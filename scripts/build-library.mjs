@@ -1,0 +1,151 @@
+import { createHash } from "node:crypto";
+import os from "node:os";
+import { mkdir, readFile, readdir, realpath, rename, rm, stat, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
+
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const coversDirectory = path.join(projectRoot, "public/covers");
+const mediaFile = path.join(projectRoot, "data/media.json");
+
+const sources = [
+  { type: "book", directory: "Project：存放项目的必要信息/閱讀書單 Book Tracker/書櫃" },
+  { type: "film", directory: "Project：存放项目的必要信息/影" },
+  { type: "music", directory: "Project：存放项目的必要信息/音" },
+];
+
+export function parseFrontmatter(markdown) {
+  const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!match) return {};
+  const metadata = {};
+  let listKey = null;
+  for (const line of match[1].split(/\r?\n/)) {
+    const property = line.match(/^([^\s][^:]*):\s*(.*)$/);
+    if (property) {
+      const key = property[1].trim();
+      const value = property[2].trim().replace(/^['"]|['"]$/g, "");
+      listKey = key === "分类" && !value ? key : null;
+      if (value) metadata[key] = value;
+      if (listKey) metadata[listKey] = [];
+      continue;
+    }
+    const item = listKey ? line.match(/^\s+-\s+(.+)$/) : null;
+    if (item) metadata[listKey].push(item[1].trim().replace(/^['"]|['"]$/g, ""));
+  }
+  return metadata;
+}
+
+export function isDisplayableBook(metadata) {
+  const completed = /^(已读|读完|完成|读完待整理)$/.test(metadata.状态?.trim() ?? "");
+  return Boolean(metadata.封面 && (metadata.完读日期 || completed));
+}
+
+export function completedMonth(value) {
+  const match = String(value ?? "").trim().match(/^(\d{4})[-/.年](\d{1,2})/);
+  return match ? `${match[1]}-${match[2].padStart(2, "0")}` : "";
+}
+
+export function isDisplayableMedia(metadata) {
+  return Boolean((metadata.名称 || metadata.书名)?.trim() && metadata.封面?.trim());
+}
+
+export function resolveVaultRoot(env = process.env, home = os.homedir()) {
+  return path.resolve(env.OBSIDIAN_VAULT || path.join(home, "Documents/obsidian/阿崔"));
+}
+
+export function validateUniqueRecords(records) {
+  const seen = new Set();
+  for (const record of records) {
+    if (seen.has(record.id)) throw new Error(`Duplicate media id: ${record.id}`);
+    seen.add(record.id);
+  }
+  return records;
+}
+
+export function orphanCoverNames(names, referenced) {
+  return names.filter((name) => /^[a-f0-9]{12}\.(jpg|jpeg|png|webp|avif)$/i.test(name) && !referenced.has(name));
+}
+
+function categories(metadata) {
+  return Array.isArray(metadata.分类) ? metadata.分类.filter(Boolean) : [];
+}
+
+function publicId(filename, type) {
+  return `${type}:${path.basename(filename, path.extname(filename))}`;
+}
+
+export function toPublicMedia(filename, metadata, publicCover, type) {
+  const title = (metadata.名称 || metadata.书名 || path.basename(filename, path.extname(filename))).trim();
+  const creator = (metadata.创作者 || metadata.作者 || "").trim();
+  const month = type === "book" ? completedMonth(metadata.完读日期) : "";
+  return {
+    id: publicId(filename, type),
+    type,
+    title,
+    ...(creator ? { creator } : {}),
+    cover: publicCover,
+    categories: categories(metadata),
+    ...(month ? { completedMonth: month } : {}),
+  };
+}
+
+export function toPublicBook(filename, metadata, publicCover) {
+  return toPublicMedia(filename, metadata, publicCover, "book");
+}
+
+function coverDestination(sourcePath, contents) {
+  const extension = path.extname(sourcePath).toLowerCase();
+  if (![".jpg", ".jpeg", ".png", ".webp", ".avif"].includes(extension)) return null;
+  const digest = createHash("sha1").update(contents).digest("hex").slice(0, 12);
+  return `${digest}${extension}`;
+}
+
+async function copyCover(sourceCover) {
+  const resolvedRoot = await realpath(resolveVaultRoot());
+  const resolvedCover = await realpath(sourceCover);
+  const relativeCover = path.relative(resolvedRoot, resolvedCover);
+  const sourceStat = await stat(resolvedCover);
+  const contents = await readFile(resolvedCover);
+  const outputName = coverDestination(resolvedCover, contents);
+  if (!outputName || relativeCover.startsWith("..") || path.isAbsolute(relativeCover) || !sourceStat.isFile()) return null;
+  await writeFile(path.join(coversDirectory, outputName), contents);
+  return `public/covers/${outputName}`;
+}
+
+async function buildSource(source) {
+  const vaultRoot = resolveVaultRoot();
+  const directory = path.join(vaultRoot, source.directory);
+  const records = [];
+  for (const filename of (await readdir(directory)).filter((name) => name.endsWith(".md"))) {
+    const markdown = await readFile(path.join(directory, filename), "utf8");
+    const metadata = parseFrontmatter(markdown);
+    const displayable = source.type === "book" ? isDisplayableBook(metadata) : isDisplayableMedia(metadata);
+    if (!displayable) continue;
+    try {
+      const cover = await copyCover(path.resolve(vaultRoot, metadata.封面));
+      if (cover) records.push(toPublicMedia(filename, metadata, cover, source.type));
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
+  return records;
+}
+
+async function buildLibrary() {
+  await mkdir(coversDirectory, { recursive: true });
+  await mkdir(path.dirname(mediaFile), { recursive: true });
+  const collections = [];
+  for (const source of sources) collections.push(...await buildSource(source));
+  validateUniqueRecords(collections);
+  collections.sort((left, right) => left.type.localeCompare(right.type) || left.title.localeCompare(right.title, "zh-CN"));
+  const temporaryFile = `${mediaFile}.tmp`;
+  await writeFile(temporaryFile, `${JSON.stringify(collections, null, 2)}\n`, "utf8");
+  await rename(temporaryFile, mediaFile);
+  const referenced = new Set(collections.map((item) => path.basename(item.cover)));
+  const existingCovers = await readdir(coversDirectory);
+  for (const orphan of orphanCoverNames(existingCovers, referenced)) await rm(path.join(coversDirectory, orphan));
+  const counts = collections.reduce((result, item) => { result[item.type] = (result[item.type] ?? 0) + 1; return result; }, {});
+  process.stdout.write(`Generated ${collections.length} media records (${Object.entries(counts).map(([type, count]) => `${type}=${count}`).join(", ")}).\n`);
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) await buildLibrary();

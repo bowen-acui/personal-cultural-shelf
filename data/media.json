@@ -1,0 +1,3235 @@
+[
+  {
+    "id": "book:暗时间",
+    "type": "book",
+    "title": "暗时间",
+    "creator": "刘未鹏",
+    "cover": "public/covers/b92a5884b46a.jpg",
+    "categories": [
+      "个人成长",
+      "工具书"
+    ],
+    "completedMonth": "2024-12"
+  },
+  {
+    "id": "book:巴菲特的护城河",
+    "type": "book",
+    "title": "巴菲特的护城河",
+    "creator": "帕特·多尔西",
+    "cover": "public/covers/611bee935ed7.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2021-01"
+  },
+  {
+    "id": "book:巴拉巴西成功定律",
+    "type": "book",
+    "title": "巴拉巴西成功定律",
+    "creator": "艾伯特-拉斯洛•巴拉巴西",
+    "cover": "public/covers/9634b6557d7e.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-11"
+  },
+  {
+    "id": "book:白鹿原",
+    "type": "book",
+    "title": "白鹿原",
+    "creator": "陈忠实",
+    "cover": "public/covers/0a2841013496.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2023-06"
+  },
+  {
+    "id": "book:百万富翁快车道",
+    "type": "book",
+    "title": "百万富翁快车道",
+    "creator": "MJ·德马科",
+    "cover": "public/covers/80be02b48eca.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-07"
+  },
+  {
+    "id": "book:被劫持的私生活",
+    "type": "book",
+    "title": "被劫持的私生活",
+    "creator": "肉唐僧",
+    "cover": "public/covers/6bbd899fce0d.jpg",
+    "categories": [
+      "文化"
+    ],
+    "completedMonth": "2022-01"
+  },
+  {
+    "id": "book:被讨厌的勇气",
+    "type": "book",
+    "title": "被讨厌的勇气",
+    "creator": "岸见一郎",
+    "cover": "public/covers/5533f8326677.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2022-05"
+  },
+  {
+    "id": "book:彼得2 0",
+    "type": "book",
+    "title": "彼得2.0",
+    "creator": "彼得·斯科特-摩根",
+    "cover": "public/covers/18850140156c.jpg",
+    "categories": [
+      "科幻"
+    ],
+    "completedMonth": "2023-03"
+  },
+  {
+    "id": "book:别忘你也曾野心勃勃",
+    "type": "book",
+    "title": "别忘你也曾野心勃勃",
+    "creator": "詹姆斯·阿图彻",
+    "cover": "public/covers/4375aef54e93.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-06"
+  },
+  {
+    "id": "book:不二",
+    "type": "book",
+    "title": "不二",
+    "creator": "冯唐",
+    "cover": "public/covers/f3fa453b9b67.png",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2021-12"
+  },
+  {
+    "id": "book:财富的真相",
+    "type": "book",
+    "title": "财富的真相",
+    "creator": "李笑来",
+    "cover": "public/covers/601c38c5aebb.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2026-06"
+  },
+  {
+    "id": "book:财富自由之路",
+    "type": "book",
+    "title": "财富自由之路",
+    "creator": "李笑来",
+    "cover": "public/covers/cf432e6d6f6d.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-06"
+  },
+  {
+    "id": "book:沧浪之水",
+    "type": "book",
+    "title": "沧浪之水",
+    "creator": "阎真",
+    "cover": "public/covers/49b06b368fd9.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2024-01"
+  },
+  {
+    "id": "book:茶馆 龙须沟",
+    "type": "book",
+    "title": "茶馆 龙须沟",
+    "creator": "老舍",
+    "cover": "public/covers/9bedd86aa7a7.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2023-03"
+  },
+  {
+    "id": "book:沉思录",
+    "type": "book",
+    "title": "沉思录",
+    "creator": "奥勒留",
+    "cover": "public/covers/b3eb9589f5b6.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2026-01"
+  },
+  {
+    "id": "book:冲向火星",
+    "type": "book",
+    "title": "冲向火星",
+    "creator": "艾瑞克·伯格",
+    "cover": "public/covers/ec73142feb4f.jpg",
+    "categories": [
+      "企业"
+    ],
+    "completedMonth": "2025-09"
+  },
+  {
+    "id": "book:丑陋的中国人",
+    "type": "book",
+    "title": "丑陋的中国人",
+    "creator": "柏杨",
+    "cover": "public/covers/91fc984e9447.jpg",
+    "categories": [
+      "文化"
+    ],
+    "completedMonth": "2022-04"
+  },
+  {
+    "id": "book:聪明人的个人成长",
+    "type": "book",
+    "title": "聪明人的个人成长",
+    "creator": "史蒂夫·帕弗利纳",
+    "cover": "public/covers/24bafa90ecfa.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2024-06"
+  },
+  {
+    "id": "book:从负债2000万到心想事成的每一天",
+    "type": "book",
+    "title": "从负债2000万到心想事成的每一天",
+    "creator": "小池浩",
+    "cover": "public/covers/87af4cffcfbb.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2025-01"
+  },
+  {
+    "id": "book:打开心智",
+    "type": "book",
+    "title": "打开心智",
+    "creator": "李睿秋",
+    "cover": "public/covers/7fb1c30896ec.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2024-05"
+  },
+  {
+    "id": "book:大话西方艺术史",
+    "type": "book",
+    "title": "大话西方艺术史",
+    "creator": "意公子",
+    "cover": "public/covers/f74972a404dd.jpg",
+    "categories": [
+      "文化"
+    ],
+    "completedMonth": "2023-09"
+  },
+  {
+    "id": "book:大明王朝1566",
+    "type": "book",
+    "title": "大明王朝1566",
+    "creator": "刘和平",
+    "cover": "public/covers/d9cf2f1aea09.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2026-02"
+  },
+  {
+    "id": "book:大投机家",
+    "type": "book",
+    "title": "大投机家",
+    "creator": "安德烈•科斯托拉尼",
+    "cover": "public/covers/18af5e3a7ba6.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-09"
+  },
+  {
+    "id": "book:当下的力量",
+    "type": "book",
+    "title": "当下的力量",
+    "creator": "埃克哈特·托利",
+    "cover": "public/covers/6637dcedfe32.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2023-02"
+  },
+  {
+    "id": "book:刀与星辰",
+    "type": "book",
+    "title": "刀与星辰",
+    "creator": "徐皓峰",
+    "cover": "public/covers/a25bed9107b6.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2022-12"
+  },
+  {
+    "id": "book:东京绮梦",
+    "type": "book",
+    "title": "东京绮梦",
+    "creator": "伊恩·布鲁玛",
+    "cover": "public/covers/42d71e2c18c0.jpg",
+    "categories": [
+      "文化"
+    ],
+    "completedMonth": "2021-12"
+  },
+  {
+    "id": "book:反本能",
+    "type": "book",
+    "title": "反本能",
+    "creator": "卫蓝",
+    "cover": "public/covers/4d67c1583300.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2025-10"
+  },
+  {
+    "id": "book:反脆弱 从不确定性中获益",
+    "type": "book",
+    "title": "反脆弱:从不确定性中获益",
+    "creator": "纳西姆•尼古拉斯•塔勒布",
+    "cover": "public/covers/9a5e9650494a.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2025-11"
+  },
+  {
+    "id": "book:风和投资随笔",
+    "type": "book",
+    "title": "风和投资随笔",
+    "creator": "胡猛",
+    "cover": "public/covers/bdad94079d93.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2026-04"
+  },
+  {
+    "id": "book:富爸爸的财富花园",
+    "type": "book",
+    "title": "富爸爸的财富花园",
+    "creator": "约翰·索福里克",
+    "cover": "public/covers/d80ca54df312.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2024-06"
+  },
+  {
+    "id": "book:高效能人士的七个习惯",
+    "type": "book",
+    "title": "高效能人士的七个习惯",
+    "creator": "史蒂芬·柯维",
+    "cover": "public/covers/ee0200b4aa02.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2022-06"
+  },
+  {
+    "id": "book:个体破局",
+    "type": "book",
+    "title": "个体破局",
+    "creator": "王川",
+    "cover": "public/covers/834e0f3b8718.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2024-02"
+  },
+  {
+    "id": "book:更富有、更睿智、更快乐",
+    "type": "book",
+    "title": "更富有、更睿智、更快乐",
+    "creator": "威廉·格林",
+    "cover": "public/covers/cd4d6083e447.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-08"
+  },
+  {
+    "id": "book:工作、消费主义和新穷人",
+    "type": "book",
+    "title": "工作、消费主义和新穷人",
+    "creator": "齐格蒙特·鲍曼",
+    "cover": "public/covers/b33debf58dee.jpg",
+    "categories": [
+      "社会科学"
+    ],
+    "completedMonth": "2023-03"
+  },
+  {
+    "id": "book:关乎天下",
+    "type": "book",
+    "title": "关乎天下",
+    "creator": "关明生",
+    "cover": "public/covers/45f5237520c3.jpg",
+    "categories": [
+      "企业"
+    ],
+    "completedMonth": "2022-08"
+  },
+  {
+    "id": "book:滚雪球",
+    "type": "book",
+    "title": "滚雪球",
+    "creator": "艾丽斯·施罗德",
+    "cover": "public/covers/5438b65fa970.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-02"
+  },
+  {
+    "id": "book:国王武士祭司诗人",
+    "type": "book",
+    "title": "国王武士祭司诗人",
+    "creator": "罗伯特·摩尔, 道格拉斯·吉列",
+    "cover": "public/covers/384f68fb9d18.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2024-02"
+  },
+  {
+    "id": "book:海龟交易法则",
+    "type": "book",
+    "title": "海龟交易法则",
+    "creator": "柯蒂斯•费思",
+    "cover": "public/covers/ed7eae365a98.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2021-12"
+  },
+  {
+    "id": "book:毫无意义的工作",
+    "type": "book",
+    "title": "毫无意义的工作",
+    "creator": "大卫·格雷伯",
+    "cover": "public/covers/d2dcc93f2e25.jpg",
+    "categories": [
+      "社会科学"
+    ],
+    "completedMonth": "2023-01"
+  },
+  {
+    "id": "book:黑天鹅",
+    "type": "book",
+    "title": "黑天鹅",
+    "creator": "纳西姆•尼古拉斯•塔勒布",
+    "cover": "public/covers/38ccbb5627c5.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2024-08"
+  },
+  {
+    "id": "book:红色赌盘",
+    "type": "book",
+    "title": "红色赌盘",
+    "creator": "沈栋",
+    "cover": "public/covers/a43407f9d69f.jpeg",
+    "categories": [
+      "政治"
+    ],
+    "completedMonth": "2023-10"
+  },
+  {
+    "id": "book:翦商",
+    "type": "book",
+    "title": "翦商",
+    "creator": "李硕",
+    "cover": "public/covers/566d9a403849.jpg",
+    "categories": [
+      "历史"
+    ],
+    "completedMonth": "2023-05"
+  },
+  {
+    "id": "book:金钱博弈",
+    "type": "book",
+    "title": "金钱博弈",
+    "creator": "单伟建",
+    "cover": "public/covers/f91d725cbc28.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2025-10"
+  },
+  {
+    "id": "book:金钱的属性：一个富豪的财富私房课",
+    "type": "book",
+    "title": "金钱的属性：一个富豪的财富私房课",
+    "creator": "金胜镐",
+    "cover": "public/covers/54644fed91ab.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2024-05"
+  },
+  {
+    "id": "book:金钱心理学",
+    "type": "book",
+    "title": "金钱心理学",
+    "creator": "摩根·豪泽尔",
+    "cover": "public/covers/3992e480c408.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-08"
+  },
+  {
+    "id": "book:金色梦乡",
+    "type": "book",
+    "title": "金色梦乡",
+    "creator": "伊坂幸太郎",
+    "cover": "public/covers/c037a780eadf.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2022-01"
+  },
+  {
+    "id": "book:金字塔原理",
+    "type": "book",
+    "title": "金字塔原理",
+    "creator": "芭芭拉•明托",
+    "cover": "public/covers/91e28ac9c553.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2021-05"
+  },
+  {
+    "id": "book:巨人的工具",
+    "type": "book",
+    "title": "巨人的工具",
+    "creator": "蒂姆·费里斯",
+    "cover": "public/covers/8d3982fd14af.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2024-04"
+  },
+  {
+    "id": "book:君主论",
+    "type": "book",
+    "title": "君主论",
+    "creator": "尼科洛·马基雅维里",
+    "cover": "public/covers/f3aec4c855c9.jpg",
+    "categories": [
+      "文化"
+    ],
+    "completedMonth": "2022-04"
+  },
+  {
+    "id": "book:刻意练习",
+    "type": "book",
+    "title": "刻意练习",
+    "creator": "安德斯·艾利克森",
+    "cover": "public/covers/73ddfaacde4b.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-04"
+  },
+  {
+    "id": "book:浪潮",
+    "type": "book",
+    "title": "浪潮",
+    "creator": "托德·斯特拉瑟",
+    "cover": "public/covers/87f2dabbbc79.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2022-05"
+  },
+  {
+    "id": "book:邻家的百万富翁",
+    "type": "book",
+    "title": "邻家的百万富翁",
+    "creator": "托马斯·斯坦利",
+    "cover": "public/covers/7fe26e13c712.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-12"
+  },
+  {
+    "id": "book:卖桔者言",
+    "type": "book",
+    "title": "卖桔者言",
+    "creator": "张五常",
+    "cover": "public/covers/d9f623a6bbf4.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2022-04"
+  },
+  {
+    "id": "book:每周工作四小时",
+    "type": "book",
+    "title": "每周工作四小时",
+    "creator": "蒂姆·费里斯",
+    "cover": "public/covers/30f432e99fd5.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2024-08"
+  },
+  {
+    "id": "book:牧羊少年奇幻之旅",
+    "type": "book",
+    "title": "牧羊少年奇幻之旅",
+    "creator": "保罗·柯艾略",
+    "cover": "public/covers/686d899a6329.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-12"
+  },
+  {
+    "id": "book:纳瓦尔宝典",
+    "type": "book",
+    "title": "纳瓦尔宝典",
+    "creator": "埃里克·乔根森",
+    "cover": "public/covers/e0d0ec24e09d.jpg",
+    "categories": [
+      "个人成长",
+      "投资"
+    ],
+    "completedMonth": "2023-02"
+  },
+  {
+    "id": "book:钱：7步创造终身收入",
+    "type": "book",
+    "title": "钱：7步创造终身收入",
+    "creator": "托尼·罗宾斯",
+    "cover": "public/covers/38327834f26c.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-12"
+  },
+  {
+    "id": "book:潜规则",
+    "type": "book",
+    "title": "潜规则",
+    "creator": "吴思",
+    "cover": "public/covers/9d97e0164223.jpg",
+    "categories": [
+      "历史"
+    ],
+    "completedMonth": "2021-12"
+  },
+  {
+    "id": "book:情商：为什么情商比智商更重要",
+    "type": "book",
+    "title": "情商：为什么情商比智商更重要",
+    "creator": "丹尼尔·戈尔曼",
+    "cover": "public/covers/0b3d9a6ca700.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2023-08"
+  },
+  {
+    "id": "book:区块链启示录",
+    "type": "book",
+    "title": "区块链启示录",
+    "creator": "菲尔·尚帕涅",
+    "cover": "public/covers/8ec5c69aa5f5.jpg",
+    "categories": [
+      "工具书"
+    ],
+    "completedMonth": "2023-09"
+  },
+  {
+    "id": "book:人类群星闪耀时",
+    "type": "book",
+    "title": "人类群星闪耀时",
+    "creator": "斯蒂芬·茨威格",
+    "cover": "public/covers/8e708efcfabe.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2022-12"
+  },
+  {
+    "id": "book:人生护城河",
+    "type": "book",
+    "title": "人生护城河",
+    "creator": "张辉",
+    "cover": "public/covers/f1a357699f8c.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-04"
+  },
+  {
+    "id": "book:认知觉醒",
+    "type": "book",
+    "title": "认知觉醒",
+    "creator": "周岭",
+    "cover": "public/covers/89c46a570f5c.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-03"
+  },
+  {
+    "id": "book:认知驱动",
+    "type": "book",
+    "title": "认知驱动",
+    "creator": "周岭",
+    "cover": "public/covers/f42aa07b83a9.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-08"
+  },
+  {
+    "id": "book:三体",
+    "type": "book",
+    "title": "三体",
+    "creator": "刘慈欣",
+    "cover": "public/covers/50583e1811a3.jpg",
+    "categories": [
+      "科幻"
+    ],
+    "completedMonth": "2025-12"
+  },
+  {
+    "id": "book:少有人走的路",
+    "type": "book",
+    "title": "少有人走的路",
+    "creator": "斯科特·派克",
+    "cover": "public/covers/518b7cc895d5.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2022-06"
+  },
+  {
+    "id": "book:十分钟冥想",
+    "type": "book",
+    "title": "十分钟冥想",
+    "creator": "安迪·普迪科姆",
+    "cover": "public/covers/2f483b716dd6.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2024-07"
+  },
+  {
+    "id": "book:时间游戏",
+    "type": "book",
+    "title": "时间游戏",
+    "creator": "周洛华",
+    "cover": "public/covers/dddb050d2f25.jpg",
+    "categories": [
+      "社会科学"
+    ],
+    "completedMonth": "2026-04"
+  },
+  {
+    "id": "book:史蒂夫·乔布斯",
+    "type": "book",
+    "title": "史蒂夫·乔布斯",
+    "creator": "沃尔特·艾萨克森",
+    "cover": "public/covers/699beb49e132.jpg",
+    "categories": [
+      "个人传记"
+    ],
+    "completedMonth": "2022-08"
+  },
+  {
+    "id": "book:鼠疫",
+    "type": "book",
+    "title": "鼠疫",
+    "creator": "阿尔贝·加缪",
+    "cover": "public/covers/f8d698052103.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2026-01"
+  },
+  {
+    "id": "book:睡眠革命",
+    "type": "book",
+    "title": "睡眠革命",
+    "creator": "尼克·利特尔黑尔斯",
+    "cover": "public/covers/562d4b5a452b.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2024-04"
+  },
+  {
+    "id": "book:思考致富",
+    "type": "book",
+    "title": "思考致富",
+    "creator": "拿破仑·希尔",
+    "cover": "public/covers/f60dc14cc75a.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-12"
+  },
+  {
+    "id": "book:随机漫步的傻瓜",
+    "type": "book",
+    "title": "随机漫步的傻瓜",
+    "creator": "纳西姆•尼古拉斯•塔勒布",
+    "cover": "public/covers/8eecbeb3ffd5.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2025-04"
+  },
+  {
+    "id": "book:太白金星有点烦",
+    "type": "book",
+    "title": "太白金星有点烦",
+    "creator": "马伯庸",
+    "cover": "public/covers/af0d9ede5d98.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2026-06"
+  },
+  {
+    "id": "book:拖延心理学",
+    "type": "book",
+    "title": "拖延心理学",
+    "creator": "简·博克",
+    "cover": "public/covers/09510fc257f8.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2022-07"
+  },
+  {
+    "id": "book:围城",
+    "type": "book",
+    "title": "围城",
+    "creator": "钱钟书",
+    "cover": "public/covers/b0d7a85b6d96.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2022-03"
+  },
+  {
+    "id": "book:为什么精英都是时间控",
+    "type": "book",
+    "title": "为什么精英都是时间控",
+    "creator": "桦泽紫苑",
+    "cover": "public/covers/2a33262c2367.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2022-07"
+  },
+  {
+    "id": "book:文明、现代化、价值投资于中国",
+    "type": "book",
+    "title": "文明、现代化、价值投资于中国",
+    "creator": "李录",
+    "cover": "public/covers/101f007d93e1.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2021-11"
+  },
+  {
+    "id": "book:我在底层的生活",
+    "type": "book",
+    "title": "我在底层的生活",
+    "creator": "芭芭拉·艾伦瑞克",
+    "cover": "public/covers/956109fc1c19.jpg",
+    "categories": [
+      "社会科学"
+    ],
+    "completedMonth": "2021-04"
+  },
+  {
+    "id": "book:悉达多",
+    "type": "book",
+    "title": "悉达多",
+    "creator": "赫尔曼·黑塞",
+    "cover": "public/covers/8f21b4565b42.jpg",
+    "categories": [
+      "哲学"
+    ],
+    "completedMonth": "2024-09"
+  },
+  {
+    "id": "book:显微镜下的大明",
+    "type": "book",
+    "title": "显微镜下的大明",
+    "creator": "马伯庸",
+    "cover": "public/covers/f061fa07ec54.jpg",
+    "categories": [
+      "历史",
+      "小说"
+    ],
+    "completedMonth": "2022-12"
+  },
+  {
+    "id": "book:详谈：赵鹏",
+    "type": "book",
+    "title": "详谈：赵鹏",
+    "creator": "李翔",
+    "cover": "public/covers/33704cb9741d.jpg",
+    "categories": [
+      "个人传记",
+      "企业"
+    ],
+    "completedMonth": "2024-09"
+  },
+  {
+    "id": "book:详谈：左晖",
+    "type": "book",
+    "title": "详谈：左晖",
+    "creator": "李翔",
+    "cover": "public/covers/40c84f471ff1.jpg",
+    "categories": [
+      "个人传记",
+      "企业"
+    ],
+    "completedMonth": "2024-10"
+  },
+  {
+    "id": "book:像高手一样思考",
+    "type": "book",
+    "title": "像高手一样思考",
+    "creator": "杰伊·谢蒂",
+    "cover": "public/covers/72f70ef13f44.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2025-06"
+  },
+  {
+    "id": "book:心理强大之路",
+    "type": "book",
+    "title": "心理强大之路",
+    "creator": "石勇",
+    "cover": "public/covers/43478218df34.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2023-07"
+  },
+  {
+    "id": "book:血酬定律",
+    "type": "book",
+    "title": "血酬定律",
+    "creator": "吴思",
+    "cover": "public/covers/f66bc7d7896d.jpg",
+    "categories": [
+      "历史"
+    ],
+    "completedMonth": "2022-01"
+  },
+  {
+    "id": "book:一句顶一万句",
+    "type": "book",
+    "title": "一句顶一万句",
+    "creator": "刘震云",
+    "cover": "public/covers/98fe9c2c6414.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2023-01"
+  },
+  {
+    "id": "book:一生的旅程",
+    "type": "book",
+    "title": "一生的旅程",
+    "creator": "罗伯特·艾格",
+    "cover": "public/covers/4e62d2159810.jpg",
+    "categories": [
+      "个人传记"
+    ],
+    "completedMonth": "2022-03"
+  },
+  {
+    "id": "book:有本事",
+    "type": "book",
+    "title": "有本事",
+    "creator": "冯唐",
+    "cover": "public/covers/7d453c4f27bc.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2021-12"
+  },
+  {
+    "id": "book:有钱人和你想的不一样",
+    "type": "book",
+    "title": "有钱人和你想的不一样",
+    "creator": "哈维‧艾克",
+    "cover": "public/covers/88a6e8613b56.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-06"
+  },
+  {
+    "id": "book:原则",
+    "type": "book",
+    "title": "原则",
+    "creator": "瑞·达利欧",
+    "cover": "public/covers/9593bea67fe6.jpg",
+    "categories": [
+      "个人成长",
+      "投资"
+    ],
+    "completedMonth": "2022-08"
+  },
+  {
+    "id": "book:原子习惯",
+    "type": "book",
+    "title": "原子习惯",
+    "creator": "詹姆斯·克利尔",
+    "cover": "public/covers/7cddfc0dd3d8.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2024-01"
+  },
+  {
+    "id": "book:长安的荔枝",
+    "type": "book",
+    "title": "长安的荔枝",
+    "creator": "马伯庸",
+    "cover": "public/covers/fb02d01ca562.jpg",
+    "categories": [
+      "小说"
+    ],
+    "completedMonth": "2023-08"
+  },
+  {
+    "id": "book:制造消费者",
+    "type": "book",
+    "title": "制造消费者",
+    "creator": "安东尼·加卢佐",
+    "cover": "public/covers/bfa110827d63.jpg",
+    "categories": [
+      "社会科学"
+    ],
+    "completedMonth": "2024-04"
+  },
+  {
+    "id": "book:致富心态",
+    "type": "book",
+    "title": "致富心态",
+    "creator": "摩根·豪瑟",
+    "cover": "public/covers/23371fb0a146.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2023-03"
+  },
+  {
+    "id": "book:置身事内",
+    "type": "book",
+    "title": "置身事内",
+    "creator": "兰小欢",
+    "cover": "public/covers/ed0fbf12baad.jpg",
+    "categories": [
+      "政治"
+    ],
+    "completedMonth": "2022-02"
+  },
+  {
+    "id": "book:中产阶级如何保护自己的财富",
+    "type": "book",
+    "title": "中产阶级如何保护自己的财富",
+    "creator": "欧成效",
+    "cover": "public/covers/b19fac9a69bc.jpg",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2024-05"
+  },
+  {
+    "id": "book:终身成长",
+    "type": "book",
+    "title": "终身成长",
+    "creator": "卡罗尔·德韦克",
+    "cover": "public/covers/92e9be74f8f4.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2023-06"
+  },
+  {
+    "id": "book:自控力",
+    "type": "book",
+    "title": "自控力",
+    "creator": "凯利·麦格尼格尔",
+    "cover": "public/covers/0faa3d62ae94.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2021-02"
+  },
+  {
+    "id": "book:走出戈壁",
+    "type": "book",
+    "title": "走出戈壁",
+    "creator": "单伟建",
+    "cover": "public/covers/d2d8db49b143.jpg",
+    "categories": [
+      "个人成长"
+    ],
+    "completedMonth": "2026-02"
+  },
+  {
+    "id": "book:最优解人生",
+    "type": "book",
+    "title": "最优解人生",
+    "creator": "比尔·帕金斯",
+    "cover": "public/covers/b595a8239c08.jpg",
+    "categories": [
+      "身心灵"
+    ],
+    "completedMonth": "2023-09"
+  },
+  {
+    "id": "book:坐天下",
+    "type": "book",
+    "title": "坐天下",
+    "creator": "张宏杰",
+    "cover": "public/covers/49bb14808aad.jpg",
+    "categories": [
+      "历史"
+    ],
+    "completedMonth": "2021-06"
+  },
+  {
+    "id": "film:阿甘正传",
+    "type": "film",
+    "title": "阿甘正传",
+    "creator": "罗伯特·泽米吉斯",
+    "cover": "public/covers/83e8cc4a87f7.jpg",
+    "categories": [
+      "剧情",
+      "爱情"
+    ]
+  },
+  {
+    "id": "film:霸王别姬",
+    "type": "film",
+    "title": "霸王别姬",
+    "creator": "陈凯歌",
+    "cover": "public/covers/00c18f7d5967.jpg",
+    "categories": [
+      "剧情",
+      "爱情"
+    ]
+  },
+  {
+    "id": "film:泰坦尼克号",
+    "type": "film",
+    "title": "泰坦尼克号",
+    "creator": "詹姆斯·卡梅隆",
+    "cover": "public/covers/c4a612fcc9e2.jpg",
+    "categories": [
+      "剧情",
+      "爱情",
+      "灾难"
+    ]
+  },
+  {
+    "id": "film:肖申克的救赎",
+    "type": "film",
+    "title": "肖申克的救赎",
+    "creator": "弗兰克·德拉邦特",
+    "cover": "public/covers/4c560d8e032c.jpg",
+    "categories": [
+      "剧情",
+      "犯罪"
+    ]
+  },
+  {
+    "id": "film:一一",
+    "type": "film",
+    "title": "一一",
+    "creator": "杨德昌",
+    "cover": "public/covers/925823e694b3.jpg",
+    "categories": [
+      "剧情"
+    ]
+  },
+  {
+    "id": "music:10號",
+    "type": "music",
+    "title": "10號",
+    "creator": "Edmond Leung",
+    "cover": "public/covers/e7bb0cd5c7ba.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:13 Reasons Why (A Netflix Original Series Soundtrack)",
+    "type": "music",
+    "title": "13 Reasons Why (A Netflix Original Series Soundtrack)",
+    "creator": "Various Artists",
+    "cover": "public/covers/85d62c0665ee.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:1701",
+    "type": "music",
+    "title": "1701",
+    "creator": "Li Zhi",
+    "cover": "public/covers/19f2ca1fae01.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:2013 陳奕迅 Music Life 精選",
+    "type": "music",
+    "title": "2013 陳奕迅 Music Life 精選",
+    "creator": "Eason Chan",
+    "cover": "public/covers/8d6f31e014a3.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:21",
+    "type": "music",
+    "title": "21",
+    "creator": "Adele",
+    "cover": "public/covers/1eeb4fc30b4e.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:23",
+    "type": "music",
+    "title": "23",
+    "creator": "HYUKOH",
+    "cover": "public/covers/df1608b04bc8.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:30",
+    "type": "music",
+    "title": "30",
+    "creator": "Adele",
+    "cover": "public/covers/9c9acebe795b.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:愛與夢",
+    "type": "music",
+    "title": "愛與夢",
+    "creator": "Dave Wang",
+    "cover": "public/covers/79a295c784e5.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:安和桥北",
+    "type": "music",
+    "title": "安和桥北",
+    "creator": "Song Dongye",
+    "cover": "public/covers/8b2800b93032.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:玻璃 demo",
+    "type": "music",
+    "title": "玻璃 demo",
+    "creator": "Gareth.T",
+    "cover": "public/covers/5b68df1320f0.jpg",
+    "categories": [
+      "独立流行"
+    ]
+  },
+  {
+    "id": "music:陳奕迅2010 Duo演唱會",
+    "type": "music",
+    "title": "陳奕迅2010 Duo演唱會",
+    "creator": "Eason Chan",
+    "cover": "public/covers/35c238c6804f.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:打得火熱",
+    "type": "music",
+    "title": "打得火熱",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9fbf61c62039.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:帶你飛",
+    "type": "music",
+    "title": "帶你飛",
+    "creator": "Accusefive",
+    "cover": "public/covers/1df4218b486c.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:峨眉",
+    "type": "music",
+    "title": "峨眉",
+    "creator": "刘森",
+    "cover": "public/covers/53f9958e3946.jpg",
+    "categories": [
+      "Indie Rock"
+    ]
+  },
+  {
+    "id": "music:梵高先生",
+    "type": "music",
+    "title": "梵高先生",
+    "creator": "Li Zhi",
+    "cover": "public/covers/a4c5be884f05.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:風繼續吹",
+    "type": "music",
+    "title": "風繼續吹",
+    "creator": "Leslie Cheung",
+    "cover": "public/covers/148433f59c09.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:復黑王_ 聽濤",
+    "type": "music",
+    "title": "復黑王: 聽濤",
+    "creator": "Kenny Bee",
+    "cover": "public/covers/91f7a1f263ce.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:过去来的人",
+    "type": "music",
+    "title": "过去来的人",
+    "creator": "刘森",
+    "cover": "public/covers/605afd23c20f.jpg",
+    "categories": [
+      "Indie Rock"
+    ]
+  },
+  {
+    "id": "music:华北浪革",
+    "type": "music",
+    "title": "华北浪革",
+    "creator": "刘森",
+    "cover": "public/covers/9784ae98f895.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:壞蛋 (電影《周處除三害》片尾曲)",
+    "type": "music",
+    "title": "壞蛋 (電影《周處除三害》片尾曲)",
+    "creator": "MIXER",
+    "cover": "public/covers/4f8a2815c40d.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:冀西南林路行",
+    "type": "music",
+    "title": "冀西南林路行",
+    "creator": "Omnipotent Youth Society",
+    "cover": "public/covers/34c73548b0b2.jpg",
+    "categories": [
+      "Prog-Rock/Art Rock"
+    ]
+  },
+  {
+    "id": "music:緊急聯絡人",
+    "type": "music",
+    "title": "緊急聯絡人",
+    "creator": "Gareth.T",
+    "cover": "public/covers/f9e494c77ad7.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:空無之地",
+    "type": "music",
+    "title": "空無之地",
+    "creator": "Panther Chan",
+    "cover": "public/covers/746ec8e7c0da.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:乐队的夏天3 第4期 (Live)",
+    "type": "music",
+    "title": "乐队的夏天3 第4期 (Live)",
+    "creator": "群星",
+    "cover": "public/covers/d6fb67183d1d.jpg",
+    "categories": [
+      "摇滚"
+    ]
+  },
+  {
+    "id": "music:羅生門",
+    "type": "music",
+    "title": "羅生門",
+    "creator": "Juno Mak & Kay Tse",
+    "cover": "public/covers/7e1e71b1f349.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:盲婚啞嫁",
+    "type": "music",
+    "title": "盲婚啞嫁",
+    "creator": "Eason Chan",
+    "cover": "public/covers/3d0b7ea69ed0.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:迷藏",
+    "type": "music",
+    "title": "迷藏",
+    "creator": "Bruce Liang",
+    "cover": "public/covers/b945af115cbe.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:莫愁乡",
+    "type": "music",
+    "title": "莫愁乡",
+    "creator": "亞細亞曠世奇才",
+    "cover": "public/covers/295882bcc5d2.jpg",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:漠河舞厅·2022",
+    "type": "music",
+    "title": "漠河舞厅·2022",
+    "creator": "Leon",
+    "cover": "public/covers/8c9d4b72f9d3.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:泥菩薩",
+    "type": "music",
+    "title": "泥菩薩",
+    "creator": "Gareth.T",
+    "cover": "public/covers/4acc5dc22cb5.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:念",
+    "type": "music",
+    "title": "念",
+    "creator": "Panther Chan",
+    "cover": "public/covers/ef24c366a81c.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:浓烟下的诗歌电台",
+    "type": "music",
+    "title": "浓烟下的诗歌电台",
+    "creator": "Chen Hong Yu",
+    "cover": "public/covers/367bb7a6347d.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:平等路",
+    "type": "music",
+    "title": "平等路",
+    "creator": "Wild Children",
+    "cover": "public/covers/e8b4a1edda8b.jpg",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:普渡眾生 (《破.地獄》 THE LAST DANCE 電影主題曲)",
+    "type": "music",
+    "title": "普渡眾生 (《破.地獄》 THE LAST DANCE 電影主題曲)",
+    "creator": "Terence Lam",
+    "cover": "public/covers/3db7a784e729.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:亲爱的你啊(电视剧《无尽的尽头》主题曲)",
+    "type": "music",
+    "title": "亲爱的你啊(电视剧《无尽的尽头》主题曲)",
+    "creator": "Suxi Ren",
+    "cover": "public/covers/ca8fa3105d3a.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:窮人的薔薇",
+    "type": "music",
+    "title": "窮人的薔薇",
+    "creator": "Panther Chan",
+    "cover": "public/covers/b366694b41e6.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:人人彈起 新曲+精選",
+    "type": "music",
+    "title": "人人彈起 新曲+精選",
+    "creator": "Twins",
+    "cover": "public/covers/7f959ca16b03.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:山丘",
+    "type": "music",
+    "title": "山丘",
+    "creator": "Jonathan Lee",
+    "cover": "public/covers/9b845072eadb.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:伸縮自如的愛",
+    "type": "music",
+    "title": "伸縮自如的愛",
+    "creator": "Panther Chan",
+    "cover": "public/covers/af81e98392c5.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:神愛世人 (合唱版)",
+    "type": "music",
+    "title": "神愛世人 (合唱版)",
+    "creator": "Tang Siu Hau & Hins Cheung",
+    "cover": "public/covers/e2c1d5f72272.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:神的不在場證明",
+    "type": "music",
+    "title": "神的不在場證明",
+    "creator": "Panther Chan",
+    "cover": "public/covers/7fd302d1a50e.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:署前街少年",
+    "type": "music",
+    "title": "署前街少年",
+    "creator": "Lei Zhao",
+    "cover": "public/covers/43116c6a03b6.jpg",
+    "categories": [
+      "Folk"
+    ]
+  },
+  {
+    "id": "music:誰明浪子心 (粵)",
+    "type": "music",
+    "title": "誰明浪子心 (粵)",
+    "creator": "Dave Wang",
+    "cover": "public/covers/6c81b108e0cd.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:太平盛世",
+    "type": "music",
+    "title": "太平盛世",
+    "creator": "David Tao",
+    "cover": "public/covers/356f512b2493.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:嗵嗵",
+    "type": "music",
+    "title": "嗵嗵",
+    "creator": "DOUDOU",
+    "cover": "public/covers/01c6cf7ffb58.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:万能青年旅店",
+    "type": "music",
+    "title": "万能青年旅店",
+    "creator": "Omnipotent Youth Society",
+    "cover": "public/covers/e59f46bf26cc.jpg",
+    "categories": [
+      "Adult Alternative"
+    ]
+  },
+  {
+    "id": "music:危險世界",
+    "type": "music",
+    "title": "危險世界",
+    "creator": "Khalil Fong",
+    "cover": "public/covers/74dd806cba32.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:我愛南京",
+    "type": "music",
+    "title": "我愛南京",
+    "creator": "Black Dyke Band & Nicholas J. Childs",
+    "cover": "public/covers/45bdc2897dbf.jpg",
+    "categories": [
+      "Classical"
+    ]
+  },
+  {
+    "id": "music:我的快樂時代",
+    "type": "music",
+    "title": "我的快樂時代",
+    "creator": "Eason Chan",
+    "cover": "public/covers/f60cbeb908b2.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:我用什么把你留住",
+    "type": "music",
+    "title": "我用什么把你留住",
+    "creator": "FloruitShow",
+    "cover": "public/covers/a80be8bcf610.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:五年新曲加精選",
+    "type": "music",
+    "title": "五年新曲加精選",
+    "creator": "Jason Chan",
+    "cover": "public/covers/88afb4de49ce.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:小梦大半",
+    "type": "music",
+    "title": "小梦大半",
+    "creator": "Chen Li",
+    "cover": "public/covers/811da8406323.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:小王",
+    "type": "music",
+    "title": "小王",
+    "creator": "Mao Bu Yi",
+    "cover": "public/covers/4a7b9fd3e738.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:幸福",
+    "type": "music",
+    "title": "幸福",
+    "creator": "陈奕迅",
+    "cover": "public/covers/5e473c2df643.jpg",
+    "categories": [
+      "华语流行"
+    ]
+  },
+  {
+    "id": "music:顏色",
+    "type": "music",
+    "title": "顏色",
+    "creator": "Gareth.T",
+    "cover": "public/covers/ff379a8dab07.jpg",
+    "categories": [
+      "独立流行"
+    ]
+  },
+  {
+    "id": "music:夜枕青山",
+    "type": "music",
+    "title": "夜枕青山",
+    "creator": "刘森",
+    "cover": "public/covers/376769d8466e.jpg",
+    "categories": [
+      "Indie Rock"
+    ]
+  },
+  {
+    "id": "music:一如年少模样",
+    "type": "music",
+    "title": "一如年少模样",
+    "creator": "Chen Hong Yu",
+    "cover": "public/covers/6f06daae1ae0.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:永久損毀",
+    "type": "music",
+    "title": "永久損毀",
+    "creator": "MC Cheung Tinfu & Panther Chan",
+    "cover": "public/covers/a88eff4e434a.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:用背脊唱情歌",
+    "type": "music",
+    "title": "用背脊唱情歌",
+    "creator": "Gareth.T",
+    "cover": "public/covers/9ada2137de36.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:與我常在",
+    "type": "music",
+    "title": "與我常在",
+    "creator": "Eason Chan",
+    "cover": "public/covers/1932972c3ba1.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:赵小雷",
+    "type": "music",
+    "title": "赵小雷",
+    "creator": "Lei Zhao",
+    "cover": "public/covers/b2d42ca97381.jpg",
+    "categories": [
+      "Folk"
+    ]
+  },
+  {
+    "id": "music:正宗K (新曲+精選)",
+    "type": "music",
+    "title": "正宗K (新曲+精選)",
+    "creator": "Ronald Cheng",
+    "cover": "public/covers/7a5466b76116.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:至情志炫",
+    "type": "music",
+    "title": "至情志炫",
+    "creator": "Terry Lin",
+    "cover": "public/covers/1e0ef46488b6.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:自定義",
+    "type": "music",
+    "title": "自定義",
+    "creator": "Vae Xu",
+    "cover": "public/covers/a18035793814.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:最好的時刻 2006-2012",
+    "type": "music",
+    "title": "最好的時刻 2006-2012",
+    "creator": "Kay Tse",
+    "cover": "public/covers/e5b2d8880165.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:作品李宗盛",
+    "type": "music",
+    "title": "作品李宗盛",
+    "creator": "Jonathan Lee",
+    "cover": "public/covers/a84587ef8162.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:A Night At The Opera (Deluxe Edition)",
+    "type": "music",
+    "title": "A Night At The Opera (Deluxe Edition)",
+    "creator": "Queen",
+    "cover": "public/covers/79acf4261fa4.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:A Star Is Born Soundtrack",
+    "type": "music",
+    "title": "A Star Is Born Soundtrack",
+    "creator": "Lady Gaga & Bradley Cooper",
+    "cover": "public/covers/5c9e98cb280e.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Abracadabra",
+    "type": "music",
+    "title": "Abracadabra",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/15286447a8fb.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Amour _ 遙遠的她",
+    "type": "music",
+    "title": "Amour / 遙遠的她",
+    "creator": "Jacky Cheung",
+    "cover": "public/covers/4b2a925be815.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Anohi Anotoki",
+    "type": "music",
+    "title": "Anohi Anotoki",
+    "creator": "Kazumasa Oda",
+    "cover": "public/covers/ba02438bdc52.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Another Day, Another Time_ Celebrating the Music of 'Inside Llewyn Davis'",
+    "type": "music",
+    "title": "Another Day, Another Time: Celebrating the Music of 'Inside Llewyn Davis'",
+    "creator": "Various Artists",
+    "cover": "public/covers/e8313a38779f.jpg",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:Beautiful Things",
+    "type": "music",
+    "title": "Beautiful Things",
+    "creator": "Benson Boone",
+    "cover": "public/covers/fb4a9ca7514f.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
+    "type": "music",
+    "title": "Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/31f65c3c3e4e.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Believe (Deluxe Edition)",
+    "type": "music",
+    "title": "Believe (Deluxe Edition)",
+    "creator": "Justin Bieber",
+    "cover": "public/covers/447461acb77e.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Binary",
+    "type": "music",
+    "title": "Binary",
+    "creator": "Kay Tse",
+    "cover": "public/covers/86cf4936c532.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Blonde",
+    "type": "music",
+    "title": "Blonde",
+    "creator": "Frank Ocean",
+    "cover": "public/covers/95d11a49480a.jpg",
+    "categories": [
+      "R&B"
+    ]
+  },
+  {
+    "id": "music:Bloodletting",
+    "type": "music",
+    "title": "Bloodletting",
+    "creator": "Concrete Blonde",
+    "cover": "public/covers/6e9ad004209d.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:Bones",
+    "type": "music",
+    "title": "Bones",
+    "creator": "Imagine Dragons",
+    "cover": "public/covers/3befd365a2d7.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:bootleg",
+    "type": "music",
+    "title": "bootleg",
+    "creator": "Kenshi Yonezu",
+    "cover": "public/covers/48c9d7b32d3a.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Born to Die - The Paradise Edition",
+    "type": "music",
+    "title": "Born to Die - The Paradise Edition",
+    "creator": "Lana Del Rey",
+    "cover": "public/covers/c15da333e964.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:CALMOCOBRA",
+    "type": "music",
+    "title": "CALMOCOBRA",
+    "creator": "Tananai",
+    "cover": "public/covers/d691b62d4db4.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Ching Ching (Ultimate Collection)",
+    "type": "music",
+    "title": "Ching Ching (Ultimate Collection)",
+    "creator": "Chen Hsien Ching",
+    "cover": "public/covers/4914ac7155f4.jpg",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:CINEMA",
+    "type": "music",
+    "title": "CINEMA",
+    "creator": "The Marías",
+    "cover": "public/covers/170ee5c935f7.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:City Zoo",
+    "type": "music",
+    "title": "City Zoo",
+    "creator": "G.E.M.",
+    "cover": "public/covers/8eb47802c778.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Come Back to Me",
+    "type": "music",
+    "title": "Come Back to Me",
+    "creator": "Utada",
+    "cover": "public/covers/107ea8a27a6e.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Common Jasmine Orange",
+    "type": "music",
+    "title": "Common Jasmine Orange",
+    "creator": "Jay Chou",
+    "cover": "public/covers/69aeebc87b04.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Cult.",
+    "type": "music",
+    "title": "Cult.",
+    "creator": "natori",
+    "cover": "public/covers/a8becc4280d0.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Curtain Call_ The Hits (Deluxe Edition)",
+    "type": "music",
+    "title": "Curtain Call: The Hits (Deluxe Edition)",
+    "creator": "Eminem",
+    "cover": "public/covers/80beb807a3d0.jpg",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:David Tao",
+    "type": "music",
+    "title": "David Tao",
+    "creator": "David Tao",
+    "cover": "public/covers/bf1db0b94a6a.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Did you know that there's a tunnel under Ocean Blvd",
+    "type": "music",
+    "title": "Did you know that there's a tunnel under Ocean Blvd",
+    "creator": "Ana Done",
+    "cover": "public/covers/76a598554168.jpg",
+    "categories": [
+      "Instrumental"
+    ]
+  },
+  {
+    "id": "music:Die With A Smile",
+    "type": "music",
+    "title": "Die With A Smile",
+    "creator": "Lady Gaga & Bruno Mars",
+    "cover": "public/covers/b641af46bbdf.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:dont smile at me",
+    "type": "music",
+    "title": "dont smile at me",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/5d69909e1891.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:E=MC2 (Deluxe Version)",
+    "type": "music",
+    "title": "E=MC2 (Deluxe Version)",
+    "creator": "Mariah Carey",
+    "cover": "public/covers/82b98404b0ea.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Encore",
+    "type": "music",
+    "title": "Encore",
+    "creator": "Eminem",
+    "cover": "public/covers/82e8c2f808ab.jpg",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:Endless Summer Vacation",
+    "type": "music",
+    "title": "Endless Summer Vacation",
+    "creator": "Miley Cyrus",
+    "cover": "public/covers/c0a0fc01c0de.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Everyday Is Christmas (Deluxe)",
+    "type": "music",
+    "title": "Everyday Is Christmas (Deluxe)",
+    "creator": "Sia",
+    "cover": "public/covers/89b5f004d149.jpg",
+    "categories": [
+      "Holiday"
+    ]
+  },
+  {
+    "id": "music:everything i wanted",
+    "type": "music",
+    "title": "everything i wanted",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/8e2e3850a1fa.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Evolve",
+    "type": "music",
+    "title": "Evolve",
+    "creator": "Imagine Dragons",
+    "cover": "public/covers/ea05e83fb167.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Excitement of Youth",
+    "type": "music",
+    "title": "Excitement of Youth",
+    "creator": "Aimyon",
+    "cover": "public/covers/69efc5c7fa93.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:F",
+    "type": "music",
+    "title": "F",
+    "creator": "Li Zhi",
+    "cover": "public/covers/ee6b9c24c526.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Fields",
+    "type": "music",
+    "title": "Fields",
+    "creator": "Junip",
+    "cover": "public/covers/d049b9d46fae.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:First Love (Remastered 2014)",
+    "type": "music",
+    "title": "First Love (Remastered 2014)",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/d2b8553ef392.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Funeral",
+    "type": "music",
+    "title": "Funeral",
+    "creator": "Arcade Fire",
+    "cover": "public/covers/18a08fb4383b.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Getting Ready",
+    "type": "music",
+    "title": "Getting Ready",
+    "creator": "Eason Chan",
+    "cover": "public/covers/39f36f8dddce.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Girl, so confusing featuring lorde",
+    "type": "music",
+    "title": "Girl, so confusing featuring lorde",
+    "creator": "Charli xcx & Lorde",
+    "cover": "public/covers/c4cc5a72a466.jpg",
+    "categories": [
+      "Dance"
+    ]
+  },
+  {
+    "id": "music:Golden",
+    "type": "music",
+    "title": "Golden",
+    "creator": "Enno Cheng",
+    "cover": "public/covers/6b8653196efa.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Great 5000 Secs (新曲+精選)",
+    "type": "music",
+    "title": "Great 5000 Secs (新曲+精選)",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c9e865e986b2.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Guitar Songs",
+    "type": "music",
+    "title": "Guitar Songs",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/9cf90645994a.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:H3M (Remastered 2019)",
+    "type": "music",
+    "title": "H3M (Remastered 2019)",
+    "creator": "Eason Chan",
+    "cover": "public/covers/a629f4e383be.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Happier Than Ever",
+    "type": "music",
+    "title": "Happier Than Ever",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/da74a8890bff.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Happy Together",
+    "type": "music",
+    "title": "Happy Together",
+    "creator": "The Turtles",
+    "cover": "public/covers/db546a1beb2f.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Harry Styles",
+    "type": "music",
+    "title": "Harry Styles",
+    "creator": "Harry Styles",
+    "cover": "public/covers/ded403d7a65c.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Head High",
+    "type": "music",
+    "title": "Head High",
+    "creator": "Alexander Jean",
+    "cover": "public/covers/e83e5f2ea8b1.jpg",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:Heisei Fuuzoku - Japanese Manners",
+    "type": "music",
+    "title": "Heisei Fuuzoku - Japanese Manners",
+    "creator": "椎名林檎×斎藤ネコ",
+    "cover": "public/covers/d47acfec032a.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:HELP EVER HURT NEVER",
+    "type": "music",
+    "title": "HELP EVER HURT NEVER",
+    "creator": "Fujii Kaze",
+    "cover": "public/covers/82b439fcb10e.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Here On Earth (Ultimate Edition _ Big Machine Radio Release Special)",
+    "type": "music",
+    "title": "Here On Earth (Ultimate Edition / Big Machine Radio Release Special)",
+    "creator": "Tim McGraw",
+    "cover": "public/covers/c0112aa51e15.jpg",
+    "categories": [
+      "Country"
+    ]
+  },
+  {
+    "id": "music:Here With Me (feat. CHVRCHES)",
+    "type": "music",
+    "title": "Here With Me (feat. CHVRCHES)",
+    "creator": "Marshmello",
+    "cover": "public/covers/76874265c1a5.jpg",
+    "categories": [
+      "Dance"
+    ]
+  },
+  {
+    "id": "music:HIT ME HARD AND SOFT",
+    "type": "music",
+    "title": "HIT ME HARD AND SOFT",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/d8b520370df3.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Hold My Hand (Music From The Motion Picture _Top Gun_ Maverick_)",
+    "type": "music",
+    "title": "Hold My Hand (Music From The Motion Picture \\\"Top Gun: Maverick\\\")",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/358dc7b03f5f.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Hollywood's Bleeding",
+    "type": "music",
+    "title": "Hollywood's Bleeding",
+    "creator": "Post Malone",
+    "cover": "public/covers/2796ba56b248.jpg",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:hotline (edit)",
+    "type": "music",
+    "title": "hotline (edit)",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/669e1a100a4a.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Hounds of Love",
+    "type": "music",
+    "title": "Hounds of Love",
+    "creator": "Kate Bush",
+    "cover": "public/covers/2714183d22e5.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:How to Be a Human Being",
+    "type": "music",
+    "title": "How to Be a Human Being",
+    "creator": "Glass Animals",
+    "cover": "public/covers/cba0c5bd6037.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Hu Guangsheng",
+    "type": "music",
+    "title": "Hu Guangsheng",
+    "creator": "Suxi Ren",
+    "cover": "public/covers/9b357d2ac638.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:I Am What I Am",
+    "type": "music",
+    "title": "I Am What I Am",
+    "creator": "Leslie Cheung",
+    "cover": "public/covers/c4a9532bd42a.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:I Wanna Be Your Slave (feat. Margad)",
+    "type": "music",
+    "title": "I Wanna Be Your Slave (feat. Margad)",
+    "creator": "Jaydan Wolf, Te Pai & Daniel Chord",
+    "cover": "public/covers/9bd179d5e832.jpg",
+    "categories": [
+      "Dance"
+    ]
+  },
+  {
+    "id": "music:I'm O.K.",
+    "type": "music",
+    "title": "I'm O.K.",
+    "creator": "David Tao",
+    "cover": "public/covers/f96f10897f3b.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Illuminate (Deluxe)",
+    "type": "music",
+    "title": "Illuminate (Deluxe)",
+    "creator": "Shawn Mendes",
+    "cover": "public/covers/05ba68c63bef.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:In Between Dreams (Bonus Track Version)",
+    "type": "music",
+    "title": "In Between Dreams (Bonus Track Version)",
+    "creator": "Jack Johnson",
+    "cover": "public/covers/ceb70ca13e15.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:Inauguration of the Pleasure Dome",
+    "type": "music",
+    "title": "Inauguration of the Pleasure Dome",
+    "creator": "8 Immortals Restaurant",
+    "cover": "public/covers/faf0c46d51e0.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:Joanne (Deluxe)",
+    "type": "music",
+    "title": "Joanne (Deluxe)",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/04de5678a30f.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:K歌之王 AIR",
+    "type": "music",
+    "title": "K歌之王 AIR",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c170aa4098cd.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Let's Fall In Love For The Night",
+    "type": "music",
+    "title": "Let's Fall In Love For The Night",
+    "creator": "Us The Duo",
+    "cover": "public/covers/8d7c782b99a2.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Let's Hope Heteros Fail, Learn and Retire",
+    "type": "music",
+    "title": "Let's Hope Heteros Fail, Learn and Retire",
+    "creator": "Alice Longyu Gao",
+    "cover": "public/covers/ac9a9ab2231c.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Life Continues",
+    "type": "music",
+    "title": "Life Continues",
+    "creator": "Eason Chan",
+    "cover": "public/covers/fe1e09c9472a.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Listen to the Music 3",
+    "type": "music",
+    "title": "Listen to the Music 3",
+    "creator": "Noriyuki Makihara",
+    "cover": "public/covers/58ab35fae3a3.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Live for Today",
+    "type": "music",
+    "title": "Live for Today",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9b5eb59b21fa.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:lovely",
+    "type": "music",
+    "title": "lovely",
+    "creator": "Billie Eilish & Khalid",
+    "cover": "public/covers/362ad7cb6d52.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Luna",
+    "type": "music",
+    "title": "Luna",
+    "creator": "AGA",
+    "cover": "public/covers/2ee9e0f7ca92.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Lungs (Deluxe)",
+    "type": "music",
+    "title": "Lungs (Deluxe)",
+    "creator": "Florence + the Machine",
+    "cover": "public/covers/a677590a9ca0.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Making Mirrors",
+    "type": "music",
+    "title": "Making Mirrors",
+    "creator": "Gotye",
+    "cover": "public/covers/dc3ffe007656.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:MAYHEM",
+    "type": "music",
+    "title": "MAYHEM",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/d66949d9bcd3.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Mercury - Acts 1 & 2",
+    "type": "music",
+    "title": "Mercury - Acts 1 & 2",
+    "creator": "Imagine Dragons",
+    "cover": "public/covers/f8351c75878d.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Momentary Sixth Sense",
+    "type": "music",
+    "title": "Momentary Sixth Sense",
+    "creator": "Aimyon",
+    "cover": "public/covers/abb19a7bfd64.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Monday (feat. Lionman)",
+    "type": "music",
+    "title": "Monday (feat. Lionman)",
+    "creator": "Leah Dou",
+    "cover": "public/covers/99a06d47d32a.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Muzai Moratorium - Innocence Moratorium",
+    "type": "music",
+    "title": "Muzai Moratorium - Innocence Moratorium",
+    "creator": "Sheena Ringo",
+    "cover": "public/covers/f19e7fbf2746.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Naked Heart",
+    "type": "music",
+    "title": "Naked Heart",
+    "creator": "Aimyon",
+    "cover": "public/covers/6f342c6404e7.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Narrated for You",
+    "type": "music",
+    "title": "Narrated for You",
+    "creator": "Alec Benjamin",
+    "cover": "public/covers/8886b2c18d92.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Neon Genesis Evangelion (Original Series Soundtrack)",
+    "type": "music",
+    "title": "Neon Genesis Evangelion (Original Series Soundtrack)",
+    "creator": "Shiro SAGISU",
+    "cover": "public/covers/1e91f0f1086f.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:No. Eleven",
+    "type": "music",
+    "title": "No. Eleven",
+    "creator": "Hins Cheung",
+    "cover": "public/covers/ede957c68bb9.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Nothing Lasts Forever",
+    "type": "music",
+    "title": "Nothing Lasts Forever",
+    "creator": "Juno Mak",
+    "cover": "public/covers/c725011393db.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:November's Chopin",
+    "type": "music",
+    "title": "November's Chopin",
+    "creator": "Jay Chou",
+    "cover": "public/covers/b2c1d74e6568.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:One Last Kiss",
+    "type": "music",
+    "title": "One Last Kiss",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/064f17868278.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Orange Moon",
+    "type": "music",
+    "title": "Orange Moon",
+    "creator": "Khalil Fong",
+    "cover": "public/covers/1d483f0a211d.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Pilgrim's Paradise",
+    "type": "music",
+    "title": "Pilgrim's Paradise",
+    "creator": "Daniel Caesar",
+    "cover": "public/covers/12c1c3d64ba5.jpg",
+    "categories": [
+      "R&B"
+    ]
+  },
+  {
+    "id": "music:Play It Loud Kiss Me Soft",
+    "type": "music",
+    "title": "Play It Loud Kiss Me Soft",
+    "creator": "Miriam Yeung",
+    "cover": "public/covers/e1c26bff1fb4.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol]",
+    "type": "music",
+    "title": "Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol]",
+    "creator": "The Weeknd & Madonna",
+    "cover": "public/covers/2da4d9602519.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Prema",
+    "type": "music",
+    "title": "Prema",
+    "creator": "Fujii Kaze",
+    "cover": "public/covers/b39b354f3b1b.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Promise",
+    "type": "music",
+    "title": "Promise",
+    "creator": "CoCo Lee",
+    "cover": "public/covers/77cc9956f007.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack (Edited Version)",
+    "type": "music",
+    "title": "Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack (Edited Version)",
+    "creator": "Various Artists",
+    "cover": "public/covers/36b315efc7b5.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Ram",
+    "type": "music",
+    "title": "Ram",
+    "creator": "Wheeler Walker Jr.",
+    "cover": "public/covers/57798442d116.jpg",
+    "categories": [
+      "Country"
+    ]
+  },
+  {
+    "id": "music:raw,book1",
+    "type": "music",
+    "title": "raw,book1",
+    "creator": "金車厘子",
+    "cover": "public/covers/a2a5ad7c44ac.jpg",
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:Recovery",
+    "type": "music",
+    "title": "Recovery",
+    "creator": "Eminem",
+    "cover": "public/covers/3a92fd4b1114.jpg",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:Reset",
+    "type": "music",
+    "title": "Reset",
+    "creator": "Taichi Mukai",
+    "cover": "public/covers/ecaf6ada14cd.jpg",
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:Señorita",
+    "type": "music",
+    "title": "Señorita",
+    "creator": "Shawn Mendes & Camila Cabello",
+    "cover": "public/covers/c152f72f445f.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Shall We Dance_ Shall We Talk!",
+    "type": "music",
+    "title": "Shall We Dance? Shall We Talk!",
+    "creator": "Eason Chan",
+    "cover": "public/covers/659c0cda23bf.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Shock Value",
+    "type": "music",
+    "title": "Shock Value",
+    "creator": "Timbaland",
+    "cover": "public/covers/c293bf4ca13a.jpg",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:Smoke + Mirrors (Deluxe)",
+    "type": "music",
+    "title": "Smoke + Mirrors (Deluxe)",
+    "creator": "Imagine Dragons",
+    "cover": "public/covers/fc616d0c5754.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:So Far",
+    "type": "music",
+    "title": "So Far",
+    "creator": "SoulFa",
+    "cover": "public/covers/965cf0699559.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Soft Machine",
+    "type": "music",
+    "title": "Soft Machine",
+    "creator": "Teddybears",
+    "cover": "public/covers/d54ada82412c.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Somnium Chamber",
+    "type": "music",
+    "title": "Somnium Chamber",
+    "creator": "9m88",
+    "cover": "public/covers/e205c46c71dd.jpg",
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:Son Of Spergy",
+    "type": "music",
+    "title": "Son Of Spergy",
+    "creator": "Daniel Caesar",
+    "cover": "public/covers/ffc6d89be463.jpg",
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:St. Louis to Liverpool",
+    "type": "music",
+    "title": "St. Louis to Liverpool",
+    "creator": "Chuck Berry",
+    "cover": "public/covers/0187a810909a.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:Starboy",
+    "type": "music",
+    "title": "Starboy",
+    "creator": "The Weeknd",
+    "cover": "public/covers/c4d70c85194d.jpg",
+    "categories": [
+      "R&B"
+    ]
+  },
+  {
+    "id": "music:Start Up",
+    "type": "music",
+    "title": "Start Up",
+    "creator": "Wilfred Lau",
+    "cover": "public/covers/5c35bf090e33.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Stranger Under My Skin",
+    "type": "music",
+    "title": "Stranger Under My Skin",
+    "creator": "Eason Chan",
+    "cover": "public/covers/025c741ae061.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:STRAY SHEEP",
+    "type": "music",
+    "title": "STRAY SHEEP",
+    "creator": "Kenshi Yonezu",
+    "cover": "public/covers/bb3c78bdaf5f.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:take off",
+    "type": "music",
+    "title": "take off",
+    "creator": "oceanfromtheblue",
+    "cover": "public/covers/149445c3f29e.jpg",
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:The Art of Loving",
+    "type": "music",
+    "title": "The Art of Loving",
+    "creator": "Olivia Dean",
+    "cover": "public/covers/a6b97c4958fb.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:The Eight Dimensions",
+    "type": "music",
+    "title": "The Eight Dimensions",
+    "creator": "Jay Chou",
+    "cover": "public/covers/c46cab5e0c44.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:The Game (Deluxe Edition)",
+    "type": "music",
+    "title": "The Game (Deluxe Edition)",
+    "creator": "Queen",
+    "cover": "public/covers/e9083dc316f7.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:The Hunger Games_ Mockingjay, Pt. 1 (Original Motion Picture Soundtrack)",
+    "type": "music",
+    "title": "The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack)",
+    "creator": "Olivia Rodrigo, Rachel Zegler & Flatland Cavalry",
+    "cover": "public/covers/96eebbd6ff1c.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:The Key",
+    "type": "music",
+    "title": "The Key",
+    "creator": "Eason Chan",
+    "cover": "public/covers/edd5597e96bd.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:The Life of a Showgirl",
+    "type": "music",
+    "title": "The Life of a Showgirl",
+    "creator": "Taylor Swift",
+    "cover": "public/covers/43b73ba64782.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:The Line-Up",
+    "type": "music",
+    "title": "The Line-Up",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9a9bfd60f996.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
+    "type": "music",
+    "title": "The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
+    "creator": "Various Artists",
+    "cover": "public/covers/4410b8e40a57.jpg",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:The Story",
+    "type": "music",
+    "title": "The Story",
+    "creator": "Brandi Carlile",
+    "cover": "public/covers/caa7ae00d840.jpg",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:Time Flies 2010",
+    "type": "music",
+    "title": "Time Flies 2010",
+    "creator": "Eason Chan",
+    "cover": "public/covers/0d1ac0b7c03a.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Tough",
+    "type": "music",
+    "title": "Tough",
+    "creator": "Mika Nakashima",
+    "cover": "public/covers/8f5a2384cddd.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:TRADY 1.0",
+    "type": "music",
+    "title": "TRADY 1.0",
+    "creator": "崔迪Trady",
+    "cover": "public/covers/bce2ee6510c6.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Twilight",
+    "type": "music",
+    "title": "Twilight",
+    "creator": "bôa",
+    "cover": "public/covers/fc41b091e569.jpg",
+    "categories": [
+      "Indie Pop"
+    ]
+  },
+  {
+    "id": "music:Uchiagehanabi",
+    "type": "music",
+    "title": "Uchiagehanabi",
+    "creator": "DAOKO",
+    "cover": "public/covers/7b047df2258a.jpg",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Ultraviolence (Deluxe)",
+    "type": "music",
+    "title": "Ultraviolence (Deluxe)",
+    "creator": "Lana Del Rey",
+    "cover": "public/covers/d62391d903a5.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Valentine",
+    "type": "music",
+    "title": "Valentine",
+    "creator": "G.E.M. 邓紫棋",
+    "cover": "public/covers/ff73eb489364.jpg",
+    "categories": [
+      "华语流行"
+    ]
+  },
+  {
+    "id": "music:Way out (With Track-by-Track Commentary)",
+    "type": "music",
+    "title": "Way out (With Track-by-Track Commentary)",
+    "creator": "Taylor Swift",
+    "cover": "public/covers/c0674feaab5c.jpg",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:We have a lifetime to shine",
+    "type": "music",
+    "title": "We have a lifetime to shine",
+    "creator": "Young Dan",
+    "cover": "public/covers/bd2dc0f163a5.jpg",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:What Was I Made For_ (From The Motion Picture _Barbie_)",
+    "type": "music",
+    "title": "What Was I Made For? (From The Motion Picture \"Barbie\")",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/1c3790c67a17.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:What's Going On..._",
+    "type": "music",
+    "title": "What's Going On...?",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c680be68efdd.jpg",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:WHEN WE ALL FALL ASLEEP, WHERE DO WE GO_",
+    "type": "music",
+    "title": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/49cbde0ef98a.jpg",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Wonderland",
+    "type": "music",
+    "title": "Wonderland",
+    "creator": "Khalil Fong",
+    "cover": "public/covers/8c1d0a085d05.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Yeh, Hwei-Mei",
+    "type": "music",
+    "title": "Yeh, Hwei-Mei",
+    "creator": "Jay Chou",
+    "cover": "public/covers/42b4ff625008.jpg",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:You Don't Mess Around With Jim",
+    "type": "music",
+    "title": "You Don't Mess Around With Jim",
+    "creator": "Jim Croce",
+    "cover": "public/covers/636274f255be.jpg",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:You'll Live Forever in My Songs",
+    "type": "music",
+    "title": "You'll Live Forever in My Songs",
+    "creator": "Paige Su",
+    "cover": "public/covers/c5ecd728f01f.jpg",
+    "categories": [
+      "Indie Pop"
+    ]
+  },
+  {
+    "id": "music:Zoo (From _Zootropolis 2_)",
+    "type": "music",
+    "title": "Zoo (From \"Zootropolis 2\")",
+    "creator": "Shakira",
+    "cover": "public/covers/b619bbab26c5.jpg",
+    "categories": [
+      "Pop"
+    ]
+  }
+]

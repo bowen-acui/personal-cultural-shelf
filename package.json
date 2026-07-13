@@ -1,0 +1,9 @@
+{
+  "name": "personal-cultural-shelf",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-library.mjs",
+    "test": "node --test"
+  }
+}
