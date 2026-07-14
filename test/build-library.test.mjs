@@ -12,6 +12,7 @@ import {
   orphanCoverNames,
   resolveVaultRoot,
   validateUniqueRecords,
+  sortMediaRecords,
 } from "../scripts/build-library.mjs";
 
 test("parseFrontmatter reads quoted scalars and dates", () => {
@@ -150,4 +151,18 @@ test("vault root is portable and duplicate ids are rejected", () => {
 
 test("orphan cover names only includes generated, unreferenced files", () => {
   assert.deepEqual(orphanCoverNames(["abc123abc123-320.webp", "def456def456-720.webp", "manual-note.txt"], new Set(["abc123abc123-320.webp"])), ["def456def456-720.webp"]);
+});
+
+test("book records sort from five stars to one while other shelves keep title order", () => {
+  const records = [
+    { id: "music:z", type: "music", title: "乙" },
+    { id: "book:two", type: "book", title: "乙", rating: 2 },
+    { id: "book:five", type: "book", title: "丙", rating: 5 },
+    { id: "book:none", type: "book", title: "甲" },
+    { id: "film:a", type: "film", title: "甲" },
+    { id: "book:four", type: "book", title: "甲", rating: 4 },
+    { id: "music:a", type: "music", title: "甲" },
+  ];
+  sortMediaRecords(records);
+  assert.deepEqual(records.map((item) => item.id), ["book:five", "book:four", "book:two", "book:none", "film:a", "music:a", "music:z"]);
 });

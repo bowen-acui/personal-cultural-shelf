@@ -68,6 +68,18 @@ export function validateUniqueRecords(records) {
   return records;
 }
 
+export function sortMediaRecords(records) {
+  return records.sort((left, right) => {
+    const typeOrder = left.type.localeCompare(right.type);
+    if (typeOrder) return typeOrder;
+    if (left.type === "book") {
+      const ratingOrder = (right.rating ?? 0) - (left.rating ?? 0);
+      if (ratingOrder) return ratingOrder;
+    }
+    return left.title.localeCompare(right.title, "zh-CN");
+  });
+}
+
 export function orphanCoverNames(names, referenced) {
   return names.filter((name) => /^[a-f0-9]{12}(?:-(?:320|720))?\.(jpg|jpeg|png|webp|avif)$/i.test(name) && !referenced.has(name));
 }
@@ -158,7 +170,7 @@ async function buildLibrary() {
   const collections = [];
   for (const source of sources) collections.push(...await buildSource(source));
   validateUniqueRecords(collections);
-  collections.sort((left, right) => left.type.localeCompare(right.type) || left.title.localeCompare(right.title, "zh-CN"));
+  sortMediaRecords(collections);
   const temporaryFile = `${mediaFile}.tmp`;
   await writeFile(temporaryFile, `${JSON.stringify(collections, null, 2)}\n`, "utf8");
   await rename(temporaryFile, mediaFile);
