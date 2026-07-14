@@ -25,8 +25,8 @@ A personal library emptied onto a warm paper table. The signature is abundance w
 | Focus | `--focus` | `rgb(181 86 57)` | Focus ring and selected state |
 | Active | `--active` | `rgb(196 93 62)` | Active control, observed source |
 | Paper line | `--paper-line` | `rgb(213 206 194)` | Subtle page ruling |
-| Focus backdrop | `--focus-backdrop` | `rgb(35 31 27 / 58%)` | A warm, translucent retreat behind one touched work |
-| Glass surface | `--glass-surface` | `rgb(244 241 234 / 78%)` | Focus layer, filter and catalog tools |
+| Focus backdrop | `--focus-backdrop` | `rgb(35 31 27 / 58%)` | Share-poster dialog backdrop only |
+| Glass surface | `--glass-surface` | `rgb(244 241 234 / 78%)` | Filter and share tools only |
 | Glass edge | `--glass-edge` | `rgb(255 255 255 / 56%)` | Refracted inner highlight |
 
 No dark theme is included in the first version. Cover artwork retains its original colors.
@@ -40,7 +40,8 @@ No dark theme is included in the first version. Cover artwork retains its origin
 | Body | 14px | 400 | 1.4 | 0 | Author |
 | Mono | 10px | 400 | 1.3 | 0.08em | Navigation, count |
 
-- Display serif: `"Instrument Serif", Georgia, serif`; used by the source for the brand and editorial headings.
+- Display serif: `"Instrument Serif", Georgia, serif`; used by the source for the brand and editorial headings. Instrument Serif and Space Mono are checked into `public/fonts/` so the layout does not depend on a font CDN.
+- Detail Chinese text: `"LXGW WenKai", "霞鹜文楷", var(--font-display)`; reserved for the flipped work object so the information side feels handwritten and distinct without changing navigation or controls.
 - Interface sans: `Inter, -apple-system, sans-serif`; used by the source for body text.
 - Interface mono: `"Space Mono", monospace`; used by the source for controls, labels, and metadata.
 
@@ -63,6 +64,7 @@ Base unit: 4px.
 - Desktop cover width: 104-168px. Mobile cover width: 88-120px.
 - Breakpoints: mobile `< 640px`, tablet `640-1023px`, desktop `>= 1024px`.
 - Page texture: subtle vertical paper ruling, not a flat fill.
+- Cover assets: the data builder emits deterministic `-320.webp` and `-720.webp` derivatives; the interface uses `srcset` and keeps the larger asset for the floating detail object.
 
 ## 5. Components
 
@@ -76,28 +78,21 @@ Base unit: 4px.
 ### Cover Object
 
 - **Structure**: native button containing one proportional image and an accessible label.
-- **States**: default is rotated and shadowed; hover/focus raises z-index and reveals the information slip; press compresses to 98.5%; click opens the Focus Layer.
+- **States**: default is rotated and shadowed; hover/focus raises z-index; press gives a short physical response; one click opens the floating work object on the same shelf page.
 - **Accessibility**: keyboard reachable, visible focus ring, image alt contains title and author, pressed state reflects mobile selection.
-- **Motion**: source transition is 300ms for transform and shadow; reduced-motion mode makes the transition immediate.
-
-### Focus Layer
-
-- **Structure**: a native dialog containing the full cover, one media label, title, creator, public categories, and books' optional completion month.
-- **States**: closed, entering, open, switching, leaving. Only one work can be focused at once.
-- **Interaction**: one click, Enter, or Space opens it; clicking the surrounding backdrop, Escape, media navigation, Filter, or Share closes it. Clicking another cover switches focus directly. Dragging never opens it.
-- **Material**: warm translucent paper, one refracted highlight, one inner shade, and two warm shadows. It is not blue-purple glass and carries no decorative glow.
-- **Accessibility**: `aria-labelledby`, `aria-describedby`, a 44px close target, focus moves into the dialog and returns to the triggering cover.
+- **Motion**: scatter touch feedback is 180ms without overshoot; layout modes retain their editorial spring; reduced-motion mode makes the transition immediate.
 
 ### Information Slip
 
 - **Structure**: title, creator, books' completion month, optional categories.
-- **States**: hidden by default; visible only for the active cover.
+- **States**: hidden by default; visible on hover or keyboard focus. The floating object carries the full public information.
+- **Material**: no panel, border, blur, or glass; typography stays attached to the cover object.
 - **Accessibility**: associated with the cover through `aria-describedby`; content is always present in the DOM.
 - **Motion**: opacity and transform only, 200ms ease-out.
 
 ### Control Capsule
 
-- **Structure**: fixed warm-dark capsule with three groups: layout (Scatter, Shake, Tidy, Vortex), action (Filter, Share), and destination (Catalog). The collection count sits in the footer.
+- **Structure**: fixed warm-dark capsule following the source rhythm: count, divider, individually surfaced actions, divider, and accent Catalog link. Every label shares one vertical center; Catalog is optically raised 1px.
 - **States**: default, active, pressed, hover, focus, compact mobile. Active layout uses an inset surface and a small accent dot rather than a solid accent pill.
 - **Accessibility**: `aria-live="polite"` after data loads.
 - **Motion**: controls use the observed 200ms transition.
@@ -123,42 +118,48 @@ Base unit: 4px.
 - **Accessibility**: native search input, live result count, semantic list.
 - **Motion**: none.
 
+### Floating Work Object
+
+- **Structure**: a modal floating object on the current shelf page. Its front is the original cover; tapping it flips to a dark information back.
+- **Information**: media type, title, creator, categories, and book completion month. Films and music never show dates.
+- **Rating**: books alone show five dots representing the `rating` field from 1–5. Missing book ratings render as five empty dots; films and music show no rating row.
+- **Material**: the reverse uses the same warm-dark surface as the control capsule, with a terracotta title accent and no glass card.
+- **Dismissal**: close button, Escape, or tapping the transparent backdrop returns to the unchanged shelf. The shelf stays sharp and fully visible behind the floating object.
+- **Motion**: 520ms GPU-composited `rotateY`; reduced-motion removes the transition.
+
 ## 6. Motion & Interaction
 
 | Type | Duration | Easing | Usage |
 |---|---:|---|---|
-| Cover emphasis | 300ms | ease | Transform and shadow, observed source behavior |
+| Cover emphasis | 180ms | `cubic-bezier(0.2, 0.8, 0.2, 1)` | Scatter hover, press, and focus feedback |
 | Slip reveal | 200ms | ease-out | Opacity and transform |
 | Tidy | 700ms | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Grid arrangement with 18ms stagger |
 | Vortex | 900ms | `cubic-bezier(0.2, 1.6, 0.4, 1)` | Spiral arrangement with 8ms stagger |
 | Filter | 400ms | ease | Dim unrelated covers to 0.12 |
-| Focus layer | 320ms | `cubic-bezier(0.22, 1, 0.36, 1)` | Cover and information settle into the warm glass layer |
-| Focus backdrop | 240ms | ease-out | Environment recedes without disappearing |
 | Press | 80ms | ease-out | Physical compression to 0.985 |
 
 - No continuous animation, parallax, or decorative motion.
 - Shake recomputes Scatter positions; Scatter, Tidy, and Vortex are explicit user-chosen modes.
 - Pointer and touch dragging update only the selected cover position.
 - Hover and focus share the same visual state.
-- Tap opens one cover in the Focus Layer; tapping the surrounding canvas or pressing Escape closes it.
+- Tap opens the floating work object without leaving the shelf; dragging remains a separate gesture and does not open it.
 - `prefers-reduced-motion: reduce` removes transition duration.
 
 ## 7. Depth & Surface
 
-Strategy: mixed, limited to the physical cover metaphor and the single touched-work Focus Layer.
+Strategy: physical cover objects remain the only depth metaphor on the shelf.
 
 | Level | Value | Usage |
 |---|---|---|
 | Cover rest | `2px 4px 12px rgb(0 0 0 / 15%), 0 1px 3px rgb(0 0 0 / 10%)` | Observed source cover shadow |
 | Cover active | `8px 16px 28px rgb(0 0 0 / 24%), 0 3px 8px rgb(0 0 0 / 14%)` | Focused cover |
 | Slip | `0 8px 24px rgb(0 0 0 / 14%)` | Paper information slip |
-| Focus glass | `0 1px 0 rgb(255 255 255 / 56%) inset, 0 -1px 0 rgb(70 58 47 / 9%) inset, 0 18px 48px rgb(55 44 35 / 22%), 0 4px 14px rgb(55 44 35 / 14%)` | Touched-work layer |
 
-Covers use the observed 4px radius. Glass is reserved for transient interaction layers and the catalog tool strip; it never wraps every item into a card.
+Covers use the observed 4px radius. Glass is reserved for utility tools such as filtering and poster generation; touching a work never creates another surface.
 
 ## 8. Accessibility Constraints & Accepted Debt
 
-Layer contract: header `--layer-header: 40`, active object `--layer-object-active: 50`, filter `--layer-filter: 60`, controls `--layer-controls: 70`, status `--layer-status: 80`. Dialogs use the browser top layer. Every interactive target is at least 44px, and transient states are mutually exclusive.
+Layer contract: header `--layer-header: 40`, active object `--layer-object-active: 50`, filter `--layer-filter: 60`, controls `--layer-controls: 70`, status `--layer-status: 80`. The share dialog uses the browser top layer. Every interactive target is at least 44px, and transient states are mutually exclusive.
 
 ### Constraints
 

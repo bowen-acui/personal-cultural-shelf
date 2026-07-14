@@ -1,3 +1,53 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="阿崔看过的电影。"><title>影 · 阿崔的精神地图</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="shelf.css"></head>
-<body data-media-type="film"><header class="site-header"><a class="brand" href="./"><span>阿崔的精神地图</span><small>读过 · 看过 · 听过</small></a><nav class="media-nav" aria-label="精神地图入口"><a data-type="book" href="./">书</a><a data-type="film" aria-current="page" href="film.html">影</a><a data-type="music" href="music.html">音</a></nav></header><main><section id="shelf-stage" class="shelf-stage" aria-label="影的收藏" aria-busy="true"></section></main><section id="filter-panel" class="filter-panel" aria-label="按分类筛选" hidden></section><div id="shelf-controls" class="shelf-controls" aria-label="陈列操作"><span class="control-group control-layout"><button class="is-active" data-mode="scatter" type="button">散落</button><button data-action="shake" type="button">抖动</button><button data-mode="tidy" type="button">整理</button><button data-mode="vortex" type="button">漩涡</button></span><span class="control-group control-actions"><button data-action="filter" aria-expanded="false" aria-controls="filter-panel" type="button">筛选</button><button id="share-action" data-action="share" type="button">分享</button></span><span class="control-group control-destination"><a href="browse.html">目录</a></span></div><div id="pick-status" class="pick-status" role="status" aria-live="polite" hidden>选择五件藏品 <strong id="pick-count">0</strong>/5 <button id="make-poster" type="button" disabled>生成图片</button></div><dialog id="poster-dialog" class="shelf-dialog"><button class="dialog-close" type="button" aria-label="关闭">×</button><h2>你的五件藏品</h2><img id="poster-preview" alt="五件藏品组成的分享图片"><div><a id="poster-download" download="acui-spiritual-map.png">下载图片</a><button id="copy-link" type="button">复制本站链接</button></div></dialog><dialog id="detail-dialog" class="shelf-dialog focus-dialog" aria-labelledby="detail-title" aria-describedby="detail-meta"><div class="focus-cover"><img id="detail-cover" alt=""></div><div class="focus-copy"><button class="dialog-close" type="button" aria-label="关闭">×</button><span id="detail-kind" class="eyebrow"></span><h2 id="detail-title"></h2><p id="detail-meta"></p></div></dialog><footer class="site-footer"><span><strong id="item-count">0</strong> <span id="item-kind">影</span></span><nav><a href="about.html">关于</a></nav></footer><script type="module" src="app.js?v=5"></script></body></html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="阿崔看过的电影。">
+    <meta property="og:title" content="影 · 阿崔的精神地图"><meta property="og:description" content="阿崔看过的电影。"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>影 · 阿崔的精神地图</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shelf.css">
+  </head>
+  <body data-media-type="film">
+    <a class="skip-link" href="#shelf-stage">跳到陈列</a>
+    <header class="site-header">
+      <a class="brand" href="./"><span>阿崔的精神地图</span><small>读过 · 看过 · 听过</small></a>
+      <nav class="media-nav" aria-label="精神地图入口">
+        <a data-type="book" href="./">书</a>
+        <a data-type="film" aria-current="page" href="film.html">影</a>
+        <a data-type="music" href="music.html">音</a>
+      </nav>
+    </header>
+    <main id="shelf-main">
+      <section id="shelf-stage" class="shelf-stage" aria-label="影的收藏" aria-busy="true"></section>
+    </main>
+    <section id="filter-panel" class="filter-panel" aria-label="按分类筛选" hidden></section>
+    <div id="shelf-controls" class="shelf-controls" aria-label="陈列操作">
+      <span class="control-stat"><strong id="item-count">0</strong><span id="item-kind">影</span></span>
+      <i class="control-divider" aria-hidden="true"></i>
+      <span class="control-group control-layout">
+        <button data-action="shake" type="button">抖动</button>
+        <button data-action="filter" aria-expanded="false" aria-controls="filter-panel" type="button">筛选</button>
+        <button data-mode="tidy" aria-pressed="false" type="button">整理</button>
+        <button data-mode="scatter" aria-pressed="true" class="is-active" type="button">散落</button>
+        <button data-mode="vortex" aria-pressed="false" type="button">漩涡</button>
+        <button id="share-action" data-action="share" type="button">分享</button>
+      </span>
+      <i class="control-divider" aria-hidden="true"></i>
+      <a class="control-catalog" href="browse.html">目录 →</a>
+    </div>
+    <dialog id="work-dialog" class="work-dialog" aria-labelledby="work-title">
+      <button class="work-close" type="button" aria-label="关闭详情">×</button>
+      <button id="work-flip" class="work-flip" type="button" aria-pressed="false" aria-label="翻转查看作品信息">
+        <span class="work-flip-inner"><span class="work-face work-front"><img id="work-cover" alt=""></span><span class="work-face work-back"><small id="work-type"></small><strong id="work-title"></strong><span id="work-creator"></span><span id="work-meta"></span><em>点击翻回封面</em></span></span>
+      </button>
+    </dialog>
+    <div id="pick-status" class="pick-status" role="status" aria-live="polite" hidden>选择五件藏品 <strong id="pick-count">0</strong>/5 <button id="make-poster" type="button" disabled>生成图片</button></div>
+    <dialog id="poster-dialog" class="shelf-dialog" aria-labelledby="poster-title">
+      <button class="dialog-close" type="button" aria-label="关闭">×</button><h2 id="poster-title">你的五件藏品</h2><img id="poster-preview" alt="五件藏品组成的分享图片"><div><a id="poster-download" download="acui-spiritual-map.png">下载图片</a><button id="copy-link" type="button">复制本站链接</button></div>
+    </dialog>
+    <footer class="site-footer"><nav><a href="about.html">关于</a></nav></footer>
+    <script type="module" src="app.js?v=6"></script>
+  </body>
+</html>

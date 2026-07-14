@@ -22,8 +22,9 @@ python3 -m http.server 4173
 - 公开分类
 - 本地封面
 - 书籍完读年月
+- 可选的个人评分（1–5）
 
-网站不会读取或发布重点摘抄、ISBN、出版社、完整日期、阅读天数、评分、来源和相关笔记。运行网站不需要 Obsidian、数据库、后台或网络接口。
+网站不会读取或发布重点摘抄、ISBN、出版社、完整日期、阅读天数、来源和相关笔记。运行网站不需要 Obsidian、数据库、后台或网络接口。
 
 ## 更新收藏
 
@@ -33,9 +34,11 @@ python3 -m http.server 4173
 npm run build:data
 ```
 
+评分使用 frontmatter 字段 `评分: 1` 到 `评分: 5`；不填写时，详情卡显示五个空点。
+
 如果 Obsidian 不在默认位置，可以通过 `OBSIDIAN_VAULT=/path/to/阿崔 npm run build:data` 指定只读数据源。
 
-生成结果位于 `data/media.json` 与 `public/covers/`。将代码推送到 GitHub 后，可以使用任意静态托管服务发布。
+生成结果位于 `data/media.json` 与 `public/covers/`。构建会为每张封面生成 320px 与 720px 的 WebP 响应式资源，页面通过 `srcset` 按设备选择尺寸。字体文件（包含详情背面的霞鹜文楷）与 favicon 也随站点本地发布，因此运行时不依赖第三方字体 CDN。将代码推送到 GitHub 后，可以使用任意静态托管服务发布。
 
 ## 参考站扫描
 

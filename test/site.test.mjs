@@ -28,6 +28,12 @@ test("browse, film, music and about pages exist", async () => {
   assert.ok(pages.every((page) => page.includes("阿崔的精神地图")));
 });
 
+test("public pages expose local identity assets", async () => {
+  const pages = await Promise.all(["index", "film", "music", "browse", "about"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
+  assert.ok(pages.every((page) => page.includes("favicon.svg") && page.includes("og:title")));
+  assert.match(await readFile(new URL("../404.html", import.meta.url), "utf8"), /返回陈列/);
+});
+
 test("styles use the documented token and layer scale", async () => {
   const styles = await Promise.all(["styles", "shelf", "pages"].map((name) => readFile(new URL(`../${name}.css`, import.meta.url), "utf8")));
   const css = styles.join("\n");
@@ -38,25 +44,48 @@ test("styles use the documented token and layer scale", async () => {
   assert.match(css, /--layer-controls:/);
 });
 
-test("media objects open a semantic focus layer without double click", async () => {
-  const [app, index] = await Promise.all([
+test("media objects open a same-page flipping detail object", async () => {
+  const [app, index, shelf] = await Promise.all([
     readFile(new URL("../app.js", import.meta.url), "utf8"),
     readFile(new URL("../index.html", import.meta.url), "utf8"),
+    readFile(new URL("../shelf.css", import.meta.url), "utf8"),
   ]);
 
   assert.doesNotMatch(app, /addEventListener\("dblclick"/);
-  assert.match(app, /function showDetails/);
-  assert.match(app, /function closeDetails/);
-  assert.match(index, /id="detail-dialog"[^>]*aria-labelledby="detail-title"/);
-  assert.match(index, /aria-describedby="detail-meta"/);
+  assert.match(app, /function openWork/);
+  assert.match(app, /完读日期/);
+  assert.match(app, /workDialog\.showModal\(\)/);
+  assert.match(app, /Array\.from\(\{ length: 5 \}/);
+  assert.doesNotMatch(app, /function focusObject/);
+  assert.match(index, /id="work-dialog"/);
+  assert.match(index, /class="control-catalog" href="browse\.html">目录 →<\/a>/);
+  assert.match(shelf, /transition-timing-function:cubic-bezier\(.2,.8,.2,1\)/);
+  assert.match(shelf, /rotateY\(180deg\)/);
+  assert.match(shelf, /LXGW WenKai/);
 });
 
-test("shelf controls separate layout, actions and destination", async () => {
+test("shelf pages expose synchronized metadata and keyboard entry points", async () => {
+  const pages = await Promise.all(["index", "film", "music", "browse", "about"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
+  assert.ok(pages.every((page) => page.includes('class="skip-link"')));
+  assert.ok(pages.every((page) => page.includes('meta name="description"')));
+  assert.match(pages[0], /data-mode="scatter" aria-pressed="true"/);
+  assert.match(pages[0], /data-mode="tidy" aria-pressed="false"/);
+  assert.match(pages[0], /aria-labelledby="poster-title"/);
+  const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
+  assert.match(app, /const pageMeta =/);
+  assert.match(app, /document\.title = meta\.title/);
+  assert.match(app, /filterPanel\.querySelector\("\.filter-pill"\)\?\.focus\(\)/);
+  assert.match(app, /\.media-object:not\(\[aria-hidden="true"\]\)/);
+  assert.doesNotMatch(app, /stateMessage\.innerHTML/);
+});
+
+test("shelf controls use one continuous rhythm with count and catalog", async () => {
   const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 
-  assert.equal((html.match(/class="control-group/g) ?? []).length, 3);
-  assert.match(html, /class="control-group control-destination"/);
-  assert.match(html, /href="browse\.html">目录<\/a>/);
+  assert.match(html, /class="control-stat"/);
+  assert.equal((html.match(/class="control-divider"/g) ?? []).length, 2);
+  assert.match(html, /class="control-catalog" href="browse\.html">目录 →<\/a>/);
+  assert.doesNotMatch(html, /control-destination/);
 });
 
 test("drag cleanup survives pointer release outside the cover", async () => {

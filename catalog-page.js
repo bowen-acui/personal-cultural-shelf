@@ -15,6 +15,8 @@ function card(item) {
   article.setAttribute("role", "listitem");
   const image = document.createElement("img");
   image.src = item.cover;
+  if (item.coverLarge) image.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
+  image.sizes = "(max-width: 639px) 42vw, 180px";
   image.alt = [item.title, item.creator].filter(Boolean).join("，");
   image.width = 320;
   image.height = item.type === "music" ? 320 : 480;
@@ -22,7 +24,7 @@ function card(item) {
   const title = document.createElement("strong");
   const meta = document.createElement("small");
   title.textContent = item.title;
-  const month = item.type === "book" && item.completedMonth ? `${item.completedMonth.replace("-", "年")}月` : "";
+  const month = item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : "";
   meta.textContent = [labels[item.type], item.creator, month, ...(item.categories ?? [])].filter(Boolean).join(" · ");
   article.append(image, title, meta);
   return article;
@@ -32,6 +34,18 @@ function render() {
   const source = type.value === "全部" ? data : data.filter((item) => item.type === type.value);
   const results = filterCatalog(source, search.value, category.value);
   grid.replaceChildren(...results.map(card));
+  if (!results.length) {
+    const empty = document.createElement("div");
+    const clear = document.createElement("button");
+    empty.className = "catalog-empty";
+    empty.setAttribute("role", "listitem");
+    clear.type = "button";
+    clear.className = "catalog-empty-action";
+    clear.textContent = "清除搜索";
+    clear.addEventListener("click", () => { search.value = ""; render(); search.focus(); });
+    empty.append(clear);
+    grid.append(empty);
+  }
   status.textContent = results.length ? `找到 ${results.length} 件${type.value === "全部" ? "藏品" : labels[type.value]}` : "没有找到符合条件的藏品";
 }
 

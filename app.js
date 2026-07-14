@@ -5,15 +5,23 @@ import { pathForType, typeFromPath } from "./lib/routes.js";
 import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=2";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
+const pageMeta = {
+  book: { title: "阿崔的精神地图", description: "阿崔的精神地图：读过的书、看过的电影、听过的音乐。" },
+  film: { title: "影 · 阿崔的精神地图", description: "阿崔看过的电影。" },
+  music: { title: "音 · 阿崔的精神地图", description: "阿崔听过的音乐。" },
+};
 const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", picking: false, picked: [], dragging: false };
 const stage = document.querySelector("#shelf-stage");
 const controls = document.querySelector("#shelf-controls");
 const filterPanel = document.querySelector("#filter-panel");
-const detailDialog = document.querySelector("#detail-dialog");
-let detailTrigger = null;
+const workDialog = document.querySelector("#work-dialog");
+const workFlip = document.querySelector("#work-flip");
+const filterAction = document.querySelector('[data-action="filter"]');
+const shareAction = document.querySelector('[data-action="share"]');
+let transientTrigger = null;
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
-function monthLabel(item) { return item.type === "book" && item.completedMonth ? `${item.completedMonth.replace("-", "年")}月` : ""; }
+function monthLabel(item) { return item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : ""; }
 
 function placementFor(items) {
   const viewport = { width: document.documentElement.clientWidth, height: innerHeight };
@@ -39,7 +47,21 @@ function applyLayout() {
   stage.dataset.mode = state.mode;
   stage.dataset.mediaType = state.type;
   stage.style.height = `${stageHeightFor(state.items.length, document.documentElement.clientWidth, state.mode, state.type)}px`;
-  controls.querySelectorAll("[data-mode]").forEach((button) => button.classList.toggle("is-active", button.dataset.mode === state.mode));
+  controls.querySelectorAll("[data-mode]").forEach((button) => {
+    const active = button.dataset.mode === state.mode;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function rememberTrigger(element) {
+  transientTrigger = element instanceof HTMLElement ? element : null;
+}
+
+function restoreTrigger() {
+  const trigger = transientTrigger;
+  transientTrigger = null;
+  if (trigger?.isConnected) trigger.focus();
 }
 
 function createObject(item, index) {
@@ -49,9 +71,10 @@ function createObject(item, index) {
   button.dataset.index = index;
   button.dataset.categories = item.categories.join("|");
   button.setAttribute("aria-label", label(item));
-  button.setAttribute("aria-pressed", "false");
   const image = document.createElement("img");
   image.src = item.cover;
+  if (item.coverLarge) image.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
+  image.sizes = state.type === "music" ? "(max-width: 639px) 20vw, 8vw" : "(max-width: 639px) 25vw, 10vw";
   image.alt = label(item);
   image.width = 320;
   image.height = state.type === "music" ? 320 : 480;
@@ -71,12 +94,60 @@ function createObject(item, index) {
   return button;
 }
 
+function openWork(item) {
+  filterPanel.hidden = true;
+  document.querySelector('[data-action="filter"]').setAttribute("aria-expanded", "false");
+  document.querySelector("#poster-dialog")?.close();
+  workFlip.classList.remove("is-flipped");
+  workFlip.setAttribute("aria-pressed", "false");
+  workFlip.setAttribute("aria-label", "翻转查看作品信息");
+  workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
+  workFlip.style.setProperty("--detail-ratio", item.type === "music" ? "1" : "2 / 3");
+  const cover = document.querySelector("#work-cover");
+  cover.src = item.coverLarge || item.cover;
+  if (item.coverLarge) cover.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
+  cover.sizes = "(max-width: 639px) 72vw, 360px";
+  cover.alt = label(item);
+  document.querySelector("#work-type").textContent = typeLabels[item.type];
+  document.querySelector("#work-title").textContent = item.title;
+  document.querySelector("#work-creator").textContent = item.creator ?? "";
+  document.querySelector("#work-meta").textContent = [monthLabel(item), ...(item.categories ?? [])].filter(Boolean).join(" · ");
+  const score = item.type === "book" ? Math.max(0, Math.min(5, Number(item.rating) || 0)) : 0;
+  let rating = document.querySelector("#work-rating");
+  if (!rating) {
+    rating = document.createElement("span");
+    rating.id = "work-rating";
+    rating.className = "work-rating";
+    document.querySelector(".work-back").insertBefore(rating, document.querySelector(".work-back em"));
+  }
+  rating.hidden = item.type !== "book";
+  rating.setAttribute("aria-label", score ? `个人评分 ${score} / 5` : "尚未录入个人评分");
+  rating.replaceChildren(...Array.from({ length: 5 }, (_, index) => {
+    const dot = document.createElement("i");
+    dot.className = index < score ? "is-filled" : "";
+    return dot;
+  }));
+  const ratingLabel = item.type === "book"
+    ? (score ? `个人评分 ${score} / 5` : "尚未录入个人评分")
+    : "";
+  workFlip.dataset.detailLabel = [item.title, item.creator, document.querySelector("#work-meta").textContent, ratingLabel].filter(Boolean).join("，");
+  workDialog.showModal();
+}
+
 function setError(message) {
   stage.replaceChildren();
   stage.classList.add("shelf-state");
   const stateMessage = document.createElement("div");
   stateMessage.className = "shelf-error";
-  stateMessage.innerHTML = `<strong>暂时无法打开这张精神地图</strong><span>${message}</span><button type="button" data-action="retry">重新读取</button>`;
+  const title = document.createElement("strong");
+  const detail = document.createElement("span");
+  const retry = document.createElement("button");
+  title.textContent = "暂时无法打开这张精神地图";
+  detail.textContent = message;
+  retry.type = "button";
+  retry.dataset.action = "retry";
+  retry.textContent = "重新读取";
+  stateMessage.append(title, detail, retry);
   stage.append(stateMessage);
   stage.setAttribute("aria-busy", "false");
 }
@@ -86,6 +157,9 @@ function render() {
   stage.replaceChildren(...state.items.map(createObject));
   document.querySelector("#item-count").textContent = state.items.length;
   document.querySelector("#item-kind").textContent = typeLabels[state.type];
+  const meta = pageMeta[state.type];
+  document.title = meta.title;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
   document.querySelector(".media-nav [aria-current]")?.removeAttribute("aria-current");
   document.querySelector(`.media-nav [data-type="${state.type}"]`)?.setAttribute("aria-current", "page");
   stage.setAttribute("aria-label", `${typeLabels[state.type]}的收藏`);
@@ -125,34 +199,42 @@ function renderFilters() {
 
 function closeTransientStates() {
   filterPanel.hidden = true;
-  document.querySelector('[data-action="filter"]').setAttribute("aria-expanded", "false");
+  filterAction.setAttribute("aria-expanded", "false");
   if (state.picking) startPicking(false);
-  closeDetails(false);
+  workDialog?.close();
   document.querySelector("#poster-dialog")?.close();
+  restoreTrigger();
 }
 
 function showFilters() {
   if (state.picking) startPicking(false);
-  filterPanel.hidden = !filterPanel.hidden;
-  document.querySelector('[data-action="filter"]').setAttribute("aria-expanded", String(!filterPanel.hidden));
-}
-
-function clearSelection() {
-  stage.querySelectorAll(".is-selected").forEach((object) => { object.classList.remove("is-selected"); object.setAttribute("aria-pressed", "false"); });
+  const opening = filterPanel.hidden;
+  if (opening) rememberTrigger(filterAction);
+  filterPanel.hidden = !opening;
+  filterAction.setAttribute("aria-expanded", String(opening));
+  if (opening) requestAnimationFrame(() => filterPanel.querySelector(".filter-pill")?.focus());
+  else restoreTrigger();
 }
 
 function startPicking(force) {
   state.picking = typeof force === "boolean" ? force : !state.picking;
   filterPanel.hidden = true;
-  document.querySelector('[data-action="filter"]').setAttribute("aria-expanded", "false");
+  filterAction.setAttribute("aria-expanded", "false");
+  if (state.picking) rememberTrigger(shareAction);
   state.picked = [];
-  clearSelection();
-  stage.querySelectorAll(".is-picked").forEach((object) => { object.classList.remove("is-picked"); object.setAttribute("aria-pressed", "false"); });
+  workDialog?.close();
+  stage.querySelectorAll(".media-object").forEach((object) => {
+    object.classList.remove("is-picked");
+    if (state.picking) object.setAttribute("aria-pressed", "false");
+    else object.removeAttribute("aria-pressed");
+  });
   document.body.classList.toggle("is-picking", state.picking);
   document.querySelector("#share-action").textContent = state.picking ? "取消" : "分享";
   document.querySelector("#pick-status").hidden = !state.picking;
   document.querySelector("#pick-status").firstChild.textContent = `选择五件${typeLabels[state.type]}藏品 `;
   updatePickStatus();
+  if (state.picking) requestAnimationFrame(() => stage.querySelector('.media-object:not([aria-hidden="true"])')?.focus());
+  else restoreTrigger();
 }
 
 function updatePickStatus() {
@@ -164,34 +246,10 @@ function createPoster() {
   const items = state.picked.map((index) => ({ image: stage.querySelector(`[data-index="${index}"] img`) }));
   const canvas = createPosterCanvas(state.type, items);
   const url = canvas.toDataURL("image/png");
+  startPicking(false);
   document.querySelector("#poster-preview").src = url;
   document.querySelector("#poster-download").href = url;
   document.querySelector("#poster-dialog").showModal();
-}
-
-function showDetails(index, trigger) {
-  const item = state.items[index];
-  if (!item) return;
-  filterPanel.hidden = true;
-  document.querySelector('[data-action="filter"]').setAttribute("aria-expanded", "false");
-  clearSelection();
-  trigger.classList.add("is-selected");
-  trigger.setAttribute("aria-pressed", "true");
-  detailTrigger = trigger;
-  document.querySelector("#detail-cover").src = item.cover;
-  document.querySelector("#detail-cover").alt = item.title;
-  document.querySelector("#detail-kind").textContent = typeLabels[item.type];
-  document.querySelector("#detail-title").textContent = item.title;
-  document.querySelector("#detail-meta").textContent = [item.creator, monthLabel(item), ...item.categories].filter(Boolean).join(" · ");
-  detailDialog.showModal();
-  detailDialog.querySelector(".dialog-close").focus();
-}
-
-function closeDetails(restoreFocus = true) {
-  if (detailDialog?.open) detailDialog.close();
-  clearSelection();
-  if (restoreFocus && detailTrigger?.isConnected) detailTrigger.focus();
-  detailTrigger = null;
 }
 
 function enableDrag(object, event) {
@@ -273,10 +331,9 @@ stage.addEventListener("pointerdown", (event) => { const object = event.target.c
 stage.addEventListener("click", (event) => { if (event.target.closest('[data-action="retry"]')) load(); });
 stage.addEventListener("click", (event) => {
   const object = event.target.closest(".media-object");
-  if (!object) { closeDetails(false); return; }
-  if (state.dragging) return;
-  if (!state.picking) { showDetails(Number(object.dataset.index), object); return; }
+  if (!object || state.dragging) return;
   const index = Number(object.dataset.index); const position = state.picked.indexOf(index);
+  if (!state.picking) { openWork(state.items[index]); return; }
   if (position >= 0) state.picked.splice(position, 1); else if (state.picked.length < 5) state.picked.push(index);
   object.classList.toggle("is-picked", state.picked.includes(index)); object.setAttribute("aria-pressed", String(state.picked.includes(index))); updatePickStatus();
 });
@@ -288,17 +345,23 @@ document.querySelector("#copy-link").addEventListener("click", async (event) => 
   setTimeout(() => { button.textContent = "复制本站链接"; }, 1600);
 });
 document.querySelectorAll(".dialog-close").forEach((button) => button.addEventListener("click", () => {
-  if (button.closest("dialog") === detailDialog) closeDetails();
-  else button.closest("dialog").close();
+  button.closest("dialog").close();
 }));
-detailDialog.addEventListener("click", (event) => { if (event.target === detailDialog) closeDetails(); });
-detailDialog.addEventListener("cancel", (event) => { event.preventDefault(); closeDetails(); });
+document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => workDialog.close()));
+workFlip.addEventListener("click", () => {
+  const flipped = workFlip.classList.toggle("is-flipped");
+  workFlip.setAttribute("aria-pressed", String(flipped));
+  workFlip.setAttribute("aria-label", flipped ? `${workFlip.dataset.detailLabel}。翻回作品封面` : "翻转查看作品信息");
+});
+workDialog.addEventListener("click", (event) => { if (event.target === workDialog) workDialog.close(); });
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
   if (filterPanel.hidden === false) showFilters();
   else if (state.picking) startPicking(false);
-  else if (detailDialog.open) closeDetails();
-  else document.querySelector("#poster-dialog")?.close();
+  else if (document.querySelector("#poster-dialog")?.open) {
+    document.querySelector("#poster-dialog").close();
+    restoreTrigger();
+  }
 });
 let resizeFrame = 0;
 addEventListener("resize", () => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(applyLayout); });

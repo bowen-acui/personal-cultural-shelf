@@ -6,6 +6,7 @@ import {
   parseFrontmatter,
   isDisplayableMedia,
   completedMonth,
+  publicRating,
   toPublicMedia,
   toPublicBook,
   orphanCoverNames,
@@ -66,6 +67,14 @@ test("completedMonth keeps only the year and month", () => {
   assert.equal(completedMonth(""), "");
 });
 
+test("publicRating accepts only whole scores from one to five", () => {
+  assert.equal(publicRating("5"), 5);
+  assert.equal(publicRating(3), 3);
+  assert.equal(publicRating("4.5"), 0);
+  assert.equal(publicRating(6), 0);
+  assert.equal(publicRating(""), 0);
+});
+
 test("toPublicBook exposes only display fields", () => {
   const publicBook = toPublicBook(
     "黑天鹅.md",
@@ -90,6 +99,7 @@ test("toPublicBook exposes only display fields", () => {
     cover: "covers/black-swan.jpg",
     categories: ["投资", "思维"],
     completedMonth: "2024-08",
+    rating: 5,
   });
   assert.equal("ISBN" in publicBook, false);
   assert.equal("评分" in publicBook, false);
@@ -116,6 +126,7 @@ test("media records use the folder type and never expose dates", () => {
     封面: "附件/电影封面/一一.jpg",
     分类: ["剧情", ""],
     完成日期: "2024-01-01",
+    评分: "5",
   };
   assert.equal(isDisplayableMedia(metadata), true);
   assert.deepEqual(toPublicMedia("一一.md", metadata, "covers/one-one.jpg", "film"), {
@@ -127,6 +138,7 @@ test("media records use the folder type and never expose dates", () => {
     categories: ["剧情"],
   });
   assert.equal("completedMonth" in toPublicMedia("一一.md", { ...metadata, 完读日期: "2024-01-01" }, "covers/one-one.jpg", "film"), false);
+  assert.equal("rating" in toPublicMedia("一一.md", metadata, "covers/one-one.jpg", "film"), false);
   assert.equal(isDisplayableMedia({ 名称: "", 封面: "cover.jpg" }), false);
 });
 
@@ -137,5 +149,5 @@ test("vault root is portable and duplicate ids are rejected", () => {
 });
 
 test("orphan cover names only includes generated, unreferenced files", () => {
-  assert.deepEqual(orphanCoverNames(["abc123abc123.jpg", "def456def456.webp", "manual-note.txt"], new Set(["abc123abc123.jpg"])), ["def456def456.webp"]);
+  assert.deepEqual(orphanCoverNames(["abc123abc123-320.webp", "def456def456-720.webp", "manual-note.txt"], new Set(["abc123abc123-320.webp"])), ["def456def456-720.webp"]);
 });

@@ -3,6 +3,7 @@ import os from "node:os";
 import { mkdir, readFile, readdir, realpath, rename, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import sharp from "sharp";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const coversDirectory = path.join(projectRoot, "public/covers");
@@ -45,6 +46,11 @@ export function completedMonth(value) {
   return match ? `${match[1]}-${match[2].padStart(2, "0")}` : "";
 }
 
+export function publicRating(value) {
+  const score = Number(value);
+  return Number.isInteger(score) && score >= 1 && score <= 5 ? score : 0;
+}
+
 export function isDisplayableMedia(metadata) {
   return Boolean((metadata.名称 || metadata.书名)?.trim() && metadata.封面?.trim());
 }
@@ -63,7 +69,7 @@ export function validateUniqueRecords(records) {
 }
 
 export function orphanCoverNames(names, referenced) {
-  return names.filter((name) => /^[a-f0-9]{12}\.(jpg|jpeg|png|webp|avif)$/i.test(name) && !referenced.has(name));
+  return names.filter((name) => /^[a-f0-9]{12}(?:-(?:320|720))?\.(jpg|jpeg|png|webp|avif)$/i.test(name) && !referenced.has(name));
 }
 
 function categories(metadata) {
@@ -74,18 +80,21 @@ function publicId(filename, type) {
   return `${type}:${path.basename(filename, path.extname(filename))}`;
 }
 
-export function toPublicMedia(filename, metadata, publicCover, type) {
+export function toPublicMedia(filename, metadata, publicCover, type, publicCoverLarge = "") {
   const title = (metadata.名称 || metadata.书名 || path.basename(filename, path.extname(filename))).trim();
   const creator = (metadata.创作者 || metadata.作者 || "").trim();
   const month = type === "book" ? completedMonth(metadata.完读日期) : "";
+  const rating = type === "book" ? publicRating(metadata.评分) : 0;
   return {
     id: publicId(filename, type),
     type,
     title,
     ...(creator ? { creator } : {}),
     cover: publicCover,
+    ...(publicCoverLarge ? { coverLarge: publicCoverLarge } : {}),
     categories: categories(metadata),
     ...(month ? { completedMonth: month } : {}),
+    ...(rating ? { rating } : {}),
   };
 }
 
@@ -97,19 +106,31 @@ function coverDestination(sourcePath, contents) {
   const extension = path.extname(sourcePath).toLowerCase();
   if (![".jpg", ".jpeg", ".png", ".webp", ".avif"].includes(extension)) return null;
   const digest = createHash("sha1").update(contents).digest("hex").slice(0, 12);
-  return `${digest}${extension}`;
+  return digest;
 }
 
 async function copyCover(sourceCover) {
   const resolvedRoot = await realpath(resolveVaultRoot());
   const resolvedCover = await realpath(sourceCover);
   const relativeCover = path.relative(resolvedRoot, resolvedCover);
+  if (relativeCover.startsWith("..") || path.isAbsolute(relativeCover)) return null;
   const sourceStat = await stat(resolvedCover);
+  if (!sourceStat.isFile()) return null;
   const contents = await readFile(resolvedCover);
   const outputName = coverDestination(resolvedCover, contents);
-  if (!outputName || relativeCover.startsWith("..") || path.isAbsolute(relativeCover) || !sourceStat.isFile()) return null;
-  await writeFile(path.join(coversDirectory, outputName), contents);
-  return `public/covers/${outputName}`;
+  if (!outputName) return null;
+  await sharp(contents)
+    .resize({ width: 320, withoutEnlargement: true })
+    .webp({ quality: 82, effort: 4 })
+    .toFile(path.join(coversDirectory, `${outputName}-320.webp`));
+  await sharp(contents)
+    .resize({ width: 720, withoutEnlargement: true })
+    .webp({ quality: 84, effort: 4 })
+    .toFile(path.join(coversDirectory, `${outputName}-720.webp`));
+  return {
+    small: `public/covers/${outputName}-320.webp`,
+    large: `public/covers/${outputName}-720.webp`,
+  };
 }
 
 async function buildSource(source) {
@@ -122,8 +143,8 @@ async function buildSource(source) {
     const displayable = source.type === "book" ? isDisplayableBook(metadata) : isDisplayableMedia(metadata);
     if (!displayable) continue;
     try {
-      const cover = await copyCover(path.resolve(vaultRoot, metadata.封面));
-      if (cover) records.push(toPublicMedia(filename, metadata, cover, source.type));
+      const covers = await copyCover(path.resolve(vaultRoot, metadata.封面));
+      if (covers) records.push(toPublicMedia(filename, metadata, covers.small, source.type, covers.large));
     } catch (error) {
       if (error.code !== "ENOENT") throw error;
     }
@@ -141,7 +162,7 @@ async function buildLibrary() {
   const temporaryFile = `${mediaFile}.tmp`;
   await writeFile(temporaryFile, `${JSON.stringify(collections, null, 2)}\n`, "utf8");
   await rename(temporaryFile, mediaFile);
-  const referenced = new Set(collections.map((item) => path.basename(item.cover)));
+  const referenced = new Set(collections.flatMap((item) => [path.basename(item.cover), path.basename(item.coverLarge)]));
   const existingCovers = await readdir(coversDirectory);
   for (const orphan of orphanCoverNames(existingCovers, referenced)) await rm(path.join(coversDirectory, orphan));
   const counts = collections.reduce((result, item) => { result[item.type] = (result[item.type] ?? 0) + 1; return result; }, {});

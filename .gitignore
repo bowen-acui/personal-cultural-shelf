@@ -1,3 +1,4 @@
 .worktrees/
 qa/
+node_modules/
 research/reference/
