@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build:data": "node scripts/build-library.mjs",
+    "start": "node server.mjs",
     "test": "node --test"
   },
   "devDependencies": {
