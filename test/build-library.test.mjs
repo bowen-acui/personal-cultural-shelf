@@ -13,6 +13,8 @@ import {
   resolveVaultRoot,
   validateUniqueRecords,
   sortMediaRecords,
+  filmPriority,
+  musicPriority,
 } from "../scripts/build-library.mjs";
 
 test("parseFrontmatter reads quoted scalars and dates", () => {
@@ -165,4 +167,15 @@ test("book records sort from five stars to one while other shelves keep title or
   ];
   sortMediaRecords(records);
   assert.deepEqual(records.map((item) => item.id), ["book:five", "book:four", "book:two", "book:none", "film:a", "music:a", "music:z"]);
+});
+
+test("film and music records honor the requested creator priorities", () => {
+  assert.equal(filmPriority({ title: "低俗小说", creator: "昆汀·塔伦蒂诺" }), 0);
+  assert.equal(filmPriority({ title: "搏击俱乐部", creator: "大卫·芬奇" }), 1);
+  assert.equal(filmPriority({ title: "奇巧计程车", creator: "木下麦" }), 2);
+  assert.equal(filmPriority({ title: "霸王别姬", creator: "陈凯歌" }), 3);
+  assert.equal(musicPriority({ creator: "Eason Chan" }), 0);
+  assert.equal(musicPriority({ creator: "Gareth.T" }), 1);
+  assert.equal(musicPriority({ creator: "Billie Eilish" }), 2);
+  assert.equal(musicPriority({ creator: "Chen Hsien Ching" }), 3);
 });

@@ -51,6 +51,11 @@ export function publicRating(value) {
   return Number.isInteger(score) && score >= 1 && score <= 5 ? score : 0;
 }
 
+export function publicDecimalRating(value) {
+  const score = Number(value);
+  return Number.isFinite(score) && score >= 0 && score <= 10 ? score : 0;
+}
+
 export function isDisplayableMedia(metadata) {
   return Boolean((metadata.名称 || metadata.书名)?.trim() && metadata.封面?.trim());
 }
@@ -76,8 +81,38 @@ export function sortMediaRecords(records) {
       const ratingOrder = (right.rating ?? 0) - (left.rating ?? 0);
       if (ratingOrder) return ratingOrder;
     }
+    if (left.type === "film") {
+      const priorityOrder = filmPriority(left) - filmPriority(right);
+      if (priorityOrder) return priorityOrder;
+      const doubanOrder = (right.doubanRating ?? 0) - (left.doubanRating ?? 0);
+      if (doubanOrder) return doubanOrder;
+    }
+    if (left.type === "music") {
+      const priorityOrder = musicPriority(left) - musicPriority(right);
+      if (priorityOrder) return priorityOrder;
+    }
     return left.title.localeCompare(right.title, "zh-CN");
   });
+}
+
+function hasCreator(item, names) {
+  return names.some((name) => item.creator?.toLowerCase().includes(name.toLowerCase()));
+}
+
+export function filmPriority(item) {
+  if (hasCreator(item, ["昆汀·塔伦蒂诺", "昆汀", "quentin tarantino"])) return 0;
+  if (item.title === "搏击俱乐部") return 1;
+  if (item.title === "奇巧计程车") return 2;
+  if (item.title === "霸王别姬") return 3;
+  return 4;
+}
+
+export function musicPriority(item) {
+  if (hasCreator(item, ["陈奕迅", "eason chan"])) return 0;
+  if (hasCreator(item, ["汤令山", "gareth.t"])) return 1;
+  if (hasCreator(item, ["billie eilish", "billy"])) return 2;
+  if (hasCreator(item, ["陈娴静", "chen hsien ching"])) return 3;
+  return 4;
 }
 
 export function orphanCoverNames(names, referenced) {
@@ -97,6 +132,7 @@ export function toPublicMedia(filename, metadata, publicCover, type, publicCover
   const creator = (metadata.创作者 || metadata.作者 || "").trim();
   const month = type === "book" ? completedMonth(metadata.完读日期) : "";
   const rating = type === "book" ? publicRating(metadata.评分) : 0;
+  const doubanRating = type === "film" ? publicDecimalRating(metadata.豆瓣评分 || metadata.豆瓣分数) : 0;
   return {
     id: publicId(filename, type),
     type,
@@ -107,6 +143,7 @@ export function toPublicMedia(filename, metadata, publicCover, type, publicCover
     categories: categories(metadata),
     ...(month ? { completedMonth: month } : {}),
     ...(rating ? { rating } : {}),
+    ...(doubanRating ? { doubanRating } : {}),
   };
 }
 

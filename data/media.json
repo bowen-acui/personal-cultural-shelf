@@ -1761,6 +1761,113 @@
     "rating": 1
   },
   {
+    "id": "film:被解救的姜戈",
+    "type": "film",
+    "title": "被解救的姜戈",
+    "creator": "昆汀·塔伦蒂诺",
+    "cover": "public/covers/c2ca6644ba4d-320.webp",
+    "coverLarge": "public/covers/c2ca6644ba4d-720.webp",
+    "categories": [
+      "剧情",
+      "西部"
+    ]
+  },
+  {
+    "id": "film:低俗小说",
+    "type": "film",
+    "title": "低俗小说",
+    "creator": "昆汀·塔伦蒂诺",
+    "cover": "public/covers/b48094c8d37b-320.webp",
+    "coverLarge": "public/covers/b48094c8d37b-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪"
+    ]
+  },
+  {
+    "id": "film:好莱坞往事",
+    "type": "film",
+    "title": "好莱坞往事",
+    "creator": "昆汀·塔伦蒂诺",
+    "cover": "public/covers/7c9ef5932dfe-320.webp",
+    "coverLarge": "public/covers/7c9ef5932dfe-720.webp",
+    "categories": [
+      "剧情",
+      "喜剧"
+    ]
+  },
+  {
+    "id": "film:落水狗",
+    "type": "film",
+    "title": "落水狗",
+    "creator": "昆汀·塔伦蒂诺",
+    "cover": "public/covers/c3b0c4aaeb7d-320.webp",
+    "coverLarge": "public/covers/c3b0c4aaeb7d-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪"
+    ]
+  },
+  {
+    "id": "film:杀死比尔",
+    "type": "film",
+    "title": "杀死比尔",
+    "creator": "昆汀·塔伦蒂诺",
+    "cover": "public/covers/61aa79b42d1f-320.webp",
+    "coverLarge": "public/covers/61aa79b42d1f-720.webp",
+    "categories": [
+      "动作",
+      "剧情"
+    ]
+  },
+  {
+    "id": "film:无耻混蛋",
+    "type": "film",
+    "title": "无耻混蛋",
+    "creator": "昆汀·塔伦蒂诺",
+    "cover": "public/covers/af23ff7dc8c5-320.webp",
+    "coverLarge": "public/covers/af23ff7dc8c5-720.webp",
+    "categories": [
+      "剧情",
+      "战争"
+    ]
+  },
+  {
+    "id": "film:搏击俱乐部",
+    "type": "film",
+    "title": "搏击俱乐部",
+    "creator": "大卫·芬奇",
+    "cover": "public/covers/0175566f5b55-320.webp",
+    "coverLarge": "public/covers/0175566f5b55-720.webp",
+    "categories": [
+      "剧情"
+    ]
+  },
+  {
+    "id": "film:奇巧计程车",
+    "type": "film",
+    "title": "奇巧计程车",
+    "creator": "木下麦",
+    "cover": "public/covers/9b447c22e892-320.webp",
+    "coverLarge": "public/covers/9b447c22e892-720.webp",
+    "categories": [
+      "剧情",
+      "悬疑"
+    ]
+  },
+  {
+    "id": "film:霸王别姬",
+    "type": "film",
+    "title": "霸王别姬",
+    "creator": "陈凯歌",
+    "cover": "public/covers/7a1db935079d-320.webp",
+    "coverLarge": "public/covers/7a1db935079d-720.webp",
+    "categories": [
+      "剧情",
+      "爱情"
+    ]
+  },
+  {
     "id": "film:阿凡达",
     "type": "film",
     "title": "阿凡达",
@@ -1808,15 +1915,16 @@
     ]
   },
   {
-    "id": "film:霸王别姬",
+    "id": "film:奥本海默",
     "type": "film",
-    "title": "霸王别姬",
-    "creator": "陈凯歌",
-    "cover": "public/covers/7a1db935079d-320.webp",
-    "coverLarge": "public/covers/7a1db935079d-720.webp",
+    "title": "奥本海默",
+    "creator": "克里斯托弗·诺兰",
+    "cover": "public/covers/48e4a7c2e2dd-320.webp",
+    "coverLarge": "public/covers/48e4a7c2e2dd-720.webp",
     "categories": [
       "剧情",
-      "爱情"
+      "传记",
+      "历史"
     ]
   },
   {
@@ -1878,18 +1986,6 @@
     "coverLarge": "public/covers/58d9da448bdc-720.webp",
     "categories": [
       "剧情"
-    ]
-  },
-  {
-    "id": "film:被解救的姜戈",
-    "type": "film",
-    "title": "被解救的姜戈",
-    "creator": "昆汀·塔伦蒂诺",
-    "cover": "public/covers/c2ca6644ba4d-320.webp",
-    "coverLarge": "public/covers/c2ca6644ba4d-720.webp",
-    "categories": [
-      "剧情",
-      "西部"
     ]
   },
   {
@@ -1955,17 +2051,6 @@
       "剧情",
       "音乐",
       "传记"
-    ]
-  },
-  {
-    "id": "film:搏击俱乐部",
-    "type": "film",
-    "title": "搏击俱乐部",
-    "creator": "大卫·芬奇",
-    "cover": "public/covers/0175566f5b55-320.webp",
-    "coverLarge": "public/covers/0175566f5b55-720.webp",
-    "categories": [
-      "剧情"
     ]
   },
   {
@@ -2151,6 +2236,31 @@
     ]
   },
   {
+    "id": "film:大内密探零零发",
+    "type": "film",
+    "title": "大内密探零零发",
+    "creator": "谷德昭",
+    "cover": "public/covers/aa935e61be5a-320.webp",
+    "coverLarge": "public/covers/aa935e61be5a-720.webp",
+    "categories": [
+      "喜剧",
+      "古装"
+    ]
+  },
+  {
+    "id": "film:大只佬",
+    "type": "film",
+    "title": "大只佬",
+    "creator": "杜琪峰",
+    "cover": "public/covers/a768d68bf029-320.webp",
+    "coverLarge": "public/covers/a768d68bf029-720.webp",
+    "categories": [
+      "剧情",
+      "动作",
+      "奇幻"
+    ]
+  },
+  {
     "id": "film:盗梦空间",
     "type": "film",
     "title": "盗梦空间",
@@ -2161,18 +2271,6 @@
       "科幻",
       "悬疑",
       "动作"
-    ]
-  },
-  {
-    "id": "film:低俗小说",
-    "type": "film",
-    "title": "低俗小说",
-    "creator": "昆汀·塔伦蒂诺",
-    "cover": "public/covers/b48094c8d37b-320.webp",
-    "coverLarge": "public/covers/b48094c8d37b-720.webp",
-    "categories": [
-      "剧情",
-      "犯罪"
     ]
   },
   {
@@ -2200,6 +2298,19 @@
     ]
   },
   {
+    "id": "film:东京喰种",
+    "type": "film",
+    "title": "东京喰种",
+    "creator": "森田修平",
+    "cover": "public/covers/3682a59ea023-320.webp",
+    "coverLarge": "public/covers/3682a59ea023-720.webp",
+    "categories": [
+      "动画",
+      "恐怖",
+      "奇幻"
+    ]
+  },
+  {
     "id": "film:东京教父",
     "type": "film",
     "title": "东京教父",
@@ -2221,6 +2332,18 @@
     "categories": [
       "武侠",
       "爱情"
+    ]
+  },
+  {
+    "id": "film:毒舌律师",
+    "type": "film",
+    "title": "毒舌律师",
+    "creator": "神经刀",
+    "cover": "public/covers/35fcd5c5c90e-320.webp",
+    "coverLarge": "public/covers/35fcd5c5c90e-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪"
     ]
   },
   {
@@ -2702,18 +2825,6 @@
     ]
   },
   {
-    "id": "film:好莱坞往事",
-    "type": "film",
-    "title": "好莱坞往事",
-    "creator": "昆汀·塔伦蒂诺",
-    "cover": "public/covers/7c9ef5932dfe-320.webp",
-    "coverLarge": "public/covers/7c9ef5932dfe-720.webp",
-    "categories": [
-      "剧情",
-      "喜剧"
-    ]
-  },
-  {
     "id": "film:河狸变身计划",
     "type": "film",
     "title": "河狸变身计划",
@@ -2886,6 +2997,30 @@
     ]
   },
   {
+    "id": "film:荒野大镖客",
+    "type": "film",
+    "title": "荒野大镖客",
+    "creator": "塞尔乔·莱昂内",
+    "cover": "public/covers/5627f9a10ddd-320.webp",
+    "coverLarge": "public/covers/5627f9a10ddd-720.webp",
+    "categories": [
+      "剧情",
+      "西部"
+    ]
+  },
+  {
+    "id": "film:黄金三镖客",
+    "type": "film",
+    "title": "黄金三镖客",
+    "creator": "塞尔乔·莱昂内",
+    "cover": "public/covers/67555afe72e6-320.webp",
+    "coverLarge": "public/covers/67555afe72e6-720.webp",
+    "categories": [
+      "剧情",
+      "西部"
+    ]
+  },
+  {
     "id": "film:混沌武士",
     "type": "film",
     "title": "混沌武士",
@@ -2906,6 +3041,19 @@
     "coverLarge": "public/covers/5c190b6392b0-720.webp",
     "categories": [
       "剧情"
+    ]
+  },
+  {
+    "id": "film:火影忍者",
+    "type": "film",
+    "title": "火影忍者",
+    "creator": "伊达勇登",
+    "cover": "public/covers/543744bf7fe7-320.webp",
+    "coverLarge": "public/covers/543744bf7fe7-720.webp",
+    "categories": [
+      "动画",
+      "动作",
+      "冒险"
     ]
   },
   {
@@ -3032,6 +3180,19 @@
       "剧情",
       "动作",
       "历史"
+    ]
+  },
+  {
+    "id": "film:剑雨",
+    "type": "film",
+    "title": "剑雨",
+    "creator": "苏照彬",
+    "cover": "public/covers/3b8005bed7de-320.webp",
+    "coverLarge": "public/covers/3b8005bed7de-720.webp",
+    "categories": [
+      "动作",
+      "武侠",
+      "爱情"
     ]
   },
   {
@@ -3308,6 +3469,18 @@
     ]
   },
   {
+    "id": "film:龙纹身的女孩",
+    "type": "film",
+    "title": "龙纹身的女孩",
+    "creator": "大卫·芬奇",
+    "cover": "public/covers/edc6c048ecde-320.webp",
+    "coverLarge": "public/covers/edc6c048ecde-720.webp",
+    "categories": [
+      "悬疑",
+      "犯罪"
+    ]
+  },
+  {
     "id": "film:龙与虎",
     "type": "film",
     "title": "龙与虎",
@@ -3408,18 +3581,6 @@
     ]
   },
   {
-    "id": "film:落水狗",
-    "type": "film",
-    "title": "落水狗",
-    "creator": "昆汀·塔伦蒂诺",
-    "cover": "public/covers/c3b0c4aaeb7d-320.webp",
-    "coverLarge": "public/covers/c3b0c4aaeb7d-720.webp",
-    "categories": [
-      "剧情",
-      "犯罪"
-    ]
-  },
-  {
     "id": "film:麻将",
     "type": "film",
     "title": "麻将",
@@ -3463,6 +3624,18 @@
     "creator": "尔冬升",
     "cover": "public/covers/4df0834ecf76-320.webp",
     "coverLarge": "public/covers/4df0834ecf76-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪"
+    ]
+  },
+  {
+    "id": "film:艋舺",
+    "type": "film",
+    "title": "艋舺",
+    "creator": "钮承泽",
+    "cover": "public/covers/a0bf8692a0e6-320.webp",
+    "coverLarge": "public/covers/a0bf8692a0e6-720.webp",
     "categories": [
       "剧情",
       "犯罪"
@@ -3630,18 +3803,6 @@
     ]
   },
   {
-    "id": "film:奇巧计程车",
-    "type": "film",
-    "title": "奇巧计程车",
-    "creator": "木下麦",
-    "cover": "public/covers/9b447c22e892-320.webp",
-    "coverLarge": "public/covers/9b447c22e892-720.webp",
-    "categories": [
-      "剧情",
-      "悬疑"
-    ]
-  },
-  {
     "id": "film:千与千寻",
     "type": "film",
     "title": "千与千寻",
@@ -3688,6 +3849,18 @@
     "coverLarge": "public/covers/4124a8b139ec-720.webp",
     "categories": [
       "剧情"
+    ]
+  },
+  {
+    "id": "film:亲切的金子",
+    "type": "film",
+    "title": "亲切的金子",
+    "creator": "朴赞郁",
+    "cover": "public/covers/7af85c73c601-320.webp",
+    "coverLarge": "public/covers/7af85c73c601-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪"
     ]
   },
   {
@@ -3886,18 +4059,6 @@
     ]
   },
   {
-    "id": "film:杀死比尔",
-    "type": "film",
-    "title": "杀死比尔",
-    "creator": "昆汀·塔伦蒂诺",
-    "cover": "public/covers/61aa79b42d1f-320.webp",
-    "coverLarge": "public/covers/61aa79b42d1f-720.webp",
-    "categories": [
-      "动作",
-      "剧情"
-    ]
-  },
-  {
     "id": "film:沙丘",
     "type": "film",
     "title": "沙丘",
@@ -4044,6 +4205,19 @@
     ]
   },
   {
+    "id": "film:十面埋伏",
+    "type": "film",
+    "title": "十面埋伏",
+    "creator": "张艺谋",
+    "cover": "public/covers/453e9a2386c8-320.webp",
+    "coverLarge": "public/covers/453e9a2386c8-720.webp",
+    "categories": [
+      "剧情",
+      "爱情",
+      "武侠"
+    ]
+  },
+  {
     "id": "film:树大招风",
     "type": "film",
     "title": "树大招风",
@@ -4153,6 +4327,19 @@
     ]
   },
   {
+    "id": "film:唐人街探案",
+    "type": "film",
+    "title": "唐人街探案",
+    "creator": "陈思诚",
+    "cover": "public/covers/2e4e3e14527e-320.webp",
+    "coverLarge": "public/covers/2e4e3e14527e-720.webp",
+    "categories": [
+      "喜剧",
+      "悬疑",
+      "犯罪"
+    ]
+  },
+  {
     "id": "film:逃避虽可耻但有用",
     "type": "film",
     "title": "逃避虽可耻但有用",
@@ -4163,6 +4350,18 @@
       "爱情",
       "喜剧",
       "日剧"
+    ]
+  },
+  {
+    "id": "film:逃学威龙",
+    "type": "film",
+    "title": "逃学威龙",
+    "creator": "元奎 / 刘镇伟",
+    "cover": "public/covers/4857576b1d9d-320.webp",
+    "coverLarge": "public/covers/4857576b1d9d-720.webp",
+    "categories": [
+      "喜剧",
+      "动作"
     ]
   },
   {
@@ -4322,18 +4521,6 @@
       "剧情",
       "武侠",
       "爱情"
-    ]
-  },
-  {
-    "id": "film:无耻混蛋",
-    "type": "film",
-    "title": "无耻混蛋",
-    "creator": "昆汀·塔伦蒂诺",
-    "cover": "public/covers/af23ff7dc8c5-320.webp",
-    "coverLarge": "public/covers/af23ff7dc8c5-720.webp",
-    "categories": [
-      "剧情",
-      "战争"
     ]
   },
   {
@@ -4533,6 +4720,18 @@
     ]
   },
   {
+    "id": "film:笑傲江湖之东方不败",
+    "type": "film",
+    "title": "笑傲江湖之东方不败",
+    "creator": "程小东",
+    "cover": "public/covers/e82bb4f41297-320.webp",
+    "coverLarge": "public/covers/e82bb4f41297-720.webp",
+    "categories": [
+      "武侠",
+      "奇幻"
+    ]
+  },
+  {
     "id": "film:心灵奇旅",
     "type": "film",
     "title": "心灵奇旅",
@@ -4579,6 +4778,19 @@
     "categories": [
       "剧情",
       "犯罪"
+    ]
+  },
+  {
+    "id": "film:信条",
+    "type": "film",
+    "title": "信条",
+    "creator": "克里斯托弗·诺兰",
+    "cover": "public/covers/233854ba9b93-320.webp",
+    "coverLarge": "public/covers/233854ba9b93-720.webp",
+    "categories": [
+      "科幻",
+      "动作",
+      "悬疑"
     ]
   },
   {
@@ -4852,6 +5064,19 @@
     ]
   },
   {
+    "id": "film:周处除三害",
+    "type": "film",
+    "title": "周处除三害",
+    "creator": "黄精甫",
+    "cover": "public/covers/f3a0bd0e4410-320.webp",
+    "coverLarge": "public/covers/f3a0bd0e4410-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪",
+      "动作"
+    ]
+  },
+  {
     "id": "film:咒术回战",
     "type": "film",
     "title": "咒术回战",
@@ -4926,6 +5151,380 @@
     ]
   },
   {
+    "id": "music:2013 陳奕迅 Music Life 精選",
+    "type": "music",
+    "title": "2013 陳奕迅 Music Life 精選",
+    "creator": "Eason Chan",
+    "cover": "public/covers/8d6f31e014a3-320.webp",
+    "coverLarge": "public/covers/8d6f31e014a3-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:陳奕迅2010 Duo演唱會",
+    "type": "music",
+    "title": "陳奕迅2010 Duo演唱會",
+    "creator": "Eason Chan",
+    "cover": "public/covers/35c238c6804f-320.webp",
+    "coverLarge": "public/covers/35c238c6804f-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:打得火熱",
+    "type": "music",
+    "title": "打得火熱",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9fbf61c62039-320.webp",
+    "coverLarge": "public/covers/9fbf61c62039-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:盲婚啞嫁",
+    "type": "music",
+    "title": "盲婚啞嫁",
+    "creator": "Eason Chan",
+    "cover": "public/covers/3d0b7ea69ed0-320.webp",
+    "coverLarge": "public/covers/3d0b7ea69ed0-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:我的快樂時代",
+    "type": "music",
+    "title": "我的快樂時代",
+    "creator": "Eason Chan",
+    "cover": "public/covers/f60cbeb908b2-320.webp",
+    "coverLarge": "public/covers/f60cbeb908b2-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:幸福",
+    "type": "music",
+    "title": "幸福",
+    "creator": "陈奕迅",
+    "cover": "public/covers/5e473c2df643-320.webp",
+    "coverLarge": "public/covers/5e473c2df643-720.webp",
+    "categories": [
+      "华语流行"
+    ]
+  },
+  {
+    "id": "music:與我常在",
+    "type": "music",
+    "title": "與我常在",
+    "creator": "Eason Chan",
+    "cover": "public/covers/1932972c3ba1-320.webp",
+    "coverLarge": "public/covers/1932972c3ba1-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Getting Ready",
+    "type": "music",
+    "title": "Getting Ready",
+    "creator": "Eason Chan",
+    "cover": "public/covers/39f36f8dddce-320.webp",
+    "coverLarge": "public/covers/39f36f8dddce-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Great 5000 Secs (新曲+精選)",
+    "type": "music",
+    "title": "Great 5000 Secs (新曲+精選)",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c9e865e986b2-320.webp",
+    "coverLarge": "public/covers/c9e865e986b2-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:H3M (Remastered 2019)",
+    "type": "music",
+    "title": "H3M (Remastered 2019)",
+    "creator": "Eason Chan",
+    "cover": "public/covers/a629f4e383be-320.webp",
+    "coverLarge": "public/covers/a629f4e383be-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:K歌之王 AIR",
+    "type": "music",
+    "title": "K歌之王 AIR",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c170aa4098cd-320.webp",
+    "coverLarge": "public/covers/c170aa4098cd-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Life Continues",
+    "type": "music",
+    "title": "Life Continues",
+    "creator": "Eason Chan",
+    "cover": "public/covers/fe1e09c9472a-320.webp",
+    "coverLarge": "public/covers/fe1e09c9472a-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Live for Today",
+    "type": "music",
+    "title": "Live for Today",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9b5eb59b21fa-320.webp",
+    "coverLarge": "public/covers/9b5eb59b21fa-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Shall We Dance_ Shall We Talk!",
+    "type": "music",
+    "title": "Shall We Dance? Shall We Talk!",
+    "creator": "Eason Chan",
+    "cover": "public/covers/659c0cda23bf-320.webp",
+    "coverLarge": "public/covers/659c0cda23bf-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Stranger Under My Skin",
+    "type": "music",
+    "title": "Stranger Under My Skin",
+    "creator": "Eason Chan",
+    "cover": "public/covers/025c741ae061-320.webp",
+    "coverLarge": "public/covers/025c741ae061-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:The Key",
+    "type": "music",
+    "title": "The Key",
+    "creator": "Eason Chan",
+    "cover": "public/covers/edd5597e96bd-320.webp",
+    "coverLarge": "public/covers/edd5597e96bd-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:The Line-Up",
+    "type": "music",
+    "title": "The Line-Up",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9a9bfd60f996-320.webp",
+    "coverLarge": "public/covers/9a9bfd60f996-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Time Flies 2010",
+    "type": "music",
+    "title": "Time Flies 2010",
+    "creator": "Eason Chan",
+    "cover": "public/covers/0d1ac0b7c03a-320.webp",
+    "coverLarge": "public/covers/0d1ac0b7c03a-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:What's Going On..._",
+    "type": "music",
+    "title": "What's Going On...?",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c680be68efdd-320.webp",
+    "coverLarge": "public/covers/c680be68efdd-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:玻璃 demo",
+    "type": "music",
+    "title": "玻璃 demo",
+    "creator": "Gareth.T",
+    "cover": "public/covers/5b68df1320f0-320.webp",
+    "coverLarge": "public/covers/5b68df1320f0-720.webp",
+    "categories": [
+      "独立流行"
+    ]
+  },
+  {
+    "id": "music:緊急聯絡人",
+    "type": "music",
+    "title": "緊急聯絡人",
+    "creator": "Gareth.T",
+    "cover": "public/covers/f9e494c77ad7-320.webp",
+    "coverLarge": "public/covers/f9e494c77ad7-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:泥菩薩",
+    "type": "music",
+    "title": "泥菩薩",
+    "creator": "Gareth.T",
+    "cover": "public/covers/4acc5dc22cb5-320.webp",
+    "coverLarge": "public/covers/4acc5dc22cb5-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:顏色",
+    "type": "music",
+    "title": "顏色",
+    "creator": "Gareth.T",
+    "cover": "public/covers/ff379a8dab07-320.webp",
+    "coverLarge": "public/covers/ff379a8dab07-720.webp",
+    "categories": [
+      "独立流行"
+    ]
+  },
+  {
+    "id": "music:用背脊唱情歌",
+    "type": "music",
+    "title": "用背脊唱情歌",
+    "creator": "Gareth.T",
+    "cover": "public/covers/9ada2137de36-320.webp",
+    "coverLarge": "public/covers/9ada2137de36-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:dont smile at me",
+    "type": "music",
+    "title": "dont smile at me",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/5d69909e1891-320.webp",
+    "coverLarge": "public/covers/5d69909e1891-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:everything i wanted",
+    "type": "music",
+    "title": "everything i wanted",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/8e2e3850a1fa-320.webp",
+    "coverLarge": "public/covers/8e2e3850a1fa-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Guitar Songs",
+    "type": "music",
+    "title": "Guitar Songs",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/9cf90645994a-320.webp",
+    "coverLarge": "public/covers/9cf90645994a-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Happier Than Ever",
+    "type": "music",
+    "title": "Happier Than Ever",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/da74a8890bff-320.webp",
+    "coverLarge": "public/covers/da74a8890bff-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:HIT ME HARD AND SOFT",
+    "type": "music",
+    "title": "HIT ME HARD AND SOFT",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/d8b520370df3-320.webp",
+    "coverLarge": "public/covers/d8b520370df3-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:hotline (edit)",
+    "type": "music",
+    "title": "hotline (edit)",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/669e1a100a4a-320.webp",
+    "coverLarge": "public/covers/669e1a100a4a-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:lovely",
+    "type": "music",
+    "title": "lovely",
+    "creator": "Billie Eilish & Khalid",
+    "cover": "public/covers/362ad7cb6d52-320.webp",
+    "coverLarge": "public/covers/362ad7cb6d52-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:What Was I Made For_ (From The Motion Picture _Barbie_)",
+    "type": "music",
+    "title": "What Was I Made For? (From The Motion Picture \"Barbie\")",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/1c3790c67a17-320.webp",
+    "coverLarge": "public/covers/1c3790c67a17-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:WHEN WE ALL FALL ASLEEP, WHERE DO WE GO_",
+    "type": "music",
+    "title": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/49cbde0ef98a-320.webp",
+    "coverLarge": "public/covers/49cbde0ef98a-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Ching Ching (Ultimate Collection)",
+    "type": "music",
+    "title": "Ching Ching (Ultimate Collection)",
+    "creator": "Chen Hsien Ching",
+    "cover": "public/covers/4914ac7155f4-320.webp",
+    "coverLarge": "public/covers/4914ac7155f4-720.webp",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
     "id": "music:10號",
     "type": "music",
     "title": "10號",
@@ -4956,17 +5555,6 @@
     "coverLarge": "public/covers/19f2ca1fae01-720.webp",
     "categories": [
       "Mandopop"
-    ]
-  },
-  {
-    "id": "music:2013 陳奕迅 Music Life 精選",
-    "type": "music",
-    "title": "2013 陳奕迅 Music Life 精選",
-    "creator": "Eason Chan",
-    "cover": "public/covers/8d6f31e014a3-320.webp",
-    "coverLarge": "public/covers/8d6f31e014a3-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -5022,39 +5610,6 @@
     "coverLarge": "public/covers/8b2800b93032-720.webp",
     "categories": [
       "Mandopop"
-    ]
-  },
-  {
-    "id": "music:玻璃 demo",
-    "type": "music",
-    "title": "玻璃 demo",
-    "creator": "Gareth.T",
-    "cover": "public/covers/5b68df1320f0-320.webp",
-    "coverLarge": "public/covers/5b68df1320f0-720.webp",
-    "categories": [
-      "独立流行"
-    ]
-  },
-  {
-    "id": "music:陳奕迅2010 Duo演唱會",
-    "type": "music",
-    "title": "陳奕迅2010 Duo演唱會",
-    "creator": "Eason Chan",
-    "cover": "public/covers/35c238c6804f-320.webp",
-    "coverLarge": "public/covers/35c238c6804f-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:打得火熱",
-    "type": "music",
-    "title": "打得火熱",
-    "creator": "Eason Chan",
-    "cover": "public/covers/9fbf61c62039-320.webp",
-    "coverLarge": "public/covers/9fbf61c62039-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -5157,17 +5712,6 @@
     ]
   },
   {
-    "id": "music:緊急聯絡人",
-    "type": "music",
-    "title": "緊急聯絡人",
-    "creator": "Gareth.T",
-    "cover": "public/covers/f9e494c77ad7-320.webp",
-    "coverLarge": "public/covers/f9e494c77ad7-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:空無之地",
     "type": "music",
     "title": "空無之地",
@@ -5196,17 +5740,6 @@
     "creator": "Juno Mak & Kay Tse",
     "cover": "public/covers/7e1e71b1f349-320.webp",
     "coverLarge": "public/covers/7e1e71b1f349-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:盲婚啞嫁",
-    "type": "music",
-    "title": "盲婚啞嫁",
-    "creator": "Eason Chan",
-    "cover": "public/covers/3d0b7ea69ed0-320.webp",
-    "coverLarge": "public/covers/3d0b7ea69ed0-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -5242,17 +5775,6 @@
     "coverLarge": "public/covers/8c9d4b72f9d3-720.webp",
     "categories": [
       "Mandopop"
-    ]
-  },
-  {
-    "id": "music:泥菩薩",
-    "type": "music",
-    "title": "泥菩薩",
-    "creator": "Gareth.T",
-    "cover": "public/covers/4acc5dc22cb5-320.webp",
-    "coverLarge": "public/covers/4acc5dc22cb5-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -5454,17 +5976,6 @@
     ]
   },
   {
-    "id": "music:我的快樂時代",
-    "type": "music",
-    "title": "我的快樂時代",
-    "creator": "Eason Chan",
-    "cover": "public/covers/f60cbeb908b2-320.webp",
-    "coverLarge": "public/covers/f60cbeb908b2-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:我用什么把你留住",
     "type": "music",
     "title": "我用什么把你留住",
@@ -5509,28 +6020,6 @@
     ]
   },
   {
-    "id": "music:幸福",
-    "type": "music",
-    "title": "幸福",
-    "creator": "陈奕迅",
-    "cover": "public/covers/5e473c2df643-320.webp",
-    "coverLarge": "public/covers/5e473c2df643-720.webp",
-    "categories": [
-      "华语流行"
-    ]
-  },
-  {
-    "id": "music:顏色",
-    "type": "music",
-    "title": "顏色",
-    "creator": "Gareth.T",
-    "cover": "public/covers/ff379a8dab07-320.webp",
-    "coverLarge": "public/covers/ff379a8dab07-720.webp",
-    "categories": [
-      "独立流行"
-    ]
-  },
-  {
     "id": "music:夜枕青山",
     "type": "music",
     "title": "夜枕青山",
@@ -5559,28 +6048,6 @@
     "creator": "MC Cheung Tinfu & Panther Chan",
     "cover": "public/covers/a88eff4e434a-320.webp",
     "coverLarge": "public/covers/a88eff4e434a-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:用背脊唱情歌",
-    "type": "music",
-    "title": "用背脊唱情歌",
-    "creator": "Gareth.T",
-    "cover": "public/covers/9ada2137de36-320.webp",
-    "coverLarge": "public/covers/9ada2137de36-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:與我常在",
-    "type": "music",
-    "title": "與我常在",
-    "creator": "Eason Chan",
-    "cover": "public/covers/1932972c3ba1-320.webp",
-    "coverLarge": "public/covers/1932972c3ba1-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -5828,17 +6295,6 @@
     ]
   },
   {
-    "id": "music:Ching Ching (Ultimate Collection)",
-    "type": "music",
-    "title": "Ching Ching (Ultimate Collection)",
-    "creator": "Chen Hsien Ching",
-    "cover": "public/covers/4914ac7155f4-320.webp",
-    "coverLarge": "public/covers/4914ac7155f4-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
-    ]
-  },
-  {
     "id": "music:CINEMA",
     "type": "music",
     "title": "CINEMA",
@@ -5938,17 +6394,6 @@
     ]
   },
   {
-    "id": "music:dont smile at me",
-    "type": "music",
-    "title": "dont smile at me",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/5d69909e1891-320.webp",
-    "coverLarge": "public/covers/5d69909e1891-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
     "id": "music:E=MC2 (Deluxe Version)",
     "type": "music",
     "title": "E=MC2 (Deluxe Version)",
@@ -5990,17 +6435,6 @@
     "coverLarge": "public/covers/89b5f004d149-720.webp",
     "categories": [
       "Holiday"
-    ]
-  },
-  {
-    "id": "music:everything i wanted",
-    "type": "music",
-    "title": "everything i wanted",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/8e2e3850a1fa-320.webp",
-    "coverLarge": "public/covers/8e2e3850a1fa-720.webp",
-    "categories": [
-      "Alternative"
     ]
   },
   {
@@ -6070,17 +6504,6 @@
     ]
   },
   {
-    "id": "music:Getting Ready",
-    "type": "music",
-    "title": "Getting Ready",
-    "creator": "Eason Chan",
-    "cover": "public/covers/39f36f8dddce-320.webp",
-    "coverLarge": "public/covers/39f36f8dddce-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:Girl, so confusing featuring lorde",
     "type": "music",
     "title": "Girl, so confusing featuring lorde",
@@ -6100,50 +6523,6 @@
     "coverLarge": "public/covers/6b8653196efa-720.webp",
     "categories": [
       "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Great 5000 Secs (新曲+精選)",
-    "type": "music",
-    "title": "Great 5000 Secs (新曲+精選)",
-    "creator": "Eason Chan",
-    "cover": "public/covers/c9e865e986b2-320.webp",
-    "coverLarge": "public/covers/c9e865e986b2-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Guitar Songs",
-    "type": "music",
-    "title": "Guitar Songs",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/9cf90645994a-320.webp",
-    "coverLarge": "public/covers/9cf90645994a-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:H3M (Remastered 2019)",
-    "type": "music",
-    "title": "H3M (Remastered 2019)",
-    "creator": "Eason Chan",
-    "cover": "public/covers/a629f4e383be-320.webp",
-    "coverLarge": "public/covers/a629f4e383be-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Happier Than Ever",
-    "type": "music",
-    "title": "Happier Than Ever",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/da74a8890bff-320.webp",
-    "coverLarge": "public/covers/da74a8890bff-720.webp",
-    "categories": [
-      "Alternative"
     ]
   },
   {
@@ -6224,17 +6603,6 @@
     ]
   },
   {
-    "id": "music:HIT ME HARD AND SOFT",
-    "type": "music",
-    "title": "HIT ME HARD AND SOFT",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/d8b520370df3-320.webp",
-    "coverLarge": "public/covers/d8b520370df3-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
     "id": "music:Hold My Hand (Music From The Motion Picture _Top Gun_ Maverick_)",
     "type": "music",
     "title": "Hold My Hand (Music From The Motion Picture \\\"Top Gun: Maverick\\\")",
@@ -6254,17 +6622,6 @@
     "coverLarge": "public/covers/2796ba56b248-720.webp",
     "categories": [
       "Hip-Hop/Rap"
-    ]
-  },
-  {
-    "id": "music:hotline (edit)",
-    "type": "music",
-    "title": "hotline (edit)",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/669e1a100a4a-320.webp",
-    "coverLarge": "public/covers/669e1a100a4a-720.webp",
-    "categories": [
-      "Alternative"
     ]
   },
   {
@@ -6378,17 +6735,6 @@
     ]
   },
   {
-    "id": "music:K歌之王 AIR",
-    "type": "music",
-    "title": "K歌之王 AIR",
-    "creator": "Eason Chan",
-    "cover": "public/covers/c170aa4098cd-320.webp",
-    "coverLarge": "public/covers/c170aa4098cd-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:Let's Fall In Love For The Night",
     "type": "music",
     "title": "Let's Fall In Love For The Night",
@@ -6411,17 +6757,6 @@
     ]
   },
   {
-    "id": "music:Life Continues",
-    "type": "music",
-    "title": "Life Continues",
-    "creator": "Eason Chan",
-    "cover": "public/covers/fe1e09c9472a-320.webp",
-    "coverLarge": "public/covers/fe1e09c9472a-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:Listen to the Music 3",
     "type": "music",
     "title": "Listen to the Music 3",
@@ -6430,28 +6765,6 @@
     "coverLarge": "public/covers/58ab35fae3a3-720.webp",
     "categories": [
       "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Live for Today",
-    "type": "music",
-    "title": "Live for Today",
-    "creator": "Eason Chan",
-    "cover": "public/covers/9b5eb59b21fa-320.webp",
-    "coverLarge": "public/covers/9b5eb59b21fa-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:lovely",
-    "type": "music",
-    "title": "lovely",
-    "creator": "Billie Eilish & Khalid",
-    "cover": "public/covers/362ad7cb6d52-320.webp",
-    "coverLarge": "public/covers/362ad7cb6d52-720.webp",
-    "categories": [
-      "Pop"
     ]
   },
   {
@@ -6752,17 +7065,6 @@
     ]
   },
   {
-    "id": "music:Shall We Dance_ Shall We Talk!",
-    "type": "music",
-    "title": "Shall We Dance? Shall We Talk!",
-    "creator": "Eason Chan",
-    "cover": "public/covers/659c0cda23bf-320.webp",
-    "coverLarge": "public/covers/659c0cda23bf-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:Shock Value",
     "type": "music",
     "title": "Shock Value",
@@ -6862,17 +7164,6 @@
     ]
   },
   {
-    "id": "music:Stranger Under My Skin",
-    "type": "music",
-    "title": "Stranger Under My Skin",
-    "creator": "Eason Chan",
-    "cover": "public/covers/025c741ae061-320.webp",
-    "coverLarge": "public/covers/025c741ae061-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:STRAY SHEEP",
     "type": "music",
     "title": "STRAY SHEEP",
@@ -6939,17 +7230,6 @@
     ]
   },
   {
-    "id": "music:The Key",
-    "type": "music",
-    "title": "The Key",
-    "creator": "Eason Chan",
-    "cover": "public/covers/edd5597e96bd-320.webp",
-    "coverLarge": "public/covers/edd5597e96bd-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:The Life of a Showgirl",
     "type": "music",
     "title": "The Life of a Showgirl",
@@ -6958,17 +7238,6 @@
     "coverLarge": "public/covers/43b73ba64782-720.webp",
     "categories": [
       "Pop"
-    ]
-  },
-  {
-    "id": "music:The Line-Up",
-    "type": "music",
-    "title": "The Line-Up",
-    "creator": "Eason Chan",
-    "cover": "public/covers/9a9bfd60f996-320.webp",
-    "coverLarge": "public/covers/9a9bfd60f996-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -6991,17 +7260,6 @@
     "coverLarge": "public/covers/caa7ae00d840-720.webp",
     "categories": [
       "Singer/Songwriter"
-    ]
-  },
-  {
-    "id": "music:Time Flies 2010",
-    "type": "music",
-    "title": "Time Flies 2010",
-    "creator": "Eason Chan",
-    "cover": "public/covers/0d1ac0b7c03a-320.webp",
-    "coverLarge": "public/covers/0d1ac0b7c03a-720.webp",
-    "categories": [
-      "Pop"
     ]
   },
   {
@@ -7090,39 +7348,6 @@
     "coverLarge": "public/covers/bd2dc0f163a5-720.webp",
     "categories": [
       "Rock"
-    ]
-  },
-  {
-    "id": "music:What Was I Made For_ (From The Motion Picture _Barbie_)",
-    "type": "music",
-    "title": "What Was I Made For? (From The Motion Picture \"Barbie\")",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/1c3790c67a17-320.webp",
-    "coverLarge": "public/covers/1c3790c67a17-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:What's Going On..._",
-    "type": "music",
-    "title": "What's Going On...?",
-    "creator": "Eason Chan",
-    "cover": "public/covers/c680be68efdd-320.webp",
-    "coverLarge": "public/covers/c680be68efdd-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:WHEN WE ALL FALL ASLEEP, WHERE DO WE GO_",
-    "type": "music",
-    "title": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/49cbde0ef98a-320.webp",
-    "coverLarge": "public/covers/49cbde0ef98a-720.webp",
-    "categories": [
-      "Alternative"
     ]
   },
   {
