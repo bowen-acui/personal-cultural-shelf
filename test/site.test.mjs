@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 
 test("site shell exposes the media shelves and reference interactions", async () => {
   const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
@@ -31,6 +31,8 @@ test("browse, film, music and about pages exist", async () => {
 test("public pages expose local identity assets", async () => {
   const pages = await Promise.all(["index", "film", "music", "browse", "about"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
   assert.ok(pages.every((page) => page.includes("favicon.svg") && page.includes("og:title")));
+  assert.ok(pages.every((page) => page.includes("og:image") && page.includes("avatar.png")));
+  await access(new URL("../public/avatar.png", import.meta.url));
   assert.match(await readFile(new URL("../404.html", import.meta.url), "utf8"), /返回陈列/);
 });
 
