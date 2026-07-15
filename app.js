@@ -19,6 +19,7 @@ const workFlip = document.querySelector("#work-flip");
 const filterAction = document.querySelector('[data-action="filter"]');
 const shareAction = document.querySelector('[data-action="share"]');
 let transientTrigger = null;
+const PRIORITY_IMAGE_COUNT = 30;
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
 function monthLabel(item) { return item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : ""; }
@@ -78,7 +79,9 @@ function createObject(item, index) {
   image.alt = label(item);
   image.width = 320;
   image.height = state.type === "music" ? 320 : 480;
-  if (index >= 18) image.loading = "lazy";
+  image.decoding = "async";
+  image.fetchPriority = index < PRIORITY_IMAGE_COUNT ? "high" : "auto";
+  if (index >= PRIORITY_IMAGE_COUNT) image.loading = "lazy";
   const information = document.createElement("span");
   information.className = "object-info";
   information.id = `object-info-${state.type}-${index}`;

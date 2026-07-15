@@ -14,6 +14,14 @@ function safePath(urlPath) {
   return candidate.startsWith(root + path.sep) ? candidate : null;
 }
 
+function cacheControl(file) {
+  const relative = path.relative(root, file);
+  if (relative.startsWith(path.join("public", "covers")) || relative.startsWith(path.join("public", "fonts"))) return "public, max-age=31536000, immutable";
+  if (relative === path.join("data", "media.json")) return "public, max-age=60, must-revalidate";
+  if ([".css", ".js"].includes(path.extname(file).toLowerCase())) return "public, max-age=3600, must-revalidate";
+  return "public, max-age=300";
+}
+
 const server = http.createServer(async (request, response) => {
   try {
     let file = safePath(request.url || "/");
@@ -21,7 +29,7 @@ const server = http.createServer(async (request, response) => {
     try { await access(file); } catch { file = path.join(root, "404.html"); }
     const info = await stat(file);
     if (!info.isFile()) file = path.join(root, "404.html");
-    response.writeHead(200, { "Cache-Control": "public, max-age=300", "Content-Type": mime[path.extname(file).toLowerCase()] || "application/octet-stream" });
+    response.writeHead(200, { "Cache-Control": cacheControl(file), "Content-Type": mime[path.extname(file).toLowerCase()] || "application/octet-stream" });
     createReadStream(file).pipe(response);
   } catch { response.writeHead(500).end("Server error"); }
 });
