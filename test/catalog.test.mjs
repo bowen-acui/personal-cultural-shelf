@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { categoryCounts, filterCatalog } from "../lib/catalog.js";
+import { categoryCounts, filterCatalog, toggleCategory } from "../lib/catalog.js";
 
 const items = [
   { type: "book", title: "黑天鹅", creator: "塔勒布", categories: ["投资", "思维"] },
@@ -25,4 +25,9 @@ test("category counts are sorted by frequency then name", () => {
     ["投资", 1],
     ["R&B", 1],
   ]);
+});
+
+test("clicking the active category clears the filter", () => {
+  assert.equal(toggleCategory("投资", "投资"), "全部");
+  assert.equal(toggleCategory("投资", "思维"), "思维");
 });
