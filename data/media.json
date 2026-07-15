@@ -2078,6 +2078,19 @@
     ]
   },
   {
+    "id": "film:拆弹部队",
+    "type": "film",
+    "title": "拆弹部队",
+    "creator": "凯瑟琳·毕格罗",
+    "cover": "public/covers/2b57c9d4195c-320.webp",
+    "coverLarge": "public/covers/2b57c9d4195c-720.webp",
+    "categories": [
+      "剧情",
+      "惊悚",
+      "战争"
+    ]
+  },
+  {
     "id": "film:超能陆战队",
     "type": "film",
     "title": "超能陆战队",
@@ -2271,6 +2284,17 @@
       "科幻",
       "悬疑",
       "动作"
+    ]
+  },
+  {
+    "id": "film:点球成金",
+    "type": "film",
+    "title": "点球成金",
+    "creator": "贝内特·米勒",
+    "cover": "public/covers/f3513248a7c1-320.webp",
+    "coverLarge": "public/covers/f3513248a7c1-720.webp",
+    "categories": [
+      "剧情"
     ]
   },
   {
@@ -2837,6 +2861,19 @@
     ]
   },
   {
+    "id": "film:黑豹",
+    "type": "film",
+    "title": "黑豹",
+    "creator": "瑞恩·库格勒",
+    "cover": "public/covers/6407a42bc651-320.webp",
+    "coverLarge": "public/covers/6407a42bc651-720.webp",
+    "categories": [
+      "动作",
+      "冒险",
+      "科幻"
+    ]
+  },
+  {
     "id": "film:黑礁",
     "type": "film",
     "title": "黑礁",
@@ -3208,6 +3245,19 @@
     ]
   },
   {
+    "id": "film:角斗士",
+    "type": "film",
+    "title": "角斗士",
+    "creator": "雷德利·斯科特",
+    "cover": "public/covers/8771a79b5cc9-320.webp",
+    "coverLarge": "public/covers/8771a79b5cc9-720.webp",
+    "categories": [
+      "动作",
+      "剧情",
+      "冒险"
+    ]
+  },
+  {
     "id": "film:教父",
     "type": "film",
     "title": "教父",
@@ -3416,6 +3466,19 @@
       "剧情",
       "悬疑",
       "惊悚"
+    ]
+  },
+  {
+    "id": "film:雷霆沙赞",
+    "type": "film",
+    "title": "雷霆沙赞",
+    "creator": "大卫·F·桑德伯格",
+    "cover": "public/covers/33bf7d0d766c-320.webp",
+    "coverLarge": "public/covers/33bf7d0d766c-720.webp",
+    "categories": [
+      "动作",
+      "喜剧",
+      "奇幻"
     ]
   },
   {
@@ -4051,8 +4114,8 @@
     "type": "film",
     "title": "杀人回忆",
     "creator": "奉俊昊",
-    "cover": "public/covers/013a2e93b871-320.webp",
-    "coverLarge": "public/covers/013a2e93b871-720.webp",
+    "cover": "public/covers/a0116c1b54bc-320.webp",
+    "coverLarge": "public/covers/a0116c1b54bc-720.webp",
     "categories": [
       "悬疑",
       "犯罪"
@@ -4243,6 +4306,19 @@
     ]
   },
   {
+    "id": "film:瞬息全宇宙",
+    "type": "film",
+    "title": "瞬息全宇宙",
+    "creator": "丹尼尔·关 / 丹尼尔·施纳特",
+    "cover": "public/covers/3d195284b537-320.webp",
+    "coverLarge": "public/covers/3d195284b537-720.webp",
+    "categories": [
+      "动作",
+      "冒险",
+      "科幻"
+    ]
+  },
+  {
     "id": "film:斯巴达克斯",
     "type": "film",
     "title": "斯巴达克斯",
@@ -4377,6 +4453,19 @@
     ]
   },
   {
+    "id": "film:天生杀人狂",
+    "type": "film",
+    "title": "天生杀人狂",
+    "creator": "奥利弗·斯通",
+    "cover": "public/covers/480f0bf16d36-320.webp",
+    "coverLarge": "public/covers/480f0bf16d36-720.webp",
+    "categories": [
+      "犯罪",
+      "惊悚",
+      "剧情"
+    ]
+  },
+  {
     "id": "film:天使爱美丽",
     "type": "film",
     "title": "天使爱美丽",
@@ -4390,18 +4479,6 @@
     ]
   },
   {
-    "id": "film:天堂电影院",
-    "type": "film",
-    "title": "天堂电影院",
-    "creator": "朱塞佩·托纳多雷",
-    "cover": "public/covers/2324afc16697-320.webp",
-    "coverLarge": "public/covers/2324afc16697-720.webp",
-    "categories": [
-      "剧情",
-      "爱情"
-    ]
-  },
-  {
     "id": "film:天注定",
     "type": "film",
     "title": "天注定",
@@ -4411,18 +4488,6 @@
     "categories": [
       "剧情",
       "犯罪"
-    ]
-  },
-  {
-    "id": "film:甜蜜蜜",
-    "type": "film",
-    "title": "甜蜜蜜",
-    "creator": "陈可辛",
-    "cover": "public/covers/8152f4ed8c10-320.webp",
-    "coverLarge": "public/covers/8152f4ed8c10-720.webp",
-    "categories": [
-      "剧情",
-      "爱情"
     ]
   },
   {
@@ -4867,6 +4932,18 @@
     ]
   },
   {
+    "id": "film:阳光小美女",
+    "type": "film",
+    "title": "阳光小美女",
+    "creator": "乔纳森·代顿 / 瓦莱丽·法里斯",
+    "cover": "public/covers/116d40e886e9-320.webp",
+    "coverLarge": "public/covers/116d40e886e9-720.webp",
+    "categories": [
+      "喜剧",
+      "剧情"
+    ]
+  },
+  {
     "id": "film:一代宗师",
     "type": "film",
     "title": "一代宗师",
@@ -5124,6 +5201,18 @@
     "categories": [
       "动作",
       "爱情"
+    ]
+  },
+  {
+    "id": "film:醉乡民谣",
+    "type": "film",
+    "title": "醉乡民谣",
+    "creator": "伊桑·科恩 / 乔尔·科恩",
+    "cover": "public/covers/ade9dadfd38e-320.webp",
+    "coverLarge": "public/covers/ade9dadfd38e-720.webp",
+    "categories": [
+      "剧情",
+      "音乐"
     ]
   },
   {
@@ -6688,6 +6777,17 @@
     "coverLarge": "public/covers/f96f10897f3b-720.webp",
     "categories": [
       "Mandopop"
+    ]
+  },
+  {
+    "id": "music:If we can be happy happy every day, who wants to be sad",
+    "type": "music",
+    "title": "If we can be happy happy every day, who wants to be sad",
+    "creator": "陈嫺静",
+    "cover": "public/covers/aafd13071dee-320.webp",
+    "coverLarge": "public/covers/aafd13071dee-720.webp",
+    "categories": [
+      "华语流行"
     ]
   },
   {
