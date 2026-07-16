@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:data": "node scripts/build-library.mjs",
+    "build:data": "node scripts/build-library.mjs && node scripts/subset-font.mjs",
     "start": "node server.mjs",
     "test": "node --test"
   },
