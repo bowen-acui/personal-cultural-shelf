@@ -15,6 +15,18 @@ python3 -m http.server 4173
 
 Railway 使用 `npm start` 启动同一个静态站点，并自动读取平台提供的 `PORT` 环境变量。
 
+## 修改前端代码
+
+浏览器对 JS 的缓存是 `max-age=3600`，页面脚本和 `lib/` 模块各自独立缓存。若只给入口加版本号，发版后一小时内用户可能加载到「新 app.js + 旧 lib」的混合版本。
+
+因此规则只有一条：**改任何 JS 后，全局搜索 `?v=` 并统一 +1。**
+
+```bash
+grep -rn '?v=' *.html app.js catalog-page.js lib/
+```
+
+输出的每一处版本号必须一致——HTML 里的 `<script src>` 与 `app.js` / `catalog-page.js` 顶部的 `lib/` import 是同一个版本，一起改。
+
 ## 数据边界
 
 构建脚本只读本机 Obsidian 图书馆，并生成独立的静态数据和封面副本。公开数据只有：
