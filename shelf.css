@@ -29,7 +29,7 @@
 .shelf-controls .control-catalog:hover { color:var(--control-text); background:transparent; }
 .shelf-controls .control-catalog:active { transform:translateY(0) scale(.97); }
 .work-dialog { width:min(360px,calc(100% - 48px)); max-width:none; padding:0; overflow:visible; border:0; color:var(--control-text); background:transparent; }
-.work-dialog::backdrop { background:transparent; }
+.work-dialog::backdrop { background:var(--work-backdrop); backdrop-filter:blur(2px); animation:backdrop-in 240ms ease-out both; }
 .work-flip { display:block; width:100%; padding:0; border:0; color:inherit; background:transparent; cursor:pointer; perspective:1200px; transform:rotate(-1.5deg); }
 .work-flip-inner { position:relative; display:block; width:100%; aspect-ratio:var(--detail-ratio,2 / 3); transform-style:preserve-3d; transition:transform 520ms cubic-bezier(.2,.72,.2,1); }
 .work-flip.is-flipped .work-flip-inner { transform:rotateY(180deg); }
