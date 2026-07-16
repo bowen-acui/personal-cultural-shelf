@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=7";
-import { loadMediaData } from "./lib/media-data.js?v=7";
-import { createPosterCanvas } from "./lib/poster.js?v=7";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=7";
-import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=7";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=8";
+import { loadMediaData } from "./lib/media-data.js?v=8";
+import { createPosterCanvas } from "./lib/poster.js?v=8";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=8";
+import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=8";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {

@@ -1,5 +1,5 @@
-import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=7";
-import { loadMediaData } from "./lib/media-data.js?v=7";
+import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=8";
+import { loadMediaData } from "./lib/media-data.js?v=8";
 
 const labels = { book: "书", film: "影", music: "音" };
 const grid = document.querySelector("#catalog-grid");
