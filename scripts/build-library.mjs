@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import os from "node:os";
-import { mkdir, readFile, readdir, realpath, rename, rm, stat, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, readdir, realpath, rename, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import sharp from "sharp";
@@ -168,14 +168,20 @@ async function copyCover(sourceCover) {
   const contents = await readFile(resolvedCover);
   const outputName = coverDestination(resolvedCover, contents);
   if (!outputName) return null;
-  await sharp(contents)
-    .resize({ width: 320, withoutEnlargement: true })
-    .webp({ quality: 82, effort: 4 })
-    .toFile(path.join(coversDirectory, `${outputName}-320.webp`));
-  await sharp(contents)
-    .resize({ width: 720, withoutEnlargement: true })
-    .webp({ quality: 84, effort: 4 })
-    .toFile(path.join(coversDirectory, `${outputName}-720.webp`));
+  const smallPath = path.join(coversDirectory, `${outputName}-320.webp`);
+  const largePath = path.join(coversDirectory, `${outputName}-720.webp`);
+  // outputName 是内容哈希，同名即同内容：两档产物都在就没有重编码的必要。
+  const encoded = await Promise.all([smallPath, largePath].map((file) => access(file).then(() => true, () => false)));
+  if (!encoded.every(Boolean)) {
+    await sharp(contents)
+      .resize({ width: 320, withoutEnlargement: true })
+      .webp({ quality: 82, effort: 4 })
+      .toFile(smallPath);
+    await sharp(contents)
+      .resize({ width: 720, withoutEnlargement: true })
+      .webp({ quality: 84, effort: 4 })
+      .toFile(largePath);
+  }
   return {
     small: `public/covers/${outputName}-320.webp`,
     large: `public/covers/${outputName}-720.webp`,
