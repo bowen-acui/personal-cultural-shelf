@@ -13,8 +13,7 @@ import {
   resolveVaultRoot,
   validateUniqueRecords,
   sortMediaRecords,
-  filmPriority,
-  musicPriority,
+  pinnedRank,
 } from "../scripts/build-library.mjs";
 
 test("parseFrontmatter reads quoted scalars and dates", () => {
@@ -169,13 +168,21 @@ test("book records sort from five stars to one while other shelves keep title or
   assert.deepEqual(records.map((item) => item.id), ["book:five", "book:four", "book:two", "book:none", "film:a", "music:a", "music:z"]);
 });
 
-test("film and music records honor the requested creator priorities", () => {
-  assert.equal(filmPriority({ title: "低俗小说", creator: "昆汀·塔伦蒂诺" }), 0);
-  assert.equal(filmPriority({ title: "搏击俱乐部", creator: "大卫·芬奇" }), 1);
-  assert.equal(filmPriority({ title: "奇巧计程车", creator: "木下麦" }), 2);
-  assert.equal(filmPriority({ title: "霸王别姬", creator: "陈凯歌" }), 3);
-  assert.equal(musicPriority({ creator: "Eason Chan" }), 0);
-  assert.equal(musicPriority({ creator: "Gareth.T" }), 1);
-  assert.equal(musicPriority({ creator: "Billie Eilish" }), 2);
-  assert.equal(musicPriority({ creator: "Chen Hsien Ching" }), 3);
+test("pinnedRank reads the 置顶 frontmatter field and defaults to the back", () => {
+  assert.equal(pinnedRank({ 置顶: "0" }), 0);
+  assert.equal(pinnedRank({ 置顶: "3" }), 3);
+  assert.equal(pinnedRank({}), 99);
+  assert.equal(pinnedRank({ 置顶: "" }), 99);
+  assert.equal(pinnedRank({ 置顶: "第一" }), 99);
+});
+
+test("film and music records honor 置顶 before their usual ordering", () => {
+  const records = [
+    { id: "film:late", type: "film", title: "乙", doubanRating: 9.5 },
+    { id: "film:pinned", type: "film", title: "甲", doubanRating: 6, pinned: 0 },
+    { id: "music:late", type: "music", title: "甲" },
+    { id: "music:pinned", type: "music", title: "乙", pinned: 1 },
+  ];
+  sortMediaRecords(records);
+  assert.deepEqual(records.map((item) => item.id), ["film:pinned", "film:late", "music:pinned", "music:late"]);
 });

@@ -82,37 +82,26 @@ export function sortMediaRecords(records) {
       if (ratingOrder) return ratingOrder;
     }
     if (left.type === "film") {
-      const priorityOrder = filmPriority(left) - filmPriority(right);
+      const priorityOrder = (left.pinned ?? 99) - (right.pinned ?? 99);
       if (priorityOrder) return priorityOrder;
       const doubanOrder = (right.doubanRating ?? 0) - (left.doubanRating ?? 0);
       if (doubanOrder) return doubanOrder;
     }
     if (left.type === "music") {
-      const priorityOrder = musicPriority(left) - musicPriority(right);
+      const priorityOrder = (left.pinned ?? 99) - (right.pinned ?? 99);
       if (priorityOrder) return priorityOrder;
     }
     return left.title.localeCompare(right.title, "zh-CN");
   });
 }
 
-function hasCreator(item, names) {
-  return names.some((name) => item.creator?.toLowerCase().includes(name.toLowerCase()));
-}
-
-export function filmPriority(item) {
-  if (hasCreator(item, ["昆汀·塔伦蒂诺", "昆汀", "quentin tarantino"])) return 0;
-  if (item.title === "搏击俱乐部") return 1;
-  if (item.title === "奇巧计程车") return 2;
-  if (item.title === "霸王别姬") return 3;
-  return 4;
-}
-
-export function musicPriority(item) {
-  if (hasCreator(item, ["陈奕迅", "eason chan"])) return 0;
-  if (hasCreator(item, ["汤令山", "gareth.t"])) return 1;
-  if (hasCreator(item, ["billie eilish", "billy"])) return 2;
-  if (hasCreator(item, ["陈娴静", "chen hsien ching"])) return 3;
-  return 4;
+// 影/音的置顶来自 frontmatter `置顶:`（数字越小越靠前），换偏好改笔记即可，不用改代码。
+// 该字段只参与排序，写 JSON 前会被剥掉，不进入公开数据面。
+export function pinnedRank(metadata) {
+  const raw = String(metadata.置顶 ?? "").trim();
+  const rank = Number(raw);
+  // 空串要走缺省而不是被 Number("") 悄悄算成 0 —— 那会把没写置顶的笔记顶到最前。
+  return raw && Number.isFinite(rank) ? rank : 99;
 }
 
 export function orphanCoverNames(names, referenced) {
@@ -199,7 +188,7 @@ async function buildSource(source) {
     if (!displayable) continue;
     try {
       const covers = await copyCover(path.resolve(vaultRoot, metadata.封面));
-      if (covers) records.push(toPublicMedia(filename, metadata, covers.small, source.type, covers.large));
+      if (covers) records.push({ ...toPublicMedia(filename, metadata, covers.small, source.type, covers.large), pinned: pinnedRank(metadata) });
     } catch (error) {
       if (error.code !== "ENOENT") throw error;
     }
@@ -214,6 +203,7 @@ async function buildLibrary() {
   for (const source of sources) collections.push(...await buildSource(source));
   validateUniqueRecords(collections);
   sortMediaRecords(collections);
+  for (const record of collections) delete record.pinned;
   const temporaryFile = `${mediaFile}.tmp`;
   await writeFile(temporaryFile, `${JSON.stringify(collections, null, 2)}\n`, "utf8");
   await rename(temporaryFile, mediaFile);
