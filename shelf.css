@@ -50,8 +50,13 @@
 .filter-panel { position:fixed; z-index:var(--layer-filter); left:50%; bottom:86px; display:flex; flex-wrap:wrap; justify-content:center; width:min(780px,calc(100% - 32px)); max-height:45vh; gap:6px; padding:14px; overflow:auto; border:1px solid var(--glass-edge); border-radius:18px; background:var(--glass-surface); box-shadow:var(--glass-shadow); transform:translateX(-50%); backdrop-filter:blur(14px) saturate(1.04); }
 .filter-pill { min-height:var(--target-min); padding:7px 10px; border:1px solid var(--paper-line); border-radius:999px; color:var(--ink); background:transparent; }
 .filter-pill.is-active { color:var(--ink); border-color:var(--active-edge); background:var(--active-wash); box-shadow:0 0 0 1px var(--glass-ring) inset; }
-.pick-status { position:fixed; z-index:var(--layer-status); left:50%; bottom:86px; padding:10px 14px; border-radius:999px; color:white; background:var(--control); transform:translateX(-50%); }
-.pick-status button { min-height:var(--target-min); margin-left:10px; padding:6px 9px; border:0; border-radius:999px; }
+.pick-status { position:fixed; z-index:var(--layer-status); left:50%; bottom:86px; display:flex; flex-direction:column; align-items:center; gap:10px; padding:14px 24px; border:1px solid var(--control-edge); border-radius:22px; color:var(--control-text); background:var(--control-surface); box-shadow:0 18px 48px var(--control-shadow); transform:translateX(-50%); white-space:nowrap; backdrop-filter:blur(14px) saturate(1.04); }
+.pick-label { color:var(--control-muted); font:400 14px/1 var(--font-body); letter-spacing:.04em; }
+.pick-label strong { margin-left:6px; color:var(--control-text); font:700 16px/1 var(--font-mono); font-variant-numeric:tabular-nums; }
+.pick-total { color:var(--control-muted); font:400 13px/1 var(--font-mono); }
+.pick-status button { min-height:var(--target-min); align-self:stretch; padding:8px 22px; border:0; border-radius:999px; color:var(--control-text); background:var(--active); font:600 15px/1 var(--font-body); letter-spacing:.08em; cursor:pointer; transition:background-color .2s ease,color .2s ease,transform .08s ease-out; }
+.pick-status button:disabled { color:var(--control-muted); background:var(--control-hover); cursor:default; }
+.pick-status button:not(:disabled):active { transform:scale(.97); }
 .shelf-dialog { width:min(600px,calc(100% - 32px)); padding:24px; border:1px solid var(--glass-edge); border-radius:18px; color:var(--ink); background:var(--glass-surface); box-shadow:var(--glass-shadow); backdrop-filter:blur(14px) saturate(1.04); }
 .shelf-dialog::backdrop { background:var(--focus-backdrop); backdrop-filter:blur(12px) saturate(.86); animation:backdrop-in 240ms ease-out both; }
 .shelf-dialog h2 { margin:0 0 18px; font-size:38px; }

@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=10";
-import { loadMediaData } from "./lib/media-data.js?v=10";
-import { createPosterCanvas } from "./lib/poster.js?v=10";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=10";
-import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=10";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=11";
+import { loadMediaData } from "./lib/media-data.js?v=11";
+import { createPosterCanvas } from "./lib/poster.js?v=11";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=11";
+import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=11";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -234,7 +234,7 @@ function startPicking(force) {
   document.body.classList.toggle("is-picking", state.picking);
   document.querySelector("#share-action").textContent = state.picking ? "取消" : "分享";
   document.querySelector("#pick-status").hidden = !state.picking;
-  document.querySelector("#pick-status").firstChild.textContent = `选择五件${typeLabels[state.type]}藏品 `;
+  document.querySelector("#pick-status .pick-label").firstChild.textContent = `选择五件${typeLabels[state.type]}藏品 `;
   updatePickStatus();
   if (state.picking) requestAnimationFrame(() => stage.querySelector('.media-object:not([aria-hidden="true"])')?.focus());
   else restoreTrigger();

@@ -8,8 +8,8 @@
     <meta name="description" content="阿崔听过的音乐。">
     <meta property="og:title" content="音 · 阿崔的精神地图"><meta property="og:description" content="阿崔听过的音乐。"><meta property="og:type" content="website"><meta property="og:image" content="https://bowen-acui.github.io/personal-cultural-shelf/avatar.png"><meta property="og:image:width" content="500"><meta property="og:image:height" content="492"><meta property="og:image:alt" content="阿崔的分享头像"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bowen-acui.github.io/personal-cultural-shelf/avatar.png"><link rel="icon" href="public/avatar.png" type="image/png"><link rel="apple-touch-icon" href="public/avatar.png">
     <title>音 · 阿崔的精神地图</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="shelf.css">
+    <link rel="stylesheet" href="styles.css?v=11">
+    <link rel="stylesheet" href="shelf.css?v=11">
   </head>
   <body data-media-type="music">
     <a class="skip-link" href="#shelf-stage">跳到陈列</a>
@@ -45,11 +45,11 @@
         <span class="work-flip-inner"><span class="work-face work-front"><img id="work-cover" alt=""></span><span class="work-face work-back"><small id="work-type"></small><strong id="work-title"></strong><span id="work-creator"></span><span id="work-meta"></span><em>点击翻回封面</em></span></span>
       </button>
     </dialog>
-    <div id="pick-status" class="pick-status" role="status" aria-live="polite" hidden>选择五件藏品 <strong id="pick-count">0</strong>/5 <button id="make-poster" type="button" disabled>生成图片</button></div>
+    <div id="pick-status" class="pick-status" role="status" aria-live="polite" hidden><span class="pick-label">选择五件藏品 <strong id="pick-count">0</strong><span class="pick-total">/5</span></span><button id="make-poster" type="button" disabled>生成图片</button></div>
     <dialog id="poster-dialog" class="shelf-dialog" aria-labelledby="poster-title">
       <button class="dialog-close" type="button" aria-label="关闭">×</button><h2 id="poster-title">你的五件藏品</h2><img id="poster-preview" alt="五件藏品组成的分享图片"><div><a id="poster-download" download="acui-spiritual-map.png">下载图片</a><button id="copy-link" type="button">复制本站链接</button></div>
     </dialog>
     <footer class="site-footer"><nav><a href="about.html">关于</a></nav></footer>
-    <script type="module" src="app.js?v=10"></script>
+    <script type="module" src="app.js?v=11"></script>
   </body>
 </html>

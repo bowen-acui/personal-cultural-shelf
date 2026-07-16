@@ -28,6 +28,8 @@ a { color:inherit; }
 .site-footer nav { display:flex; gap:22px; }
 .site-footer a { display:inline-flex; min-height:var(--target-min); align-items:center; text-decoration:none; }
 :focus-visible { outline:3px solid var(--active); outline-offset:3px; }
+/* 触屏没有键盘 Tab 导航，但 iOS 点按后按钮持续保持 focus，橙圈会一直挂在功能键上不消失。 */
+@media(pointer:coarse){ :focus-visible { outline:none; } }
 [hidden] { display:none!important; }
 @media(max-width:639px){ .site-header { padding:14px 16px; } .brand span { font-size:23px; } .brand small { max-width:135px; font-size:10px; } .media-nav { gap:2px; } .media-nav a,.media-nav button { display:grid; min-width:var(--target-min); min-height:var(--target-min); place-items:center; padding:0 8px; } .media-nav [aria-current="page"]::after { right:10px; left:10px; } .site-footer { align-items:flex-start; gap:30px; padding:36px 16px 110px; } .site-footer nav { display:grid; gap:10px; } }
 @media(prefers-reduced-motion:reduce){ * { scroll-behavior:auto!important; transition-duration:0ms!important; animation-duration:0ms!important; } }
