@@ -14,7 +14,7 @@ import {
   validateUniqueRecords,
   sortMediaRecords,
   pinnedRank,
-} from "../scripts/build-library.mjs";
+} from "../lib/build-utils.mjs";
 
 test("parseFrontmatter reads quoted scalars and dates", () => {
   const note = `---

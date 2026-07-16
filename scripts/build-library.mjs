@@ -1,9 +1,24 @@
 import { createHash } from "node:crypto";
-import os from "node:os";
 import { access, mkdir, readFile, readdir, realpath, rename, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import sharp from "sharp";
+
+import {
+  coverDestinationName,
+  isDisplayableBook,
+  isDisplayableMedia,
+  orphanCoverNames,
+  parseFrontmatter,
+  pinnedRank,
+  resolveVaultRoot,
+  sortMediaRecords,
+  toPublicMedia,
+  validateUniqueRecords,
+} from "../lib/build-utils.mjs";
+
+// 纯函数都在 lib/build-utils.mjs，测试只 import 那个文件，因此不装 sharp 也能跑。
+// 本文件是唯一 import sharp 的地方——不要从这里转出纯函数，否则耦合会悄悄长回来。
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const coversDirectory = path.join(projectRoot, "public/covers");
@@ -15,138 +30,9 @@ const sources = [
   { type: "music", directory: "Project：存放项目的必要信息/音" },
 ];
 
-export function parseFrontmatter(markdown) {
-  const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!match) return {};
-  const metadata = {};
-  let listKey = null;
-  for (const line of match[1].split(/\r?\n/)) {
-    const property = line.match(/^([^\s][^:]*):\s*(.*)$/);
-    if (property) {
-      const key = property[1].trim();
-      const value = property[2].trim().replace(/^['"]|['"]$/g, "");
-      listKey = key === "分类" && !value ? key : null;
-      if (value) metadata[key] = value;
-      if (listKey) metadata[listKey] = [];
-      continue;
-    }
-    const item = listKey ? line.match(/^\s+-\s+(.+)$/) : null;
-    if (item) metadata[listKey].push(item[1].trim().replace(/^['"]|['"]$/g, ""));
-  }
-  return metadata;
-}
-
-export function isDisplayableBook(metadata) {
-  const completed = /^(已读|读完|完成|读完待整理)$/.test(metadata.状态?.trim() ?? "");
-  return Boolean(metadata.封面 && (metadata.完读日期 || completed));
-}
-
-export function completedMonth(value) {
-  const match = String(value ?? "").trim().match(/^(\d{4})[-/.年](\d{1,2})/);
-  return match ? `${match[1]}-${match[2].padStart(2, "0")}` : "";
-}
-
-export function publicRating(value) {
-  const score = Number(value);
-  return Number.isInteger(score) && score >= 1 && score <= 5 ? score : 0;
-}
-
-export function publicDecimalRating(value) {
-  const score = Number(value);
-  return Number.isFinite(score) && score >= 0 && score <= 10 ? score : 0;
-}
-
-export function isDisplayableMedia(metadata) {
-  return Boolean((metadata.名称 || metadata.书名)?.trim() && metadata.封面?.trim());
-}
-
-export function resolveVaultRoot(env = process.env, home = os.homedir()) {
-  return path.resolve(env.OBSIDIAN_VAULT || path.join(home, "Documents/obsidian/阿崔"));
-}
-
-export function validateUniqueRecords(records) {
-  const seen = new Set();
-  for (const record of records) {
-    if (seen.has(record.id)) throw new Error(`Duplicate media id: ${record.id}`);
-    seen.add(record.id);
-  }
-  return records;
-}
-
-export function sortMediaRecords(records) {
-  return records.sort((left, right) => {
-    const typeOrder = left.type.localeCompare(right.type);
-    if (typeOrder) return typeOrder;
-    if (left.type === "book") {
-      const ratingOrder = (right.rating ?? 0) - (left.rating ?? 0);
-      if (ratingOrder) return ratingOrder;
-    }
-    if (left.type === "film") {
-      const priorityOrder = (left.pinned ?? 99) - (right.pinned ?? 99);
-      if (priorityOrder) return priorityOrder;
-      const doubanOrder = (right.doubanRating ?? 0) - (left.doubanRating ?? 0);
-      if (doubanOrder) return doubanOrder;
-    }
-    if (left.type === "music") {
-      const priorityOrder = (left.pinned ?? 99) - (right.pinned ?? 99);
-      if (priorityOrder) return priorityOrder;
-    }
-    return left.title.localeCompare(right.title, "zh-CN");
-  });
-}
-
-// 影/音的置顶来自 frontmatter `置顶:`（数字越小越靠前），换偏好改笔记即可，不用改代码。
-// 该字段只参与排序，写 JSON 前会被剥掉，不进入公开数据面。
-export function pinnedRank(metadata) {
-  const raw = String(metadata.置顶 ?? "").trim();
-  const rank = Number(raw);
-  // 空串要走缺省而不是被 Number("") 悄悄算成 0 —— 那会把没写置顶的笔记顶到最前。
-  return raw && Number.isFinite(rank) ? rank : 99;
-}
-
-export function orphanCoverNames(names, referenced) {
-  return names.filter((name) => /^[a-f0-9]{12}(?:-(?:320|720))?\.(jpg|jpeg|png|webp|avif)$/i.test(name) && !referenced.has(name));
-}
-
-function categories(metadata) {
-  return Array.isArray(metadata.分类) ? metadata.分类.filter(Boolean) : [];
-}
-
-function publicId(filename, type) {
-  return `${type}:${path.basename(filename, path.extname(filename))}`;
-}
-
-export function toPublicMedia(filename, metadata, publicCover, type, publicCoverLarge = "") {
-  const title = (metadata.名称 || metadata.书名 || path.basename(filename, path.extname(filename))).trim();
-  const creator = (metadata.创作者 || metadata.作者 || "").trim();
-  const month = type === "book" ? completedMonth(metadata.完读日期) : "";
-  const rating = type === "book" ? publicRating(metadata.评分) : 0;
-  const doubanRating = type === "film" ? publicDecimalRating(metadata.豆瓣评分 || metadata.豆瓣分数) : 0;
-  return {
-    id: publicId(filename, type),
-    type,
-    title,
-    ...(creator ? { creator } : {}),
-    cover: publicCover,
-    ...(publicCoverLarge ? { coverLarge: publicCoverLarge } : {}),
-    categories: categories(metadata),
-    ...(month ? { completedMonth: month } : {}),
-    ...(rating ? { rating } : {}),
-    ...(doubanRating ? { doubanRating } : {}),
-  };
-}
-
-export function toPublicBook(filename, metadata, publicCover) {
-  return toPublicMedia(filename, metadata, publicCover, "book");
-}
-
 function coverDestination(sourcePath, contents) {
-  const extension = path.extname(sourcePath).toLowerCase();
-  if (![".jpg", ".jpeg", ".png", ".webp", ".avif"].includes(extension)) return null;
-  const digest = createHash("sha1").update(contents).digest("hex").slice(0, 12);
-  return digest;
+  return coverDestinationName(sourcePath, createHash("sha1").update(contents).digest("hex").slice(0, 12));
 }
-
 async function copyCover(sourceCover) {
   const resolvedRoot = await realpath(resolveVaultRoot());
   const resolvedCover = await realpath(sourceCover);

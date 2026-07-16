@@ -2,6 +2,9 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 
+// 这里只断言「发布出去的东西」：HTML 结构、隐私边界、CSS 令牌约定。
+// 不要断言 app.js 的源码文本（函数名、事件绑定写法、缓动曲线数值）——
+// 那种用例改一行就红，却抓不到任何真 bug。行为覆盖该由 DOM 测试承担。
 test("site shell exposes the media shelves and reference interactions", async () => {
   const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 
@@ -46,26 +49,6 @@ test("styles use the documented token and layer scale", async () => {
   assert.match(css, /--layer-controls:/);
 });
 
-test("media objects open a same-page flipping detail object", async () => {
-  const [app, index, shelf] = await Promise.all([
-    readFile(new URL("../app.js", import.meta.url), "utf8"),
-    readFile(new URL("../index.html", import.meta.url), "utf8"),
-    readFile(new URL("../shelf.css", import.meta.url), "utf8"),
-  ]);
-
-  assert.doesNotMatch(app, /addEventListener\("dblclick"/);
-  assert.match(app, /function openWork/);
-  assert.match(app, /完读日期/);
-  assert.match(app, /workDialog\.showModal\(\)/);
-  assert.match(app, /Array\.from\(\{ length: 5 \}/);
-  assert.doesNotMatch(app, /function focusObject/);
-  assert.match(index, /id="work-dialog"/);
-  assert.match(index, /class="control-catalog" href="browse\.html">目录 →<\/a>/);
-  assert.match(shelf, /transition-timing-function:cubic-bezier\(.2,.8,.2,1\)/);
-  assert.match(shelf, /rotateY\(180deg\)/);
-  assert.match(shelf, /LXGW WenKai/);
-});
-
 test("shelf pages expose synchronized metadata and keyboard entry points", async () => {
   const pages = await Promise.all(["index", "film", "music", "browse", "about"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
   assert.ok(pages.every((page) => page.includes('class="skip-link"')));
@@ -73,12 +56,7 @@ test("shelf pages expose synchronized metadata and keyboard entry points", async
   assert.match(pages[0], /data-mode="scatter" aria-pressed="true"/);
   assert.match(pages[0], /data-mode="tidy" aria-pressed="false"/);
   assert.match(pages[0], /aria-labelledby="poster-title"/);
-  const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
-  assert.match(app, /const pageMeta =/);
-  assert.match(app, /document\.title = meta\.title/);
-  assert.match(app, /filterPanel\.querySelector\("\.filter-pill"\)\?\.focus\(\)/);
-  assert.match(app, /\.media-object:not\(\[aria-hidden="true"\]\)/);
-  assert.doesNotMatch(app, /stateMessage\.innerHTML/);
+  assert.match(pages[0], /id="work-dialog"/);
 });
 
 test("shelf controls use one continuous rhythm with count and catalog", async () => {
@@ -88,13 +66,6 @@ test("shelf controls use one continuous rhythm with count and catalog", async ()
   assert.equal((html.match(/class="control-divider"/g) ?? []).length, 2);
   assert.match(html, /class="control-catalog" href="browse\.html">目录 →<\/a>/);
   assert.doesNotMatch(html, /control-destination/);
-});
-
-test("drag cleanup survives pointer release outside the cover", async () => {
-  const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
-
-  assert.match(app, /window\.addEventListener\("pointerup", finish, \{ once: true \}\)/);
-  assert.match(app, /window\.addEventListener\("pointercancel", finish, \{ once: true \}\)/);
 });
 
 test("component styles consume color tokens instead of raw hex values", async () => {
