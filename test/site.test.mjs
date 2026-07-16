@@ -39,6 +39,26 @@ test("public pages expose local identity assets", async () => {
   assert.match(await readFile(new URL("../404.html", import.meta.url), "utf8"), /返回陈列/);
 });
 
+test("every page tints the mobile address bar the same paper color", async () => {
+  const names = ["index", "film", "music", "browse", "about", "404"];
+  const pages = await Promise.all(names.map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
+  for (const [index, page] of pages.entries()) {
+    assert.match(page, /<meta name="theme-color" content="#e8e2d8">/, `${names[index]}.html 缺 theme-color 或取值不一致`);
+  }
+});
+
+test("pages that render the shelf preload the media data", async () => {
+  const names = ["index", "film", "music", "browse"];
+  const pages = await Promise.all(names.map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
+  for (const [index, page] of pages.entries()) {
+    assert.match(page, /<link rel="preload" href="data\/media\.json" as="fetch"/, `${names[index]}.html 缺 media.json preload`);
+  }
+  // about/404 不加载 media.json，预载了反而是浪费请求。
+  for (const name of ["about", "404"]) {
+    assert.doesNotMatch(await readFile(new URL(`../${name}.html`, import.meta.url), "utf8"), /rel="preload" href="data\/media\.json"/);
+  }
+});
+
 test("styles use the documented token and layer scale", async () => {
   const styles = await Promise.all(["styles", "shelf", "pages"].map((name) => readFile(new URL(`../${name}.css`, import.meta.url), "utf8")));
   const css = styles.join("\n");
