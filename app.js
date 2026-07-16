@@ -245,8 +245,11 @@ function updatePickStatus() {
   document.querySelector("#make-poster").disabled = state.picked.length !== 5;
 }
 
-function createPoster() {
+async function createPoster() {
   const items = state.picked.map((index) => ({ image: stage.querySelector(`[data-index="${index}"] img`) }));
+  // 字体是 font-display:swap 懒加载的，canvas 不会等它：不先 load 就会画成回退字形。
+  // 声明必须和 poster.js 里的 context.font 一致，否则匹配不上。
+  await document.fonts.load('72px "LXGW WenKai"');
   const canvas = createPosterCanvas(state.type, items);
   const url = canvas.toDataURL("image/png");
   startPicking(false);

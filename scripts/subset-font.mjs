@@ -9,7 +9,9 @@ const mediaFile = path.join(projectRoot, "data/media.json");
 const sourceFont = path.join(projectRoot, "public/fonts/lxgw-wenkai-regular.ttf");
 const outputFont = path.join(projectRoot, "public/fonts/lxgw-wenkai-subset.woff2");
 
-const uiCharset = "完读日期个人评分点击翻回封面翻转查看作品信息书影音豆瓣评分小说·，。：/（）— 0123456789年月日";
+// 站内固定文案 + 海报标题。这些字不能指望藏品数据顺带覆盖——
+// 「崔」一度只靠某一条笔记撑着，那条笔记一删海报标题就会掉字。
+const uiCharset = "完读日期个人评分点击翻回封面翻转查看作品信息书影音豆瓣评分小说·，。：/（）— 0123456789年月日阿崔的精神地图";
 const asciiCharset = Array.from({ length: 95 }, (unused, index) => String.fromCharCode(32 + index)).join("");
 
 export function charsetFromMedia(records) {
