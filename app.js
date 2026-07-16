@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=8";
-import { loadMediaData } from "./lib/media-data.js?v=8";
-import { createPosterCanvas } from "./lib/poster.js?v=8";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=8";
-import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=8";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=9";
+import { loadMediaData } from "./lib/media-data.js?v=9";
+import { createPosterCanvas } from "./lib/poster.js?v=9";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=9";
+import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=9";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -47,7 +47,7 @@ function applyLayout() {
   });
   stage.dataset.mode = state.mode;
   stage.dataset.mediaType = state.type;
-  stage.style.height = `${stageHeightFor(state.items.length, document.documentElement.clientWidth, state.mode, state.type)}px`;
+  stage.style.height = `${stageHeightFor(layout, state.mode)}px`;
   controls.querySelectorAll("[data-mode]").forEach((button) => {
     const active = button.dataset.mode === state.mode;
     button.classList.toggle("is-active", active);

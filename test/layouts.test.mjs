@@ -40,12 +40,32 @@ test("film scatter uses a wider dramatic spread than a book pile", () => {
   assert.ok(layout.every((item) => item.width >= 130));
 });
 
+const manyOf = (type, count) =>
+  Array.from({ length: count }, (_, index) => ({ id: `${type}:${index}`, title: `${type} ${index}` }));
+
+const layoutBottom = (layout) =>
+  layout.reduce((lowest, place) => Math.max(lowest, place.top + place.width / place.ratio), 0);
+
 test("film stage height follows its five-column layout", () => {
-  assert.ok(stageHeightFor(15, 1280, "scatter", "film") > stageHeightFor(5, 1280, "scatter", "film"));
+  const scatter = (count) => stageHeightFor(createScatterLayout(manyOf("film", count), { width: 1280 }, 0, "film"), "scatter");
+  assert.ok(scatter(15) > scatter(5));
 });
 
 test("stage height grows for narrow screens", () => {
-  const desktop = stageHeightFor(60, 1280, "scatter");
-  const mobile = stageHeightFor(60, 375, "scatter");
-  assert.ok(mobile > desktop);
+  const scatter = (width) => stageHeightFor(createScatterLayout(manyOf("book", 60), { width }, 0), "scatter");
+  assert.ok(scatter(375) > scatter(1280));
+});
+
+// 回归：舞台高度曾经照着 dimensions() 的行高另算一遍，和 createTidyLayout 实际用的行高错开，
+// 移动端音乐页页脚横线穿过封面中间（实测溢出 497px）。高度必须始终盖住最后一排。
+test("stage height contains every cover in tidy and scatter", () => {
+  for (const type of ["book", "film", "music"]) {
+    for (const width of [375, 768, 1280]) {
+      const items = manyOf(type, 206);
+      const tidy = createTidyLayout(items, { width }, type);
+      assert.ok(stageHeightFor(tidy, "tidy") >= layoutBottom(tidy), `tidy ${type} @${width}`);
+      const scatter = createScatterLayout(items, { width }, 0, type);
+      assert.ok(stageHeightFor(scatter, "scatter") >= layoutBottom(scatter), `scatter ${type} @${width}`);
+    }
+  }
 });
