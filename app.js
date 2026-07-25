@@ -32,8 +32,10 @@ function placementFor(items) {
 }
 
 function applyLayout() {
-  const layout = placementFor(state.items);
-  stage.querySelectorAll(".media-object").forEach((object, index) => {
+  const objects = [...stage.querySelectorAll(".media-object")];
+  const visible = objects.filter((object) => !object.classList.contains("is-dimmed"));
+  const layout = placementFor(visible.map((object) => state.items[Number(object.dataset.index)]));
+  visible.forEach((object, index) => {
     const place = layout[index];
     if (!place) return;
     object.style.setProperty("--left", `${place.left}px`);
@@ -166,7 +168,6 @@ function render() {
   document.querySelector(".media-nav [aria-current]")?.removeAttribute("aria-current");
   document.querySelector(`.media-nav [data-type="${state.type}"]`)?.setAttribute("aria-current", "page");
   stage.setAttribute("aria-label", `${typeLabels[state.type]}的收藏`);
-  applyLayout();
   filter(state.category);
   stage.setAttribute("aria-busy", "false");
 }
@@ -186,6 +187,7 @@ function filter(category) {
     pill.setAttribute("aria-pressed", String(active));
   });
   document.querySelector('[data-action="filter"]').textContent = category === "全部" ? "筛选" : `${category} ${matches}`;
+  applyLayout();
 }
 
 function renderFilters() {
@@ -268,8 +270,10 @@ function enableDrag(object, event) {
     const dy = next.clientY - start.y;
     moved ||= Math.hypot(dx, dy) > 6;
     if (!moved) return;
-    object.style.setProperty("--left", `${start.left + dx}px`);
-    object.style.setProperty("--top", `${start.top + dy}px`);
+    const maxLeft = Math.max(stage.clientWidth - object.offsetWidth, 0);
+    const maxTop = Math.max(stage.clientHeight - object.offsetHeight, 0);
+    object.style.setProperty("--left", `${Math.min(Math.max(start.left + dx, 0), maxLeft)}px`);
+    object.style.setProperty("--top", `${Math.min(Math.max(start.top + dy, 0), maxTop)}px`);
     state.dragging = true;
   };
   const finish = () => {
