@@ -140,7 +140,7 @@ Base unit: 4px.
 
 - No continuous animation, parallax, or decorative motion.
 - Shake recomputes Scatter positions; Scatter, Tidy, and Vortex are explicit user-chosen modes.
-- Pointer and touch dragging update only the selected cover position.
+- Pointer dragging updates only the selected cover position; touch uses native scroll and tap-to-open instead.
 - Hover and focus share the same visual state.
 - Tap opens the floating work object without leaving the shelf; dragging remains a separate gesture and does not open it.
 - `prefers-reduced-motion: reduce` removes transition duration.

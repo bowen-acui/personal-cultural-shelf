@@ -261,7 +261,7 @@ async function createPoster() {
 }
 
 function enableDrag(object, event) {
-  if (state.picking || event.button !== 0) return;
+  if (state.picking || event.pointerType === "touch" || event.button !== 0) return;
   const start = { x: event.clientX, y: event.clientY, left: Number.parseFloat(object.style.getPropertyValue("--left")) || object.offsetLeft, top: Number.parseFloat(object.style.getPropertyValue("--top")) || object.offsetTop };
   let moved = false;
   let finished = false;
