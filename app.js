@@ -10,7 +10,7 @@ const pageMeta = {
   film: { title: "影 · 阿崔的精神地图", description: "阿崔看过的电影。" },
   music: { title: "音 · 阿崔的精神地图", description: "阿崔听过的音乐。" },
 };
-const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", picking: false, picked: [], dragging: false };
+const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", picking: false, picked: [], dragging: false, savedScroll: 0 };
 const stage = document.querySelector("#shelf-stage");
 const controls = document.querySelector("#shelf-controls");
 const filterPanel = document.querySelector("#filter-panel");
@@ -323,8 +323,21 @@ async function load() {
 controls.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
-  if (button.dataset.mode) { state.mode = button.dataset.mode; if (state.mode === "scatter") state.seed += 1; applyLayout(); }
-  if (button.dataset.action === "shake") { state.mode = "scatter"; state.seed += 1; applyLayout(); }
+  if (button.dataset.mode) {
+    const previous = state.mode;
+    if (previous !== "vortex" && button.dataset.mode === "vortex") state.savedScroll = scrollY;
+    state.mode = button.dataset.mode;
+    if (state.mode === "scatter") state.seed += 1;
+    applyLayout();
+    if (previous === "vortex" && state.mode !== "vortex") scrollTo({ top: state.savedScroll, behavior: "instant" });
+  }
+  if (button.dataset.action === "shake") {
+    const previous = state.mode;
+    state.mode = "scatter";
+    state.seed += 1;
+    applyLayout();
+    if (previous === "vortex") scrollTo({ top: state.savedScroll, behavior: "instant" });
+  }
   if (button.dataset.action === "filter") showFilters();
   if (button.dataset.action === "share") startPicking();
   if (button.dataset.action === "retry") load();
