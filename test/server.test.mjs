@@ -74,3 +74,14 @@ test("已压缩的二进制资源不再 gzip", async () => {
     assert.equal(response.headers.get("content-encoding"), null);
   });
 });
+
+test("命中 If-None-Match 时返回 304 且不带响应体", async () => {
+  await withServer(async (base) => {
+    const first = await fetch(`${base}/styles.css`);
+    const etag = first.headers.get("etag");
+    assert.ok(etag && etag.startsWith('W/"'), "响应应带弱 ETag");
+    const second = await fetch(`${base}/styles.css`, { headers: { "if-none-match": etag } });
+    assert.equal(second.status, 304);
+    assert.equal(await second.text(), "");
+  });
+});

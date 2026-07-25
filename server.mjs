@@ -38,14 +38,23 @@ export const server = http.createServer(async (request, response) => {
   try {
     const requested = decodeURIComponent((request.url || "/").split("?")[0]);
     let file = safePath(request.url || "/") ?? path.join(root, "404.html");
+    let stats;
     try {
-      if (!(await stat(file)).isFile()) throw new Error("not a file");
+      stats = await stat(file);
+      if (!stats.isFile()) throw new Error("not a file");
     } catch {
       file = path.join(root, "404.html");
+      stats = await stat(file);
     }
     const status = path.basename(file) === "404.html" && requested !== "/404.html" ? 404 : 200;
     const extension = path.extname(file).toLowerCase();
-    const headers = { "Cache-Control": cacheControl(file), "Content-Type": mime[extension] || "application/octet-stream" };
+    const etag = `W/"${stats.size.toString(16)}-${Math.trunc(stats.mtimeMs).toString(16)}"`;
+    const headers = { "Cache-Control": cacheControl(file), "Content-Type": mime[extension] || "application/octet-stream", ETag: etag };
+    if (status === 200 && request.headers["if-none-match"] === etag) {
+      response.writeHead(304, headers);
+      response.end();
+      return;
+    }
     if (compressible.has(extension)) {
       headers.Vary = "Accept-Encoding";
       if (/\bgzip\b/.test(request.headers["accept-encoding"] || "")) {
