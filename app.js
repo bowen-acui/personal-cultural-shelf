@@ -368,7 +368,14 @@ stage.addEventListener("click", (event) => {
   if (position >= 0) state.picked.splice(position, 1); else if (state.picked.length < 5) state.picked.push(index);
   object.classList.toggle("is-picked", state.picked.includes(index)); object.setAttribute("aria-pressed", String(state.picked.includes(index))); updatePickStatus();
 });
-filterPanel.addEventListener("click", (event) => { const pill = event.target.closest("[data-category]"); if (pill) filter(toggleCategory(state.category, pill.dataset.category)); });
+filterPanel.addEventListener("click", (event) => {
+  const pill = event.target.closest("[data-category]");
+  if (!pill) return;
+  filter(toggleCategory(state.category, pill.dataset.category));
+  filterPanel.hidden = true;
+  filterAction.setAttribute("aria-expanded", "false");
+  restoreTrigger();
+});
 document.querySelector("#make-poster").addEventListener("click", createPoster);
 document.querySelector("#copy-link").addEventListener("click", async (event) => {
   const button = event.currentTarget;
