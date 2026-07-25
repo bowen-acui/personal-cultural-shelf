@@ -3,3 +3,4 @@ qa/
 node_modules/
 research/reference/
 public/fonts/*.ttf
+.claude/

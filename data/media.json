@@ -2150,6 +2150,19 @@
     ]
   },
   {
+    "id": "film:春光灿烂猪八戒",
+    "type": "film",
+    "title": "春光灿烂猪八戒",
+    "creator": "范小天 / 叶崇铭 / 梦继",
+    "cover": "public/covers/662788fadbcf-320.webp",
+    "coverLarge": "public/covers/662788fadbcf-720.webp",
+    "categories": [
+      "喜剧",
+      "爱情",
+      "古装"
+    ]
+  },
+  {
     "id": "film:春光乍泄",
     "type": "film",
     "title": "春光乍泄",
@@ -2849,6 +2862,19 @@
     ]
   },
   {
+    "id": "film:好先生",
+    "type": "film",
+    "title": "好先生",
+    "creator": "张晓波",
+    "cover": "public/covers/d8a916f1cfae-320.webp",
+    "coverLarge": "public/covers/d8a916f1cfae-720.webp",
+    "categories": [
+      "剧情",
+      "爱情",
+      "都市"
+    ]
+  },
+  {
     "id": "film:河狸变身计划",
     "type": "film",
     "title": "河狸变身计划",
@@ -3128,6 +3154,19 @@
     "categories": [
       "动画",
       "科幻"
+    ]
+  },
+  {
+    "id": "film:鸡毛飞上天",
+    "type": "film",
+    "title": "鸡毛飞上天",
+    "creator": "余丁",
+    "cover": "public/covers/b474bbe452a2-320.webp",
+    "coverLarge": "public/covers/b474bbe452a2-720.webp",
+    "categories": [
+      "剧情",
+      "年代",
+      "商战"
     ]
   },
   {
@@ -3430,6 +3469,19 @@
     ]
   },
   {
+    "id": "film:琅琊榜",
+    "type": "film",
+    "title": "琅琊榜",
+    "creator": "孔笙 / 李雪",
+    "cover": "public/covers/32b8b74a7d0e-320.webp",
+    "coverLarge": "public/covers/32b8b74a7d0e-720.webp",
+    "categories": [
+      "古装",
+      "剧情",
+      "权谋"
+    ]
+  },
+  {
     "id": "film:浪客剑心",
     "type": "film",
     "title": "浪客剑心",
@@ -3529,6 +3581,18 @@
     "categories": [
       "动画",
       "奇幻"
+    ]
+  },
+  {
+    "id": "film:龙门镖局",
+    "type": "film",
+    "title": "龙门镖局",
+    "creator": "王勇",
+    "cover": "public/covers/9e622c3190f7-320.webp",
+    "coverLarge": "public/covers/9e622c3190f7-720.webp",
+    "categories": [
+      "喜剧",
+      "古装"
     ]
   },
   {
@@ -4074,6 +4138,18 @@
     ]
   },
   {
+    "id": "film:扫黑风暴",
+    "type": "film",
+    "title": "扫黑风暴",
+    "creator": "五百",
+    "cover": "public/covers/b7acd6d766db-320.webp",
+    "coverLarge": "public/covers/b7acd6d766db-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪"
+    ]
+  },
+  {
     "id": "film:色，戒",
     "type": "film",
     "title": "色，戒",
@@ -4367,6 +4443,19 @@
     ]
   },
   {
+    "id": "film:隋唐演义",
+    "type": "film",
+    "title": "隋唐演义",
+    "creator": "钟少雄 / 王飞",
+    "cover": "public/covers/5e3f7cabfbf5-320.webp",
+    "coverLarge": "public/covers/5e3f7cabfbf5-720.webp",
+    "categories": [
+      "剧情",
+      "历史",
+      "古装"
+    ]
+  },
+  {
     "id": "film:岁月神偷",
     "type": "film",
     "title": "岁月神偷",
@@ -4441,6 +4530,19 @@
     ]
   },
   {
+    "id": "film:天道",
+    "type": "film",
+    "title": "天道",
+    "creator": "张前",
+    "cover": "public/covers/88490148952d-320.webp",
+    "coverLarge": "public/covers/88490148952d-720.webp",
+    "categories": [
+      "都市",
+      "商战",
+      "剧情"
+    ]
+  },
+  {
     "id": "film:天空之城",
     "type": "film",
     "title": "天空之城",
@@ -4476,6 +4578,19 @@
       "剧情",
       "爱情",
       "喜剧"
+    ]
+  },
+  {
+    "id": "film:天下第一",
+    "type": "film",
+    "title": "天下第一",
+    "creator": "邓衍成 / 韦丽园",
+    "cover": "public/covers/f040dc87a484-320.webp",
+    "coverLarge": "public/covers/f040dc87a484-720.webp",
+    "categories": [
+      "武侠",
+      "古装",
+      "悬疑"
     ]
   },
   {
@@ -4515,6 +4630,18 @@
     ]
   },
   {
+    "id": "film:万万没想到",
+    "type": "film",
+    "title": "万万没想到",
+    "creator": "易小星",
+    "cover": "public/covers/27fbe52ea7a2-320.webp",
+    "coverLarge": "public/covers/27fbe52ea7a2-720.webp",
+    "categories": [
+      "喜剧",
+      "短片"
+    ]
+  },
+  {
     "id": "film:王国",
     "type": "film",
     "title": "王国",
@@ -4525,6 +4652,19 @@
       "悬疑",
       "惊悚",
       "韩剧"
+    ]
+  },
+  {
+    "id": "film:围棋少年",
+    "type": "film",
+    "title": "围棋少年",
+    "creator": "马风清",
+    "cover": "public/covers/6097b36a365c-320.webp",
+    "coverLarge": "public/covers/6097b36a365c-720.webp",
+    "categories": [
+      "武侠",
+      "冒险",
+      "动画"
     ]
   },
   {
@@ -4573,6 +4713,19 @@
     "categories": [
       "剧情",
       "家庭"
+    ]
+  },
+  {
+    "id": "film:我是刑警",
+    "type": "film",
+    "title": "我是刑警",
+    "creator": "惠楷栋",
+    "cover": "public/covers/d683b16cd2ff-320.webp",
+    "coverLarge": "public/covers/d683b16cd2ff-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪",
+      "刑侦"
     ]
   },
   {
@@ -5066,6 +5219,19 @@
     "categories": [
       "剧情",
       "战争"
+    ]
+  },
+  {
+    "id": "film:正阳门下",
+    "type": "film",
+    "title": "正阳门下",
+    "creator": "刘家成",
+    "cover": "public/covers/5d0e41c71308-320.webp",
+    "coverLarge": "public/covers/5d0e41c71308-720.webp",
+    "categories": [
+      "剧情",
+      "年代",
+      "家庭"
     ]
   },
   {
