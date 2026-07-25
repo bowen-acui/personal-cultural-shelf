@@ -2,11 +2,15 @@ import { createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
+import { pipeline } from "node:stream";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { createGzip } from "node:zlib";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT || 4173);
 const mime = { ".css": "text/css; charset=utf-8", ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".png": "image/png", ".svg": "image/svg+xml", ".ttf": "font/ttf", ".webp": "image/webp", ".woff2": "font/woff2" };
+// webp/woff2/png 自身已压缩，再 gzip 只浪费 CPU；只压文本类。
+const compressible = new Set([".html", ".css", ".js", ".json", ".svg", ".txt", ".xml"]);
 
 // 只放行站点真正要发的资源：根目录静态页 + public/lib/data 三个目录。
 // 其余（server.mjs、scripts/、docs/、.git/、node_modules/）一律当 404。
@@ -40,7 +44,18 @@ export const server = http.createServer(async (request, response) => {
       file = path.join(root, "404.html");
     }
     const status = path.basename(file) === "404.html" && requested !== "/404.html" ? 404 : 200;
-    response.writeHead(status, { "Cache-Control": cacheControl(file), "Content-Type": mime[path.extname(file).toLowerCase()] || "application/octet-stream" });
+    const extension = path.extname(file).toLowerCase();
+    const headers = { "Cache-Control": cacheControl(file), "Content-Type": mime[extension] || "application/octet-stream" };
+    if (compressible.has(extension)) {
+      headers.Vary = "Accept-Encoding";
+      if (/\bgzip\b/.test(request.headers["accept-encoding"] || "")) {
+        headers["Content-Encoding"] = "gzip";
+        response.writeHead(status, headers);
+        pipeline(createReadStream(file), createGzip(), response, () => {});
+        return;
+      }
+    }
+    response.writeHead(status, headers);
     createReadStream(file).pipe(response);
   } catch { response.writeHead(500).end("Server error"); }
 });
