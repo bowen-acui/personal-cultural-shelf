@@ -7,7 +7,7 @@
 .catalog-tools input:focus,.catalog-tools select:focus { border-color:var(--active-edge); background:var(--field-surface-focus); }
 .catalog-tools input { flex:1; }
 .catalog-grid { columns:5 150px; column-gap:22px; }
-.catalog-card { display:inline-grid; width:100%; gap:9px; margin:0 0 28px; break-inside:avoid; }
+.catalog-card { display:inline-grid; width:100%; gap:9px; margin:0 0 28px; break-inside:avoid; content-visibility:auto; contain-intrinsic-size:auto 200px auto 400px; }
 .catalog-card img { display:block; width:100%; height:auto; box-shadow:var(--shadow); }
 .catalog-card strong { font-family:var(--font-display); font-size:18px; font-weight:400; line-height:1.15; text-wrap:balance; }
 .catalog-card small { color:var(--ink-muted); font-size:10px; line-height:1.5; text-wrap:pretty; }
