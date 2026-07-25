@@ -19,6 +19,7 @@ const workFlip = document.querySelector("#work-flip");
 const filterAction = document.querySelector('[data-action="filter"]');
 const shareAction = document.querySelector('[data-action="share"]');
 let transientTrigger = null;
+let posterUrl = null;
 const PRIORITY_IMAGE_COUNT = 30;
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
@@ -253,10 +254,17 @@ async function createPoster() {
   // 声明必须和 poster.js 里的 context.font 一致，否则匹配不上。
   await document.fonts.load('72px "LXGW WenKai"');
   const canvas = createPosterCanvas(state.type, items);
-  const url = canvas.toDataURL("image/png");
+  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+  if (posterUrl) URL.revokeObjectURL(posterUrl);
+  posterUrl = URL.createObjectURL(blob);
   startPicking(false);
-  document.querySelector("#poster-preview").src = url;
-  document.querySelector("#poster-download").href = url;
+  document.querySelector("#poster-preview").src = posterUrl;
+  document.querySelector("#poster-download").href = posterUrl;
+  const share = document.querySelector("#poster-share");
+  const file = new File([blob], "acui-spiritual-map.png", { type: "image/png" });
+  const canShare = typeof navigator.canShare === "function" && navigator.canShare({ files: [file] });
+  share.hidden = !canShare;
+  share.onclick = () => navigator.share({ files: [file] }).catch(() => {});
   document.querySelector("#poster-dialog").showModal();
 }
 
