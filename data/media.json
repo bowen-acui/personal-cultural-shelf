@@ -783,6 +783,19 @@
     "rating": 4
   },
   {
+    "id": "book:投资最重要的事",
+    "type": "book",
+    "title": "投资最重要的事",
+    "creator": "霍华德·马克斯",
+    "cover": "public/covers/c52a1ae82a20-320.webp",
+    "coverLarge": "public/covers/c52a1ae82a20-720.webp",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2026-07",
+    "rating": 4
+  },
+  {
     "id": "book:文明、现代化、价值投资于中国",
     "type": "book",
     "title": "文明、现代化、价值投资于中国",
@@ -832,6 +845,19 @@
       "小说"
     ],
     "completedMonth": "2023-01",
+    "rating": 4
+  },
+  {
+    "id": "book:因为独特",
+    "type": "book",
+    "title": "因为独特",
+    "creator": "李翔",
+    "cover": "public/covers/8f500329b2fa-320.webp",
+    "coverLarge": "public/covers/8f500329b2fa-720.webp",
+    "categories": [
+      "传记"
+    ],
+    "completedMonth": "2026-07",
     "rating": 4
   },
   {
@@ -1105,6 +1131,19 @@
       "社会科学"
     ],
     "completedMonth": "2023-01",
+    "rating": 3
+  },
+  {
+    "id": "book:华杉讲透王阳明《传习录》",
+    "type": "book",
+    "title": "华杉讲透王阳明《传习录》",
+    "creator": "华杉",
+    "cover": "public/covers/5f8c6954b97a-320.webp",
+    "coverLarge": "public/covers/5f8c6954b97a-720.webp",
+    "categories": [
+      "哲学"
+    ],
+    "completedMonth": "2026-07",
     "rating": 3
   },
   {
@@ -1903,6 +1942,19 @@
     ]
   },
   {
+    "id": "film:爱尔兰人",
+    "type": "film",
+    "title": "爱尔兰人",
+    "creator": "马丁·斯科塞斯",
+    "cover": "public/covers/2519b149ecff-320.webp",
+    "coverLarge": "public/covers/2519b149ecff-720.webp",
+    "categories": [
+      "犯罪",
+      "剧情",
+      "传记"
+    ]
+  },
+  {
     "id": "film:傲慢与偏见",
     "type": "film",
     "title": "傲慢与偏见",
@@ -2028,6 +2080,19 @@
     ]
   },
   {
+    "id": "film:变脸",
+    "type": "film",
+    "title": "变脸",
+    "creator": "吴宇森",
+    "cover": "public/covers/20f48b08f9a0-320.webp",
+    "coverLarge": "public/covers/20f48b08f9a0-720.webp",
+    "categories": [
+      "动作",
+      "科幻",
+      "惊悚"
+    ]
+  },
+  {
     "id": "film:冰雪奇缘",
     "type": "film",
     "title": "冰雪奇缘",
@@ -2078,6 +2143,19 @@
     ]
   },
   {
+    "id": "film:猜火车",
+    "type": "film",
+    "title": "猜火车",
+    "creator": "丹尼·博伊尔",
+    "cover": "public/covers/2c0fb8a20c84-320.webp",
+    "coverLarge": "public/covers/2c0fb8a20c84-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪",
+      "喜剧"
+    ]
+  },
+  {
     "id": "film:拆弹部队",
     "type": "film",
     "title": "拆弹部队",
@@ -2088,6 +2166,19 @@
       "剧情",
       "惊悚",
       "战争"
+    ]
+  },
+  {
+    "id": "film:超感猎杀",
+    "type": "film",
+    "title": "超感猎杀",
+    "creator": "莉莉·沃卓斯基 / 拉娜·沃卓斯基 / J·迈克尔·斯特拉辛斯基",
+    "cover": "public/covers/94043c3e5837-320.webp",
+    "coverLarge": "public/covers/94043c3e5837-720.webp",
+    "categories": [
+      "科幻",
+      "剧情",
+      "惊悚"
     ]
   },
   {
@@ -2274,6 +2365,18 @@
     ]
   },
   {
+    "id": "film:大腕",
+    "type": "film",
+    "title": "大腕",
+    "creator": "冯小刚",
+    "cover": "public/covers/054192da1c2e-320.webp",
+    "coverLarge": "public/covers/054192da1c2e-720.webp",
+    "categories": [
+      "喜剧",
+      "剧情"
+    ]
+  },
+  {
     "id": "film:大只佬",
     "type": "film",
     "title": "大只佬",
@@ -2284,6 +2387,19 @@
       "剧情",
       "动作",
       "奇幻"
+    ]
+  },
+  {
+    "id": "film:盗火线",
+    "type": "film",
+    "title": "盗火线",
+    "creator": "迈克尔·曼",
+    "cover": "public/covers/e9dbf7057299-320.webp",
+    "coverLarge": "public/covers/e9dbf7057299-720.webp",
+    "categories": [
+      "犯罪",
+      "惊悚",
+      "剧情"
     ]
   },
   {
@@ -2332,6 +2448,19 @@
     "categories": [
       "喜剧",
       "动作"
+    ]
+  },
+  {
+    "id": "film:东方快车谋杀案",
+    "type": "film",
+    "title": "东方快车谋杀案",
+    "creator": "西德尼·吕美特",
+    "cover": "public/covers/da94f05a8335-320.webp",
+    "coverLarge": "public/covers/da94f05a8335-720.webp",
+    "categories": [
+      "悬疑",
+      "犯罪",
+      "剧情"
     ]
   },
   {
@@ -2405,6 +2534,19 @@
     "categories": [
       "剧情",
       "犯罪"
+    ]
+  },
+  {
+    "id": "film:恶灵骑士",
+    "type": "film",
+    "title": "恶灵骑士",
+    "creator": "马克·斯蒂文·约翰逊",
+    "cover": "public/covers/e8562bffff65-320.webp",
+    "coverLarge": "public/covers/e8562bffff65-720.webp",
+    "categories": [
+      "超级英雄",
+      "奇幻",
+      "动作"
     ]
   },
   {
@@ -2627,6 +2769,58 @@
     "categories": [
       "恐怖",
       "动作"
+    ]
+  },
+  {
+    "id": "film:复仇者联盟",
+    "type": "film",
+    "title": "复仇者联盟",
+    "creator": "乔斯·韦登",
+    "cover": "public/covers/d99d6b7b7a0f-320.webp",
+    "coverLarge": "public/covers/d99d6b7b7a0f-720.webp",
+    "categories": [
+      "动作",
+      "科幻",
+      "冒险"
+    ]
+  },
+  {
+    "id": "film:复仇者联盟2：奥创纪元",
+    "type": "film",
+    "title": "复仇者联盟2：奥创纪元",
+    "creator": "乔斯·韦登",
+    "cover": "public/covers/ea5c12d881eb-320.webp",
+    "coverLarge": "public/covers/ea5c12d881eb-720.webp",
+    "categories": [
+      "动作",
+      "科幻",
+      "冒险"
+    ]
+  },
+  {
+    "id": "film:复仇者联盟3：无限战争",
+    "type": "film",
+    "title": "复仇者联盟3：无限战争",
+    "creator": "安东尼·罗素, 乔·罗素",
+    "cover": "public/covers/1779127e1e7c-320.webp",
+    "coverLarge": "public/covers/1779127e1e7c-720.webp",
+    "categories": [
+      "动作",
+      "科幻",
+      "冒险"
+    ]
+  },
+  {
+    "id": "film:复仇者联盟4：终局之战",
+    "type": "film",
+    "title": "复仇者联盟4：终局之战",
+    "creator": "安东尼·罗素, 乔·罗素",
+    "cover": "public/covers/7d89eba743af-320.webp",
+    "coverLarge": "public/covers/7d89eba743af-720.webp",
+    "categories": [
+      "剧情",
+      "动作",
+      "科幻"
     ]
   },
   {
@@ -2900,6 +3094,19 @@
     ]
   },
   {
+    "id": "film:黑吃黑",
+    "type": "film",
+    "title": "黑吃黑",
+    "creator": "乔纳森·特罗普 / 大卫·斯奇克勒",
+    "cover": "public/covers/1be6a91822c7-320.webp",
+    "coverLarge": "public/covers/1be6a91822c7-720.webp",
+    "categories": [
+      "犯罪",
+      "动作",
+      "美剧"
+    ]
+  },
+  {
     "id": "film:黑礁",
     "type": "film",
     "title": "黑礁",
@@ -3081,6 +3288,19 @@
     "categories": [
       "剧情",
       "西部"
+    ]
+  },
+  {
+    "id": "film:回到未来",
+    "type": "film",
+    "title": "回到未来",
+    "creator": "罗伯特·泽米吉斯",
+    "cover": "public/covers/3910f0e077bd-320.webp",
+    "coverLarge": "public/covers/3910f0e077bd-720.webp",
+    "categories": [
+      "科幻",
+      "冒险",
+      "喜剧"
     ]
   },
   {
@@ -3408,6 +3628,19 @@
     ]
   },
   {
+    "id": "film:康斯坦丁",
+    "type": "film",
+    "title": "康斯坦丁",
+    "creator": "弗朗西斯·劳伦斯",
+    "cover": "public/covers/5a41ebf14b9e-320.webp",
+    "coverLarge": "public/covers/5a41ebf14b9e-720.webp",
+    "categories": [
+      "奇幻",
+      "惊悚",
+      "动作"
+    ]
+  },
+  {
     "id": "film:亢奋",
     "type": "film",
     "title": "亢奋",
@@ -3429,6 +3662,19 @@
     "categories": [
       "恐怖",
       "悬疑"
+    ]
+  },
+  {
+    "id": "film:苦月亮",
+    "type": "film",
+    "title": "苦月亮",
+    "creator": "罗曼·波兰斯基",
+    "cover": "public/covers/29c387fb19e1-320.webp",
+    "coverLarge": "public/covers/29c387fb19e1-720.webp",
+    "categories": [
+      "剧情",
+      "惊悚",
+      "爱情"
     ]
   },
   {
@@ -3569,6 +3815,19 @@
       "剧情",
       "犯罪",
       "悬疑"
+    ]
+  },
+  {
+    "id": "film:流人",
+    "type": "film",
+    "title": "流人",
+    "creator": "威尔·史密斯",
+    "cover": "public/covers/d9ef950d671f-320.webp",
+    "coverLarge": "public/covers/d9ef950d671f-720.webp",
+    "categories": [
+      "谍战",
+      "悬疑",
+      "英剧"
     ]
   },
   {
@@ -3720,6 +3979,19 @@
     ]
   },
   {
+    "id": "film:曼达洛人",
+    "type": "film",
+    "title": "曼达洛人",
+    "creator": "乔恩·费儒",
+    "cover": "public/covers/c3f987611a35-320.webp",
+    "coverLarge": "public/covers/c3f987611a35-720.webp",
+    "categories": [
+      "科幻",
+      "动作",
+      "冒险"
+    ]
+  },
+  {
     "id": "film:猫鼠游戏",
     "type": "film",
     "title": "猫鼠游戏",
@@ -3730,6 +4002,18 @@
       "剧情",
       "犯罪",
       "传记"
+    ]
+  },
+  {
+    "id": "film:美国派",
+    "type": "film",
+    "title": "美国派",
+    "creator": "保罗·韦兹",
+    "cover": "public/covers/a453e8dc70fb-320.webp",
+    "coverLarge": "public/covers/a453e8dc70fb-720.webp",
+    "categories": [
+      "喜剧",
+      "爱情"
     ]
   },
   {
@@ -4078,6 +4362,18 @@
     ]
   },
   {
+    "id": "film:燃烧",
+    "type": "film",
+    "title": "燃烧",
+    "creator": "李沧东",
+    "cover": "public/covers/d37becdb5765-320.webp",
+    "coverLarge": "public/covers/d37becdb5765-720.webp",
+    "categories": [
+      "剧情",
+      "悬疑"
+    ]
+  },
+  {
     "id": "film:让子弹飞",
     "type": "film",
     "title": "让子弹飞",
@@ -4111,6 +4407,19 @@
     "coverLarge": "public/covers/7b507d29c74d-720.webp",
     "categories": [
       "剧情"
+    ]
+  },
+  {
+    "id": "film:瑞克和莫蒂",
+    "type": "film",
+    "title": "瑞克和莫蒂",
+    "creator": "贾斯汀·罗兰、丹·哈蒙",
+    "cover": "public/covers/c7f591e6add6-320.webp",
+    "coverLarge": "public/covers/c7f591e6add6-720.webp",
+    "categories": [
+      "成人动画",
+      "科幻",
+      "喜剧"
     ]
   },
   {
@@ -4467,6 +4776,18 @@
     ]
   },
   {
+    "id": "film:太阳照常升起",
+    "type": "film",
+    "title": "太阳照常升起",
+    "creator": "姜文",
+    "cover": "public/covers/0dca0672c0a2-320.webp",
+    "coverLarge": "public/covers/0dca0672c0a2-720.webp",
+    "categories": [
+      "剧情",
+      "奇幻"
+    ]
+  },
+  {
     "id": "film:泰坦尼克号",
     "type": "film",
     "title": "泰坦尼克号",
@@ -4527,6 +4848,18 @@
     "categories": [
       "喜剧",
       "动作"
+    ]
+  },
+  {
+    "id": "film:桃姐",
+    "type": "film",
+    "title": "桃姐",
+    "creator": "许鞍华",
+    "cover": "public/covers/9e14d7adeb6d-320.webp",
+    "coverLarge": "public/covers/9e14d7adeb6d-720.webp",
+    "categories": [
+      "剧情",
+      "家庭"
     ]
   },
   {
@@ -4652,6 +4985,45 @@
       "悬疑",
       "惊悚",
       "韩剧"
+    ]
+  },
+  {
+    "id": "film:王牌贱谍：格林姆斯比",
+    "type": "film",
+    "title": "王牌贱谍：格林姆斯比",
+    "creator": "路易·莱特里尔",
+    "cover": "public/covers/b36245efe759-320.webp",
+    "coverLarge": "public/covers/b36245efe759-720.webp",
+    "categories": [
+      "喜剧",
+      "动作",
+      "犯罪"
+    ]
+  },
+  {
+    "id": "film:王者",
+    "type": "film",
+    "title": "王者",
+    "creator": "韩在林",
+    "cover": "public/covers/fb226aa2c716-320.webp",
+    "coverLarge": "public/covers/fb226aa2c716-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪",
+      "动作"
+    ]
+  },
+  {
+    "id": "film:旺角卡门",
+    "type": "film",
+    "title": "旺角卡门",
+    "creator": "王家卫",
+    "cover": "public/covers/2af15adea96a-320.webp",
+    "coverLarge": "public/covers/2af15adea96a-720.webp",
+    "categories": [
+      "剧情",
+      "犯罪",
+      "爱情"
     ]
   },
   {
