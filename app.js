@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=12";
-import { loadMediaData } from "./lib/media-data.js?v=12";
-import { createPosterCanvas } from "./lib/poster.js?v=12";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=12";
-import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=12";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=13";
+import { loadMediaData } from "./lib/media-data.js?v=13";
+import { createPosterCanvas } from "./lib/poster.js?v=13";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=13";
+import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=13";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -10,6 +10,9 @@ const pageMeta = {
   film: { title: "影 · 阿崔的精神地图", description: "阿崔看过的电影。" },
   music: { title: "音 · 阿崔的精神地图", description: "阿崔听过的音乐。" },
 };
+// 三种排布是互斥的，移动端塞不下三个并列按钮：合成一个循环键，按钮文字就是当前排布。
+const layoutModes = ["scatter", "tidy", "vortex"];
+const layoutLabels = { scatter: "散落", tidy: "整理", vortex: "漩涡" };
 const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", picking: false, picked: [], dragging: false, savedScroll: 0 };
 const stage = document.querySelector("#shelf-stage");
 const controls = document.querySelector("#shelf-controls");
@@ -17,6 +20,7 @@ const filterPanel = document.querySelector("#filter-panel");
 const workDialog = document.querySelector("#work-dialog");
 const workFlip = document.querySelector("#work-flip");
 const filterAction = document.querySelector('[data-action="filter"]');
+const layoutAction = document.querySelector('[data-action="layout"]');
 const shareAction = document.querySelector('[data-action="share"]');
 let transientTrigger = null;
 let posterUrl = null;
@@ -51,11 +55,8 @@ function applyLayout() {
   stage.dataset.mode = state.mode;
   stage.dataset.mediaType = state.type;
   stage.style.height = `${stageHeightFor(layout, state.mode)}px`;
-  controls.querySelectorAll("[data-mode]").forEach((button) => {
-    const active = button.dataset.mode === state.mode;
-    button.classList.toggle("is-active", active);
-    button.setAttribute("aria-pressed", String(active));
-  });
+  layoutAction.textContent = layoutLabels[state.mode];
+  layoutAction.setAttribute("aria-label", `当前排布：${layoutLabels[state.mode]}，点击换下一种`);
 }
 
 function rememberTrigger(element) {
@@ -100,13 +101,16 @@ function createObject(item, index) {
   return button;
 }
 
+function setFlipped(flipped) {
+  workFlip.classList.toggle("is-flipped", flipped);
+  workFlip.setAttribute("aria-pressed", String(flipped));
+  workFlip.setAttribute("aria-label", flipped ? `${workFlip.dataset.detailLabel}。翻回作品封面` : "翻转查看作品信息");
+}
+
 function openWork(item) {
   filterPanel.hidden = true;
-  document.querySelector('[data-action="filter"]').setAttribute("aria-expanded", "false");
+  filterAction.setAttribute("aria-expanded", "false");
   document.querySelector("#poster-dialog")?.close();
-  workFlip.classList.remove("is-flipped");
-  workFlip.setAttribute("aria-pressed", "false");
-  workFlip.setAttribute("aria-label", "翻转查看作品信息");
   workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
   workFlip.style.setProperty("--detail-ratio", item.type === "music" ? "1" : "2 / 3");
   const cover = document.querySelector("#work-cover");
@@ -137,6 +141,9 @@ function openWork(item) {
     ? (score ? `个人评分 ${score} / 5` : "尚未录入个人评分")
     : "";
   workFlip.dataset.detailLabel = [item.title, item.creator, document.querySelector("#work-meta").textContent, ratingLabel].filter(Boolean).join("，");
+  // 触屏没有 hover，封面上的信息条永远不显示：点开只看到刚点的那张封面等于零信息，
+  // 所以无 hover 设备直接开在信息面，想看大图再翻回去。
+  setFlipped(matchMedia("(hover: none)").matches);
   workDialog.showModal();
 }
 
@@ -331,18 +338,12 @@ async function load() {
 controls.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
-  if (button.dataset.mode) {
+  if (button.dataset.action === "layout") {
     const previous = state.mode;
-    if (previous !== "vortex" && button.dataset.mode === "vortex") state.savedScroll = scrollY;
-    state.mode = button.dataset.mode;
-    if (state.mode === "scatter") state.seed += 1;
-    applyLayout();
-    if (previous === "vortex" && state.mode !== "vortex") scrollTo({ top: state.savedScroll, behavior: "instant" });
-  }
-  if (button.dataset.action === "shake") {
-    const previous = state.mode;
-    state.mode = "scatter";
-    state.seed += 1;
+    const next = layoutModes[(layoutModes.indexOf(previous) + 1) % layoutModes.length];
+    if (next === "vortex") state.savedScroll = scrollY;
+    state.mode = next;
+    if (next === "scatter") state.seed += 1;
     applyLayout();
     if (previous === "vortex") scrollTo({ top: state.savedScroll, behavior: "instant" });
   }
@@ -386,11 +387,7 @@ document.querySelectorAll(".dialog-close").forEach((button) => button.addEventLi
   button.closest("dialog").close();
 }));
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => workDialog.close()));
-workFlip.addEventListener("click", () => {
-  const flipped = workFlip.classList.toggle("is-flipped");
-  workFlip.setAttribute("aria-pressed", String(flipped));
-  workFlip.setAttribute("aria-label", flipped ? `${workFlip.dataset.detailLabel}。翻回作品封面` : "翻转查看作品信息");
-});
+workFlip.addEventListener("click", () => setFlipped(!workFlip.classList.contains("is-flipped")));
 workDialog.addEventListener("click", (event) => { if (event.target === workDialog) workDialog.close(); });
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;

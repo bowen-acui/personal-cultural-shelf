@@ -92,8 +92,8 @@ Base unit: 4px.
 
 ### Control Capsule
 
-- **Structure**: fixed warm-dark capsule following the source rhythm: count, divider, individually surfaced actions, divider, and accent Catalog link. Every label shares one vertical center; Catalog is optically raised 1px.
-- **States**: default, active, pressed, hover, focus, compact mobile. Active layout uses an inset surface and a small accent dot rather than a solid accent pill.
+- **Structure**: fixed warm-dark capsule following the source rhythm: count, divider, three actions (Layout, Filter, Share), divider, and accent Catalog link. Every label shares one vertical center; Catalog is optically raised 1px.
+- **States**: default, pressed, hover, focus, compact mobile. Layout is a single cycling control whose label is the current arrangement, so no separate active treatment is needed and the three actions fit a 375px viewport without horizontal scrolling.
 - **Accessibility**: `aria-live="polite"` after data loads.
 - **Motion**: controls use the observed 200ms transition.
 
@@ -120,7 +120,7 @@ Base unit: 4px.
 
 ### Floating Work Object
 
-- **Structure**: a modal floating object on the current shelf page. Its front is the original cover; tapping it flips to a dark information back.
+- **Structure**: a modal floating object on the current shelf page. Its front is the original cover; tapping it flips to a dark information back. Pointer devices open on the cover face because hover already revealed the slip; `hover: none` devices open on the information face, since a touch visitor has never seen the title and would otherwise be shown the cover they just tapped.
 - **Information**: media type, title, creator, categories, and book completion month. Films and music never show dates.
 - **Rating**: books alone show five dots representing the `rating` field from 1–5. Missing book ratings render as five empty dots; films and music show no rating row.
 - **Material**: the reverse uses the same warm-dark surface as the control capsule, with a terracotta title accent and no glass card.
@@ -139,7 +139,7 @@ Base unit: 4px.
 | Press | 80ms | ease-out | Physical compression to 0.985 |
 
 - No continuous animation, parallax, or decorative motion.
-- Shake recomputes Scatter positions; Scatter, Tidy, and Vortex are explicit user-chosen modes.
+- Layout cycles Scatter, Tidy, and Vortex in that order; re-entering Scatter reseeds the composition, which replaces the former separate Shake action.
 - Pointer dragging updates only the selected cover position; touch uses native scroll and tap-to-open instead.
 - Hover and focus share the same visual state.
 - Tap opens the floating work object without leaving the shelf; dragging remains a separate gesture and does not open it.

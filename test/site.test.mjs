@@ -12,10 +12,9 @@ test("site shell exposes the media shelves and reference interactions", async ()
   assert.match(html, /data-type="book"/);
   assert.match(html, /href="film\.html">影/);
   assert.match(html, /href="music\.html">音/);
-  assert.match(html, /data-mode="scatter"/);
-  assert.match(html, /data-mode="tidy"/);
-  assert.match(html, /data-mode="vortex"/);
-  assert.match(html, /data-action="shake"/);
+  // 三种排布合成一个循环键，移动端才塞得下：断言只剩一个排布控件，且旧的并列按钮没有残留。
+  assert.match(html, /data-action="layout"/);
+  assert.doesNotMatch(html, /data-mode=|data-action="shake"/);
   assert.match(html, /data-action="filter"/);
   assert.match(html, /data-action="share"/);
   assert.match(html, /href="browse\.html"/);
@@ -73,8 +72,8 @@ test("shelf pages expose synchronized metadata and keyboard entry points", async
   const pages = await Promise.all(["index", "film", "music", "browse", "about"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
   assert.ok(pages.every((page) => page.includes('class="skip-link"')));
   assert.ok(pages.every((page) => page.includes('meta name="description"')));
-  assert.match(pages[0], /data-mode="scatter" aria-pressed="true"/);
-  assert.match(pages[0], /data-mode="tidy" aria-pressed="false"/);
+  // 循环键的按钮文字就是当前排布，屏幕阅读器靠 aria-label 知道「点一下会换」。
+  assert.match(pages[0], /<button data-action="layout" type="button" aria-label="当前排布：散落，点击换下一种">散落<\/button>/);
   assert.match(pages[0], /aria-labelledby="poster-title"/);
   assert.match(pages[0], /id="work-dialog"/);
 });
