@@ -82,7 +82,8 @@ test("shelf controls use one continuous rhythm with count and catalog", async ()
   const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 
   assert.match(html, /class="control-stat"/);
-  assert.equal((html.match(/class="control-divider"/g) ?? []).length, 2);
+  // 分组交给间距节奏，竖线元素不该再回来——它只是给 DOM 加噪音。
+  assert.doesNotMatch(html, /control-divider/);
   assert.match(html, /class="control-catalog" href="browse\.html">目录 →<\/a>/);
   assert.doesNotMatch(html, /control-destination/);
 });

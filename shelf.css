@@ -16,9 +16,9 @@
 .media-object.is-dragging { cursor:grabbing; transition:none; }
 .is-picking .media-object { opacity:.6; cursor:crosshair; }
 .is-picking .media-object.is-picked { opacity:1; outline:5px solid var(--active); outline-offset:4px; }
-.shelf-controls { position:fixed; z-index:var(--layer-controls); left:50%; bottom:22px; display:flex; align-items:center; height:64px; gap:10px; padding:8px 12px; border:1px solid var(--control-edge); border-radius:999px; color:var(--control-muted); background:var(--control-surface); box-shadow:0 1px 0 var(--control-active) inset,0 10px 32px var(--control-shadow); font:500 12px/1 var(--font-mono); letter-spacing:.04em; transform:translateX(-50%); backdrop-filter:blur(20px) saturate(1.1); }
-.control-group { display:flex; align-items:center; flex:none; gap:10px; }
-.control-divider { display:block; flex:none; width:1px; height:28px; background:var(--control-divider); }
+/* 分组不靠竖线，靠节奏：组间 16px、组内 6px，眼睛自己会分段。 */
+.shelf-controls { position:fixed; z-index:var(--layer-controls); left:50%; bottom:22px; display:flex; align-items:center; height:64px; gap:16px; padding:8px 12px; border:1px solid var(--control-edge); border-radius:999px; color:var(--control-muted); background:var(--control-surface); box-shadow:0 1px 0 var(--control-active) inset,0 10px 32px var(--control-shadow); font:500 12px/1 var(--font-mono); letter-spacing:.04em; transform:translateX(-50%); backdrop-filter:blur(20px) saturate(1.1); }
+.control-group { display:flex; align-items:center; gap:6px; }
 .shelf-controls button,.shelf-controls a { position:relative; display:inline-flex; align-items:center; justify-content:center; min-width:var(--target-min); min-height:46px; padding:0 16px; border:0; border-radius:999px; color:var(--control-text); background:var(--control-hover); line-height:1; text-decoration:none; white-space:nowrap; transition:background-color .2s ease,color .2s ease,transform 80ms ease-out; }
 .shelf-controls button:hover { background:var(--control-active); }
 .shelf-controls button:active,.shelf-controls a:active { transform:scale(.97); }
@@ -70,4 +70,4 @@
 .shelf-error strong { font:32px/1.05 "Instrument Serif",Georgia,serif; }
 .shelf-error span { color:var(--ink-muted); }
 .shelf-error button { min-height:var(--target-min); border:1px solid var(--ink); color:var(--ink); background:transparent; }
-@media(max-width:639px){ .shelf-controls { bottom:14px; width:calc(100% - 28px); height:60px; display:grid; grid-template-columns:auto auto minmax(0,1fr) auto auto; justify-content:initial; gap:7px; padding:8px; overflow:hidden; } .shelf-controls .control-group { min-width:0; justify-content:center; gap:7px; } .shelf-controls button,.shelf-controls a { min-height:var(--target-min); padding:0 12px; } .control-stat { min-height:var(--target-min); padding:0 8px; } .control-divider { height:24px; } .object-info { max-width:min(180px,72vw); } .work-dialog { width:min(330px,calc(100% - 48px)); } .work-back { padding:26px 24px 22px; } .filter-panel,.pick-status { bottom:82px; } .dialog-close { top:8px; right:8px; } }
+@media(max-width:639px){ .shelf-controls { bottom:14px; max-width:calc(100% - 24px); height:58px; gap:10px; padding:6px 8px; } .shelf-controls .control-group { gap:5px; } .shelf-controls button,.shelf-controls a { min-height:var(--target-min); padding:0 10px; } .control-stat { min-height:var(--target-min); padding:0 4px; } .object-info { max-width:min(180px,72vw); } .work-dialog { width:min(330px,calc(100% - 48px)); } .work-back { padding:26px 24px 22px; } .filter-panel,.pick-status { bottom:82px; } .dialog-close { top:8px; right:8px; } }

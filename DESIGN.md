@@ -92,8 +92,8 @@ Base unit: 4px.
 
 ### Control Capsule
 
-- **Structure**: fixed warm-dark capsule following the source rhythm: count, divider, three actions (Layout, Filter, Share), divider, and accent Catalog link. Every label shares one vertical center; Catalog is optically raised 1px.
-- **States**: default, pressed, hover, focus, compact mobile. Layout is a single cycling control whose label is the current arrangement, so no separate active treatment is needed and the three actions fit a 375px viewport without horizontal scrolling.
+- **Structure**: fixed warm-dark capsule reading left to right as count, three actions (Layout, Filter, Share), accent Catalog link. Grouping comes from rhythm, not rules: 16px between the three groups against 6px inside the action group, so the eye segments them without any divider element. Every label shares one vertical center; Catalog is optically raised 1px.
+- **States**: default, pressed, hover, focus, compact mobile. Layout is a single cycling control whose label is the current arrangement, so no separate active treatment is needed. The capsule hugs its content at every width — it never stretches edge to edge on mobile — and the whole row fits a 320px viewport without clipping or horizontal scrolling.
 - **Accessibility**: `aria-live="polite"` after data loads.
 - **Motion**: controls use the observed 200ms transition.
 
