@@ -926,7 +926,7 @@
     "rating": 3
   },
   {
-    "id": "book:彼得2 0",
+    "id": "book:彼得2.0",
     "type": "book",
     "title": "彼得2.0",
     "creator": "彼得·斯科特-摩根",
@@ -5494,6 +5494,20 @@
     ]
   },
   {
+    "id": "film:异邦人：无皇刃谭",
+    "type": "film",
+    "title": "异邦人：无皇刃谭",
+    "creator": "安藤真裕",
+    "cover": "public/covers/d5ae29e02edf-320.webp",
+    "coverLarge": "public/covers/d5ae29e02edf-720.webp",
+    "categories": [
+      "动画",
+      "动作",
+      "武侠",
+      "剧情"
+    ]
+  },
+  {
     "id": "film:音乐之声",
     "type": "film",
     "title": "音乐之声",
@@ -6240,6 +6254,18 @@
     ]
   },
   {
+    "id": "music:不能說的秘密電影原聲帶",
+    "type": "music",
+    "title": "不能說的秘密電影原聲帶",
+    "creator": "周杰倫",
+    "cover": "public/covers/64ac46e3b311-320.webp",
+    "coverLarge": "public/covers/64ac46e3b311-720.webp",
+    "categories": [
+      "Soundtrack",
+      "Mandopop"
+    ]
+  },
+  {
     "id": "music:帶你飛",
     "type": "music",
     "title": "帶你飛",
@@ -6680,6 +6706,17 @@
     ]
   },
   {
+    "id": "music:隕石與地球 - Single",
+    "type": "music",
+    "title": "隕石與地球 - Single",
+    "creator": "鄭秀文",
+    "cover": "public/covers/ee0594206799-320.webp",
+    "coverLarge": "public/covers/ee0594206799-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
     "id": "music:赵小雷",
     "type": "music",
     "title": "赵小雷",
@@ -6774,6 +6811,17 @@
     "creator": "Lady Gaga",
     "cover": "public/covers/15286447a8fb-320.webp",
     "coverLarge": "public/covers/15286447a8fb-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:alone tonight - EP",
+    "type": "music",
+    "title": "alone tonight - EP",
+    "creator": "starfall",
+    "cover": "public/covers/96cf2942a278-320.webp",
+    "coverLarge": "public/covers/96cf2942a278-720.webp",
     "categories": [
       "Pop"
     ]
@@ -7373,6 +7421,17 @@
     ]
   },
   {
+    "id": "music:Kaiju - Single",
+    "type": "music",
+    "title": "Kaiju - Single",
+    "creator": "sakanaction",
+    "cover": "public/covers/d6a8480633e5-320.webp",
+    "coverLarge": "public/covers/d6a8480633e5-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
     "id": "music:Let's Fall In Love For The Night",
     "type": "music",
     "title": "Let's Fall In Love For The Night",
@@ -7681,6 +7740,17 @@
     ]
   },
   {
+    "id": "music:replica",
+    "type": "music",
+    "title": "replica",
+    "creator": "Vaundy",
+    "cover": "public/covers/71e12957f90f-320.webp",
+    "coverLarge": "public/covers/71e12957f90f-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
     "id": "music:Reset",
     "type": "music",
     "title": "Reset",
@@ -7799,6 +7869,17 @@
     "coverLarge": "public/covers/5c35bf090e33-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Straight Up (Remastered)",
+    "type": "music",
+    "title": "Straight Up (Remastered)",
+    "creator": "Badfinger",
+    "cover": "public/covers/3159ce607801-320.webp",
+    "coverLarge": "public/covers/3159ce607801-720.webp",
+    "categories": [
+      "Rock"
     ]
   },
   {
@@ -8030,6 +8111,17 @@
     "coverLarge": "public/covers/c5ecd728f01f-720.webp",
     "categories": [
       "Indie Pop"
+    ]
+  },
+  {
+    "id": "music:you're never coming back - Single",
+    "type": "music",
+    "title": "you're never coming back - Single",
+    "creator": "Cody Francis & Cayson Renshaw",
+    "cover": "public/covers/26b77724a9ef-320.webp",
+    "coverLarge": "public/covers/26b77724a9ef-720.webp",
+    "categories": [
+      "Alternative"
     ]
   },
   {
