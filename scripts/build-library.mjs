@@ -20,9 +20,11 @@ import {
 // 纯函数都在 lib/build-utils.mjs，测试只 import 那个文件，因此不装 sharp 也能跑。
 // 本文件是唯一 import sharp 的地方——不要从这里转出纯函数，否则耦合会悄悄长回来。
 
-const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const coversDirectory = path.join(projectRoot, "public/covers");
-const mediaFile = path.join(projectRoot, "data/media.json");
+const defaultProjectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const explicitOutputRoot = process.env.BUILD_OUTPUT_ROOT?.trim();
+const outputRoot = explicitOutputRoot ? path.resolve(explicitOutputRoot) : defaultProjectRoot;
+const coversDirectory = path.join(outputRoot, "public/covers");
+const mediaFile = path.join(outputRoot, "data/media.json");
 
 const sources = [
   { type: "book", directory: "Project：存放项目的必要信息/閱讀書單 Book Tracker/書櫃" },
@@ -83,6 +85,9 @@ async function buildSource(source) {
 }
 
 async function buildLibrary() {
+  if (explicitOutputRoot && (await readdir(outputRoot)).length > 0) {
+    throw new Error(`BUILD_OUTPUT_ROOT must be empty: ${outputRoot}`);
+  }
   await mkdir(coversDirectory, { recursive: true });
   await mkdir(path.dirname(mediaFile), { recursive: true });
   const collections = [];
