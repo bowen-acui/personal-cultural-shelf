@@ -2,7 +2,7 @@ import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=14";
 import { loadMediaData } from "./lib/media-data.js?v=14";
 import { createPosterCanvas } from "./lib/poster.js?v=14";
 import { pathForType, typeFromPath } from "./lib/routes.js?v=14";
-import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=14";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=14";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -24,10 +24,109 @@ const layoutAction = document.querySelector('[data-action="layout"]');
 const shareAction = document.querySelector('[data-action="share"]');
 let transientTrigger = null;
 let posterUrl = null;
-const PRIORITY_IMAGE_COUNT = 30;
+const COVER_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+let coverObserver = null;
+let cancelIdleHydration = null;
+let hydrationGeneration = 0;
+let layoutGeneration = 0;
+let layoutReleaseTimer = 0;
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
 function monthLabel(item) { return item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : ""; }
+
+function stageViewport() {
+  return { top: scrollY - stage.offsetTop, height: innerHeight };
+}
+
+function setObjectPlacement(object, place, delay) {
+  object.style.setProperty("--left", `${place.left}px`);
+  object.style.setProperty("--top", `${place.top}px`);
+  object.style.setProperty("--cover-width", `${place.width}px`);
+  object.style.setProperty("--rotation", `${place.rotation}deg`);
+  object.style.setProperty("--scale", place.scale);
+  object.style.setProperty("--layer", place.layer);
+  object.style.setProperty("--ratio", place.ratio);
+  object.style.setProperty("--delay", `${delay}ms`);
+}
+
+function hydrateObject(object, highPriority = false) {
+  const image = object?.querySelector("img");
+  if (!image) return null;
+  if (highPriority) image.fetchPriority = "high";
+  if (!image.dataset.src) return image;
+  if (image.dataset.srcset) image.srcset = image.dataset.srcset;
+  image.src = image.dataset.src;
+  image.removeAttribute("data-srcset");
+  image.removeAttribute("data-src");
+  coverObserver?.unobserve(object);
+  return image;
+}
+
+function cancelHydrationWork() {
+  hydrationGeneration += 1;
+  coverObserver?.disconnect();
+  coverObserver = null;
+  cancelIdleHydration?.();
+  cancelIdleHydration = null;
+  return hydrationGeneration;
+}
+
+function queueVortexHydration(objects, generation) {
+  let offset = 0;
+  const runBatch = () => {
+    if (generation !== hydrationGeneration) return;
+    const batch = objects.slice(offset, offset + 12);
+    offset += batch.length;
+    batch.forEach((object) => {
+      if (object.isConnected && stage.contains(object)) hydrateObject(object);
+    });
+    if (offset < objects.length) scheduleBatch();
+  };
+  const scheduleBatch = () => {
+    let cancelScheduled;
+    const callback = () => {
+      if (cancelIdleHydration === cancelScheduled) cancelIdleHydration = null;
+      runBatch();
+    };
+    if (typeof requestIdleCallback === "function") {
+      const handle = requestIdleCallback(callback, { timeout: 250 });
+      cancelScheduled = () => cancelIdleCallback(handle);
+    } else {
+      const handle = setTimeout(callback, 32);
+      cancelScheduled = () => clearTimeout(handle);
+    }
+    cancelIdleHydration = cancelScheduled;
+  };
+  if (objects.length) scheduleBatch();
+}
+
+function refreshHydration(objects, placements) {
+  const generation = cancelHydrationWork();
+  const viewport = stageViewport();
+  stage.querySelectorAll(".media-object img").forEach((image) => { image.fetchPriority = "auto"; });
+  viewportPriorityIndexes(placements, viewport).forEach((index) => hydrateObject(objects[index], true));
+  if (typeof IntersectionObserver !== "function") {
+    objects.forEach((object) => hydrateObject(object));
+    return;
+  }
+  if (state.mode === "vortex") {
+    topVortexLayerIndexes(placements).forEach((index) => hydrateObject(objects[index]));
+    queueVortexHydration(objects.filter((object) => object.querySelector("img")?.dataset.src), generation);
+    return;
+  }
+  placements.forEach((placement, index) => {
+    if (placementIntersectsViewportMargin(placement, viewport)) hydrateObject(objects[index]);
+  });
+  coverObserver = new IntersectionObserver((entries) => {
+    if (generation !== hydrationGeneration) return;
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.target.isConnected && stage.contains(entry.target)) hydrateObject(entry.target);
+    });
+  }, { rootMargin: "50% 0px" });
+  objects.forEach((object) => {
+    if (object.querySelector("img")?.dataset.src) coverObserver.observe(object);
+  });
+}
 
 function placementFor(items) {
   const viewport = { width: document.documentElement.clientWidth, height: innerHeight };
@@ -39,24 +138,43 @@ function placementFor(items) {
 function applyLayout() {
   const objects = [...stage.querySelectorAll(".media-object")];
   const visible = objects.filter((object) => !object.classList.contains("is-dimmed"));
+  const previousMode = stage.dataset.mode || state.mode;
+  const previous = visible.map((object) => ({
+    top: Number.parseFloat(object.style.getPropertyValue("--top")),
+    width: Number.parseFloat(object.style.getPropertyValue("--cover-width")),
+    ratio: Number.parseFloat(object.style.getPropertyValue("--ratio")),
+    layer: Number.parseFloat(object.style.getPropertyValue("--layer")),
+  }));
   const layout = placementFor(visible.map((object) => state.items[Number(object.dataset.index)]));
+  const viewport = stageViewport();
+  const previousVortexFront = new Set(previousMode === "vortex" ? topVortexLayerIndexes(previous) : []);
+  const nextVortexFront = new Set(state.mode === "vortex" ? topVortexLayerIndexes(layout) : []);
+  const generation = ++layoutGeneration;
   visible.forEach((object, index) => {
     const place = layout[index];
     if (!place) return;
-    object.style.setProperty("--left", `${place.left}px`);
-    object.style.setProperty("--top", `${place.top}px`);
-    object.style.setProperty("--cover-width", `${place.width}px`);
-    object.style.setProperty("--rotation", `${place.rotation}deg`);
-    object.style.setProperty("--scale", place.scale);
-    object.style.setProperty("--layer", place.layer);
-    object.style.setProperty("--ratio", place.ratio);
-    object.style.setProperty("--delay", `${Math.min(index * (state.mode === "vortex" ? 8 : 18), 500)}ms`);
+    const previousIsNearby = previousMode === "vortex"
+      ? previousVortexFront.has(index)
+      : placementIntersectsViewportMargin(previous[index], viewport, 0);
+    const nextIsNearby = state.mode === "vortex"
+      ? nextVortexFront.has(index)
+      : placementIntersectsViewportMargin(place, viewport, 0);
+    const animate = previousIsNearby || nextIsNearby;
+    object.classList.toggle("is-layout-instant", !animate);
+    setObjectPlacement(object, place, animate ? Math.min(index * (state.mode === "vortex" ? 8 : 18), 160) : 0);
   });
   stage.dataset.mode = state.mode;
   stage.dataset.mediaType = state.type;
   stage.style.height = `${stageHeightFor(layout, state.mode)}px`;
   layoutAction.textContent = layoutLabels[state.mode];
   layoutAction.setAttribute("aria-label", `当前排布：${layoutLabels[state.mode]}，点击换下一种`);
+  refreshHydration(visible, layout);
+  clearTimeout(layoutReleaseTimer);
+  const duration = state.mode === "scatter" ? 180 : state.mode === "tidy" ? 700 : 900;
+  layoutReleaseTimer = setTimeout(() => {
+    if (generation !== layoutGeneration) return;
+    stage.querySelectorAll(".media-object.is-layout-instant").forEach((object) => object.classList.remove("is-layout-instant"));
+  }, duration + 160);
 }
 
 function rememberTrigger(element) {
@@ -69,23 +187,23 @@ function restoreTrigger() {
   if (trigger?.isConnected) trigger.focus();
 }
 
-function createObject(item, index) {
+function createObject(item, index, placement) {
   const button = document.createElement("button");
   button.type = "button";
-  button.className = "media-object";
+  button.className = "media-object is-layout-instant";
   button.dataset.index = index;
   button.dataset.categories = item.categories.join("|");
   button.setAttribute("aria-label", label(item));
   const image = document.createElement("img");
-  image.src = item.cover;
-  if (item.coverLarge) image.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
+  image.src = COVER_PLACEHOLDER;
+  image.dataset.src = item.cover;
+  if (item.coverLarge) image.dataset.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
   image.sizes = state.type === "music" ? "(max-width: 639px) 20vw, 8vw" : "(max-width: 639px) 25vw, 10vw";
   image.alt = label(item);
   image.width = 320;
   image.height = state.type === "music" ? 320 : 480;
   image.decoding = "async";
-  image.fetchPriority = index < PRIORITY_IMAGE_COUNT ? "high" : "auto";
-  if (index >= PRIORITY_IMAGE_COUNT) image.loading = "lazy";
+  image.fetchPriority = "auto";
   const information = document.createElement("span");
   information.className = "object-info";
   information.id = `object-info-${state.type}-${index}`;
@@ -98,6 +216,7 @@ function createObject(item, index) {
   categories.textContent = [monthLabel(item), ...item.categories].filter(Boolean).join(" · ");
   information.append(title, creator, categories);
   button.append(image, information);
+  setObjectPlacement(button, placement, 0);
   return button;
 }
 
@@ -114,8 +233,9 @@ function openWork(item) {
   workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
   workFlip.style.setProperty("--detail-ratio", item.type === "music" ? "1" : "2 / 3");
   const cover = document.querySelector("#work-cover");
-  cover.src = item.coverLarge || item.cover;
   if (item.coverLarge) cover.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
+  else cover.removeAttribute("srcset");
+  cover.src = item.coverLarge || item.cover;
   cover.sizes = "(max-width: 639px) 72vw, 360px";
   cover.alt = label(item);
   document.querySelector("#work-type").textContent = typeLabels[item.type];
@@ -148,6 +268,8 @@ function openWork(item) {
 }
 
 function setError(message) {
+  cancelHydrationWork();
+  clearTimeout(layoutReleaseTimer);
   stage.replaceChildren();
   stage.classList.add("shelf-state");
   const stateMessage = document.createElement("div");
@@ -166,8 +288,14 @@ function setError(message) {
 }
 
 function render() {
+  cancelHydrationWork();
   stage.classList.remove("shelf-state");
-  stage.replaceChildren(...state.items.map(createObject));
+  const initialLayout = placementFor(state.items);
+  const objects = state.items.map((item, index) => createObject(item, index, initialLayout[index]));
+  stage.dataset.mode = state.mode;
+  stage.dataset.mediaType = state.type;
+  stage.style.height = `${stageHeightFor(initialLayout, state.mode)}px`;
+  stage.replaceChildren(...objects);
   document.querySelector("#item-count").textContent = state.items.length;
   document.querySelector("#item-kind").textContent = typeLabels[state.type];
   const meta = pageMeta[state.type];
@@ -256,7 +384,32 @@ function updatePickStatus() {
 }
 
 async function createPoster() {
-  const items = state.picked.map((index) => ({ image: stage.querySelector(`[data-index="${index}"] img`) }));
+  const items = state.picked.map((index) => {
+    const object = stage.querySelector(`[data-index="${index}"]`);
+    return { image: hydrateObject(object) };
+  });
+  await Promise.all(items.map(async ({ image }) => {
+    if (!image.complete || image.naturalWidth <= 1) {
+      await new Promise((resolve, reject) => {
+        const cleanup = () => {
+          image.removeEventListener("load", loaded);
+          image.removeEventListener("error", failed);
+        };
+        const loaded = () => { cleanup(); resolve(); };
+        const failed = () => { cleanup(); reject(new Error(`封面加载失败：${image.alt}`)); };
+        image.addEventListener("load", loaded, { once: true });
+        image.addEventListener("error", failed, { once: true });
+        if (image.complete) {
+          if (image.naturalWidth > 1) loaded();
+          else failed();
+        }
+      });
+    }
+    await image.decode();
+    if (!image.complete || image.naturalWidth <= 1 || image.currentSrc.startsWith("data:")) {
+      throw new Error(`封面解码失败：${image.alt}`);
+    }
+  }));
   // 字体是 font-display:swap 懒加载的，canvas 不会等它：不先 load 就会画成回退字形。
   // 声明必须和 poster.js 里的 context.font 一致，否则匹配不上。
   await document.fonts.load('72px "LXGW WenKai"');
@@ -360,10 +513,12 @@ document.querySelector(".media-nav").addEventListener("click", (event) => {
 });
 addEventListener("popstate", () => renderType(typeFromPath(location.pathname)));
 stage.addEventListener("pointerdown", (event) => { const object = event.target.closest(".media-object"); if (object) enableDrag(object, event); });
+stage.addEventListener("focusin", (event) => { const object = event.target.closest(".media-object"); if (object) hydrateObject(object); });
 stage.addEventListener("click", (event) => { if (event.target.closest('[data-action="retry"]')) load(); });
 stage.addEventListener("click", (event) => {
   const object = event.target.closest(".media-object");
   if (!object || state.dragging) return;
+  hydrateObject(object);
   const index = Number(object.dataset.index); const position = state.picked.indexOf(index);
   if (!state.picking) { openWork(state.items[index]); return; }
   if (position >= 0) state.picked.splice(position, 1); else if (state.picked.length < 5) state.picked.push(index);

@@ -5,7 +5,10 @@ import {
   createScatterLayout,
   createTidyLayout,
   createVortexLayout,
+  placementIntersectsViewportMargin,
   stageHeightFor,
+  topVortexLayerIndexes,
+  viewportPriorityIndexes,
 } from "../lib/layouts.js";
 
 const items = Array.from({ length: 12 }, (_, index) => ({
@@ -68,4 +71,43 @@ test("stage height contains every cover in tidy and scatter", () => {
       assert.ok(stageHeightFor(scatter, "scatter") >= layoutBottom(scatter), `scatter ${type} @${width}`);
     }
   }
+});
+
+test("viewport margin includes exact edges and excludes placements beyond them", () => {
+  // Given: a 200px viewport starting at y=100 with a 50% vertical margin.
+  const viewport = { top: 100, height: 200 };
+  const placement = { width: 10, ratio: 1 };
+
+  // When: covers touch or cross either expanded edge.
+  // Then: touching edges count, while a sub-pixel gap does not.
+  assert.equal(placementIntersectsViewportMargin({ ...placement, top: -10 }, viewport), true);
+  assert.equal(placementIntersectsViewportMargin({ ...placement, top: -10.01 }, viewport), false);
+  assert.equal(placementIntersectsViewportMargin({ ...placement, top: 400 }, viewport), true);
+  assert.equal(placementIntersectsViewportMargin({ ...placement, top: 400.01 }, viewport), false);
+});
+
+test("viewport priority selects only the nearest twelve visible placements", () => {
+  // Given: twenty covers intersecting the actual viewport.
+  const placements = Array.from({ length: 20 }, (_, index) => ({
+    top: index * 10,
+    width: 10,
+    ratio: 1,
+  }));
+
+  // When: initial high-priority indexes are selected.
+  const indexes = viewportPriorityIndexes(placements, { top: 0, height: 200 });
+
+  // Then: selection is capped at twelve and ordered nearest the viewport centre.
+  assert.deepEqual(indexes, [9, 10, 8, 11, 7, 12, 6, 13, 5, 14, 4, 15]);
+});
+
+test("vortex priority selects only the top thirty-six layers", () => {
+  // Given: fifty placements with ascending layers.
+  const placements = Array.from({ length: 50 }, (_, index) => ({ layer: index + 1 }));
+
+  // When: the visible vortex front is selected.
+  const indexes = topVortexLayerIndexes(placements);
+
+  // Then: only the top thirty-six indexes remain, highest layer first.
+  assert.deepEqual(indexes, Array.from({ length: 36 }, (_, index) => 49 - index));
 });
