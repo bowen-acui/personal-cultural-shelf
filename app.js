@@ -22,7 +22,7 @@ const workFlip = document.querySelector("#work-flip");
 const filterAction = document.querySelector('[data-action="filter"]');
 const layoutAction = document.querySelector('[data-action="layout"]');
 const shareAction = document.querySelector('[data-action="share"]');
-let transientTrigger = null;
+let transientTrigger = { owner: null, trigger: null };
 let posterUrl = null;
 const COVER_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 let coverObserver = null;
@@ -177,14 +177,37 @@ function applyLayout() {
   }, duration + 160);
 }
 
-function rememberTrigger(element) {
-  transientTrigger = element instanceof HTMLElement ? element : null;
+function rememberTrigger(owner, element) {
+  transientTrigger = { owner, trigger: element instanceof HTMLElement ? element : null };
 }
 
-function restoreTrigger() {
-  const trigger = transientTrigger;
-  transientTrigger = null;
+function clearTrigger(owner) {
+  if (transientTrigger.owner !== owner) return null;
+  const trigger = transientTrigger.trigger;
+  transientTrigger = { owner: null, trigger: null };
+  return trigger;
+}
+
+function restoreTrigger(owner) {
+  const trigger = clearTrigger(owner);
   if (trigger?.isConnected) trigger.focus();
+}
+
+function clearAllTransientOwnership() {
+  transientTrigger = { owner: null, trigger: null };
+}
+
+function closeFilter({ restoreFocus = false } = {}) {
+  filterPanel.hidden = true;
+  filterAction.setAttribute("aria-expanded", "false");
+  if (restoreFocus) restoreTrigger("filter");
+  else clearTrigger("filter");
+}
+
+function closeWork({ restoreFocus = false } = {}) {
+  const trigger = clearTrigger("work");
+  workDialog?.close();
+  if (restoreFocus && trigger?.isConnected) trigger.focus();
 }
 
 function createObject(item, index, placement) {
@@ -226,9 +249,9 @@ function setFlipped(flipped) {
   workFlip.setAttribute("aria-label", flipped ? `${workFlip.dataset.detailLabel}。翻回作品封面` : "翻转查看作品信息");
 }
 
-function openWork(item) {
-  filterPanel.hidden = true;
-  filterAction.setAttribute("aria-expanded", "false");
+function openWork(item, trigger) {
+  closeTransientStates();
+  rememberTrigger("work", trigger);
   document.querySelector("#poster-dialog")?.close();
   workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
   workFlip.style.setProperty("--detail-ratio", item.type === "music" ? "1" : "2 / 3");
@@ -339,31 +362,39 @@ function renderFilters() {
 }
 
 function closeTransientStates() {
-  filterPanel.hidden = true;
-  filterAction.setAttribute("aria-expanded", "false");
-  if (state.picking) startPicking(false);
-  workDialog?.close();
+  closeFilter({ restoreFocus: false });
+  if (state.picking) startPicking(false, { restoreFocus: false });
+  closeWork({ restoreFocus: false });
   document.querySelector("#poster-dialog")?.close();
-  restoreTrigger();
+  clearAllTransientOwnership();
 }
 
 function showFilters() {
-  if (state.picking) startPicking(false);
+  if (state.picking) startPicking(false, { restoreFocus: false });
   const opening = filterPanel.hidden;
-  if (opening) rememberTrigger(filterAction);
+  if (opening) {
+    closeWork({ restoreFocus: false });
+    clearAllTransientOwnership();
+    rememberTrigger("filter", filterAction);
+  }
   filterPanel.hidden = !opening;
   filterAction.setAttribute("aria-expanded", String(opening));
   if (opening) requestAnimationFrame(() => filterPanel.querySelector(".filter-pill")?.focus());
-  else restoreTrigger();
+  else closeFilter({ restoreFocus: true });
 }
 
-function startPicking(force) {
+function startPicking(force, { restoreFocus = true } = {}) {
   state.picking = typeof force === "boolean" ? force : !state.picking;
-  filterPanel.hidden = true;
-  filterAction.setAttribute("aria-expanded", "false");
-  if (state.picking) rememberTrigger(shareAction);
+  let shareTrigger = null;
+  closeFilter({ restoreFocus: false });
+  closeWork({ restoreFocus: false });
+  if (state.picking) {
+    clearAllTransientOwnership();
+    rememberTrigger("share", shareAction);
+  } else {
+    shareTrigger = clearTrigger("share");
+  }
   state.picked = [];
-  workDialog?.close();
   stage.querySelectorAll(".media-object").forEach((object) => {
     object.classList.remove("is-picked");
     if (state.picking) object.setAttribute("aria-pressed", "false");
@@ -375,7 +406,7 @@ function startPicking(force) {
   document.querySelector("#pick-status .pick-label").firstChild.textContent = `选择五件${typeLabels[state.type]}藏品 `;
   updatePickStatus();
   if (state.picking) requestAnimationFrame(() => stage.querySelector('.media-object:not([aria-hidden="true"])')?.focus());
-  else restoreTrigger();
+  else if (restoreFocus && shareTrigger?.isConnected) shareTrigger.focus();
 }
 
 function updatePickStatus() {
@@ -417,7 +448,7 @@ async function createPoster() {
   const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
   if (posterUrl) URL.revokeObjectURL(posterUrl);
   posterUrl = URL.createObjectURL(blob);
-  startPicking(false);
+  startPicking(false, { restoreFocus: false });
   document.querySelector("#poster-preview").src = posterUrl;
   document.querySelector("#poster-download").href = posterUrl;
   const share = document.querySelector("#poster-share");
@@ -492,6 +523,7 @@ controls.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
   if (button.dataset.action === "layout") {
+    closeFilter({ restoreFocus: false });
     const previous = state.mode;
     const next = layoutModes[(layoutModes.indexOf(previous) + 1) % layoutModes.length];
     if (next === "vortex") state.savedScroll = scrollY;
@@ -520,7 +552,7 @@ stage.addEventListener("click", (event) => {
   if (!object || state.dragging) return;
   hydrateObject(object);
   const index = Number(object.dataset.index); const position = state.picked.indexOf(index);
-  if (!state.picking) { openWork(state.items[index]); return; }
+  if (!state.picking) { openWork(state.items[index], object); return; }
   if (position >= 0) state.picked.splice(position, 1); else if (state.picked.length < 5) state.picked.push(index);
   object.classList.toggle("is-picked", state.picked.includes(index)); object.setAttribute("aria-pressed", String(state.picked.includes(index))); updatePickStatus();
 });
@@ -528,9 +560,7 @@ filterPanel.addEventListener("click", (event) => {
   const pill = event.target.closest("[data-category]");
   if (!pill) return;
   filter(toggleCategory(state.category, pill.dataset.category));
-  filterPanel.hidden = true;
-  filterAction.setAttribute("aria-expanded", "false");
-  restoreTrigger();
+  closeFilter({ restoreFocus: true });
 });
 document.querySelector("#make-poster").addEventListener("click", createPoster);
 document.querySelector("#copy-link").addEventListener("click", async (event) => {
@@ -541,16 +571,17 @@ document.querySelector("#copy-link").addEventListener("click", async (event) => 
 document.querySelectorAll(".dialog-close").forEach((button) => button.addEventListener("click", () => {
   button.closest("dialog").close();
 }));
-document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => workDialog.close()));
+document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true })));
 workFlip.addEventListener("click", () => setFlipped(!workFlip.classList.contains("is-flipped")));
-workDialog.addEventListener("click", (event) => { if (event.target === workDialog) workDialog.close(); });
+workDialog.addEventListener("click", (event) => { if (event.target === workDialog) closeWork({ restoreFocus: true }); });
+workDialog.addEventListener("close", () => restoreTrigger("work"));
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
-  if (filterPanel.hidden === false) showFilters();
+  if (filterPanel.hidden === false) closeFilter({ restoreFocus: true });
   else if (state.picking) startPicking(false);
   else if (document.querySelector("#poster-dialog")?.open) {
     document.querySelector("#poster-dialog").close();
-    restoreTrigger();
+    restoreTrigger("share");
   }
 });
 let resizeFrame = 0;
