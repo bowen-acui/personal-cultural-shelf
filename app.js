@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=15";
-import { loadMediaData } from "./lib/media-data.js?v=15";
-import { createPosterCanvas } from "./lib/poster.js?v=15";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=15";
-import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=15";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=16";
+import { loadMediaData } from "./lib/media-data.js?v=16";
+import { createPosterCanvas } from "./lib/poster.js?v=16";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=16";
+import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=16";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -74,6 +74,12 @@ function restoreTrigger() {
 let morphSource = null;
 const canMorph = () => typeof document.startViewTransition === "function" && !matchMedia("(prefers-reduced-motion: reduce)").matches;
 const dropMorphName = (element) => { if (element) element.style.viewTransitionName = ""; };
+// 动画被跳过时（切到后台标签页、系统降级）ready 会 reject，没人接就是一条控制台报错。
+// 收尾统一交给 finished：无论成没成，名字都得还回去。
+function settle(transition, done) {
+  transition.ready.catch(() => {});
+  transition.finished.then(done, done);
+}
 
 function morphOpen(source) {
   dropMorphName(morphSource);
@@ -81,21 +87,20 @@ function morphOpen(source) {
   if (!canMorph() || !morphSource) { workDialog.showModal(); return; }
   morphSource.style.viewTransitionName = "work-card";
   const from = morphSource;
-  document.startViewTransition(() => {
+  settle(document.startViewTransition(() => {
     dropMorphName(from);
     workDialog.showModal();
-  }).finished.catch(() => dropMorphName(from));
+  }), () => dropMorphName(from));
 }
 
 function morphClose() {
   const back = morphSource;
   morphSource = null;
   if (!canMorph() || !back?.isConnected || !workDialog.open) { workDialog.close(); return; }
-  const transition = document.startViewTransition(() => {
+  settle(document.startViewTransition(() => {
     workDialog.close();
     back.style.viewTransitionName = "work-card";
-  });
-  transition.finished.then(() => dropMorphName(back), () => dropMorphName(back));
+  }), () => dropMorphName(back));
 }
 
 function createObject(item, index) {
