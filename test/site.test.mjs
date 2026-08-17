@@ -1,6 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 // 这里只断言「发布出去的东西」：HTML 结构、隐私边界、CSS 令牌约定。
 // 不要断言 app.js 的源码文本（函数名、事件绑定写法、缓动曲线数值）——
@@ -31,11 +33,47 @@ test("browse, film, music and about pages exist", async () => {
 });
 
 test("public pages expose local identity assets", async () => {
-  const pages = await Promise.all(["index", "film", "music", "browse", "about"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
-  assert.ok(pages.every((page) => page.includes('rel="icon" href="public/avatar.png"') && page.includes("og:title")));
+  const pages = await Promise.all(["index", "film", "music", "browse", "about", "404"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
+  assert.ok(pages.every((page) => page.includes('rel="icon" href="public/favicon.svg"')));
+  assert.ok(pages.slice(0, 5).every((page) => page.includes("og:title")));
   assert.ok(pages.every((page) => page.includes("og:image") && page.includes("avatar.png")));
+  assert.ok(pages.every((page) => page.includes('rel="apple-touch-icon" href="public/avatar.png"')));
+  assert.ok(pages.slice(0, 5).every((page) => page.includes('name="twitter:image"')));
+  await access(new URL("../public/favicon.svg", import.meta.url));
   await access(new URL("../public/avatar.png", import.meta.url));
   assert.match(await readFile(new URL("../404.html", import.meta.url), "utf8"), /返回陈列/);
+});
+
+test("release-sensitive HTML, JS, and CSS assets share one cache version", async () => {
+  const root = process.env.CACHE_VERSION_ROOT
+    ? pathToFileURL(`${path.resolve(process.env.CACHE_VERSION_ROOT)}${path.sep}`)
+    : new URL("../", import.meta.url);
+  const pageNames = ["index", "film", "music", "browse", "about", "404"];
+  const pages = await Promise.all(pageNames.map((name) => readFile(new URL(`${name}.html`, root), "utf8")));
+  const modules = await Promise.all(["app.js", "catalog-page.js"].map((name) => readFile(new URL(name, root), "utf8")));
+  const styles = await readFile(new URL("styles.css", root), "utf8");
+  const versions = [];
+
+  for (const [index, page] of pages.entries()) {
+    const references = [...page.matchAll(/(?:href|src)="(?:styles|shelf|pages|app|catalog-page)\.(?:css|js)(?:\?v=(\d+))?"/g)];
+    assert.ok(references.length > 0, `${pageNames[index]}.html has no release-sensitive asset references`);
+    for (const reference of references) {
+      assert.ok(reference[1], `${pageNames[index]}.html has an unversioned release-sensitive asset`);
+      versions.push(reference[1]);
+    }
+  }
+  for (const [index, module] of modules.entries()) {
+    const imports = [...module.matchAll(/from "\.\/lib\/[^"?]+\.js(?:\?v=(\d+))?"/g)];
+    assert.ok(imports.length > 0, `${["app.js", "catalog-page.js"][index]} has no lib imports`);
+    for (const imported of imports) {
+      assert.ok(imported[1], `${["app.js", "catalog-page.js"][index]} has an unversioned lib import`);
+      versions.push(imported[1]);
+    }
+  }
+  const wenKai = styles.match(/url\("public\/fonts\/lxgw-wenkai-subset\.woff2(?:\?v=(\d+))?"\)/);
+  assert.ok(wenKai?.[1], "styles.css has an unversioned WenKai font URL");
+  versions.push(wenKai[1]);
+  assert.equal(new Set(versions).size, 1, `cache versions differ: ${[...new Set(versions)].join(", ")}`);
 });
 
 test("every page tints the mobile address bar the same paper color", async () => {

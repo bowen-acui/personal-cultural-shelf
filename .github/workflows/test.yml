@@ -8,5 +8,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      # 测试只依赖 node 内置模块（纯函数已从 sharp 解耦），故不需要 npm install。
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - run: python -m pip install "fonttools[woff]"
+      # Node 测试只依赖内置模块；字体集成测试使用上面安装的 FontTools CLI。
       - run: npm test

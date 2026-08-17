@@ -3616,6 +3616,19 @@
     ]
   },
   {
+    "id": "film:开心家族",
+    "type": "film",
+    "title": "开心家族",
+    "creator": "金英卓",
+    "cover": "public/covers/b3414e8e53de-320.webp",
+    "coverLarge": "public/covers/b3414e8e53de-720.webp",
+    "categories": [
+      "剧情",
+      "喜剧",
+      "奇幻"
+    ]
+  },
+  {
     "id": "film:看不见的客人",
     "type": "film",
     "title": "看不见的客人",
@@ -3967,6 +3980,32 @@
     ]
   },
   {
+    "id": "film:洛基",
+    "type": "film",
+    "title": "洛基",
+    "creator": "迈克尔·沃尔德伦",
+    "cover": "public/covers/d68c95cc819f-320.webp",
+    "coverLarge": "public/covers/d68c95cc819f-720.webp",
+    "categories": [
+      "剧情",
+      "科幻",
+      "奇幻",
+      "美剧"
+    ]
+  },
+  {
+    "id": "film:落魄大厨",
+    "type": "film",
+    "title": "落魄大厨",
+    "creator": "乔恩·费儒",
+    "cover": "public/covers/cac372bdc390-320.webp",
+    "coverLarge": "public/covers/cac372bdc390-720.webp",
+    "categories": [
+      "剧情",
+      "喜剧"
+    ]
+  },
+  {
     "id": "film:麻将",
     "type": "film",
     "title": "麻将",
@@ -4249,6 +4288,19 @@
       "剧情",
       "犯罪",
       "动作"
+    ]
+  },
+  {
+    "id": "film:强风吹拂",
+    "type": "film",
+    "title": "强风吹拂",
+    "creator": "野村和也",
+    "cover": "public/covers/83b7f0f87cc2-320.webp",
+    "coverLarge": "public/covers/83b7f0f87cc2-720.webp",
+    "categories": [
+      "剧情",
+      "动画",
+      "运动"
     ]
   },
   {
@@ -5466,6 +5518,20 @@
     "categories": [
       "喜剧",
       "剧情"
+    ]
+  },
+  {
+    "id": "film:夜魔侠",
+    "type": "film",
+    "title": "夜魔侠",
+    "creator": "德鲁·高达",
+    "cover": "public/covers/5f7064e36975-320.webp",
+    "coverLarge": "public/covers/5f7064e36975-720.webp",
+    "categories": [
+      "剧情",
+      "动作",
+      "犯罪",
+      "美剧"
     ]
   },
   {
