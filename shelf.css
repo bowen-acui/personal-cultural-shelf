@@ -33,6 +33,10 @@
 .work-flip { display:block; width:100%; padding:0; border:0; color:inherit; background:transparent; cursor:pointer; perspective:1200px; transform:rotate(-1.5deg); }
 .work-flip-inner { position:relative; display:block; width:100%; aspect-ratio:var(--detail-ratio,2 / 3); transform-style:preserve-3d; transition:transform 520ms cubic-bezier(.2,.72,.2,1); }
 .work-flip.is-flipped .work-flip-inner { transform:rotateY(180deg); }
+/* 共享元素开合：详情卡常驻这个名字，架上被点的那张封面在开合的瞬间临时借用（见 app.js morphOpen/morphClose），
+   浏览器就把两者当成同一个东西补间。不支持 View Transitions 的浏览器什么都不会发生，静默退回原来的淡入。 */
+.work-flip { view-transition-name:work-card; }
+::view-transition-group(work-card) { animation-duration:420ms; animation-timing-function:cubic-bezier(.2,.72,.2,1); }
 .work-face { position:absolute; inset:0; display:block; overflow:hidden; border-radius:4px; box-shadow:0 22px 70px var(--control-shadow),var(--shadow-up); backface-visibility:hidden; }
 .work-front img { display:block; width:100%; height:100%; object-fit:cover; }
 .work-back { display:flex; flex-direction:column; align-items:flex-start; padding:30px 28px 24px; color:var(--control-text); background:var(--control); text-align:left; transform:rotateY(180deg); }

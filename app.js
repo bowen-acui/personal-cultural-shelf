@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=14";
-import { loadMediaData } from "./lib/media-data.js?v=14";
-import { createPosterCanvas } from "./lib/poster.js?v=14";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=14";
-import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=14";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=15";
+import { loadMediaData } from "./lib/media-data.js?v=15";
+import { createPosterCanvas } from "./lib/poster.js?v=15";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=15";
+import { createScatterLayout, createTidyLayout, createVortexLayout, stageHeightFor } from "./lib/layouts.js?v=15";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -69,6 +69,35 @@ function restoreTrigger() {
   if (trigger?.isConnected) trigger.focus();
 }
 
+// 同一时刻只能有一个元素叫 work-card，所以名字在回调里交接：开的时候从封面交给详情卡，关的时候交还。
+// 名字必须在 startViewTransition 之前挂好——旧状态是同步截取的。
+let morphSource = null;
+const canMorph = () => typeof document.startViewTransition === "function" && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+const dropMorphName = (element) => { if (element) element.style.viewTransitionName = ""; };
+
+function morphOpen(source) {
+  dropMorphName(morphSource);
+  morphSource = source?.isConnected ? source : null;
+  if (!canMorph() || !morphSource) { workDialog.showModal(); return; }
+  morphSource.style.viewTransitionName = "work-card";
+  const from = morphSource;
+  document.startViewTransition(() => {
+    dropMorphName(from);
+    workDialog.showModal();
+  }).finished.catch(() => dropMorphName(from));
+}
+
+function morphClose() {
+  const back = morphSource;
+  morphSource = null;
+  if (!canMorph() || !back?.isConnected || !workDialog.open) { workDialog.close(); return; }
+  const transition = document.startViewTransition(() => {
+    workDialog.close();
+    back.style.viewTransitionName = "work-card";
+  });
+  transition.finished.then(() => dropMorphName(back), () => dropMorphName(back));
+}
+
 function createObject(item, index) {
   const button = document.createElement("button");
   button.type = "button";
@@ -107,7 +136,7 @@ function setFlipped(flipped) {
   workFlip.setAttribute("aria-label", flipped ? `${workFlip.dataset.detailLabel}。翻回作品封面` : "翻转查看作品信息");
 }
 
-function openWork(item) {
+function openWork(item, source) {
   filterPanel.hidden = true;
   filterAction.setAttribute("aria-expanded", "false");
   document.querySelector("#poster-dialog")?.close();
@@ -144,7 +173,7 @@ function openWork(item) {
   // 触屏没有 hover，封面上的信息条永远不显示：点开只看到刚点的那张封面等于零信息，
   // 所以无 hover 设备直接开在信息面，想看大图再翻回去。
   setFlipped(matchMedia("(hover: none)").matches);
-  workDialog.showModal();
+  morphOpen(source);
 }
 
 function setError(message) {
@@ -365,7 +394,7 @@ stage.addEventListener("click", (event) => {
   const object = event.target.closest(".media-object");
   if (!object || state.dragging) return;
   const index = Number(object.dataset.index); const position = state.picked.indexOf(index);
-  if (!state.picking) { openWork(state.items[index]); return; }
+  if (!state.picking) { openWork(state.items[index], object); return; }
   if (position >= 0) state.picked.splice(position, 1); else if (state.picked.length < 5) state.picked.push(index);
   object.classList.toggle("is-picked", state.picked.includes(index)); object.setAttribute("aria-pressed", String(state.picked.includes(index))); updatePickStatus();
 });
@@ -386,9 +415,11 @@ document.querySelector("#copy-link").addEventListener("click", async (event) => 
 document.querySelectorAll(".dialog-close").forEach((button) => button.addEventListener("click", () => {
   button.closest("dialog").close();
 }));
-document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => workDialog.close()));
+document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", morphClose));
 workFlip.addEventListener("click", () => setFlipped(!workFlip.classList.contains("is-flipped")));
-workDialog.addEventListener("click", (event) => { if (event.target === workDialog) workDialog.close(); });
+workDialog.addEventListener("click", (event) => { if (event.target === workDialog) morphClose(); });
+// Esc 走的是原生关闭，拦下来换成同一条收回动画。
+workDialog.addEventListener("cancel", (event) => { event.preventDefault(); morphClose(); });
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
   if (filterPanel.hidden === false) showFilters();
