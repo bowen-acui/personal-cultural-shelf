@@ -34,7 +34,7 @@ test("browse, film, music and about pages exist", async () => {
 
 test("public pages expose local identity assets", async () => {
   const pages = await Promise.all(["index", "film", "music", "browse", "about", "404"].map((name) => readFile(new URL(`../${name}.html`, import.meta.url), "utf8")));
-  assert.ok(pages.every((page) => page.includes('rel="icon" href="public/favicon.svg"')));
+  assert.ok(pages.every((page) => page.includes('rel="icon" href="public/avatar.png"')));
   assert.ok(pages.slice(0, 5).every((page) => page.includes("og:title")));
   assert.ok(pages.every((page) => page.includes("og:image") && page.includes("avatar.png")));
   assert.ok(pages.every((page) => page.includes('rel="apple-touch-icon" href="public/avatar.png"')));
