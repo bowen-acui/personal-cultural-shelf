@@ -419,6 +419,19 @@
     "rating": 4
   },
   {
+    "id": "book:筚路维艰",
+    "type": "book",
+    "title": "筚路维艰",
+    "creator": "萧冬连",
+    "cover": "public/covers/dd8c2cce9702-320.webp",
+    "coverLarge": "public/covers/dd8c2cce9702-720.webp",
+    "categories": [
+      "社科"
+    ],
+    "completedMonth": "2026-08",
+    "rating": 4
+  },
+  {
     "id": "book:不然你搬去火星啊",
     "type": "book",
     "title": "不然你搬去火星啊",
@@ -1105,6 +1118,19 @@
       "社会科学"
     ],
     "completedMonth": "2023-03",
+    "rating": 3
+  },
+  {
+    "id": "book:股市趋势技术分析",
+    "type": "book",
+    "title": "股市趋势技术分析",
+    "creator": "[美] 罗伯特·D·爱德华兹 / 约翰·迈吉 / W.H.C.巴塞蒂",
+    "cover": "public/covers/6edc691b0855-320.webp",
+    "coverLarge": "public/covers/6edc691b0855-720.webp",
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2026-08",
     "rating": 3
   },
   {
@@ -1955,6 +1981,22 @@
     ]
   },
   {
+    "id": "film:安昂传奇：最后的气宗",
+    "type": "film",
+    "title": "安昂传奇：最后的气宗",
+    "creator": "迈克尔·迪马蒂诺、布莱恩·科尼兹科",
+    "cover": "public/covers/935d911a777f-320.webp",
+    "coverLarge": "public/covers/935d911a777f-720.webp",
+    "categories": [
+      "动画",
+      "奇幻",
+      "冒险",
+      "动作",
+      "剧情",
+      "美剧"
+    ]
+  },
+  {
     "id": "film:傲慢与偏见",
     "type": "film",
     "title": "傲慢与偏见",
@@ -1977,6 +2019,19 @@
       "剧情",
       "传记",
       "历史"
+    ]
+  },
+  {
+    "id": "film:奥德赛",
+    "type": "film",
+    "title": "奥德赛",
+    "creator": "克里斯托弗·诺兰",
+    "cover": "public/covers/d559ae76255e-320.webp",
+    "coverLarge": "public/covers/d559ae76255e-720.webp",
+    "categories": [
+      "动作",
+      "奇幻",
+      "冒险"
     ]
   },
   {
@@ -4991,6 +5046,20 @@
     ]
   },
   {
+    "id": "film:铁甲钢拳",
+    "type": "film",
+    "title": "铁甲钢拳",
+    "creator": "肖恩·利维",
+    "cover": "public/covers/b232b2562c9f-320.webp",
+    "coverLarge": "public/covers/b232b2562c9f-720.webp",
+    "categories": [
+      "剧情",
+      "动作",
+      "科幻",
+      "运动"
+    ]
+  },
+  {
     "id": "film:头号玩家",
     "type": "film",
     "title": "头号玩家",
@@ -5012,6 +5081,21 @@
     "categories": [
       "科幻",
       "剧情"
+    ]
+  },
+  {
+    "id": "film:万神殿",
+    "type": "film",
+    "title": "万神殿",
+    "creator": "克雷格·西尔弗斯坦",
+    "cover": "public/covers/44d745865b45-320.webp",
+    "coverLarge": "public/covers/44d745865b45-720.webp",
+    "categories": [
+      "动画",
+      "科幻",
+      "剧情",
+      "悬疑",
+      "美剧"
     ]
   },
   {
@@ -5326,6 +5410,19 @@
     ]
   },
   {
+    "id": "film:小黄人与大怪兽",
+    "type": "film",
+    "title": "小黄人与大怪兽",
+    "creator": "皮埃尔·柯芬",
+    "cover": "public/covers/f44fe98add2a-320.webp",
+    "coverLarge": "public/covers/f44fe98add2a-720.webp",
+    "categories": [
+      "喜剧",
+      "动画",
+      "冒险"
+    ]
+  },
+  {
     "id": "film:小姐",
     "type": "film",
     "title": "小姐",
@@ -5612,6 +5709,22 @@
     ]
   },
   {
+    "id": "film:英雄联盟：双城之战",
+    "type": "film",
+    "title": "英雄联盟：双城之战",
+    "creator": "克里斯蒂安·林克",
+    "cover": "public/covers/71d28e4a3b51-320.webp",
+    "coverLarge": "public/covers/71d28e4a3b51-720.webp",
+    "categories": [
+      "剧情",
+      "动画",
+      "动作",
+      "奇幻",
+      "冒险",
+      "美剧"
+    ]
+  },
+  {
     "id": "film:与神同行",
     "type": "film",
     "title": "与神同行",
@@ -5858,14 +5971,47 @@
     ]
   },
   {
-    "id": "music:2013 陳奕迅 Music Life 精選",
+    "id": "music:11月的蕭邦",
     "type": "music",
-    "title": "2013 陳奕迅 Music Life 精選",
-    "creator": "Eason Chan",
-    "cover": "public/covers/8d6f31e014a3-320.webp",
-    "coverLarge": "public/covers/8d6f31e014a3-720.webp",
+    "title": "11月的蕭邦",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ee04a744d2b5-320.webp",
+    "coverLarge": "public/covers/ee04a744d2b5-720.webp",
     "categories": [
-      "Cantopop/HK-Pop"
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:4 A Change & Hits (新曲 + 精選)",
+    "type": "music",
+    "title": "4 A Change & Hits (新曲 + 精選)",
+    "creator": "Eason Chan",
+    "cover": "public/covers/b38060735c34-320.webp",
+    "coverLarge": "public/covers/b38060735c34-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:八度空間",
+    "type": "music",
+    "title": "八度空間",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ad2e9448e253-320.webp",
+    "coverLarge": "public/covers/ad2e9448e253-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:百代經典101 Vol.1",
+    "type": "music",
+    "title": "百代經典101 Vol.1",
+    "creator": "Various Artists",
+    "cover": "public/covers/8866165d9588-320.webp",
+    "coverLarge": "public/covers/8866165d9588-720.webp",
+    "categories": [
+      "C-pop"
     ]
   },
   {
@@ -5891,6 +6037,105 @@
     ]
   },
   {
+    "id": "music:大把時間璀璨（We have a lifetime to shine）",
+    "type": "music",
+    "title": "大把時間璀璨（We have a lifetime to shine）",
+    "creator": "回春丹",
+    "cover": "public/covers/0a0de35787df-320.webp",
+    "coverLarge": "public/covers/0a0de35787df-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:港樂不息 Vol.1",
+    "type": "music",
+    "title": "港樂不息 Vol.1",
+    "creator": "Various Artists",
+    "cover": "public/covers/3a2e450abef8-320.webp",
+    "coverLarge": "public/covers/3a2e450abef8-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:跟著感覺走",
+    "type": "music",
+    "title": "跟著感覺走",
+    "creator": "Zhang Zhen Yue",
+    "cover": "public/covers/d2b1e8f9bed1-320.webp",
+    "coverLarge": "public/covers/d2b1e8f9bed1-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:壞蛋",
+    "type": "music",
+    "title": "壞蛋",
+    "creator": "Mixer",
+    "cover": "public/covers/3745c4817e02-320.webp",
+    "coverLarge": "public/covers/3745c4817e02-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:荒唐谣",
+    "type": "music",
+    "title": "荒唐谣",
+    "creator": "DOUDOU",
+    "cover": "public/covers/65e24afc458b-320.webp",
+    "coverLarge": "public/covers/65e24afc458b-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:极乐大厦揭幕",
+    "type": "music",
+    "title": "极乐大厦揭幕",
+    "creator": "八仙8Immortals",
+    "cover": "public/covers/b87b51744e87-320.webp",
+    "coverLarge": "public/covers/b87b51744e87-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:金黃色的",
+    "type": "music",
+    "title": "金黃色的",
+    "creator": "Enno Cheng",
+    "cover": "public/covers/8bd2a5b3b1d1-320.webp",
+    "coverLarge": "public/covers/8bd2a5b3b1d1-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:君はロックを聴かない",
+    "type": "music",
+    "title": "君はロックを聴かない",
+    "creator": "Aimyon",
+    "cover": "public/covers/9ff009488c65-320.webp",
+    "coverLarge": "public/covers/9ff009488c65-720.webp",
+    "categories": [
+      "J-pop"
+    ]
+  },
+  {
+    "id": "music:裸の心",
+    "type": "music",
+    "title": "裸の心",
+    "creator": "Aimyon",
+    "cover": "public/covers/d71ce62732bb-320.webp",
+    "coverLarge": "public/covers/d71ce62732bb-720.webp",
+    "categories": [
+      "J-pop"
+    ]
+  },
+  {
     "id": "music:盲婚啞嫁",
     "type": "music",
     "title": "盲婚啞嫁",
@@ -5899,6 +6144,105 @@
     "coverLarge": "public/covers/3d0b7ea69ed0-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:摩天動物園",
+    "type": "music",
+    "title": "摩天動物園",
+    "creator": "G.E.M.",
+    "cover": "public/covers/8bad051abbff-320.webp",
+    "coverLarge": "public/covers/8bad051abbff-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:平成風俗",
+    "type": "music",
+    "title": "平成風俗",
+    "creator": "Sheena Ringo",
+    "cover": "public/covers/daec3b3328c4-320.webp",
+    "coverLarge": "public/covers/daec3b3328c4-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:七里香",
+    "type": "music",
+    "title": "七里香",
+    "creator": "Jay Chou",
+    "cover": "public/covers/1ab6c535db43-320.webp",
+    "coverLarge": "public/covers/1ab6c535db43-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:錢專",
+    "type": "music",
+    "title": "錢專",
+    "creator": "河南說唱之神",
+    "cover": "public/covers/f93ecfa07b51-320.webp",
+    "coverLarge": "public/covers/f93ecfa07b51-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:輕輕 (Ultimate Collection)",
+    "type": "music",
+    "title": "輕輕 (Ultimate Collection)",
+    "creator": "陳嫺靜",
+    "cover": "public/covers/600e81bbda61-320.webp",
+    "coverLarge": "public/covers/600e81bbda61-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:如果每天都可以 happy happy 誰想要sad-)) - 一起去度假",
+    "type": "music",
+    "title": "如果每天都可以 happy happy 誰想要sad:)) - 一起去度假",
+    "creator": "陳嫺靜",
+    "cover": "public/covers/1da7041844f6-320.webp",
+    "coverLarge": "public/covers/1da7041844f6-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:少女，飛 (blossom)",
+    "type": "music",
+    "title": "少女，飛 (blossom)",
+    "creator": "puppiebelly",
+    "cover": "public/covers/e658c8d8dad9-320.webp",
+    "coverLarge": "public/covers/e658c8d8dad9-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:陶喆同名專輯",
+    "type": "music",
+    "title": "陶喆同名專輯",
+    "creator": "David Tao",
+    "cover": "public/covers/9dfe472b0e3f-320.webp",
+    "coverLarge": "public/covers/9dfe472b0e3f-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:聽濤",
+    "type": "music",
+    "title": "聽濤",
+    "creator": "Kenny Bee",
+    "cover": "public/covers/e9ce100715d6-320.webp",
+    "coverLarge": "public/covers/e9ce100715d6-720.webp",
+    "categories": [
+      "C-pop"
     ]
   },
   {
@@ -5913,6 +6257,17 @@
     ]
   },
   {
+    "id": "music:無罪モラトリアム",
+    "type": "music",
+    "title": "無罪モラトリアム",
+    "creator": "Sheena Ringo",
+    "cover": "public/covers/7617e4175015-320.webp",
+    "coverLarge": "public/covers/7617e4175015-720.webp",
+    "categories": [
+      "J-pop"
+    ]
+  },
+  {
     "id": "music:幸福",
     "type": "music",
     "title": "幸福",
@@ -5924,6 +6279,28 @@
     ]
   },
   {
+    "id": "music:葉惠美",
+    "type": "music",
+    "title": "葉惠美",
+    "creator": "Jay Chou",
+    "cover": "public/covers/baf891b674d2-320.webp",
+    "coverLarge": "public/covers/baf891b674d2-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:雨RAIN RAIN RAIN",
+    "type": "music",
+    "title": "雨RAIN RAIN RAIN",
+    "creator": "无边界音乐",
+    "cover": "public/covers/748d246b8eaf-320.webp",
+    "coverLarge": "public/covers/748d246b8eaf-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
     "id": "music:與我常在",
     "type": "music",
     "title": "與我常在",
@@ -5931,7 +6308,110 @@
     "cover": "public/covers/1932972c3ba1-320.webp",
     "coverLarge": "public/covers/1932972c3ba1-720.webp",
     "categories": [
-      "Cantopop/HK-Pop"
+      "Cantopop/HK-Pop",
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:隕石與地球",
+    "type": "music",
+    "title": "隕石與地球",
+    "creator": "Sammi Cheng",
+    "cover": "public/covers/1fd2d05df39c-320.webp",
+    "coverLarge": "public/covers/1fd2d05df39c-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:鄭中基正宗 K 新曲精選",
+    "type": "music",
+    "title": "鄭中基正宗 K 新曲精選",
+    "creator": "Ronald Cheng",
+    "cover": "public/covers/a96c871c79f0-320.webp",
+    "coverLarge": "public/covers/a96c871c79f0-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:alone tonight",
+    "type": "music",
+    "title": "alone tonight",
+    "creator": "starfall",
+    "cover": "public/covers/e6f76ef8e445-320.webp",
+    "coverLarge": "public/covers/e6f76ef8e445-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Best Emo Songs EMO神曲精選",
+    "type": "music",
+    "title": "Best Emo Songs EMO神曲精選",
+    "creator": "Various Artists",
+    "cover": "public/covers/0ec042f31af9-320.webp",
+    "coverLarge": "public/covers/0ec042f31af9-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Brokeback Mountain Soundtrack",
+    "type": "music",
+    "title": "Brokeback Mountain Soundtrack",
+    "creator": "Gustavo Santaolalla",
+    "cover": "public/covers/7d03081f41a5-320.webp",
+    "coverLarge": "public/covers/7d03081f41a5-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Curtain Call- The Hits",
+    "type": "music",
+    "title": "Curtain Call: The Hits",
+    "creator": "Eminem",
+    "cover": "public/covers/85e8d0887b86-320.webp",
+    "coverLarge": "public/covers/85e8d0887b86-720.webp",
+    "categories": [
+      "Pop",
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:Eason Chan Duo Concert 2010",
+    "type": "music",
+    "title": "Eason Chan Duo Concert 2010",
+    "creator": "Eason Chan",
+    "cover": "public/covers/02c34fcce95d-320.webp",
+    "coverLarge": "public/covers/02c34fcce95d-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Everyday Is Christmas (Deluxe Edition)",
+    "type": "music",
+    "title": "Everyday Is Christmas (Deluxe Edition)",
+    "creator": "Sia",
+    "cover": "public/covers/8d27444ef6eb-320.webp",
+    "coverLarge": "public/covers/8d27444ef6eb-720.webp",
+    "categories": [
+      "Pop",
+      "Holiday"
+    ]
+  },
+  {
+    "id": "music:First Love",
+    "type": "music",
+    "title": "First Love",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/73a3d24976bc-320.webp",
+    "coverLarge": "public/covers/73a3d24976bc-720.webp",
+    "categories": [
+      "Pop",
+      "J-Pop"
     ]
   },
   {
@@ -5957,14 +6437,60 @@
     ]
   },
   {
-    "id": "music:H3M (Remastered 2019)",
+    "id": "music:H3M",
     "type": "music",
-    "title": "H3M (Remastered 2019)",
+    "title": "H3M",
     "creator": "Eason Chan",
-    "cover": "public/covers/a629f4e383be-320.webp",
-    "coverLarge": "public/covers/a629f4e383be-720.webp",
+    "cover": "public/covers/4829b66ba853-320.webp",
+    "coverLarge": "public/covers/4829b66ba853-720.webp",
     "categories": [
+      "Pop",
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Here On Earth (Ultimate Edition)",
+    "type": "music",
+    "title": "Here On Earth (Ultimate Edition)",
+    "creator": "Tim McGraw",
+    "cover": "public/covers/2b2ca075074a-320.webp",
+    "coverLarge": "public/covers/2b2ca075074a-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Here With Me",
+    "type": "music",
+    "title": "Here With Me",
+    "creator": "Marshmello",
+    "cover": "public/covers/451877e11d41-320.webp",
+    "coverLarge": "public/covers/451877e11d41-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:I WANNA BE YOUR SLAVE",
+    "type": "music",
+    "title": "I WANNA BE YOUR SLAVE",
+    "creator": "Jaydan Wolf",
+    "cover": "public/covers/f7867c008df0-320.webp",
+    "coverLarge": "public/covers/f7867c008df0-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:In Between Dreams",
+    "type": "music",
+    "title": "In Between Dreams",
+    "creator": "Jack Johnson",
+    "cover": "public/covers/5e36eeb10ac0-320.webp",
+    "coverLarge": "public/covers/5e36eeb10ac0-720.webp",
+    "categories": [
+      "Pop",
+      "Rock"
     ]
   },
   {
@@ -5976,6 +6502,28 @@
     "coverLarge": "public/covers/c170aa4098cd-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Kaiju",
+    "type": "music",
+    "title": "Kaiju",
+    "creator": "sakanaction",
+    "cover": "public/covers/a16f5bbdf28f-320.webp",
+    "coverLarge": "public/covers/a16f5bbdf28f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Karaoke Legends K歌金曲榜",
+    "type": "music",
+    "title": "Karaoke Legends K歌金曲榜",
+    "creator": "Various Artists",
+    "cover": "public/covers/d7318d58fbc2-320.webp",
+    "coverLarge": "public/covers/d7318d58fbc2-720.webp",
+    "categories": [
+      "C-pop"
     ]
   },
   {
@@ -6001,6 +6549,95 @@
     ]
   },
   {
+    "id": "music:Lonely Nights",
+    "type": "music",
+    "title": "Lonely Nights",
+    "creator": "Various Artists",
+    "cover": "public/covers/7ec215208abc-320.webp",
+    "coverLarge": "public/covers/7ec215208abc-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:LOVE 07情歌集壓軸篇",
+    "type": "music",
+    "title": "LOVE 07情歌集壓軸篇",
+    "creator": "Various Artists",
+    "cover": "public/covers/0509a61eaf06-320.webp",
+    "coverLarge": "public/covers/0509a61eaf06-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Lungs (Deluxe Version)",
+    "type": "music",
+    "title": "Lungs (Deluxe Version)",
+    "creator": "Florence + The Machine",
+    "cover": "public/covers/ed72647480cb-320.webp",
+    "coverLarge": "public/covers/ed72647480cb-720.webp",
+    "categories": [
+      "Pop",
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Monday",
+    "type": "music",
+    "title": "Monday",
+    "creator": "Leah Dou",
+    "cover": "public/covers/088b9e4dcce6-320.webp",
+    "coverLarge": "public/covers/088b9e4dcce6-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Music Life 精選",
+    "type": "music",
+    "title": "Music Life 精選",
+    "creator": "Eason Chan",
+    "cover": "public/covers/94c2a7bb3b19-320.webp",
+    "coverLarge": "public/covers/94c2a7bb3b19-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Neo-Romantic 新浪漫主義",
+    "type": "music",
+    "title": "Neo-Romantic 新浪漫主義",
+    "creator": "Various Artists",
+    "cover": "public/covers/9f9cf3d7b92c-320.webp",
+    "coverLarge": "public/covers/9f9cf3d7b92c-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:PURE",
+    "type": "music",
+    "title": "PURE",
+    "creator": "Taichi Mukai",
+    "cover": "public/covers/0fc3baffb67f-320.webp",
+    "coverLarge": "public/covers/0fc3baffb67f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack",
+    "type": "music",
+    "title": "Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack",
+    "creator": "Various Artists",
+    "cover": "public/covers/5132dc474825-320.webp",
+    "coverLarge": "public/covers/5132dc474825-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
     "id": "music:Shall We Dance_ Shall We Talk!",
     "type": "music",
     "title": "Shall We Dance? Shall We Talk!",
@@ -6020,6 +6657,39 @@
     "coverLarge": "public/covers/025c741ae061-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:T.I.M.E",
+    "type": "music",
+    "title": "T.I.M.E.",
+    "creator": "G.E.M.",
+    "cover": "public/covers/096302623fc6-320.webp",
+    "coverLarge": "public/covers/096302623fc6-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:THANK YOU BLUE",
+    "type": "music",
+    "title": "THANK YOU BLUE",
+    "creator": "Daoko",
+    "cover": "public/covers/233058c52166-320.webp",
+    "coverLarge": "public/covers/233058c52166-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:the coldest and darkest season",
+    "type": "music",
+    "title": "the coldest and darkest season",
+    "creator": "Various Artists",
+    "cover": "public/covers/f17ae7eb0d06-320.webp",
+    "coverLarge": "public/covers/f17ae7eb0d06-720.webp",
+    "categories": [
+      "Pop"
     ]
   },
   {
@@ -6045,12 +6715,34 @@
     ]
   },
   {
-    "id": "music:Time Flies 2010",
+    "id": "music:This Is The One (Remastered)",
     "type": "music",
-    "title": "Time Flies 2010",
+    "title": "This Is The One (Remastered)",
+    "creator": "Utada",
+    "cover": "public/covers/fb7346fe3b7b-320.webp",
+    "coverLarge": "public/covers/fb7346fe3b7b-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Time Flies",
+    "type": "music",
+    "title": "Time Flies",
     "creator": "Eason Chan",
-    "cover": "public/covers/0d1ac0b7c03a-320.webp",
-    "coverLarge": "public/covers/0d1ac0b7c03a-720.webp",
+    "cover": "public/covers/60e595e44347-320.webp",
+    "coverLarge": "public/covers/60e595e44347-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Way out",
+    "type": "music",
+    "title": "Way out",
+    "creator": "Whyte",
+    "cover": "public/covers/f3fde8a57017-320.webp",
+    "coverLarge": "public/covers/f3fde8a57017-720.webp",
     "categories": [
       "Pop"
     ]
@@ -6064,6 +6756,39 @@
     "coverLarge": "public/covers/c680be68efdd-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Y100",
+    "type": "music",
+    "title": "Y100",
+    "creator": "Various Artists",
+    "cover": "public/covers/d351fc616f46-320.webp",
+    "coverLarge": "public/covers/d351fc616f46-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:you're never coming back",
+    "type": "music",
+    "title": "you're never coming back",
+    "creator": "Cody Francis",
+    "cover": "public/covers/8938587eb1e3-320.webp",
+    "coverLarge": "public/covers/8938587eb1e3-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:マリーゴールド",
+    "type": "music",
+    "title": "マリーゴールド",
+    "creator": "Aimyon",
+    "cover": "public/covers/f303750e7730-320.webp",
+    "coverLarge": "public/covers/f303750e7730-720.webp",
+    "categories": [
+      "J-pop"
     ]
   },
   {
@@ -6221,17 +6946,6 @@
     ]
   },
   {
-    "id": "music:Ching Ching (Ultimate Collection)",
-    "type": "music",
-    "title": "Ching Ching (Ultimate Collection)",
-    "creator": "Chen Hsien Ching",
-    "cover": "public/covers/4914ac7155f4-320.webp",
-    "coverLarge": "public/covers/4914ac7155f4-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
-    ]
-  },
-  {
     "id": "music:10號",
     "type": "music",
     "title": "10號",
@@ -6320,9 +7034,9 @@
     ]
   },
   {
-    "id": "music:不能說的秘密電影原聲帶",
+    "id": "music:不能說的秘密電影",
     "type": "music",
-    "title": "不能說的秘密電影原聲帶",
+    "title": "不能說的秘密電影",
     "creator": "周杰倫",
     "cover": "public/covers/64ac46e3b311-320.webp",
     "coverLarge": "public/covers/64ac46e3b311-720.webp",
@@ -6376,17 +7090,6 @@
     ]
   },
   {
-    "id": "music:復黑王_ 聽濤",
-    "type": "music",
-    "title": "復黑王: 聽濤",
-    "creator": "Kenny Bee",
-    "cover": "public/covers/91f7a1f263ce-320.webp",
-    "coverLarge": "public/covers/91f7a1f263ce-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:过去来的人",
     "type": "music",
     "title": "过去来的人",
@@ -6404,17 +7107,6 @@
     "creator": "刘森",
     "cover": "public/covers/9784ae98f895-320.webp",
     "coverLarge": "public/covers/9784ae98f895-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:壞蛋 (電影《周處除三害》片尾曲)",
-    "type": "music",
-    "title": "壞蛋 (電影《周處除三害》片尾曲)",
-    "creator": "MIXER",
-    "cover": "public/covers/4f8a2815c40d-320.webp",
-    "coverLarge": "public/covers/4f8a2815c40d-720.webp",
     "categories": [
       "Mandopop"
     ]
@@ -6772,17 +7464,6 @@
     ]
   },
   {
-    "id": "music:隕石與地球 - Single",
-    "type": "music",
-    "title": "隕石與地球 - Single",
-    "creator": "鄭秀文",
-    "cover": "public/covers/ee0594206799-320.webp",
-    "coverLarge": "public/covers/ee0594206799-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:赵小雷",
     "type": "music",
     "title": "赵小雷",
@@ -6791,17 +7472,6 @@
     "coverLarge": "public/covers/b2d42ca97381-720.webp",
     "categories": [
       "Folk"
-    ]
-  },
-  {
-    "id": "music:正宗K (新曲+精選)",
-    "type": "music",
-    "title": "正宗K (新曲+精選)",
-    "creator": "Ronald Cheng",
-    "cover": "public/covers/7a5466b76116-320.webp",
-    "coverLarge": "public/covers/7a5466b76116-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -6856,7 +7526,8 @@
     "cover": "public/covers/79acf4261fa4-320.webp",
     "coverLarge": "public/covers/79acf4261fa4-720.webp",
     "categories": [
-      "Rock"
+      "Rock",
+      "Pop"
     ]
   },
   {
@@ -6877,17 +7548,6 @@
     "creator": "Lady Gaga",
     "cover": "public/covers/15286447a8fb-320.webp",
     "coverLarge": "public/covers/15286447a8fb-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:alone tonight - EP",
-    "type": "music",
-    "title": "alone tonight - EP",
-    "creator": "starfall",
-    "cover": "public/covers/96cf2942a278-320.webp",
-    "coverLarge": "public/covers/96cf2942a278-720.webp",
     "categories": [
       "Pop"
     ]
@@ -7069,17 +7729,6 @@
     ]
   },
   {
-    "id": "music:Common Jasmine Orange",
-    "type": "music",
-    "title": "Common Jasmine Orange",
-    "creator": "Jay Chou",
-    "cover": "public/covers/69aeebc87b04-320.webp",
-    "coverLarge": "public/covers/69aeebc87b04-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
     "id": "music:Cult.",
     "type": "music",
     "title": "Cult.",
@@ -7088,28 +7737,6 @@
     "coverLarge": "public/covers/a8becc4280d0-720.webp",
     "categories": [
       "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Curtain Call_ The Hits (Deluxe Edition)",
-    "type": "music",
-    "title": "Curtain Call: The Hits (Deluxe Edition)",
-    "creator": "Eminem",
-    "cover": "public/covers/80beb807a3d0-320.webp",
-    "coverLarge": "public/covers/80beb807a3d0-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
-    ]
-  },
-  {
-    "id": "music:David Tao",
-    "type": "music",
-    "title": "David Tao",
-    "creator": "David Tao",
-    "cover": "public/covers/bf1db0b94a6a-320.webp",
-    "coverLarge": "public/covers/bf1db0b94a6a-720.webp",
-    "categories": [
-      "Mandopop"
     ]
   },
   {
@@ -7168,17 +7795,6 @@
     ]
   },
   {
-    "id": "music:Everyday Is Christmas (Deluxe)",
-    "type": "music",
-    "title": "Everyday Is Christmas (Deluxe)",
-    "creator": "Sia",
-    "cover": "public/covers/89b5f004d149-320.webp",
-    "coverLarge": "public/covers/89b5f004d149-720.webp",
-    "categories": [
-      "Holiday"
-    ]
-  },
-  {
     "id": "music:Evolve",
     "type": "music",
     "title": "Evolve",
@@ -7223,17 +7839,6 @@
     ]
   },
   {
-    "id": "music:First Love (Remastered 2014)",
-    "type": "music",
-    "title": "First Love (Remastered 2014)",
-    "creator": "Hikaru Utada",
-    "cover": "public/covers/d2b8553ef392-320.webp",
-    "coverLarge": "public/covers/d2b8553ef392-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
     "id": "music:Funeral",
     "type": "music",
     "title": "Funeral",
@@ -7253,17 +7858,6 @@
     "coverLarge": "public/covers/c4cc5a72a466-720.webp",
     "categories": [
       "Dance"
-    ]
-  },
-  {
-    "id": "music:Golden",
-    "type": "music",
-    "title": "Golden",
-    "creator": "Enno Cheng",
-    "cover": "public/covers/6b8653196efa-320.webp",
-    "coverLarge": "public/covers/6b8653196efa-720.webp",
-    "categories": [
-      "Mandopop"
     ]
   },
   {
@@ -7300,17 +7894,6 @@
     ]
   },
   {
-    "id": "music:Heisei Fuuzoku - Japanese Manners",
-    "type": "music",
-    "title": "Heisei Fuuzoku - Japanese Manners",
-    "creator": "椎名林檎×斎藤ネコ",
-    "cover": "public/covers/d47acfec032a-320.webp",
-    "coverLarge": "public/covers/d47acfec032a-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
     "id": "music:HELP EVER HURT NEVER",
     "type": "music",
     "title": "HELP EVER HURT NEVER",
@@ -7319,28 +7902,6 @@
     "coverLarge": "public/covers/82b439fcb10e-720.webp",
     "categories": [
       "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Here On Earth (Ultimate Edition _ Big Machine Radio Release Special)",
-    "type": "music",
-    "title": "Here On Earth (Ultimate Edition / Big Machine Radio Release Special)",
-    "creator": "Tim McGraw",
-    "cover": "public/covers/c0112aa51e15-320.webp",
-    "coverLarge": "public/covers/c0112aa51e15-720.webp",
-    "categories": [
-      "Country"
-    ]
-  },
-  {
-    "id": "music:Here With Me (feat. CHVRCHES)",
-    "type": "music",
-    "title": "Here With Me (feat. CHVRCHES)",
-    "creator": "Marshmello",
-    "cover": "public/covers/76874265c1a5-320.webp",
-    "coverLarge": "public/covers/76874265c1a5-720.webp",
-    "categories": [
-      "Dance"
     ]
   },
   {
@@ -7410,17 +7971,6 @@
     ]
   },
   {
-    "id": "music:I Wanna Be Your Slave (feat. Margad)",
-    "type": "music",
-    "title": "I Wanna Be Your Slave (feat. Margad)",
-    "creator": "Jaydan Wolf, Te Pai & Daniel Chord",
-    "cover": "public/covers/9bd179d5e832-320.webp",
-    "coverLarge": "public/covers/9bd179d5e832-720.webp",
-    "categories": [
-      "Dance"
-    ]
-  },
-  {
     "id": "music:I'm O.K.",
     "type": "music",
     "title": "I'm O.K.",
@@ -7454,17 +8004,6 @@
     ]
   },
   {
-    "id": "music:In Between Dreams (Bonus Track Version)",
-    "type": "music",
-    "title": "In Between Dreams (Bonus Track Version)",
-    "creator": "Jack Johnson",
-    "cover": "public/covers/ceb70ca13e15-320.webp",
-    "coverLarge": "public/covers/ceb70ca13e15-720.webp",
-    "categories": [
-      "Rock"
-    ]
-  },
-  {
     "id": "music:Inauguration of the Pleasure Dome",
     "type": "music",
     "title": "Inauguration of the Pleasure Dome",
@@ -7484,17 +8023,6 @@
     "coverLarge": "public/covers/04de5678a30f-720.webp",
     "categories": [
       "Pop"
-    ]
-  },
-  {
-    "id": "music:Kaiju - Single",
-    "type": "music",
-    "title": "Kaiju - Single",
-    "creator": "sakanaction",
-    "cover": "public/covers/d6a8480633e5-320.webp",
-    "coverLarge": "public/covers/d6a8480633e5-720.webp",
-    "categories": [
-      "J-Pop"
     ]
   },
   {
@@ -7542,17 +8070,6 @@
     ]
   },
   {
-    "id": "music:Lungs (Deluxe)",
-    "type": "music",
-    "title": "Lungs (Deluxe)",
-    "creator": "Florence + the Machine",
-    "cover": "public/covers/a677590a9ca0-320.webp",
-    "coverLarge": "public/covers/a677590a9ca0-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
     "id": "music:Making Mirrors",
     "type": "music",
     "title": "Making Mirrors",
@@ -7592,39 +8109,6 @@
     "creator": "Aimyon",
     "cover": "public/covers/abb19a7bfd64-320.webp",
     "coverLarge": "public/covers/abb19a7bfd64-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Monday (feat. Lionman)",
-    "type": "music",
-    "title": "Monday (feat. Lionman)",
-    "creator": "Leah Dou",
-    "cover": "public/covers/99a06d47d32a-320.webp",
-    "coverLarge": "public/covers/99a06d47d32a-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Muzai Moratorium - Innocence Moratorium",
-    "type": "music",
-    "title": "Muzai Moratorium - Innocence Moratorium",
-    "creator": "Sheena Ringo",
-    "cover": "public/covers/f19e7fbf2746-320.webp",
-    "coverLarge": "public/covers/f19e7fbf2746-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Naked Heart",
-    "type": "music",
-    "title": "Naked Heart",
-    "creator": "Aimyon",
-    "cover": "public/covers/6f342c6404e7-320.webp",
-    "coverLarge": "public/covers/6f342c6404e7-720.webp",
     "categories": [
       "J-Pop"
     ]
@@ -7759,17 +8243,6 @@
     "coverLarge": "public/covers/77cc9956f007-720.webp",
     "categories": [
       "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack (Edited Version)",
-    "type": "music",
-    "title": "Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack (Edited Version)",
-    "creator": "Various Artists",
-    "cover": "public/covers/36b315efc7b5-320.webp",
-    "coverLarge": "public/covers/36b315efc7b5-720.webp",
-    "categories": [
-      "Soundtrack"
     ]
   },
   {
@@ -7945,7 +8418,8 @@
     "cover": "public/covers/3159ce607801-320.webp",
     "coverLarge": "public/covers/3159ce607801-720.webp",
     "categories": [
-      "Rock"
+      "Rock",
+      "Pop"
     ]
   },
   {
@@ -7982,17 +8456,6 @@
     ]
   },
   {
-    "id": "music:The Eight Dimensions",
-    "type": "music",
-    "title": "The Eight Dimensions",
-    "creator": "Jay Chou",
-    "cover": "public/covers/c46cab5e0c44-320.webp",
-    "coverLarge": "public/covers/c46cab5e0c44-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
     "id": "music:The Game (Deluxe Edition)",
     "type": "music",
     "title": "The Game (Deluxe Edition)",
@@ -8000,7 +8463,8 @@
     "cover": "public/covers/e9083dc316f7-320.webp",
     "coverLarge": "public/covers/e9083dc316f7-720.webp",
     "categories": [
-      "Rock"
+      "Rock",
+      "Pop"
     ]
   },
   {
@@ -8125,34 +8589,12 @@
     ]
   },
   {
-    "id": "music:We have a lifetime to shine",
-    "type": "music",
-    "title": "We have a lifetime to shine",
-    "creator": "Young Dan",
-    "cover": "public/covers/bd2dc0f163a5-320.webp",
-    "coverLarge": "public/covers/bd2dc0f163a5-720.webp",
-    "categories": [
-      "Rock"
-    ]
-  },
-  {
     "id": "music:Wonderland",
     "type": "music",
     "title": "Wonderland",
     "creator": "Khalil Fong",
     "cover": "public/covers/8c1d0a085d05-320.webp",
     "coverLarge": "public/covers/8c1d0a085d05-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Yeh, Hwei-Mei",
-    "type": "music",
-    "title": "Yeh, Hwei-Mei",
-    "creator": "Jay Chou",
-    "cover": "public/covers/42b4ff625008-320.webp",
-    "coverLarge": "public/covers/42b4ff625008-720.webp",
     "categories": [
       "Mandopop"
     ]
@@ -8177,17 +8619,6 @@
     "coverLarge": "public/covers/c5ecd728f01f-720.webp",
     "categories": [
       "Indie Pop"
-    ]
-  },
-  {
-    "id": "music:you're never coming back - Single",
-    "type": "music",
-    "title": "you're never coming back - Single",
-    "creator": "Cody Francis & Cayson Renshaw",
-    "cover": "public/covers/26b77724a9ef-320.webp",
-    "coverLarge": "public/covers/26b77724a9ef-720.webp",
-    "categories": [
-      "Alternative"
     ]
   },
   {
