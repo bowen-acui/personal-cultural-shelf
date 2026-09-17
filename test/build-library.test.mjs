@@ -186,3 +186,13 @@ test("film and music records honor 置顶 before their usual ordering", () => {
   sortMediaRecords(records);
   assert.deepEqual(records.map((item) => item.id), ["film:pinned", "film:late", "music:pinned", "music:late"]);
 });
+
+test("Eason records lead the music shelf before other artists", () => {
+  const records = [
+    { id: "music:eason", type: "music", title: "與我常在", creator: "Eason Chan" },
+    { id: "music:other", type: "music", title: "11月的蕭邦", creator: "Jay Chou" },
+  ];
+
+  sortMediaRecords(records);
+  assert.deepEqual(records.map((item) => item.id), ["music:eason", "music:other"]);
+});

@@ -5971,45 +5971,12 @@
     ]
   },
   {
-    "id": "music:11月的蕭邦",
-    "type": "music",
-    "title": "11月的蕭邦",
-    "creator": "Jay Chou",
-    "cover": "public/covers/ee04a744d2b5-320.webp",
-    "coverLarge": "public/covers/ee04a744d2b5-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
     "id": "music:4 A Change & Hits (新曲 + 精選)",
     "type": "music",
     "title": "4 A Change & Hits (新曲 + 精選)",
     "creator": "Eason Chan",
     "cover": "public/covers/b38060735c34-320.webp",
     "coverLarge": "public/covers/b38060735c34-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:八度空間",
-    "type": "music",
-    "title": "八度空間",
-    "creator": "Jay Chou",
-    "cover": "public/covers/ad2e9448e253-320.webp",
-    "coverLarge": "public/covers/ad2e9448e253-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:百代經典101 Vol.1",
-    "type": "music",
-    "title": "百代經典101 Vol.1",
-    "creator": "Various Artists",
-    "cover": "public/covers/8866165d9588-320.webp",
-    "coverLarge": "public/covers/8866165d9588-720.webp",
     "categories": [
       "C-pop"
     ]
@@ -6034,6 +6001,239 @@
     "coverLarge": "public/covers/9fbf61c62039-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:盲婚啞嫁",
+    "type": "music",
+    "title": "盲婚啞嫁",
+    "creator": "Eason Chan",
+    "cover": "public/covers/3d0b7ea69ed0-320.webp",
+    "coverLarge": "public/covers/3d0b7ea69ed0-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:我的快樂時代",
+    "type": "music",
+    "title": "我的快樂時代",
+    "creator": "Eason Chan",
+    "cover": "public/covers/f60cbeb908b2-320.webp",
+    "coverLarge": "public/covers/f60cbeb908b2-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:幸福",
+    "type": "music",
+    "title": "幸福",
+    "creator": "陈奕迅",
+    "cover": "public/covers/5e473c2df643-320.webp",
+    "coverLarge": "public/covers/5e473c2df643-720.webp",
+    "categories": [
+      "华语流行"
+    ]
+  },
+  {
+    "id": "music:與我常在",
+    "type": "music",
+    "title": "與我常在",
+    "creator": "Eason Chan",
+    "cover": "public/covers/1932972c3ba1-320.webp",
+    "coverLarge": "public/covers/1932972c3ba1-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop",
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Eason Chan Duo Concert 2010",
+    "type": "music",
+    "title": "Eason Chan Duo Concert 2010",
+    "creator": "Eason Chan",
+    "cover": "public/covers/02c34fcce95d-320.webp",
+    "coverLarge": "public/covers/02c34fcce95d-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Getting Ready",
+    "type": "music",
+    "title": "Getting Ready",
+    "creator": "Eason Chan",
+    "cover": "public/covers/39f36f8dddce-320.webp",
+    "coverLarge": "public/covers/39f36f8dddce-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Great 5000 Secs (新曲+精選)",
+    "type": "music",
+    "title": "Great 5000 Secs (新曲+精選)",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c9e865e986b2-320.webp",
+    "coverLarge": "public/covers/c9e865e986b2-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:H3M",
+    "type": "music",
+    "title": "H3M",
+    "creator": "Eason Chan",
+    "cover": "public/covers/4829b66ba853-320.webp",
+    "coverLarge": "public/covers/4829b66ba853-720.webp",
+    "categories": [
+      "Pop",
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:K歌之王 AIR",
+    "type": "music",
+    "title": "K歌之王 AIR",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c170aa4098cd-320.webp",
+    "coverLarge": "public/covers/c170aa4098cd-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Life Continues",
+    "type": "music",
+    "title": "Life Continues",
+    "creator": "Eason Chan",
+    "cover": "public/covers/fe1e09c9472a-320.webp",
+    "coverLarge": "public/covers/fe1e09c9472a-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Live for Today",
+    "type": "music",
+    "title": "Live for Today",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9b5eb59b21fa-320.webp",
+    "coverLarge": "public/covers/9b5eb59b21fa-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Music Life 精選",
+    "type": "music",
+    "title": "Music Life 精選",
+    "creator": "Eason Chan",
+    "cover": "public/covers/94c2a7bb3b19-320.webp",
+    "coverLarge": "public/covers/94c2a7bb3b19-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Shall We Dance_ Shall We Talk!",
+    "type": "music",
+    "title": "Shall We Dance? Shall We Talk!",
+    "creator": "Eason Chan",
+    "cover": "public/covers/659c0cda23bf-320.webp",
+    "coverLarge": "public/covers/659c0cda23bf-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Stranger Under My Skin",
+    "type": "music",
+    "title": "Stranger Under My Skin",
+    "creator": "Eason Chan",
+    "cover": "public/covers/025c741ae061-320.webp",
+    "coverLarge": "public/covers/025c741ae061-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:The Key",
+    "type": "music",
+    "title": "The Key",
+    "creator": "Eason Chan",
+    "cover": "public/covers/edd5597e96bd-320.webp",
+    "coverLarge": "public/covers/edd5597e96bd-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:The Line-Up",
+    "type": "music",
+    "title": "The Line-Up",
+    "creator": "Eason Chan",
+    "cover": "public/covers/9a9bfd60f996-320.webp",
+    "coverLarge": "public/covers/9a9bfd60f996-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Time Flies",
+    "type": "music",
+    "title": "Time Flies",
+    "creator": "Eason Chan",
+    "cover": "public/covers/60e595e44347-320.webp",
+    "coverLarge": "public/covers/60e595e44347-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:What's Going On..._",
+    "type": "music",
+    "title": "What's Going On...?",
+    "creator": "Eason Chan",
+    "cover": "public/covers/c680be68efdd-320.webp",
+    "coverLarge": "public/covers/c680be68efdd-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:11月的蕭邦",
+    "type": "music",
+    "title": "11月的蕭邦",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ee04a744d2b5-320.webp",
+    "coverLarge": "public/covers/ee04a744d2b5-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:八度空間",
+    "type": "music",
+    "title": "八度空間",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ad2e9448e253-320.webp",
+    "coverLarge": "public/covers/ad2e9448e253-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:百代經典101 Vol.1",
+    "type": "music",
+    "title": "百代經典101 Vol.1",
+    "creator": "Various Artists",
+    "cover": "public/covers/8866165d9588-320.webp",
+    "coverLarge": "public/covers/8866165d9588-720.webp",
+    "categories": [
+      "C-pop"
     ]
   },
   {
@@ -6136,17 +6336,6 @@
     ]
   },
   {
-    "id": "music:盲婚啞嫁",
-    "type": "music",
-    "title": "盲婚啞嫁",
-    "creator": "Eason Chan",
-    "cover": "public/covers/3d0b7ea69ed0-320.webp",
-    "coverLarge": "public/covers/3d0b7ea69ed0-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:摩天動物園",
     "type": "music",
     "title": "摩天動物園",
@@ -6246,17 +6435,6 @@
     ]
   },
   {
-    "id": "music:我的快樂時代",
-    "type": "music",
-    "title": "我的快樂時代",
-    "creator": "Eason Chan",
-    "cover": "public/covers/f60cbeb908b2-320.webp",
-    "coverLarge": "public/covers/f60cbeb908b2-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:無罪モラトリアム",
     "type": "music",
     "title": "無罪モラトリアム",
@@ -6265,17 +6443,6 @@
     "coverLarge": "public/covers/7617e4175015-720.webp",
     "categories": [
       "J-pop"
-    ]
-  },
-  {
-    "id": "music:幸福",
-    "type": "music",
-    "title": "幸福",
-    "creator": "陈奕迅",
-    "cover": "public/covers/5e473c2df643-320.webp",
-    "coverLarge": "public/covers/5e473c2df643-720.webp",
-    "categories": [
-      "华语流行"
     ]
   },
   {
@@ -6297,18 +6464,6 @@
     "cover": "public/covers/748d246b8eaf-320.webp",
     "coverLarge": "public/covers/748d246b8eaf-720.webp",
     "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:與我常在",
-    "type": "music",
-    "title": "與我常在",
-    "creator": "Eason Chan",
-    "cover": "public/covers/1932972c3ba1-320.webp",
-    "coverLarge": "public/covers/1932972c3ba1-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop",
       "C-pop"
     ]
   },
@@ -6380,17 +6535,6 @@
     ]
   },
   {
-    "id": "music:Eason Chan Duo Concert 2010",
-    "type": "music",
-    "title": "Eason Chan Duo Concert 2010",
-    "creator": "Eason Chan",
-    "cover": "public/covers/02c34fcce95d-320.webp",
-    "coverLarge": "public/covers/02c34fcce95d-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
     "id": "music:Everyday Is Christmas (Deluxe Edition)",
     "type": "music",
     "title": "Everyday Is Christmas (Deluxe Edition)",
@@ -6412,40 +6556,6 @@
     "categories": [
       "Pop",
       "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Getting Ready",
-    "type": "music",
-    "title": "Getting Ready",
-    "creator": "Eason Chan",
-    "cover": "public/covers/39f36f8dddce-320.webp",
-    "coverLarge": "public/covers/39f36f8dddce-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Great 5000 Secs (新曲+精選)",
-    "type": "music",
-    "title": "Great 5000 Secs (新曲+精選)",
-    "creator": "Eason Chan",
-    "cover": "public/covers/c9e865e986b2-320.webp",
-    "coverLarge": "public/covers/c9e865e986b2-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:H3M",
-    "type": "music",
-    "title": "H3M",
-    "creator": "Eason Chan",
-    "cover": "public/covers/4829b66ba853-320.webp",
-    "coverLarge": "public/covers/4829b66ba853-720.webp",
-    "categories": [
-      "Pop",
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -6494,17 +6604,6 @@
     ]
   },
   {
-    "id": "music:K歌之王 AIR",
-    "type": "music",
-    "title": "K歌之王 AIR",
-    "creator": "Eason Chan",
-    "cover": "public/covers/c170aa4098cd-320.webp",
-    "coverLarge": "public/covers/c170aa4098cd-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:Kaiju",
     "type": "music",
     "title": "Kaiju",
@@ -6524,28 +6623,6 @@
     "coverLarge": "public/covers/d7318d58fbc2-720.webp",
     "categories": [
       "C-pop"
-    ]
-  },
-  {
-    "id": "music:Life Continues",
-    "type": "music",
-    "title": "Life Continues",
-    "creator": "Eason Chan",
-    "cover": "public/covers/fe1e09c9472a-320.webp",
-    "coverLarge": "public/covers/fe1e09c9472a-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Live for Today",
-    "type": "music",
-    "title": "Live for Today",
-    "creator": "Eason Chan",
-    "cover": "public/covers/9b5eb59b21fa-320.webp",
-    "coverLarge": "public/covers/9b5eb59b21fa-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -6594,17 +6671,6 @@
     ]
   },
   {
-    "id": "music:Music Life 精選",
-    "type": "music",
-    "title": "Music Life 精選",
-    "creator": "Eason Chan",
-    "cover": "public/covers/94c2a7bb3b19-320.webp",
-    "coverLarge": "public/covers/94c2a7bb3b19-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
     "id": "music:Neo-Romantic 新浪漫主義",
     "type": "music",
     "title": "Neo-Romantic 新浪漫主義",
@@ -6635,28 +6701,6 @@
     "coverLarge": "public/covers/5132dc474825-720.webp",
     "categories": [
       "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:Shall We Dance_ Shall We Talk!",
-    "type": "music",
-    "title": "Shall We Dance? Shall We Talk!",
-    "creator": "Eason Chan",
-    "cover": "public/covers/659c0cda23bf-320.webp",
-    "coverLarge": "public/covers/659c0cda23bf-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Stranger Under My Skin",
-    "type": "music",
-    "title": "Stranger Under My Skin",
-    "creator": "Eason Chan",
-    "cover": "public/covers/025c741ae061-320.webp",
-    "coverLarge": "public/covers/025c741ae061-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -6693,45 +6737,12 @@
     ]
   },
   {
-    "id": "music:The Key",
-    "type": "music",
-    "title": "The Key",
-    "creator": "Eason Chan",
-    "cover": "public/covers/edd5597e96bd-320.webp",
-    "coverLarge": "public/covers/edd5597e96bd-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:The Line-Up",
-    "type": "music",
-    "title": "The Line-Up",
-    "creator": "Eason Chan",
-    "cover": "public/covers/9a9bfd60f996-320.webp",
-    "coverLarge": "public/covers/9a9bfd60f996-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
     "id": "music:This Is The One (Remastered)",
     "type": "music",
     "title": "This Is The One (Remastered)",
     "creator": "Utada",
     "cover": "public/covers/fb7346fe3b7b-320.webp",
     "coverLarge": "public/covers/fb7346fe3b7b-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Time Flies",
-    "type": "music",
-    "title": "Time Flies",
-    "creator": "Eason Chan",
-    "cover": "public/covers/60e595e44347-320.webp",
-    "coverLarge": "public/covers/60e595e44347-720.webp",
     "categories": [
       "Pop"
     ]
@@ -6745,17 +6756,6 @@
     "coverLarge": "public/covers/f3fde8a57017-720.webp",
     "categories": [
       "Pop"
-    ]
-  },
-  {
-    "id": "music:What's Going On..._",
-    "type": "music",
-    "title": "What's Going On...?",
-    "creator": "Eason Chan",
-    "cover": "public/covers/c680be68efdd-320.webp",
-    "coverLarge": "public/covers/c680be68efdd-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
