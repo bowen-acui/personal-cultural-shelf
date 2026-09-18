@@ -6193,17 +6193,6 @@
     ]
   },
   {
-    "id": "music:Inauguration of the Pleasure Dome",
-    "type": "music",
-    "title": "Inauguration of the Pleasure Dome",
-    "creator": "8 Immortals Restaurant",
-    "cover": "public/covers/faf0c46d51e0-320.webp",
-    "coverLarge": "public/covers/faf0c46d51e0-720.webp",
-    "categories": [
-      "Rock"
-    ]
-  },
-  {
     "id": "music:Somnium Chamber",
     "type": "music",
     "title": "Somnium Chamber",
