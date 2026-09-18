@@ -6193,91 +6193,25 @@
     ]
   },
   {
-    "id": "music:11月的蕭邦",
+    "id": "music:Inauguration of the Pleasure Dome",
     "type": "music",
-    "title": "11月的蕭邦",
-    "creator": "Jay Chou",
-    "cover": "public/covers/ee04a744d2b5-320.webp",
-    "coverLarge": "public/covers/ee04a744d2b5-720.webp",
+    "title": "Inauguration of the Pleasure Dome",
+    "creator": "8 Immortals Restaurant",
+    "cover": "public/covers/faf0c46d51e0-320.webp",
+    "coverLarge": "public/covers/faf0c46d51e0-720.webp",
     "categories": [
-      "C-pop"
+      "Rock"
     ]
   },
   {
-    "id": "music:八度空間",
+    "id": "music:Somnium Chamber",
     "type": "music",
-    "title": "八度空間",
-    "creator": "Jay Chou",
-    "cover": "public/covers/ad2e9448e253-320.webp",
-    "coverLarge": "public/covers/ad2e9448e253-720.webp",
+    "title": "Somnium Chamber",
+    "creator": "9m88",
+    "cover": "public/covers/e205c46c71dd-320.webp",
+    "coverLarge": "public/covers/e205c46c71dd-720.webp",
     "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:百代經典101 Vol.1",
-    "type": "music",
-    "title": "百代經典101 Vol.1",
-    "creator": "Various Artists",
-    "cover": "public/covers/8866165d9588-320.webp",
-    "coverLarge": "public/covers/8866165d9588-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:大把時間璀璨（We have a lifetime to shine）",
-    "type": "music",
-    "title": "大把時間璀璨（We have a lifetime to shine）",
-    "creator": "回春丹",
-    "cover": "public/covers/0a0de35787df-320.webp",
-    "coverLarge": "public/covers/0a0de35787df-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:港樂不息 Vol.1",
-    "type": "music",
-    "title": "港樂不息 Vol.1",
-    "creator": "Various Artists",
-    "cover": "public/covers/3a2e450abef8-320.webp",
-    "coverLarge": "public/covers/3a2e450abef8-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:跟著感覺走",
-    "type": "music",
-    "title": "跟著感覺走",
-    "creator": "Zhang Zhen Yue",
-    "cover": "public/covers/d2b1e8f9bed1-320.webp",
-    "coverLarge": "public/covers/d2b1e8f9bed1-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:壞蛋",
-    "type": "music",
-    "title": "壞蛋",
-    "creator": "Mixer",
-    "cover": "public/covers/3745c4817e02-320.webp",
-    "coverLarge": "public/covers/3745c4817e02-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:荒唐谣",
-    "type": "music",
-    "title": "荒唐谣",
-    "creator": "DOUDOU",
-    "cover": "public/covers/65e24afc458b-320.webp",
-    "coverLarge": "public/covers/65e24afc458b-720.webp",
-    "categories": [
-      "C-pop"
+      "R&B/Soul"
     ]
   },
   {
@@ -6292,80 +6226,14 @@
     ]
   },
   {
-    "id": "music:金黃色的",
+    "id": "music:If we can be happy happy every day, who wants to be sad",
     "type": "music",
-    "title": "金黃色的",
-    "creator": "Enno Cheng",
-    "cover": "public/covers/8bd2a5b3b1d1-320.webp",
-    "coverLarge": "public/covers/8bd2a5b3b1d1-720.webp",
+    "title": "If we can be happy happy every day, who wants to be sad",
+    "creator": "陈嫺静",
+    "cover": "public/covers/aafd13071dee-320.webp",
+    "coverLarge": "public/covers/aafd13071dee-720.webp",
     "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:君はロックを聴かない",
-    "type": "music",
-    "title": "君はロックを聴かない",
-    "creator": "Aimyon",
-    "cover": "public/covers/9ff009488c65-320.webp",
-    "coverLarge": "public/covers/9ff009488c65-720.webp",
-    "categories": [
-      "J-pop"
-    ]
-  },
-  {
-    "id": "music:裸の心",
-    "type": "music",
-    "title": "裸の心",
-    "creator": "Aimyon",
-    "cover": "public/covers/d71ce62732bb-320.webp",
-    "coverLarge": "public/covers/d71ce62732bb-720.webp",
-    "categories": [
-      "J-pop"
-    ]
-  },
-  {
-    "id": "music:摩天動物園",
-    "type": "music",
-    "title": "摩天動物園",
-    "creator": "G.E.M.",
-    "cover": "public/covers/8bad051abbff-320.webp",
-    "coverLarge": "public/covers/8bad051abbff-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:平成風俗",
-    "type": "music",
-    "title": "平成風俗",
-    "creator": "Sheena Ringo",
-    "cover": "public/covers/daec3b3328c4-320.webp",
-    "coverLarge": "public/covers/daec3b3328c4-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:七里香",
-    "type": "music",
-    "title": "七里香",
-    "creator": "Jay Chou",
-    "cover": "public/covers/1ab6c535db43-320.webp",
-    "coverLarge": "public/covers/1ab6c535db43-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:錢專",
-    "type": "music",
-    "title": "錢專",
-    "creator": "河南說唱之神",
-    "cover": "public/covers/f93ecfa07b51-320.webp",
-    "coverLarge": "public/covers/f93ecfa07b51-720.webp",
-    "categories": [
-      "C-pop"
+      "华语流行"
     ]
   },
   {
@@ -6391,58 +6259,102 @@
     ]
   },
   {
-    "id": "music:少女，飛 (blossom)",
+    "id": "music:TRADY 1.0",
     "type": "music",
-    "title": "少女，飛 (blossom)",
-    "creator": "puppiebelly",
-    "cover": "public/covers/e658c8d8dad9-320.webp",
-    "coverLarge": "public/covers/e658c8d8dad9-720.webp",
+    "title": "TRADY 1.0",
+    "creator": "崔迪Trady",
+    "cover": "public/covers/bce2ee6510c6-320.webp",
+    "coverLarge": "public/covers/bce2ee6510c6-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:錢專",
+    "type": "music",
+    "title": "錢專",
+    "creator": "河南說唱之神",
+    "cover": "public/covers/f93ecfa07b51-320.webp",
+    "coverLarge": "public/covers/f93ecfa07b51-720.webp",
     "categories": [
       "C-pop"
     ]
   },
   {
-    "id": "music:陶喆同名專輯",
+    "id": "music:大把時間璀璨（We have a lifetime to shine）",
     "type": "music",
-    "title": "陶喆同名專輯",
-    "creator": "David Tao",
-    "cover": "public/covers/9dfe472b0e3f-320.webp",
-    "coverLarge": "public/covers/9dfe472b0e3f-720.webp",
+    "title": "大把時間璀璨（We have a lifetime to shine）",
+    "creator": "回春丹",
+    "cover": "public/covers/0a0de35787df-320.webp",
+    "coverLarge": "public/covers/0a0de35787df-720.webp",
     "categories": [
       "C-pop"
     ]
   },
   {
-    "id": "music:聽濤",
+    "id": "music:raw,book1",
     "type": "music",
-    "title": "聽濤",
-    "creator": "Kenny Bee",
-    "cover": "public/covers/e9ce100715d6-320.webp",
-    "coverLarge": "public/covers/e9ce100715d6-720.webp",
+    "title": "raw,book1",
+    "creator": "金車厘子",
+    "cover": "public/covers/a2a5ad7c44ac-320.webp",
+    "coverLarge": "public/covers/a2a5ad7c44ac-720.webp",
     "categories": [
-      "C-pop"
+      "R&B/Soul"
     ]
   },
   {
-    "id": "music:無罪モラトリアム",
+    "id": "music:峨眉",
     "type": "music",
-    "title": "無罪モラトリアム",
-    "creator": "Sheena Ringo",
-    "cover": "public/covers/7617e4175015-320.webp",
-    "coverLarge": "public/covers/7617e4175015-720.webp",
+    "title": "峨眉",
+    "creator": "刘森",
+    "cover": "public/covers/53f9958e3946-320.webp",
+    "coverLarge": "public/covers/53f9958e3946-720.webp",
     "categories": [
-      "J-pop"
+      "Indie Rock"
     ]
   },
   {
-    "id": "music:葉惠美",
+    "id": "music:过去来的人",
     "type": "music",
-    "title": "葉惠美",
-    "creator": "Jay Chou",
-    "cover": "public/covers/baf891b674d2-320.webp",
-    "coverLarge": "public/covers/baf891b674d2-720.webp",
+    "title": "过去来的人",
+    "creator": "刘森",
+    "cover": "public/covers/605afd23c20f-320.webp",
+    "coverLarge": "public/covers/605afd23c20f-720.webp",
     "categories": [
-      "C-pop"
+      "Indie Rock"
+    ]
+  },
+  {
+    "id": "music:华北浪革",
+    "type": "music",
+    "title": "华北浪革",
+    "creator": "刘森",
+    "cover": "public/covers/9784ae98f895-320.webp",
+    "coverLarge": "public/covers/9784ae98f895-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:夜枕青山",
+    "type": "music",
+    "title": "夜枕青山",
+    "creator": "刘森",
+    "cover": "public/covers/376769d8466e-320.webp",
+    "coverLarge": "public/covers/376769d8466e-720.webp",
+    "categories": [
+      "Indie Rock"
+    ]
+  },
+  {
+    "id": "music:乐队的夏天3 第4期 (Live)",
+    "type": "music",
+    "title": "乐队的夏天3 第4期 (Live)",
+    "creator": "群星",
+    "cover": "public/covers/d6fb67183d1d-320.webp",
+    "coverLarge": "public/covers/d6fb67183d1d-720.webp",
+    "categories": [
+      "摇滚"
     ]
   },
   {
@@ -6457,316 +6369,92 @@
     ]
   },
   {
-    "id": "music:隕石與地球",
+    "id": "music:莫愁乡",
     "type": "music",
-    "title": "隕石與地球",
-    "creator": "Sammi Cheng",
-    "cover": "public/covers/1fd2d05df39c-320.webp",
-    "coverLarge": "public/covers/1fd2d05df39c-720.webp",
+    "title": "莫愁乡",
+    "creator": "亞細亞曠世奇才",
+    "cover": "public/covers/295882bcc5d2-320.webp",
+    "coverLarge": "public/covers/295882bcc5d2-720.webp",
     "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:鄭中基正宗 K 新曲精選",
-    "type": "music",
-    "title": "鄭中基正宗 K 新曲精選",
-    "creator": "Ronald Cheng",
-    "cover": "public/covers/a96c871c79f0-320.webp",
-    "coverLarge": "public/covers/a96c871c79f0-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:alone tonight",
-    "type": "music",
-    "title": "alone tonight",
-    "creator": "starfall",
-    "cover": "public/covers/e6f76ef8e445-320.webp",
-    "coverLarge": "public/covers/e6f76ef8e445-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Best Emo Songs EMO神曲精選",
-    "type": "music",
-    "title": "Best Emo Songs EMO神曲精選",
-    "creator": "Various Artists",
-    "cover": "public/covers/0ec042f31af9-320.webp",
-    "coverLarge": "public/covers/0ec042f31af9-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:Brokeback Mountain Soundtrack",
-    "type": "music",
-    "title": "Brokeback Mountain Soundtrack",
-    "creator": "Gustavo Santaolalla",
-    "cover": "public/covers/7d03081f41a5-320.webp",
-    "coverLarge": "public/covers/7d03081f41a5-720.webp",
-    "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:Curtain Call- The Hits",
-    "type": "music",
-    "title": "Curtain Call: The Hits",
-    "creator": "Eminem",
-    "cover": "public/covers/85e8d0887b86-320.webp",
-    "coverLarge": "public/covers/85e8d0887b86-720.webp",
-    "categories": [
-      "Pop",
       "Hip-Hop/Rap"
     ]
   },
   {
-    "id": "music:Everyday Is Christmas (Deluxe Edition)",
+    "id": "music:不能說的秘密電影",
     "type": "music",
-    "title": "Everyday Is Christmas (Deluxe Edition)",
-    "creator": "Sia",
-    "cover": "public/covers/8d27444ef6eb-320.webp",
-    "coverLarge": "public/covers/8d27444ef6eb-720.webp",
+    "title": "不能說的秘密電影",
+    "creator": "周杰倫",
+    "cover": "public/covers/64ac46e3b311-320.webp",
+    "coverLarge": "public/covers/64ac46e3b311-720.webp",
     "categories": [
-      "Pop",
-      "Holiday"
+      "Soundtrack",
+      "Mandopop"
     ]
   },
   {
-    "id": "music:First Love",
+    "id": "music:帶你飛",
     "type": "music",
-    "title": "First Love",
-    "creator": "Hikaru Utada",
-    "cover": "public/covers/73a3d24976bc-320.webp",
-    "coverLarge": "public/covers/73a3d24976bc-720.webp",
+    "title": "帶你飛",
+    "creator": "Accusefive",
+    "cover": "public/covers/1df4218b486c-320.webp",
+    "coverLarge": "public/covers/1df4218b486c-720.webp",
     "categories": [
-      "Pop",
-      "J-Pop"
+      "Mandopop"
     ]
   },
   {
-    "id": "music:Here On Earth (Ultimate Edition)",
+    "id": "music:21",
     "type": "music",
-    "title": "Here On Earth (Ultimate Edition)",
-    "creator": "Tim McGraw",
-    "cover": "public/covers/2b2ca075074a-320.webp",
-    "coverLarge": "public/covers/2b2ca075074a-720.webp",
+    "title": "21",
+    "creator": "Adele",
+    "cover": "public/covers/1eeb4fc30b4e-320.webp",
+    "coverLarge": "public/covers/1eeb4fc30b4e-720.webp",
     "categories": [
       "Pop"
     ]
   },
   {
-    "id": "music:Here With Me",
+    "id": "music:30",
     "type": "music",
-    "title": "Here With Me",
-    "creator": "Marshmello",
-    "cover": "public/covers/451877e11d41-320.webp",
-    "coverLarge": "public/covers/451877e11d41-720.webp",
+    "title": "30",
+    "creator": "Adele",
+    "cover": "public/covers/9c9acebe795b-320.webp",
+    "coverLarge": "public/covers/9c9acebe795b-720.webp",
     "categories": [
       "Pop"
     ]
   },
   {
-    "id": "music:I WANNA BE YOUR SLAVE",
+    "id": "music:Luna",
     "type": "music",
-    "title": "I WANNA BE YOUR SLAVE",
-    "creator": "Jaydan Wolf",
-    "cover": "public/covers/f7867c008df0-320.webp",
-    "coverLarge": "public/covers/f7867c008df0-720.webp",
+    "title": "Luna",
+    "creator": "AGA",
+    "cover": "public/covers/2ee9e0f7ca92-320.webp",
+    "coverLarge": "public/covers/2ee9e0f7ca92-720.webp",
     "categories": [
-      "Pop"
+      "Cantopop/HK-Pop"
     ]
   },
   {
-    "id": "music:In Between Dreams",
+    "id": "music:君はロックを聴かない",
     "type": "music",
-    "title": "In Between Dreams",
-    "creator": "Jack Johnson",
-    "cover": "public/covers/5e36eeb10ac0-320.webp",
-    "coverLarge": "public/covers/5e36eeb10ac0-720.webp",
+    "title": "君はロックを聴かない",
+    "creator": "Aimyon",
+    "cover": "public/covers/9ff009488c65-320.webp",
+    "coverLarge": "public/covers/9ff009488c65-720.webp",
     "categories": [
-      "Pop",
-      "Rock"
+      "J-pop"
     ]
   },
   {
-    "id": "music:Kaiju",
+    "id": "music:裸の心",
     "type": "music",
-    "title": "Kaiju",
-    "creator": "sakanaction",
-    "cover": "public/covers/a16f5bbdf28f-320.webp",
-    "coverLarge": "public/covers/a16f5bbdf28f-720.webp",
+    "title": "裸の心",
+    "creator": "Aimyon",
+    "cover": "public/covers/d71ce62732bb-320.webp",
+    "coverLarge": "public/covers/d71ce62732bb-720.webp",
     "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Karaoke Legends K歌金曲榜",
-    "type": "music",
-    "title": "Karaoke Legends K歌金曲榜",
-    "creator": "Various Artists",
-    "cover": "public/covers/d7318d58fbc2-320.webp",
-    "coverLarge": "public/covers/d7318d58fbc2-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:Lonely Nights",
-    "type": "music",
-    "title": "Lonely Nights",
-    "creator": "Various Artists",
-    "cover": "public/covers/7ec215208abc-320.webp",
-    "coverLarge": "public/covers/7ec215208abc-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:LOVE 07情歌集壓軸篇",
-    "type": "music",
-    "title": "LOVE 07情歌集壓軸篇",
-    "creator": "Various Artists",
-    "cover": "public/covers/0509a61eaf06-320.webp",
-    "coverLarge": "public/covers/0509a61eaf06-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:Lungs (Deluxe Version)",
-    "type": "music",
-    "title": "Lungs (Deluxe Version)",
-    "creator": "Florence + The Machine",
-    "cover": "public/covers/ed72647480cb-320.webp",
-    "coverLarge": "public/covers/ed72647480cb-720.webp",
-    "categories": [
-      "Pop",
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:Monday",
-    "type": "music",
-    "title": "Monday",
-    "creator": "Leah Dou",
-    "cover": "public/covers/088b9e4dcce6-320.webp",
-    "coverLarge": "public/covers/088b9e4dcce6-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Neo-Romantic 新浪漫主義",
-    "type": "music",
-    "title": "Neo-Romantic 新浪漫主義",
-    "creator": "Various Artists",
-    "cover": "public/covers/9f9cf3d7b92c-320.webp",
-    "coverLarge": "public/covers/9f9cf3d7b92c-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:PURE",
-    "type": "music",
-    "title": "PURE",
-    "creator": "Taichi Mukai",
-    "cover": "public/covers/0fc3baffb67f-320.webp",
-    "coverLarge": "public/covers/0fc3baffb67f-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack",
-    "type": "music",
-    "title": "Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack",
-    "creator": "Various Artists",
-    "cover": "public/covers/5132dc474825-320.webp",
-    "coverLarge": "public/covers/5132dc474825-720.webp",
-    "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:T.I.M.E",
-    "type": "music",
-    "title": "T.I.M.E.",
-    "creator": "G.E.M.",
-    "cover": "public/covers/096302623fc6-320.webp",
-    "coverLarge": "public/covers/096302623fc6-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:THANK YOU BLUE",
-    "type": "music",
-    "title": "THANK YOU BLUE",
-    "creator": "Daoko",
-    "cover": "public/covers/233058c52166-320.webp",
-    "coverLarge": "public/covers/233058c52166-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:the coldest and darkest season",
-    "type": "music",
-    "title": "the coldest and darkest season",
-    "creator": "Various Artists",
-    "cover": "public/covers/f17ae7eb0d06-320.webp",
-    "coverLarge": "public/covers/f17ae7eb0d06-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:This Is The One (Remastered)",
-    "type": "music",
-    "title": "This Is The One (Remastered)",
-    "creator": "Utada",
-    "cover": "public/covers/fb7346fe3b7b-320.webp",
-    "coverLarge": "public/covers/fb7346fe3b7b-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Way out",
-    "type": "music",
-    "title": "Way out",
-    "creator": "Whyte",
-    "cover": "public/covers/f3fde8a57017-320.webp",
-    "coverLarge": "public/covers/f3fde8a57017-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Y100",
-    "type": "music",
-    "title": "Y100",
-    "creator": "Various Artists",
-    "cover": "public/covers/d351fc616f46-320.webp",
-    "coverLarge": "public/covers/d351fc616f46-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:you're never coming back",
-    "type": "music",
-    "title": "you're never coming back",
-    "creator": "Cody Francis",
-    "cover": "public/covers/8938587eb1e3-320.webp",
-    "coverLarge": "public/covers/8938587eb1e3-720.webp",
-    "categories": [
-      "Pop"
+      "J-pop"
     ]
   },
   {
@@ -6781,58 +6469,103 @@
     ]
   },
   {
-    "id": "music:玻璃 demo",
+    "id": "music:Excitement of Youth",
     "type": "music",
-    "title": "玻璃 demo",
-    "creator": "Gareth.T",
-    "cover": "public/covers/5b68df1320f0-320.webp",
-    "coverLarge": "public/covers/5b68df1320f0-720.webp",
+    "title": "Excitement of Youth",
+    "creator": "Aimyon",
+    "cover": "public/covers/69efc5c7fa93-320.webp",
+    "coverLarge": "public/covers/69efc5c7fa93-720.webp",
     "categories": [
-      "独立流行"
+      "J-Pop"
     ]
   },
   {
-    "id": "music:緊急聯絡人",
+    "id": "music:Momentary Sixth Sense",
     "type": "music",
-    "title": "緊急聯絡人",
-    "creator": "Gareth.T",
-    "cover": "public/covers/f9e494c77ad7-320.webp",
-    "coverLarge": "public/covers/f9e494c77ad7-720.webp",
+    "title": "Momentary Sixth Sense",
+    "creator": "Aimyon",
+    "cover": "public/covers/abb19a7bfd64-320.webp",
+    "coverLarge": "public/covers/abb19a7bfd64-720.webp",
     "categories": [
-      "Cantopop/HK-Pop"
+      "J-Pop"
     ]
   },
   {
-    "id": "music:泥菩薩",
+    "id": "music:Narrated for You",
     "type": "music",
-    "title": "泥菩薩",
-    "creator": "Gareth.T",
-    "cover": "public/covers/4acc5dc22cb5-320.webp",
-    "coverLarge": "public/covers/4acc5dc22cb5-720.webp",
+    "title": "Narrated for You",
+    "creator": "Alec Benjamin",
+    "cover": "public/covers/8886b2c18d92-320.webp",
+    "coverLarge": "public/covers/8886b2c18d92-720.webp",
     "categories": [
-      "Cantopop/HK-Pop"
+      "Pop"
     ]
   },
   {
-    "id": "music:顏色",
+    "id": "music:Head High",
     "type": "music",
-    "title": "顏色",
-    "creator": "Gareth.T",
-    "cover": "public/covers/ff379a8dab07-320.webp",
-    "coverLarge": "public/covers/ff379a8dab07-720.webp",
+    "title": "Head High",
+    "creator": "Alexander Jean",
+    "cover": "public/covers/e83e5f2ea8b1-320.webp",
+    "coverLarge": "public/covers/e83e5f2ea8b1-720.webp",
     "categories": [
-      "独立流行"
+      "Singer/Songwriter"
     ]
   },
   {
-    "id": "music:用背脊唱情歌",
+    "id": "music:Let's Hope Heteros Fail, Learn and Retire",
     "type": "music",
-    "title": "用背脊唱情歌",
-    "creator": "Gareth.T",
-    "cover": "public/covers/9ada2137de36-320.webp",
-    "coverLarge": "public/covers/9ada2137de36-720.webp",
+    "title": "Let's Hope Heteros Fail, Learn and Retire",
+    "creator": "Alice Longyu Gao",
+    "cover": "public/covers/ac9a9ab2231c-320.webp",
+    "coverLarge": "public/covers/ac9a9ab2231c-720.webp",
     "categories": [
-      "Cantopop/HK-Pop"
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Did you know that there's a tunnel under Ocean Blvd",
+    "type": "music",
+    "title": "Did you know that there's a tunnel under Ocean Blvd",
+    "creator": "Ana Done",
+    "cover": "public/covers/76a598554168-320.webp",
+    "coverLarge": "public/covers/76a598554168-720.webp",
+    "categories": [
+      "Instrumental"
+    ]
+  },
+  {
+    "id": "music:Funeral",
+    "type": "music",
+    "title": "Funeral",
+    "creator": "Arcade Fire",
+    "cover": "public/covers/18a08fb4383b-320.webp",
+    "coverLarge": "public/covers/18a08fb4383b-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Straight Up (Remastered)",
+    "type": "music",
+    "title": "Straight Up (Remastered)",
+    "creator": "Badfinger",
+    "cover": "public/covers/3159ce607801-320.webp",
+    "coverLarge": "public/covers/3159ce607801-720.webp",
+    "categories": [
+      "Rock",
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Beautiful Things",
+    "type": "music",
+    "title": "Beautiful Things",
+    "creator": "Benson Boone",
+    "cover": "public/covers/fb4a9ca7514f-320.webp",
+    "coverLarge": "public/covers/fb4a9ca7514f-720.webp",
+    "categories": [
+      "Pop"
     ]
   },
   {
@@ -6902,17 +6635,6 @@
     ]
   },
   {
-    "id": "music:lovely",
-    "type": "music",
-    "title": "lovely",
-    "creator": "Billie Eilish & Khalid",
-    "cover": "public/covers/362ad7cb6d52-320.webp",
-    "coverLarge": "public/covers/362ad7cb6d52-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
     "id": "music:What Was I Made For_ (From The Motion Picture _Barbie_)",
     "type": "music",
     "title": "What Was I Made For? (From The Motion Picture \"Barbie\")",
@@ -6935,433 +6657,14 @@
     ]
   },
   {
-    "id": "music:10號",
+    "id": "music:lovely",
     "type": "music",
-    "title": "10號",
-    "creator": "Edmond Leung",
-    "cover": "public/covers/e7bb0cd5c7ba-320.webp",
-    "coverLarge": "public/covers/e7bb0cd5c7ba-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:13 Reasons Why (A Netflix Original Series Soundtrack)",
-    "type": "music",
-    "title": "13 Reasons Why (A Netflix Original Series Soundtrack)",
-    "creator": "Various Artists",
-    "cover": "public/covers/85d62c0665ee-320.webp",
-    "coverLarge": "public/covers/85d62c0665ee-720.webp",
-    "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:1701",
-    "type": "music",
-    "title": "1701",
-    "creator": "Li Zhi",
-    "cover": "public/covers/19f2ca1fae01-320.webp",
-    "coverLarge": "public/covers/19f2ca1fae01-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:21",
-    "type": "music",
-    "title": "21",
-    "creator": "Adele",
-    "cover": "public/covers/1eeb4fc30b4e-320.webp",
-    "coverLarge": "public/covers/1eeb4fc30b4e-720.webp",
+    "title": "lovely",
+    "creator": "Billie Eilish & Khalid",
+    "cover": "public/covers/362ad7cb6d52-320.webp",
+    "coverLarge": "public/covers/362ad7cb6d52-720.webp",
     "categories": [
       "Pop"
-    ]
-  },
-  {
-    "id": "music:23",
-    "type": "music",
-    "title": "23",
-    "creator": "HYUKOH",
-    "cover": "public/covers/df1608b04bc8-320.webp",
-    "coverLarge": "public/covers/df1608b04bc8-720.webp",
-    "categories": [
-      "Rock"
-    ]
-  },
-  {
-    "id": "music:30",
-    "type": "music",
-    "title": "30",
-    "creator": "Adele",
-    "cover": "public/covers/9c9acebe795b-320.webp",
-    "coverLarge": "public/covers/9c9acebe795b-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:愛與夢",
-    "type": "music",
-    "title": "愛與夢",
-    "creator": "Dave Wang",
-    "cover": "public/covers/79a295c784e5-320.webp",
-    "coverLarge": "public/covers/79a295c784e5-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:安和桥北",
-    "type": "music",
-    "title": "安和桥北",
-    "creator": "Song Dongye",
-    "cover": "public/covers/8b2800b93032-320.webp",
-    "coverLarge": "public/covers/8b2800b93032-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:不能說的秘密電影",
-    "type": "music",
-    "title": "不能說的秘密電影",
-    "creator": "周杰倫",
-    "cover": "public/covers/64ac46e3b311-320.webp",
-    "coverLarge": "public/covers/64ac46e3b311-720.webp",
-    "categories": [
-      "Soundtrack",
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:帶你飛",
-    "type": "music",
-    "title": "帶你飛",
-    "creator": "Accusefive",
-    "cover": "public/covers/1df4218b486c-320.webp",
-    "coverLarge": "public/covers/1df4218b486c-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:峨眉",
-    "type": "music",
-    "title": "峨眉",
-    "creator": "刘森",
-    "cover": "public/covers/53f9958e3946-320.webp",
-    "coverLarge": "public/covers/53f9958e3946-720.webp",
-    "categories": [
-      "Indie Rock"
-    ]
-  },
-  {
-    "id": "music:梵高先生",
-    "type": "music",
-    "title": "梵高先生",
-    "creator": "Li Zhi",
-    "cover": "public/covers/a4c5be884f05-320.webp",
-    "coverLarge": "public/covers/a4c5be884f05-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:風繼續吹",
-    "type": "music",
-    "title": "風繼續吹",
-    "creator": "Leslie Cheung",
-    "cover": "public/covers/148433f59c09-320.webp",
-    "coverLarge": "public/covers/148433f59c09-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:过去来的人",
-    "type": "music",
-    "title": "过去来的人",
-    "creator": "刘森",
-    "cover": "public/covers/605afd23c20f-320.webp",
-    "coverLarge": "public/covers/605afd23c20f-720.webp",
-    "categories": [
-      "Indie Rock"
-    ]
-  },
-  {
-    "id": "music:华北浪革",
-    "type": "music",
-    "title": "华北浪革",
-    "creator": "刘森",
-    "cover": "public/covers/9784ae98f895-320.webp",
-    "coverLarge": "public/covers/9784ae98f895-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:冀西南林路行",
-    "type": "music",
-    "title": "冀西南林路行",
-    "creator": "Omnipotent Youth Society",
-    "cover": "public/covers/34c73548b0b2-320.webp",
-    "coverLarge": "public/covers/34c73548b0b2-720.webp",
-    "categories": [
-      "Prog-Rock/Art Rock"
-    ]
-  },
-  {
-    "id": "music:空無之地",
-    "type": "music",
-    "title": "空無之地",
-    "creator": "Panther Chan",
-    "cover": "public/covers/746ec8e7c0da-320.webp",
-    "coverLarge": "public/covers/746ec8e7c0da-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:乐队的夏天3 第4期 (Live)",
-    "type": "music",
-    "title": "乐队的夏天3 第4期 (Live)",
-    "creator": "群星",
-    "cover": "public/covers/d6fb67183d1d-320.webp",
-    "coverLarge": "public/covers/d6fb67183d1d-720.webp",
-    "categories": [
-      "摇滚"
-    ]
-  },
-  {
-    "id": "music:羅生門",
-    "type": "music",
-    "title": "羅生門",
-    "creator": "Juno Mak & Kay Tse",
-    "cover": "public/covers/7e1e71b1f349-320.webp",
-    "coverLarge": "public/covers/7e1e71b1f349-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:迷藏",
-    "type": "music",
-    "title": "迷藏",
-    "creator": "Bruce Liang",
-    "cover": "public/covers/b945af115cbe-320.webp",
-    "coverLarge": "public/covers/b945af115cbe-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:莫愁乡",
-    "type": "music",
-    "title": "莫愁乡",
-    "creator": "亞細亞曠世奇才",
-    "cover": "public/covers/295882bcc5d2-320.webp",
-    "coverLarge": "public/covers/295882bcc5d2-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
-    ]
-  },
-  {
-    "id": "music:漠河舞厅·2022",
-    "type": "music",
-    "title": "漠河舞厅·2022",
-    "creator": "Leon",
-    "cover": "public/covers/8c9d4b72f9d3-320.webp",
-    "coverLarge": "public/covers/8c9d4b72f9d3-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:念",
-    "type": "music",
-    "title": "念",
-    "creator": "Panther Chan",
-    "cover": "public/covers/ef24c366a81c-320.webp",
-    "coverLarge": "public/covers/ef24c366a81c-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:浓烟下的诗歌电台",
-    "type": "music",
-    "title": "浓烟下的诗歌电台",
-    "creator": "Chen Hong Yu",
-    "cover": "public/covers/367bb7a6347d-320.webp",
-    "coverLarge": "public/covers/367bb7a6347d-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:平等路",
-    "type": "music",
-    "title": "平等路",
-    "creator": "Wild Children",
-    "cover": "public/covers/e8b4a1edda8b-320.webp",
-    "coverLarge": "public/covers/e8b4a1edda8b-720.webp",
-    "categories": [
-      "Singer/Songwriter"
-    ]
-  },
-  {
-    "id": "music:普渡眾生 (《破.地獄》 THE LAST DANCE 電影主題曲)",
-    "type": "music",
-    "title": "普渡眾生 (《破.地獄》 THE LAST DANCE 電影主題曲)",
-    "creator": "Terence Lam",
-    "cover": "public/covers/3db7a784e729-320.webp",
-    "coverLarge": "public/covers/3db7a784e729-720.webp",
-    "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:亲爱的你啊(电视剧《无尽的尽头》主题曲)",
-    "type": "music",
-    "title": "亲爱的你啊(电视剧《无尽的尽头》主题曲)",
-    "creator": "Suxi Ren",
-    "cover": "public/covers/ca8fa3105d3a-320.webp",
-    "coverLarge": "public/covers/ca8fa3105d3a-720.webp",
-    "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:窮人的薔薇",
-    "type": "music",
-    "title": "窮人的薔薇",
-    "creator": "Panther Chan",
-    "cover": "public/covers/b366694b41e6-320.webp",
-    "coverLarge": "public/covers/b366694b41e6-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:人人彈起 新曲+精選",
-    "type": "music",
-    "title": "人人彈起 新曲+精選",
-    "creator": "Twins",
-    "cover": "public/covers/7f959ca16b03-320.webp",
-    "coverLarge": "public/covers/7f959ca16b03-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:山丘",
-    "type": "music",
-    "title": "山丘",
-    "creator": "Jonathan Lee",
-    "cover": "public/covers/9b845072eadb-320.webp",
-    "coverLarge": "public/covers/9b845072eadb-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:伸縮自如的愛",
-    "type": "music",
-    "title": "伸縮自如的愛",
-    "creator": "Panther Chan",
-    "cover": "public/covers/af81e98392c5-320.webp",
-    "coverLarge": "public/covers/af81e98392c5-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:神愛世人 (合唱版)",
-    "type": "music",
-    "title": "神愛世人 (合唱版)",
-    "creator": "Tang Siu Hau & Hins Cheung",
-    "cover": "public/covers/e2c1d5f72272-320.webp",
-    "coverLarge": "public/covers/e2c1d5f72272-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:神的不在場證明",
-    "type": "music",
-    "title": "神的不在場證明",
-    "creator": "Panther Chan",
-    "cover": "public/covers/7fd302d1a50e-320.webp",
-    "coverLarge": "public/covers/7fd302d1a50e-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:署前街少年",
-    "type": "music",
-    "title": "署前街少年",
-    "creator": "Lei Zhao",
-    "cover": "public/covers/43116c6a03b6-320.webp",
-    "coverLarge": "public/covers/43116c6a03b6-720.webp",
-    "categories": [
-      "Folk"
-    ]
-  },
-  {
-    "id": "music:誰明浪子心 (粵)",
-    "type": "music",
-    "title": "誰明浪子心 (粵)",
-    "creator": "Dave Wang",
-    "cover": "public/covers/6c81b108e0cd-320.webp",
-    "coverLarge": "public/covers/6c81b108e0cd-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:太平盛世",
-    "type": "music",
-    "title": "太平盛世",
-    "creator": "David Tao",
-    "cover": "public/covers/356f512b2493-320.webp",
-    "coverLarge": "public/covers/356f512b2493-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:嗵嗵",
-    "type": "music",
-    "title": "嗵嗵",
-    "creator": "DOUDOU",
-    "cover": "public/covers/01c6cf7ffb58-320.webp",
-    "coverLarge": "public/covers/01c6cf7ffb58-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:万能青年旅店",
-    "type": "music",
-    "title": "万能青年旅店",
-    "creator": "Omnipotent Youth Society",
-    "cover": "public/covers/e59f46bf26cc-320.webp",
-    "coverLarge": "public/covers/e59f46bf26cc-720.webp",
-    "categories": [
-      "Adult Alternative"
-    ]
-  },
-  {
-    "id": "music:危險世界",
-    "type": "music",
-    "title": "危險世界",
-    "creator": "Khalil Fong",
-    "cover": "public/covers/74dd806cba32-320.webp",
-    "coverLarge": "public/covers/74dd806cba32-720.webp",
-    "categories": [
-      "Mandopop"
     ]
   },
   {
@@ -7376,58 +6679,58 @@
     ]
   },
   {
-    "id": "music:我用什么把你留住",
+    "id": "music:Twilight",
     "type": "music",
-    "title": "我用什么把你留住",
-    "creator": "FloruitShow",
-    "cover": "public/covers/a80be8bcf610-320.webp",
-    "coverLarge": "public/covers/a80be8bcf610-720.webp",
+    "title": "Twilight",
+    "creator": "bôa",
+    "cover": "public/covers/fc41b091e569-320.webp",
+    "coverLarge": "public/covers/fc41b091e569-720.webp",
+    "categories": [
+      "Indie Pop"
+    ]
+  },
+  {
+    "id": "music:The Story",
+    "type": "music",
+    "title": "The Story",
+    "creator": "Brandi Carlile",
+    "cover": "public/covers/caa7ae00d840-320.webp",
+    "coverLarge": "public/covers/caa7ae00d840-720.webp",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:迷藏",
+    "type": "music",
+    "title": "迷藏",
+    "creator": "Bruce Liang",
+    "cover": "public/covers/b945af115cbe-320.webp",
+    "coverLarge": "public/covers/b945af115cbe-720.webp",
     "categories": [
       "Mandopop"
     ]
   },
   {
-    "id": "music:五年新曲加精選",
+    "id": "music:Girl, so confusing featuring lorde",
     "type": "music",
-    "title": "五年新曲加精選",
-    "creator": "Jason Chan",
-    "cover": "public/covers/88afb4de49ce-320.webp",
-    "coverLarge": "public/covers/88afb4de49ce-720.webp",
+    "title": "Girl, so confusing featuring lorde",
+    "creator": "Charli xcx & Lorde",
+    "cover": "public/covers/c4cc5a72a466-320.webp",
+    "coverLarge": "public/covers/c4cc5a72a466-720.webp",
     "categories": [
-      "Cantopop/HK-Pop"
+      "Dance"
     ]
   },
   {
-    "id": "music:小梦大半",
+    "id": "music:浓烟下的诗歌电台",
     "type": "music",
-    "title": "小梦大半",
-    "creator": "Chen Li",
-    "cover": "public/covers/811da8406323-320.webp",
-    "coverLarge": "public/covers/811da8406323-720.webp",
+    "title": "浓烟下的诗歌电台",
+    "creator": "Chen Hong Yu",
+    "cover": "public/covers/367bb7a6347d-320.webp",
+    "coverLarge": "public/covers/367bb7a6347d-720.webp",
     "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:小王",
-    "type": "music",
-    "title": "小王",
-    "creator": "Mao Bu Yi",
-    "cover": "public/covers/4a7b9fd3e738-320.webp",
-    "coverLarge": "public/covers/4a7b9fd3e738-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:夜枕青山",
-    "type": "music",
-    "title": "夜枕青山",
-    "creator": "刘森",
-    "cover": "public/covers/376769d8466e-320.webp",
-    "coverLarge": "public/covers/376769d8466e-720.webp",
-    "categories": [
-      "Indie Rock"
+      "Pop"
     ]
   },
   {
@@ -7442,180 +6745,258 @@
     ]
   },
   {
-    "id": "music:永久損毀",
+    "id": "music:小梦大半",
     "type": "music",
-    "title": "永久損毀",
-    "creator": "MC Cheung Tinfu & Panther Chan",
-    "cover": "public/covers/a88eff4e434a-320.webp",
-    "coverLarge": "public/covers/a88eff4e434a-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:赵小雷",
-    "type": "music",
-    "title": "赵小雷",
-    "creator": "Lei Zhao",
-    "cover": "public/covers/b2d42ca97381-320.webp",
-    "coverLarge": "public/covers/b2d42ca97381-720.webp",
-    "categories": [
-      "Folk"
-    ]
-  },
-  {
-    "id": "music:至情志炫",
-    "type": "music",
-    "title": "至情志炫",
-    "creator": "Terry Lin",
-    "cover": "public/covers/1e0ef46488b6-320.webp",
-    "coverLarge": "public/covers/1e0ef46488b6-720.webp",
+    "title": "小梦大半",
+    "creator": "Chen Li",
+    "cover": "public/covers/811da8406323-320.webp",
+    "coverLarge": "public/covers/811da8406323-720.webp",
     "categories": [
       "Mandopop"
     ]
   },
   {
-    "id": "music:自定義",
+    "id": "music:St. Louis to Liverpool",
     "type": "music",
-    "title": "自定義",
-    "creator": "Vae Xu",
-    "cover": "public/covers/a18035793814-320.webp",
-    "coverLarge": "public/covers/a18035793814-720.webp",
+    "title": "St. Louis to Liverpool",
+    "creator": "Chuck Berry",
+    "cover": "public/covers/0187a810909a-320.webp",
+    "coverLarge": "public/covers/0187a810909a-720.webp",
+    "categories": [
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:Promise",
+    "type": "music",
+    "title": "Promise",
+    "creator": "CoCo Lee",
+    "cover": "public/covers/77cc9956f007-320.webp",
+    "coverLarge": "public/covers/77cc9956f007-720.webp",
     "categories": [
       "Mandopop"
     ]
   },
   {
-    "id": "music:最好的時刻 2006-2012",
+    "id": "music:you're never coming back",
     "type": "music",
-    "title": "最好的時刻 2006-2012",
-    "creator": "Kay Tse",
-    "cover": "public/covers/e5b2d8880165-320.webp",
-    "coverLarge": "public/covers/e5b2d8880165-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:作品李宗盛",
-    "type": "music",
-    "title": "作品李宗盛",
-    "creator": "Jonathan Lee",
-    "cover": "public/covers/a84587ef8162-320.webp",
-    "coverLarge": "public/covers/a84587ef8162-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:A Night At The Opera (Deluxe Edition)",
-    "type": "music",
-    "title": "A Night At The Opera (Deluxe Edition)",
-    "creator": "Queen",
-    "cover": "public/covers/79acf4261fa4-320.webp",
-    "coverLarge": "public/covers/79acf4261fa4-720.webp",
-    "categories": [
-      "Rock",
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:A Star Is Born Soundtrack",
-    "type": "music",
-    "title": "A Star Is Born Soundtrack",
-    "creator": "Lady Gaga & Bradley Cooper",
-    "cover": "public/covers/5c9e98cb280e-320.webp",
-    "coverLarge": "public/covers/5c9e98cb280e-720.webp",
-    "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:Abracadabra",
-    "type": "music",
-    "title": "Abracadabra",
-    "creator": "Lady Gaga",
-    "cover": "public/covers/15286447a8fb-320.webp",
-    "coverLarge": "public/covers/15286447a8fb-720.webp",
+    "title": "you're never coming back",
+    "creator": "Cody Francis",
+    "cover": "public/covers/8938587eb1e3-320.webp",
+    "coverLarge": "public/covers/8938587eb1e3-720.webp",
     "categories": [
       "Pop"
     ]
   },
   {
-    "id": "music:Amour _ 遙遠的她",
+    "id": "music:Bloodletting",
     "type": "music",
-    "title": "Amour / 遙遠的她",
-    "creator": "Jacky Cheung",
-    "cover": "public/covers/4b2a925be815-320.webp",
-    "coverLarge": "public/covers/4b2a925be815-720.webp",
+    "title": "Bloodletting",
+    "creator": "Concrete Blonde",
+    "cover": "public/covers/6e9ad004209d-320.webp",
+    "coverLarge": "public/covers/6e9ad004209d-720.webp",
     "categories": [
-      "Cantopop/HK-Pop"
+      "Rock"
     ]
   },
   {
-    "id": "music:Anohi Anotoki",
+    "id": "music:Pilgrim's Paradise",
     "type": "music",
-    "title": "Anohi Anotoki",
-    "creator": "Kazumasa Oda",
-    "cover": "public/covers/ba02438bdc52-320.webp",
-    "coverLarge": "public/covers/ba02438bdc52-720.webp",
+    "title": "Pilgrim's Paradise",
+    "creator": "Daniel Caesar",
+    "cover": "public/covers/12c1c3d64ba5-320.webp",
+    "coverLarge": "public/covers/12c1c3d64ba5-720.webp",
+    "categories": [
+      "R&B"
+    ]
+  },
+  {
+    "id": "music:Son Of Spergy",
+    "type": "music",
+    "title": "Son Of Spergy",
+    "creator": "Daniel Caesar",
+    "cover": "public/covers/ffc6d89be463-320.webp",
+    "coverLarge": "public/covers/ffc6d89be463-720.webp",
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:THANK YOU BLUE",
+    "type": "music",
+    "title": "THANK YOU BLUE",
+    "creator": "Daoko",
+    "cover": "public/covers/233058c52166-320.webp",
+    "coverLarge": "public/covers/233058c52166-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Uchiagehanabi",
+    "type": "music",
+    "title": "Uchiagehanabi",
+    "creator": "DAOKO",
+    "cover": "public/covers/7b047df2258a-320.webp",
+    "coverLarge": "public/covers/7b047df2258a-720.webp",
     "categories": [
       "J-Pop"
     ]
   },
   {
-    "id": "music:Another Day, Another Time_ Celebrating the Music of 'Inside Llewyn Davis'",
+    "id": "music:愛與夢",
     "type": "music",
-    "title": "Another Day, Another Time: Celebrating the Music of 'Inside Llewyn Davis'",
-    "creator": "Various Artists",
-    "cover": "public/covers/e8313a38779f-320.webp",
-    "coverLarge": "public/covers/e8313a38779f-720.webp",
-    "categories": [
-      "Singer/Songwriter"
-    ]
-  },
-  {
-    "id": "music:Beautiful Things",
-    "type": "music",
-    "title": "Beautiful Things",
-    "creator": "Benson Boone",
-    "cover": "public/covers/fb4a9ca7514f-320.webp",
-    "coverLarge": "public/covers/fb4a9ca7514f-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
-    "type": "music",
-    "title": "Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
-    "creator": "Hikaru Utada",
-    "cover": "public/covers/31f65c3c3e4e-320.webp",
-    "coverLarge": "public/covers/31f65c3c3e4e-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Believe (Deluxe Edition)",
-    "type": "music",
-    "title": "Believe (Deluxe Edition)",
-    "creator": "Justin Bieber",
-    "cover": "public/covers/447461acb77e-320.webp",
-    "coverLarge": "public/covers/447461acb77e-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Binary",
-    "type": "music",
-    "title": "Binary",
-    "creator": "Kay Tse",
-    "cover": "public/covers/86cf4936c532-320.webp",
-    "coverLarge": "public/covers/86cf4936c532-720.webp",
+    "title": "愛與夢",
+    "creator": "Dave Wang",
+    "cover": "public/covers/79a295c784e5-320.webp",
+    "coverLarge": "public/covers/79a295c784e5-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:誰明浪子心 (粵)",
+    "type": "music",
+    "title": "誰明浪子心 (粵)",
+    "creator": "Dave Wang",
+    "cover": "public/covers/6c81b108e0cd-320.webp",
+    "coverLarge": "public/covers/6c81b108e0cd-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:陶喆同名專輯",
+    "type": "music",
+    "title": "陶喆同名專輯",
+    "creator": "David Tao",
+    "cover": "public/covers/9dfe472b0e3f-320.webp",
+    "coverLarge": "public/covers/9dfe472b0e3f-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:太平盛世",
+    "type": "music",
+    "title": "太平盛世",
+    "creator": "David Tao",
+    "cover": "public/covers/356f512b2493-320.webp",
+    "coverLarge": "public/covers/356f512b2493-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:I'm O.K.",
+    "type": "music",
+    "title": "I'm O.K.",
+    "creator": "David Tao",
+    "cover": "public/covers/f96f10897f3b-320.webp",
+    "coverLarge": "public/covers/f96f10897f3b-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:荒唐谣",
+    "type": "music",
+    "title": "荒唐谣",
+    "creator": "DOUDOU",
+    "cover": "public/covers/65e24afc458b-320.webp",
+    "coverLarge": "public/covers/65e24afc458b-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:嗵嗵",
+    "type": "music",
+    "title": "嗵嗵",
+    "creator": "DOUDOU",
+    "cover": "public/covers/01c6cf7ffb58-320.webp",
+    "coverLarge": "public/covers/01c6cf7ffb58-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:10號",
+    "type": "music",
+    "title": "10號",
+    "creator": "Edmond Leung",
+    "cover": "public/covers/e7bb0cd5c7ba-320.webp",
+    "coverLarge": "public/covers/e7bb0cd5c7ba-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Curtain Call- The Hits",
+    "type": "music",
+    "title": "Curtain Call: The Hits",
+    "creator": "Eminem",
+    "cover": "public/covers/85e8d0887b86-320.webp",
+    "coverLarge": "public/covers/85e8d0887b86-720.webp",
+    "categories": [
+      "Pop",
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:Encore",
+    "type": "music",
+    "title": "Encore",
+    "creator": "Eminem",
+    "cover": "public/covers/82e8c2f808ab-320.webp",
+    "coverLarge": "public/covers/82e8c2f808ab-720.webp",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:Recovery",
+    "type": "music",
+    "title": "Recovery",
+    "creator": "Eminem",
+    "cover": "public/covers/3a92fd4b1114-320.webp",
+    "coverLarge": "public/covers/3a92fd4b1114-720.webp",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:金黃色的",
+    "type": "music",
+    "title": "金黃色的",
+    "creator": "Enno Cheng",
+    "cover": "public/covers/8bd2a5b3b1d1-320.webp",
+    "coverLarge": "public/covers/8bd2a5b3b1d1-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Lungs (Deluxe Version)",
+    "type": "music",
+    "title": "Lungs (Deluxe Version)",
+    "creator": "Florence + The Machine",
+    "cover": "public/covers/ed72647480cb-320.webp",
+    "coverLarge": "public/covers/ed72647480cb-720.webp",
+    "categories": [
+      "Pop",
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:我用什么把你留住",
+    "type": "music",
+    "title": "我用什么把你留住",
+    "creator": "FloruitShow",
+    "cover": "public/covers/a80be8bcf610-320.webp",
+    "coverLarge": "public/covers/a80be8bcf610-720.webp",
+    "categories": [
+      "Mandopop"
     ]
   },
   {
@@ -7630,12 +7011,222 @@
     ]
   },
   {
-    "id": "music:Bloodletting",
+    "id": "music:HELP EVER HURT NEVER",
     "type": "music",
-    "title": "Bloodletting",
-    "creator": "Concrete Blonde",
-    "cover": "public/covers/6e9ad004209d-320.webp",
-    "coverLarge": "public/covers/6e9ad004209d-720.webp",
+    "title": "HELP EVER HURT NEVER",
+    "creator": "Fujii Kaze",
+    "cover": "public/covers/82b439fcb10e-320.webp",
+    "coverLarge": "public/covers/82b439fcb10e-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Prema",
+    "type": "music",
+    "title": "Prema",
+    "creator": "Fujii Kaze",
+    "cover": "public/covers/b39b354f3b1b-320.webp",
+    "coverLarge": "public/covers/b39b354f3b1b-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:摩天動物園",
+    "type": "music",
+    "title": "摩天動物園",
+    "creator": "G.E.M.",
+    "cover": "public/covers/8bad051abbff-320.webp",
+    "coverLarge": "public/covers/8bad051abbff-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:T.I.M.E",
+    "type": "music",
+    "title": "T.I.M.E.",
+    "creator": "G.E.M.",
+    "cover": "public/covers/096302623fc6-320.webp",
+    "coverLarge": "public/covers/096302623fc6-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:City Zoo",
+    "type": "music",
+    "title": "City Zoo",
+    "creator": "G.E.M.",
+    "cover": "public/covers/8eb47802c778-320.webp",
+    "coverLarge": "public/covers/8eb47802c778-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Valentine",
+    "type": "music",
+    "title": "Valentine",
+    "creator": "G.E.M. 邓紫棋",
+    "cover": "public/covers/ff73eb489364-320.webp",
+    "coverLarge": "public/covers/ff73eb489364-720.webp",
+    "categories": [
+      "华语流行"
+    ]
+  },
+  {
+    "id": "music:玻璃 demo",
+    "type": "music",
+    "title": "玻璃 demo",
+    "creator": "Gareth.T",
+    "cover": "public/covers/5b68df1320f0-320.webp",
+    "coverLarge": "public/covers/5b68df1320f0-720.webp",
+    "categories": [
+      "独立流行"
+    ]
+  },
+  {
+    "id": "music:緊急聯絡人",
+    "type": "music",
+    "title": "緊急聯絡人",
+    "creator": "Gareth.T",
+    "cover": "public/covers/f9e494c77ad7-320.webp",
+    "coverLarge": "public/covers/f9e494c77ad7-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:泥菩薩",
+    "type": "music",
+    "title": "泥菩薩",
+    "creator": "Gareth.T",
+    "cover": "public/covers/4acc5dc22cb5-320.webp",
+    "coverLarge": "public/covers/4acc5dc22cb5-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:顏色",
+    "type": "music",
+    "title": "顏色",
+    "creator": "Gareth.T",
+    "cover": "public/covers/ff379a8dab07-320.webp",
+    "coverLarge": "public/covers/ff379a8dab07-720.webp",
+    "categories": [
+      "独立流行"
+    ]
+  },
+  {
+    "id": "music:用背脊唱情歌",
+    "type": "music",
+    "title": "用背脊唱情歌",
+    "creator": "Gareth.T",
+    "cover": "public/covers/9ada2137de36-320.webp",
+    "coverLarge": "public/covers/9ada2137de36-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:How to Be a Human Being",
+    "type": "music",
+    "title": "How to Be a Human Being",
+    "creator": "Glass Animals",
+    "cover": "public/covers/cba0c5bd6037-320.webp",
+    "coverLarge": "public/covers/cba0c5bd6037-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Making Mirrors",
+    "type": "music",
+    "title": "Making Mirrors",
+    "creator": "Gotye",
+    "cover": "public/covers/dc3ffe007656-320.webp",
+    "coverLarge": "public/covers/dc3ffe007656-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Brokeback Mountain Soundtrack",
+    "type": "music",
+    "title": "Brokeback Mountain Soundtrack",
+    "creator": "Gustavo Santaolalla",
+    "cover": "public/covers/7d03081f41a5-320.webp",
+    "coverLarge": "public/covers/7d03081f41a5-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Harry Styles",
+    "type": "music",
+    "title": "Harry Styles",
+    "creator": "Harry Styles",
+    "cover": "public/covers/ded403d7a65c-320.webp",
+    "coverLarge": "public/covers/ded403d7a65c-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:First Love",
+    "type": "music",
+    "title": "First Love",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/73a3d24976bc-320.webp",
+    "coverLarge": "public/covers/73a3d24976bc-720.webp",
+    "categories": [
+      "Pop",
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
+    "type": "music",
+    "title": "Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/31f65c3c3e4e-320.webp",
+    "coverLarge": "public/covers/31f65c3c3e4e-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:One Last Kiss",
+    "type": "music",
+    "title": "One Last Kiss",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/064f17868278-320.webp",
+    "coverLarge": "public/covers/064f17868278-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:No. Eleven",
+    "type": "music",
+    "title": "No. Eleven",
+    "creator": "Hins Cheung",
+    "cover": "public/covers/ede957c68bb9-320.webp",
+    "coverLarge": "public/covers/ede957c68bb9-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:23",
+    "type": "music",
+    "title": "23",
+    "creator": "HYUKOH",
+    "cover": "public/covers/df1608b04bc8-320.webp",
+    "coverLarge": "public/covers/df1608b04bc8-720.webp",
     "categories": [
       "Rock"
     ]
@@ -7652,138 +7243,6 @@
     ]
   },
   {
-    "id": "music:bootleg",
-    "type": "music",
-    "title": "bootleg",
-    "creator": "Kenshi Yonezu",
-    "cover": "public/covers/48c9d7b32d3a-320.webp",
-    "coverLarge": "public/covers/48c9d7b32d3a-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Born to Die - The Paradise Edition",
-    "type": "music",
-    "title": "Born to Die - The Paradise Edition",
-    "creator": "Lana Del Rey",
-    "cover": "public/covers/c15da333e964-320.webp",
-    "coverLarge": "public/covers/c15da333e964-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:CALMOCOBRA",
-    "type": "music",
-    "title": "CALMOCOBRA",
-    "creator": "Tananai",
-    "cover": "public/covers/d691b62d4db4-320.webp",
-    "coverLarge": "public/covers/d691b62d4db4-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:CINEMA",
-    "type": "music",
-    "title": "CINEMA",
-    "creator": "The Marías",
-    "cover": "public/covers/170ee5c935f7-320.webp",
-    "coverLarge": "public/covers/170ee5c935f7-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:City Zoo",
-    "type": "music",
-    "title": "City Zoo",
-    "creator": "G.E.M.",
-    "cover": "public/covers/8eb47802c778-320.webp",
-    "coverLarge": "public/covers/8eb47802c778-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Come Back to Me",
-    "type": "music",
-    "title": "Come Back to Me",
-    "creator": "Utada",
-    "cover": "public/covers/107ea8a27a6e-320.webp",
-    "coverLarge": "public/covers/107ea8a27a6e-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Cult.",
-    "type": "music",
-    "title": "Cult.",
-    "creator": "natori",
-    "cover": "public/covers/a8becc4280d0-320.webp",
-    "coverLarge": "public/covers/a8becc4280d0-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Did you know that there's a tunnel under Ocean Blvd",
-    "type": "music",
-    "title": "Did you know that there's a tunnel under Ocean Blvd",
-    "creator": "Ana Done",
-    "cover": "public/covers/76a598554168-320.webp",
-    "coverLarge": "public/covers/76a598554168-720.webp",
-    "categories": [
-      "Instrumental"
-    ]
-  },
-  {
-    "id": "music:Die With A Smile",
-    "type": "music",
-    "title": "Die With A Smile",
-    "creator": "Lady Gaga & Bruno Mars",
-    "cover": "public/covers/b641af46bbdf-320.webp",
-    "coverLarge": "public/covers/b641af46bbdf-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:E=MC2 (Deluxe Version)",
-    "type": "music",
-    "title": "E=MC2 (Deluxe Version)",
-    "creator": "Mariah Carey",
-    "cover": "public/covers/82b98404b0ea-320.webp",
-    "coverLarge": "public/covers/82b98404b0ea-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Encore",
-    "type": "music",
-    "title": "Encore",
-    "creator": "Eminem",
-    "cover": "public/covers/82e8c2f808ab-320.webp",
-    "coverLarge": "public/covers/82e8c2f808ab-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
-    ]
-  },
-  {
-    "id": "music:Endless Summer Vacation",
-    "type": "music",
-    "title": "Endless Summer Vacation",
-    "creator": "Miley Cyrus",
-    "cover": "public/covers/c0a0fc01c0de-320.webp",
-    "coverLarge": "public/covers/c0a0fc01c0de-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
     "id": "music:Evolve",
     "type": "music",
     "title": "Evolve",
@@ -7795,23 +7254,156 @@
     ]
   },
   {
-    "id": "music:Excitement of Youth",
+    "id": "music:Mercury - Acts 1 & 2",
     "type": "music",
-    "title": "Excitement of Youth",
-    "creator": "Aimyon",
-    "cover": "public/covers/69efc5c7fa93-320.webp",
-    "coverLarge": "public/covers/69efc5c7fa93-720.webp",
+    "title": "Mercury - Acts 1 & 2",
+    "creator": "Imagine Dragons",
+    "cover": "public/covers/f8351c75878d-320.webp",
+    "coverLarge": "public/covers/f8351c75878d-720.webp",
     "categories": [
-      "J-Pop"
+      "Alternative"
     ]
   },
   {
-    "id": "music:F",
+    "id": "music:Smoke + Mirrors (Deluxe)",
     "type": "music",
-    "title": "F",
-    "creator": "Li Zhi",
-    "cover": "public/covers/ee6b9c24c526-320.webp",
-    "coverLarge": "public/covers/ee6b9c24c526-720.webp",
+    "title": "Smoke + Mirrors (Deluxe)",
+    "creator": "Imagine Dragons",
+    "cover": "public/covers/fc616d0c5754-320.webp",
+    "coverLarge": "public/covers/fc616d0c5754-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:In Between Dreams",
+    "type": "music",
+    "title": "In Between Dreams",
+    "creator": "Jack Johnson",
+    "cover": "public/covers/5e36eeb10ac0-320.webp",
+    "coverLarge": "public/covers/5e36eeb10ac0-720.webp",
+    "categories": [
+      "Pop",
+      "Rock"
+    ]
+  },
+  {
+    "id": "music:Amour _ 遙遠的她",
+    "type": "music",
+    "title": "Amour / 遙遠的她",
+    "creator": "Jacky Cheung",
+    "cover": "public/covers/4b2a925be815-320.webp",
+    "coverLarge": "public/covers/4b2a925be815-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:五年新曲加精選",
+    "type": "music",
+    "title": "五年新曲加精選",
+    "creator": "Jason Chan",
+    "cover": "public/covers/88afb4de49ce-320.webp",
+    "coverLarge": "public/covers/88afb4de49ce-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:11月的蕭邦",
+    "type": "music",
+    "title": "11月的蕭邦",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ee04a744d2b5-320.webp",
+    "coverLarge": "public/covers/ee04a744d2b5-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:八度空間",
+    "type": "music",
+    "title": "八度空間",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ad2e9448e253-320.webp",
+    "coverLarge": "public/covers/ad2e9448e253-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:七里香",
+    "type": "music",
+    "title": "七里香",
+    "creator": "Jay Chou",
+    "cover": "public/covers/1ab6c535db43-320.webp",
+    "coverLarge": "public/covers/1ab6c535db43-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:葉惠美",
+    "type": "music",
+    "title": "葉惠美",
+    "creator": "Jay Chou",
+    "cover": "public/covers/baf891b674d2-320.webp",
+    "coverLarge": "public/covers/baf891b674d2-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:November's Chopin",
+    "type": "music",
+    "title": "November's Chopin",
+    "creator": "Jay Chou",
+    "cover": "public/covers/b2c1d74e6568-320.webp",
+    "coverLarge": "public/covers/b2c1d74e6568-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:I WANNA BE YOUR SLAVE",
+    "type": "music",
+    "title": "I WANNA BE YOUR SLAVE",
+    "creator": "Jaydan Wolf",
+    "cover": "public/covers/f7867c008df0-320.webp",
+    "coverLarge": "public/covers/f7867c008df0-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:You Don't Mess Around With Jim",
+    "type": "music",
+    "title": "You Don't Mess Around With Jim",
+    "creator": "Jim Croce",
+    "cover": "public/covers/636274f255be-320.webp",
+    "coverLarge": "public/covers/636274f255be-720.webp",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:山丘",
+    "type": "music",
+    "title": "山丘",
+    "creator": "Jonathan Lee",
+    "cover": "public/covers/9b845072eadb-320.webp",
+    "coverLarge": "public/covers/9b845072eadb-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:作品李宗盛",
+    "type": "music",
+    "title": "作品李宗盛",
+    "creator": "Jonathan Lee",
+    "cover": "public/covers/a84587ef8162-320.webp",
+    "coverLarge": "public/covers/a84587ef8162-720.webp",
     "categories": [
       "Mandopop"
     ]
@@ -7828,91 +7420,36 @@
     ]
   },
   {
-    "id": "music:Funeral",
+    "id": "music:Nothing Lasts Forever",
     "type": "music",
-    "title": "Funeral",
-    "creator": "Arcade Fire",
-    "cover": "public/covers/18a08fb4383b-320.webp",
-    "coverLarge": "public/covers/18a08fb4383b-720.webp",
+    "title": "Nothing Lasts Forever",
+    "creator": "Juno Mak",
+    "cover": "public/covers/c725011393db-320.webp",
+    "coverLarge": "public/covers/c725011393db-720.webp",
     "categories": [
-      "Alternative"
+      "Cantopop/HK-Pop"
     ]
   },
   {
-    "id": "music:Girl, so confusing featuring lorde",
+    "id": "music:羅生門",
     "type": "music",
-    "title": "Girl, so confusing featuring lorde",
-    "creator": "Charli xcx & Lorde",
-    "cover": "public/covers/c4cc5a72a466-320.webp",
-    "coverLarge": "public/covers/c4cc5a72a466-720.webp",
+    "title": "羅生門",
+    "creator": "Juno Mak & Kay Tse",
+    "cover": "public/covers/7e1e71b1f349-320.webp",
+    "coverLarge": "public/covers/7e1e71b1f349-720.webp",
     "categories": [
-      "Dance"
+      "Cantopop/HK-Pop"
     ]
   },
   {
-    "id": "music:Happy Together",
+    "id": "music:Believe (Deluxe Edition)",
     "type": "music",
-    "title": "Happy Together",
-    "creator": "The Turtles",
-    "cover": "public/covers/db546a1beb2f-320.webp",
-    "coverLarge": "public/covers/db546a1beb2f-720.webp",
+    "title": "Believe (Deluxe Edition)",
+    "creator": "Justin Bieber",
+    "cover": "public/covers/447461acb77e-320.webp",
+    "coverLarge": "public/covers/447461acb77e-720.webp",
     "categories": [
       "Pop"
-    ]
-  },
-  {
-    "id": "music:Harry Styles",
-    "type": "music",
-    "title": "Harry Styles",
-    "creator": "Harry Styles",
-    "cover": "public/covers/ded403d7a65c-320.webp",
-    "coverLarge": "public/covers/ded403d7a65c-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Head High",
-    "type": "music",
-    "title": "Head High",
-    "creator": "Alexander Jean",
-    "cover": "public/covers/e83e5f2ea8b1-320.webp",
-    "coverLarge": "public/covers/e83e5f2ea8b1-720.webp",
-    "categories": [
-      "Singer/Songwriter"
-    ]
-  },
-  {
-    "id": "music:HELP EVER HURT NEVER",
-    "type": "music",
-    "title": "HELP EVER HURT NEVER",
-    "creator": "Fujii Kaze",
-    "cover": "public/covers/82b439fcb10e-320.webp",
-    "coverLarge": "public/covers/82b439fcb10e-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Hold My Hand (Music From The Motion Picture _Top Gun_ Maverick_)",
-    "type": "music",
-    "title": "Hold My Hand (Music From The Motion Picture \\\"Top Gun: Maverick\\\")",
-    "creator": "Lady Gaga",
-    "cover": "public/covers/358dc7b03f5f-320.webp",
-    "coverLarge": "public/covers/358dc7b03f5f-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Hollywood's Bleeding",
-    "type": "music",
-    "title": "Hollywood's Bleeding",
-    "creator": "Post Malone",
-    "cover": "public/covers/2796ba56b248-320.webp",
-    "coverLarge": "public/covers/2796ba56b248-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
     ]
   },
   {
@@ -7927,245 +7464,80 @@
     ]
   },
   {
-    "id": "music:How to Be a Human Being",
+    "id": "music:最好的時刻 2006-2012",
     "type": "music",
-    "title": "How to Be a Human Being",
-    "creator": "Glass Animals",
-    "cover": "public/covers/cba0c5bd6037-320.webp",
-    "coverLarge": "public/covers/cba0c5bd6037-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:Hu Guangsheng",
-    "type": "music",
-    "title": "Hu Guangsheng",
-    "creator": "Suxi Ren",
-    "cover": "public/covers/9b357d2ac638-320.webp",
-    "coverLarge": "public/covers/9b357d2ac638-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:I Am What I Am",
-    "type": "music",
-    "title": "I Am What I Am",
-    "creator": "Leslie Cheung",
-    "cover": "public/covers/c4a9532bd42a-320.webp",
-    "coverLarge": "public/covers/c4a9532bd42a-720.webp",
+    "title": "最好的時刻 2006-2012",
+    "creator": "Kay Tse",
+    "cover": "public/covers/e5b2d8880165-320.webp",
+    "coverLarge": "public/covers/e5b2d8880165-720.webp",
     "categories": [
       "Cantopop/HK-Pop"
     ]
   },
   {
-    "id": "music:I'm O.K.",
+    "id": "music:Binary",
     "type": "music",
-    "title": "I'm O.K.",
-    "creator": "David Tao",
-    "cover": "public/covers/f96f10897f3b-320.webp",
-    "coverLarge": "public/covers/f96f10897f3b-720.webp",
+    "title": "Binary",
+    "creator": "Kay Tse",
+    "cover": "public/covers/86cf4936c532-320.webp",
+    "coverLarge": "public/covers/86cf4936c532-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Anohi Anotoki",
+    "type": "music",
+    "title": "Anohi Anotoki",
+    "creator": "Kazumasa Oda",
+    "cover": "public/covers/ba02438bdc52-320.webp",
+    "coverLarge": "public/covers/ba02438bdc52-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:聽濤",
+    "type": "music",
+    "title": "聽濤",
+    "creator": "Kenny Bee",
+    "cover": "public/covers/e9ce100715d6-320.webp",
+    "coverLarge": "public/covers/e9ce100715d6-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:bootleg",
+    "type": "music",
+    "title": "bootleg",
+    "creator": "Kenshi Yonezu",
+    "cover": "public/covers/48c9d7b32d3a-320.webp",
+    "coverLarge": "public/covers/48c9d7b32d3a-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:STRAY SHEEP",
+    "type": "music",
+    "title": "STRAY SHEEP",
+    "creator": "Kenshi Yonezu",
+    "cover": "public/covers/bb3c78bdaf5f-320.webp",
+    "coverLarge": "public/covers/bb3c78bdaf5f-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:危險世界",
+    "type": "music",
+    "title": "危險世界",
+    "creator": "Khalil Fong",
+    "cover": "public/covers/74dd806cba32-320.webp",
+    "coverLarge": "public/covers/74dd806cba32-720.webp",
     "categories": [
       "Mandopop"
-    ]
-  },
-  {
-    "id": "music:If we can be happy happy every day, who wants to be sad",
-    "type": "music",
-    "title": "If we can be happy happy every day, who wants to be sad",
-    "creator": "陈嫺静",
-    "cover": "public/covers/aafd13071dee-320.webp",
-    "coverLarge": "public/covers/aafd13071dee-720.webp",
-    "categories": [
-      "华语流行"
-    ]
-  },
-  {
-    "id": "music:Illuminate (Deluxe)",
-    "type": "music",
-    "title": "Illuminate (Deluxe)",
-    "creator": "Shawn Mendes",
-    "cover": "public/covers/05ba68c63bef-320.webp",
-    "coverLarge": "public/covers/05ba68c63bef-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Inauguration of the Pleasure Dome",
-    "type": "music",
-    "title": "Inauguration of the Pleasure Dome",
-    "creator": "8 Immortals Restaurant",
-    "cover": "public/covers/faf0c46d51e0-320.webp",
-    "coverLarge": "public/covers/faf0c46d51e0-720.webp",
-    "categories": [
-      "Rock"
-    ]
-  },
-  {
-    "id": "music:Joanne (Deluxe)",
-    "type": "music",
-    "title": "Joanne (Deluxe)",
-    "creator": "Lady Gaga",
-    "cover": "public/covers/04de5678a30f-320.webp",
-    "coverLarge": "public/covers/04de5678a30f-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Let's Fall In Love For The Night",
-    "type": "music",
-    "title": "Let's Fall In Love For The Night",
-    "creator": "Us The Duo",
-    "cover": "public/covers/8d7c782b99a2-320.webp",
-    "coverLarge": "public/covers/8d7c782b99a2-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Let's Hope Heteros Fail, Learn and Retire",
-    "type": "music",
-    "title": "Let's Hope Heteros Fail, Learn and Retire",
-    "creator": "Alice Longyu Gao",
-    "cover": "public/covers/ac9a9ab2231c-320.webp",
-    "coverLarge": "public/covers/ac9a9ab2231c-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Listen to the Music 3",
-    "type": "music",
-    "title": "Listen to the Music 3",
-    "creator": "Noriyuki Makihara",
-    "cover": "public/covers/58ab35fae3a3-320.webp",
-    "coverLarge": "public/covers/58ab35fae3a3-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Luna",
-    "type": "music",
-    "title": "Luna",
-    "creator": "AGA",
-    "cover": "public/covers/2ee9e0f7ca92-320.webp",
-    "coverLarge": "public/covers/2ee9e0f7ca92-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Making Mirrors",
-    "type": "music",
-    "title": "Making Mirrors",
-    "creator": "Gotye",
-    "cover": "public/covers/dc3ffe007656-320.webp",
-    "coverLarge": "public/covers/dc3ffe007656-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:MAYHEM",
-    "type": "music",
-    "title": "MAYHEM",
-    "creator": "Lady Gaga",
-    "cover": "public/covers/d66949d9bcd3-320.webp",
-    "coverLarge": "public/covers/d66949d9bcd3-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Mercury - Acts 1 & 2",
-    "type": "music",
-    "title": "Mercury - Acts 1 & 2",
-    "creator": "Imagine Dragons",
-    "cover": "public/covers/f8351c75878d-320.webp",
-    "coverLarge": "public/covers/f8351c75878d-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:Momentary Sixth Sense",
-    "type": "music",
-    "title": "Momentary Sixth Sense",
-    "creator": "Aimyon",
-    "cover": "public/covers/abb19a7bfd64-320.webp",
-    "coverLarge": "public/covers/abb19a7bfd64-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Narrated for You",
-    "type": "music",
-    "title": "Narrated for You",
-    "creator": "Alec Benjamin",
-    "cover": "public/covers/8886b2c18d92-320.webp",
-    "coverLarge": "public/covers/8886b2c18d92-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Neon Genesis Evangelion (Original Series Soundtrack)",
-    "type": "music",
-    "title": "Neon Genesis Evangelion (Original Series Soundtrack)",
-    "creator": "Shiro SAGISU",
-    "cover": "public/covers/1e91f0f1086f-320.webp",
-    "coverLarge": "public/covers/1e91f0f1086f-720.webp",
-    "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:No. Eleven",
-    "type": "music",
-    "title": "No. Eleven",
-    "creator": "Hins Cheung",
-    "cover": "public/covers/ede957c68bb9-320.webp",
-    "coverLarge": "public/covers/ede957c68bb9-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Nothing Lasts Forever",
-    "type": "music",
-    "title": "Nothing Lasts Forever",
-    "creator": "Juno Mak",
-    "cover": "public/covers/c725011393db-320.webp",
-    "coverLarge": "public/covers/c725011393db-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:November's Chopin",
-    "type": "music",
-    "title": "November's Chopin",
-    "creator": "Jay Chou",
-    "cover": "public/covers/b2c1d74e6568-320.webp",
-    "coverLarge": "public/covers/b2c1d74e6568-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:One Last Kiss",
-    "type": "music",
-    "title": "One Last Kiss",
-    "creator": "Hikaru Utada",
-    "cover": "public/covers/064f17868278-320.webp",
-    "coverLarge": "public/covers/064f17868278-720.webp",
-    "categories": [
-      "J-Pop"
     ]
   },
   {
@@ -8180,14 +7552,267 @@
     ]
   },
   {
-    "id": "music:Pilgrim's Paradise",
+    "id": "music:Wonderland",
     "type": "music",
-    "title": "Pilgrim's Paradise",
-    "creator": "Daniel Caesar",
-    "cover": "public/covers/12c1c3d64ba5-320.webp",
-    "coverLarge": "public/covers/12c1c3d64ba5-720.webp",
+    "title": "Wonderland",
+    "creator": "Khalil Fong",
+    "cover": "public/covers/8c1d0a085d05-320.webp",
+    "coverLarge": "public/covers/8c1d0a085d05-720.webp",
     "categories": [
-      "R&B"
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Abracadabra",
+    "type": "music",
+    "title": "Abracadabra",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/15286447a8fb-320.webp",
+    "coverLarge": "public/covers/15286447a8fb-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Hold My Hand (Music From The Motion Picture _Top Gun_ Maverick_)",
+    "type": "music",
+    "title": "Hold My Hand (Music From The Motion Picture \\\"Top Gun: Maverick\\\")",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/358dc7b03f5f-320.webp",
+    "coverLarge": "public/covers/358dc7b03f5f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Joanne (Deluxe)",
+    "type": "music",
+    "title": "Joanne (Deluxe)",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/04de5678a30f-320.webp",
+    "coverLarge": "public/covers/04de5678a30f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:MAYHEM",
+    "type": "music",
+    "title": "MAYHEM",
+    "creator": "Lady Gaga",
+    "cover": "public/covers/d66949d9bcd3-320.webp",
+    "coverLarge": "public/covers/d66949d9bcd3-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:A Star Is Born Soundtrack",
+    "type": "music",
+    "title": "A Star Is Born Soundtrack",
+    "creator": "Lady Gaga & Bradley Cooper",
+    "cover": "public/covers/5c9e98cb280e-320.webp",
+    "coverLarge": "public/covers/5c9e98cb280e-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Die With A Smile",
+    "type": "music",
+    "title": "Die With A Smile",
+    "creator": "Lady Gaga & Bruno Mars",
+    "cover": "public/covers/b641af46bbdf-320.webp",
+    "coverLarge": "public/covers/b641af46bbdf-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Born to Die - The Paradise Edition",
+    "type": "music",
+    "title": "Born to Die - The Paradise Edition",
+    "creator": "Lana Del Rey",
+    "cover": "public/covers/c15da333e964-320.webp",
+    "coverLarge": "public/covers/c15da333e964-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Ultraviolence (Deluxe)",
+    "type": "music",
+    "title": "Ultraviolence (Deluxe)",
+    "creator": "Lana Del Rey",
+    "cover": "public/covers/d62391d903a5-320.webp",
+    "coverLarge": "public/covers/d62391d903a5-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Monday",
+    "type": "music",
+    "title": "Monday",
+    "creator": "Leah Dou",
+    "cover": "public/covers/088b9e4dcce6-320.webp",
+    "coverLarge": "public/covers/088b9e4dcce6-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:署前街少年",
+    "type": "music",
+    "title": "署前街少年",
+    "creator": "Lei Zhao",
+    "cover": "public/covers/43116c6a03b6-320.webp",
+    "coverLarge": "public/covers/43116c6a03b6-720.webp",
+    "categories": [
+      "Folk"
+    ]
+  },
+  {
+    "id": "music:赵小雷",
+    "type": "music",
+    "title": "赵小雷",
+    "creator": "Lei Zhao",
+    "cover": "public/covers/b2d42ca97381-320.webp",
+    "coverLarge": "public/covers/b2d42ca97381-720.webp",
+    "categories": [
+      "Folk"
+    ]
+  },
+  {
+    "id": "music:漠河舞厅·2022",
+    "type": "music",
+    "title": "漠河舞厅·2022",
+    "creator": "Leon",
+    "cover": "public/covers/8c9d4b72f9d3-320.webp",
+    "coverLarge": "public/covers/8c9d4b72f9d3-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:風繼續吹",
+    "type": "music",
+    "title": "風繼續吹",
+    "creator": "Leslie Cheung",
+    "cover": "public/covers/148433f59c09-320.webp",
+    "coverLarge": "public/covers/148433f59c09-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:I Am What I Am",
+    "type": "music",
+    "title": "I Am What I Am",
+    "creator": "Leslie Cheung",
+    "cover": "public/covers/c4a9532bd42a-320.webp",
+    "coverLarge": "public/covers/c4a9532bd42a-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:1701",
+    "type": "music",
+    "title": "1701",
+    "creator": "Li Zhi",
+    "cover": "public/covers/19f2ca1fae01-320.webp",
+    "coverLarge": "public/covers/19f2ca1fae01-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:梵高先生",
+    "type": "music",
+    "title": "梵高先生",
+    "creator": "Li Zhi",
+    "cover": "public/covers/a4c5be884f05-320.webp",
+    "coverLarge": "public/covers/a4c5be884f05-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:F",
+    "type": "music",
+    "title": "F",
+    "creator": "Li Zhi",
+    "cover": "public/covers/ee6b9c24c526-320.webp",
+    "coverLarge": "public/covers/ee6b9c24c526-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:小王",
+    "type": "music",
+    "title": "小王",
+    "creator": "Mao Bu Yi",
+    "cover": "public/covers/4a7b9fd3e738-320.webp",
+    "coverLarge": "public/covers/4a7b9fd3e738-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:E=MC2 (Deluxe Version)",
+    "type": "music",
+    "title": "E=MC2 (Deluxe Version)",
+    "creator": "Mariah Carey",
+    "cover": "public/covers/82b98404b0ea-320.webp",
+    "coverLarge": "public/covers/82b98404b0ea-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Here With Me",
+    "type": "music",
+    "title": "Here With Me",
+    "creator": "Marshmello",
+    "cover": "public/covers/451877e11d41-320.webp",
+    "coverLarge": "public/covers/451877e11d41-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:永久損毀",
+    "type": "music",
+    "title": "永久損毀",
+    "creator": "MC Cheung Tinfu & Panther Chan",
+    "cover": "public/covers/a88eff4e434a-320.webp",
+    "coverLarge": "public/covers/a88eff4e434a-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Tough",
+    "type": "music",
+    "title": "Tough",
+    "creator": "Mika Nakashima",
+    "cover": "public/covers/8f5a2384cddd-320.webp",
+    "coverLarge": "public/covers/8f5a2384cddd-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Endless Summer Vacation",
+    "type": "music",
+    "title": "Endless Summer Vacation",
+    "creator": "Miley Cyrus",
+    "cover": "public/covers/c0a0fc01c0de-320.webp",
+    "coverLarge": "public/covers/c0a0fc01c0de-720.webp",
+    "categories": [
+      "Pop"
     ]
   },
   {
@@ -8202,222 +7827,34 @@
     ]
   },
   {
-    "id": "music:Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol]",
+    "id": "music:壞蛋",
     "type": "music",
-    "title": "Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol]",
-    "creator": "The Weeknd & Madonna",
-    "cover": "public/covers/2da4d9602519-320.webp",
-    "coverLarge": "public/covers/2da4d9602519-720.webp",
+    "title": "壞蛋",
+    "creator": "Mixer",
+    "cover": "public/covers/3745c4817e02-320.webp",
+    "coverLarge": "public/covers/3745c4817e02-720.webp",
     "categories": [
-      "Soundtrack"
+      "C-pop"
     ]
   },
   {
-    "id": "music:Prema",
+    "id": "music:Cult.",
     "type": "music",
-    "title": "Prema",
-    "creator": "Fujii Kaze",
-    "cover": "public/covers/b39b354f3b1b-320.webp",
-    "coverLarge": "public/covers/b39b354f3b1b-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Promise",
-    "type": "music",
-    "title": "Promise",
-    "creator": "CoCo Lee",
-    "cover": "public/covers/77cc9956f007-320.webp",
-    "coverLarge": "public/covers/77cc9956f007-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Ram",
-    "type": "music",
-    "title": "Ram",
-    "creator": "Wheeler Walker Jr.",
-    "cover": "public/covers/57798442d116-320.webp",
-    "coverLarge": "public/covers/57798442d116-720.webp",
-    "categories": [
-      "Country"
-    ]
-  },
-  {
-    "id": "music:raw,book1",
-    "type": "music",
-    "title": "raw,book1",
-    "creator": "金車厘子",
-    "cover": "public/covers/a2a5ad7c44ac-320.webp",
-    "coverLarge": "public/covers/a2a5ad7c44ac-720.webp",
-    "categories": [
-      "R&B/Soul"
-    ]
-  },
-  {
-    "id": "music:Recovery",
-    "type": "music",
-    "title": "Recovery",
-    "creator": "Eminem",
-    "cover": "public/covers/3a92fd4b1114-320.webp",
-    "coverLarge": "public/covers/3a92fd4b1114-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
-    ]
-  },
-  {
-    "id": "music:replica",
-    "type": "music",
-    "title": "replica",
-    "creator": "Vaundy",
-    "cover": "public/covers/71e12957f90f-320.webp",
-    "coverLarge": "public/covers/71e12957f90f-720.webp",
+    "title": "Cult.",
+    "creator": "natori",
+    "cover": "public/covers/a8becc4280d0-320.webp",
+    "coverLarge": "public/covers/a8becc4280d0-720.webp",
     "categories": [
       "J-Pop"
     ]
   },
   {
-    "id": "music:Reset",
+    "id": "music:Listen to the Music 3",
     "type": "music",
-    "title": "Reset",
-    "creator": "Taichi Mukai",
-    "cover": "public/covers/ecaf6ada14cd-320.webp",
-    "coverLarge": "public/covers/ecaf6ada14cd-720.webp",
-    "categories": [
-      "R&B/Soul"
-    ]
-  },
-  {
-    "id": "music:Señorita",
-    "type": "music",
-    "title": "Señorita",
-    "creator": "Shawn Mendes & Camila Cabello",
-    "cover": "public/covers/c152f72f445f-320.webp",
-    "coverLarge": "public/covers/c152f72f445f-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Shock Value",
-    "type": "music",
-    "title": "Shock Value",
-    "creator": "Timbaland",
-    "cover": "public/covers/c293bf4ca13a-320.webp",
-    "coverLarge": "public/covers/c293bf4ca13a-720.webp",
-    "categories": [
-      "Hip-Hop/Rap"
-    ]
-  },
-  {
-    "id": "music:Smoke + Mirrors (Deluxe)",
-    "type": "music",
-    "title": "Smoke + Mirrors (Deluxe)",
-    "creator": "Imagine Dragons",
-    "cover": "public/covers/fc616d0c5754-320.webp",
-    "coverLarge": "public/covers/fc616d0c5754-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:So Far",
-    "type": "music",
-    "title": "So Far",
-    "creator": "SoulFa",
-    "cover": "public/covers/965cf0699559-320.webp",
-    "coverLarge": "public/covers/965cf0699559-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Soft Machine",
-    "type": "music",
-    "title": "Soft Machine",
-    "creator": "Teddybears",
-    "cover": "public/covers/d54ada82412c-320.webp",
-    "coverLarge": "public/covers/d54ada82412c-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:Somnium Chamber",
-    "type": "music",
-    "title": "Somnium Chamber",
-    "creator": "9m88",
-    "cover": "public/covers/e205c46c71dd-320.webp",
-    "coverLarge": "public/covers/e205c46c71dd-720.webp",
-    "categories": [
-      "R&B/Soul"
-    ]
-  },
-  {
-    "id": "music:Son Of Spergy",
-    "type": "music",
-    "title": "Son Of Spergy",
-    "creator": "Daniel Caesar",
-    "cover": "public/covers/ffc6d89be463-320.webp",
-    "coverLarge": "public/covers/ffc6d89be463-720.webp",
-    "categories": [
-      "R&B/Soul"
-    ]
-  },
-  {
-    "id": "music:St. Louis to Liverpool",
-    "type": "music",
-    "title": "St. Louis to Liverpool",
-    "creator": "Chuck Berry",
-    "cover": "public/covers/0187a810909a-320.webp",
-    "coverLarge": "public/covers/0187a810909a-720.webp",
-    "categories": [
-      "Rock"
-    ]
-  },
-  {
-    "id": "music:Starboy",
-    "type": "music",
-    "title": "Starboy",
-    "creator": "The Weeknd",
-    "cover": "public/covers/c4d70c85194d-320.webp",
-    "coverLarge": "public/covers/c4d70c85194d-720.webp",
-    "categories": [
-      "R&B"
-    ]
-  },
-  {
-    "id": "music:Start Up",
-    "type": "music",
-    "title": "Start Up",
-    "creator": "Wilfred Lau",
-    "cover": "public/covers/5c35bf090e33-320.webp",
-    "coverLarge": "public/covers/5c35bf090e33-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:Straight Up (Remastered)",
-    "type": "music",
-    "title": "Straight Up (Remastered)",
-    "creator": "Badfinger",
-    "cover": "public/covers/3159ce607801-320.webp",
-    "coverLarge": "public/covers/3159ce607801-720.webp",
-    "categories": [
-      "Rock",
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:STRAY SHEEP",
-    "type": "music",
-    "title": "STRAY SHEEP",
-    "creator": "Kenshi Yonezu",
-    "cover": "public/covers/bb3c78bdaf5f-320.webp",
-    "coverLarge": "public/covers/bb3c78bdaf5f-720.webp",
+    "title": "Listen to the Music 3",
+    "creator": "Noriyuki Makihara",
+    "cover": "public/covers/58ab35fae3a3-320.webp",
+    "coverLarge": "public/covers/58ab35fae3a3-720.webp",
     "categories": [
       "J-Pop"
     ]
@@ -8445,18 +7882,6 @@
     ]
   },
   {
-    "id": "music:The Game (Deluxe Edition)",
-    "type": "music",
-    "title": "The Game (Deluxe Edition)",
-    "creator": "Queen",
-    "cover": "public/covers/e9083dc316f7-320.webp",
-    "coverLarge": "public/covers/e9083dc316f7-720.webp",
-    "categories": [
-      "Rock",
-      "Pop"
-    ]
-  },
-  {
     "id": "music:The Hunger Games_ Mockingjay, Pt. 1 (Original Motion Picture Soundtrack)",
     "type": "music",
     "title": "The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack)",
@@ -8468,135 +7893,25 @@
     ]
   },
   {
-    "id": "music:The Life of a Showgirl",
+    "id": "music:冀西南林路行",
     "type": "music",
-    "title": "The Life of a Showgirl",
-    "creator": "Taylor Swift",
-    "cover": "public/covers/43b73ba64782-320.webp",
-    "coverLarge": "public/covers/43b73ba64782-720.webp",
+    "title": "冀西南林路行",
+    "creator": "Omnipotent Youth Society",
+    "cover": "public/covers/34c73548b0b2-320.webp",
+    "coverLarge": "public/covers/34c73548b0b2-720.webp",
     "categories": [
-      "Pop"
+      "Prog-Rock/Art Rock"
     ]
   },
   {
-    "id": "music:The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
+    "id": "music:万能青年旅店",
     "type": "music",
-    "title": "The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
-    "creator": "Various Artists",
-    "cover": "public/covers/4410b8e40a57-320.webp",
-    "coverLarge": "public/covers/4410b8e40a57-720.webp",
+    "title": "万能青年旅店",
+    "creator": "Omnipotent Youth Society",
+    "cover": "public/covers/e59f46bf26cc-320.webp",
+    "coverLarge": "public/covers/e59f46bf26cc-720.webp",
     "categories": [
-      "Soundtrack"
-    ]
-  },
-  {
-    "id": "music:The Story",
-    "type": "music",
-    "title": "The Story",
-    "creator": "Brandi Carlile",
-    "cover": "public/covers/caa7ae00d840-320.webp",
-    "coverLarge": "public/covers/caa7ae00d840-720.webp",
-    "categories": [
-      "Singer/Songwriter"
-    ]
-  },
-  {
-    "id": "music:Tough",
-    "type": "music",
-    "title": "Tough",
-    "creator": "Mika Nakashima",
-    "cover": "public/covers/8f5a2384cddd-320.webp",
-    "coverLarge": "public/covers/8f5a2384cddd-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:TRADY 1.0",
-    "type": "music",
-    "title": "TRADY 1.0",
-    "creator": "崔迪Trady",
-    "cover": "public/covers/bce2ee6510c6-320.webp",
-    "coverLarge": "public/covers/bce2ee6510c6-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Twilight",
-    "type": "music",
-    "title": "Twilight",
-    "creator": "bôa",
-    "cover": "public/covers/fc41b091e569-320.webp",
-    "coverLarge": "public/covers/fc41b091e569-720.webp",
-    "categories": [
-      "Indie Pop"
-    ]
-  },
-  {
-    "id": "music:Uchiagehanabi",
-    "type": "music",
-    "title": "Uchiagehanabi",
-    "creator": "DAOKO",
-    "cover": "public/covers/7b047df2258a-320.webp",
-    "coverLarge": "public/covers/7b047df2258a-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Ultraviolence (Deluxe)",
-    "type": "music",
-    "title": "Ultraviolence (Deluxe)",
-    "creator": "Lana Del Rey",
-    "cover": "public/covers/d62391d903a5-320.webp",
-    "coverLarge": "public/covers/d62391d903a5-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:Valentine",
-    "type": "music",
-    "title": "Valentine",
-    "creator": "G.E.M. 邓紫棋",
-    "cover": "public/covers/ff73eb489364-320.webp",
-    "coverLarge": "public/covers/ff73eb489364-720.webp",
-    "categories": [
-      "华语流行"
-    ]
-  },
-  {
-    "id": "music:Way out (With Track-by-Track Commentary)",
-    "type": "music",
-    "title": "Way out (With Track-by-Track Commentary)",
-    "creator": "Taylor Swift",
-    "cover": "public/covers/c0674feaab5c-320.webp",
-    "coverLarge": "public/covers/c0674feaab5c-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Wonderland",
-    "type": "music",
-    "title": "Wonderland",
-    "creator": "Khalil Fong",
-    "cover": "public/covers/8c1d0a085d05-320.webp",
-    "coverLarge": "public/covers/8c1d0a085d05-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:You Don't Mess Around With Jim",
-    "type": "music",
-    "title": "You Don't Mess Around With Jim",
-    "creator": "Jim Croce",
-    "cover": "public/covers/636274f255be-320.webp",
-    "coverLarge": "public/covers/636274f255be-720.webp",
-    "categories": [
-      "Singer/Songwriter"
+      "Adult Alternative"
     ]
   },
   {
@@ -8611,6 +7926,140 @@
     ]
   },
   {
+    "id": "music:空無之地",
+    "type": "music",
+    "title": "空無之地",
+    "creator": "Panther Chan",
+    "cover": "public/covers/746ec8e7c0da-320.webp",
+    "coverLarge": "public/covers/746ec8e7c0da-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:念",
+    "type": "music",
+    "title": "念",
+    "creator": "Panther Chan",
+    "cover": "public/covers/ef24c366a81c-320.webp",
+    "coverLarge": "public/covers/ef24c366a81c-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:窮人的薔薇",
+    "type": "music",
+    "title": "窮人的薔薇",
+    "creator": "Panther Chan",
+    "cover": "public/covers/b366694b41e6-320.webp",
+    "coverLarge": "public/covers/b366694b41e6-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:伸縮自如的愛",
+    "type": "music",
+    "title": "伸縮自如的愛",
+    "creator": "Panther Chan",
+    "cover": "public/covers/af81e98392c5-320.webp",
+    "coverLarge": "public/covers/af81e98392c5-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:神的不在場證明",
+    "type": "music",
+    "title": "神的不在場證明",
+    "creator": "Panther Chan",
+    "cover": "public/covers/7fd302d1a50e-320.webp",
+    "coverLarge": "public/covers/7fd302d1a50e-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Hollywood's Bleeding",
+    "type": "music",
+    "title": "Hollywood's Bleeding",
+    "creator": "Post Malone",
+    "cover": "public/covers/2796ba56b248-320.webp",
+    "coverLarge": "public/covers/2796ba56b248-720.webp",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:少女，飛 (blossom)",
+    "type": "music",
+    "title": "少女，飛 (blossom)",
+    "creator": "puppiebelly",
+    "cover": "public/covers/e658c8d8dad9-320.webp",
+    "coverLarge": "public/covers/e658c8d8dad9-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:A Night At The Opera (Deluxe Edition)",
+    "type": "music",
+    "title": "A Night At The Opera (Deluxe Edition)",
+    "creator": "Queen",
+    "cover": "public/covers/79acf4261fa4-320.webp",
+    "coverLarge": "public/covers/79acf4261fa4-720.webp",
+    "categories": [
+      "Rock",
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:The Game (Deluxe Edition)",
+    "type": "music",
+    "title": "The Game (Deluxe Edition)",
+    "creator": "Queen",
+    "cover": "public/covers/e9083dc316f7-320.webp",
+    "coverLarge": "public/covers/e9083dc316f7-720.webp",
+    "categories": [
+      "Rock",
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:鄭中基正宗 K 新曲精選",
+    "type": "music",
+    "title": "鄭中基正宗 K 新曲精選",
+    "creator": "Ronald Cheng",
+    "cover": "public/covers/a96c871c79f0-320.webp",
+    "coverLarge": "public/covers/a96c871c79f0-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Kaiju",
+    "type": "music",
+    "title": "Kaiju",
+    "creator": "sakanaction",
+    "cover": "public/covers/a16f5bbdf28f-320.webp",
+    "coverLarge": "public/covers/a16f5bbdf28f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:隕石與地球",
+    "type": "music",
+    "title": "隕石與地球",
+    "creator": "Sammi Cheng",
+    "cover": "public/covers/1fd2d05df39c-320.webp",
+    "coverLarge": "public/covers/1fd2d05df39c-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
     "id": "music:Zoo (From _Zootropolis 2_)",
     "type": "music",
     "title": "Zoo (From \"Zootropolis 2\")",
@@ -8619,6 +8068,557 @@
     "coverLarge": "public/covers/b619bbab26c5-720.webp",
     "categories": [
       "Pop"
+    ]
+  },
+  {
+    "id": "music:Illuminate (Deluxe)",
+    "type": "music",
+    "title": "Illuminate (Deluxe)",
+    "creator": "Shawn Mendes",
+    "cover": "public/covers/05ba68c63bef-320.webp",
+    "coverLarge": "public/covers/05ba68c63bef-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Señorita",
+    "type": "music",
+    "title": "Señorita",
+    "creator": "Shawn Mendes & Camila Cabello",
+    "cover": "public/covers/c152f72f445f-320.webp",
+    "coverLarge": "public/covers/c152f72f445f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:平成風俗",
+    "type": "music",
+    "title": "平成風俗",
+    "creator": "Sheena Ringo",
+    "cover": "public/covers/daec3b3328c4-320.webp",
+    "coverLarge": "public/covers/daec3b3328c4-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:無罪モラトリアム",
+    "type": "music",
+    "title": "無罪モラトリアム",
+    "creator": "Sheena Ringo",
+    "cover": "public/covers/7617e4175015-320.webp",
+    "coverLarge": "public/covers/7617e4175015-720.webp",
+    "categories": [
+      "J-pop"
+    ]
+  },
+  {
+    "id": "music:Neon Genesis Evangelion (Original Series Soundtrack)",
+    "type": "music",
+    "title": "Neon Genesis Evangelion (Original Series Soundtrack)",
+    "creator": "Shiro SAGISU",
+    "cover": "public/covers/1e91f0f1086f-320.webp",
+    "coverLarge": "public/covers/1e91f0f1086f-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Everyday Is Christmas (Deluxe Edition)",
+    "type": "music",
+    "title": "Everyday Is Christmas (Deluxe Edition)",
+    "creator": "Sia",
+    "cover": "public/covers/8d27444ef6eb-320.webp",
+    "coverLarge": "public/covers/8d27444ef6eb-720.webp",
+    "categories": [
+      "Pop",
+      "Holiday"
+    ]
+  },
+  {
+    "id": "music:安和桥北",
+    "type": "music",
+    "title": "安和桥北",
+    "creator": "Song Dongye",
+    "cover": "public/covers/8b2800b93032-320.webp",
+    "coverLarge": "public/covers/8b2800b93032-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:So Far",
+    "type": "music",
+    "title": "So Far",
+    "creator": "SoulFa",
+    "cover": "public/covers/965cf0699559-320.webp",
+    "coverLarge": "public/covers/965cf0699559-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:alone tonight",
+    "type": "music",
+    "title": "alone tonight",
+    "creator": "starfall",
+    "cover": "public/covers/e6f76ef8e445-320.webp",
+    "coverLarge": "public/covers/e6f76ef8e445-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:亲爱的你啊(电视剧《无尽的尽头》主题曲)",
+    "type": "music",
+    "title": "亲爱的你啊(电视剧《无尽的尽头》主题曲)",
+    "creator": "Suxi Ren",
+    "cover": "public/covers/ca8fa3105d3a-320.webp",
+    "coverLarge": "public/covers/ca8fa3105d3a-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Hu Guangsheng",
+    "type": "music",
+    "title": "Hu Guangsheng",
+    "creator": "Suxi Ren",
+    "cover": "public/covers/9b357d2ac638-320.webp",
+    "coverLarge": "public/covers/9b357d2ac638-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:PURE",
+    "type": "music",
+    "title": "PURE",
+    "creator": "Taichi Mukai",
+    "cover": "public/covers/0fc3baffb67f-320.webp",
+    "coverLarge": "public/covers/0fc3baffb67f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Reset",
+    "type": "music",
+    "title": "Reset",
+    "creator": "Taichi Mukai",
+    "cover": "public/covers/ecaf6ada14cd-320.webp",
+    "coverLarge": "public/covers/ecaf6ada14cd-720.webp",
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:CALMOCOBRA",
+    "type": "music",
+    "title": "CALMOCOBRA",
+    "creator": "Tananai",
+    "cover": "public/covers/d691b62d4db4-320.webp",
+    "coverLarge": "public/covers/d691b62d4db4-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:神愛世人 (合唱版)",
+    "type": "music",
+    "title": "神愛世人 (合唱版)",
+    "creator": "Tang Siu Hau & Hins Cheung",
+    "cover": "public/covers/e2c1d5f72272-320.webp",
+    "coverLarge": "public/covers/e2c1d5f72272-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:The Life of a Showgirl",
+    "type": "music",
+    "title": "The Life of a Showgirl",
+    "creator": "Taylor Swift",
+    "cover": "public/covers/43b73ba64782-320.webp",
+    "coverLarge": "public/covers/43b73ba64782-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Way out (With Track-by-Track Commentary)",
+    "type": "music",
+    "title": "Way out (With Track-by-Track Commentary)",
+    "creator": "Taylor Swift",
+    "cover": "public/covers/c0674feaab5c-320.webp",
+    "coverLarge": "public/covers/c0674feaab5c-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Soft Machine",
+    "type": "music",
+    "title": "Soft Machine",
+    "creator": "Teddybears",
+    "cover": "public/covers/d54ada82412c-320.webp",
+    "coverLarge": "public/covers/d54ada82412c-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:普渡眾生 (《破.地獄》 THE LAST DANCE 電影主題曲)",
+    "type": "music",
+    "title": "普渡眾生 (《破.地獄》 THE LAST DANCE 電影主題曲)",
+    "creator": "Terence Lam",
+    "cover": "public/covers/3db7a784e729-320.webp",
+    "coverLarge": "public/covers/3db7a784e729-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:至情志炫",
+    "type": "music",
+    "title": "至情志炫",
+    "creator": "Terry Lin",
+    "cover": "public/covers/1e0ef46488b6-320.webp",
+    "coverLarge": "public/covers/1e0ef46488b6-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:CINEMA",
+    "type": "music",
+    "title": "CINEMA",
+    "creator": "The Marías",
+    "cover": "public/covers/170ee5c935f7-320.webp",
+    "coverLarge": "public/covers/170ee5c935f7-720.webp",
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Happy Together",
+    "type": "music",
+    "title": "Happy Together",
+    "creator": "The Turtles",
+    "cover": "public/covers/db546a1beb2f-320.webp",
+    "coverLarge": "public/covers/db546a1beb2f-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Starboy",
+    "type": "music",
+    "title": "Starboy",
+    "creator": "The Weeknd",
+    "cover": "public/covers/c4d70c85194d-320.webp",
+    "coverLarge": "public/covers/c4d70c85194d-720.webp",
+    "categories": [
+      "R&B"
+    ]
+  },
+  {
+    "id": "music:Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol]",
+    "type": "music",
+    "title": "Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol]",
+    "creator": "The Weeknd & Madonna",
+    "cover": "public/covers/2da4d9602519-320.webp",
+    "coverLarge": "public/covers/2da4d9602519-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Here On Earth (Ultimate Edition)",
+    "type": "music",
+    "title": "Here On Earth (Ultimate Edition)",
+    "creator": "Tim McGraw",
+    "cover": "public/covers/2b2ca075074a-320.webp",
+    "coverLarge": "public/covers/2b2ca075074a-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Shock Value",
+    "type": "music",
+    "title": "Shock Value",
+    "creator": "Timbaland",
+    "cover": "public/covers/c293bf4ca13a-320.webp",
+    "coverLarge": "public/covers/c293bf4ca13a-720.webp",
+    "categories": [
+      "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:人人彈起 新曲+精選",
+    "type": "music",
+    "title": "人人彈起 新曲+精選",
+    "creator": "Twins",
+    "cover": "public/covers/7f959ca16b03-320.webp",
+    "coverLarge": "public/covers/7f959ca16b03-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Let's Fall In Love For The Night",
+    "type": "music",
+    "title": "Let's Fall In Love For The Night",
+    "creator": "Us The Duo",
+    "cover": "public/covers/8d7c782b99a2-320.webp",
+    "coverLarge": "public/covers/8d7c782b99a2-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:This Is The One (Remastered)",
+    "type": "music",
+    "title": "This Is The One (Remastered)",
+    "creator": "Utada",
+    "cover": "public/covers/fb7346fe3b7b-320.webp",
+    "coverLarge": "public/covers/fb7346fe3b7b-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Come Back to Me",
+    "type": "music",
+    "title": "Come Back to Me",
+    "creator": "Utada",
+    "cover": "public/covers/107ea8a27a6e-320.webp",
+    "coverLarge": "public/covers/107ea8a27a6e-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:自定義",
+    "type": "music",
+    "title": "自定義",
+    "creator": "Vae Xu",
+    "cover": "public/covers/a18035793814-320.webp",
+    "coverLarge": "public/covers/a18035793814-720.webp",
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:百代經典101 Vol.1",
+    "type": "music",
+    "title": "百代經典101 Vol.1",
+    "creator": "Various Artists",
+    "cover": "public/covers/8866165d9588-320.webp",
+    "coverLarge": "public/covers/8866165d9588-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:港樂不息 Vol.1",
+    "type": "music",
+    "title": "港樂不息 Vol.1",
+    "creator": "Various Artists",
+    "cover": "public/covers/3a2e450abef8-320.webp",
+    "coverLarge": "public/covers/3a2e450abef8-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Best Emo Songs EMO神曲精選",
+    "type": "music",
+    "title": "Best Emo Songs EMO神曲精選",
+    "creator": "Various Artists",
+    "cover": "public/covers/0ec042f31af9-320.webp",
+    "coverLarge": "public/covers/0ec042f31af9-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Karaoke Legends K歌金曲榜",
+    "type": "music",
+    "title": "Karaoke Legends K歌金曲榜",
+    "creator": "Various Artists",
+    "cover": "public/covers/d7318d58fbc2-320.webp",
+    "coverLarge": "public/covers/d7318d58fbc2-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Lonely Nights",
+    "type": "music",
+    "title": "Lonely Nights",
+    "creator": "Various Artists",
+    "cover": "public/covers/7ec215208abc-320.webp",
+    "coverLarge": "public/covers/7ec215208abc-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:LOVE 07情歌集壓軸篇",
+    "type": "music",
+    "title": "LOVE 07情歌集壓軸篇",
+    "creator": "Various Artists",
+    "cover": "public/covers/0509a61eaf06-320.webp",
+    "coverLarge": "public/covers/0509a61eaf06-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Neo-Romantic 新浪漫主義",
+    "type": "music",
+    "title": "Neo-Romantic 新浪漫主義",
+    "creator": "Various Artists",
+    "cover": "public/covers/9f9cf3d7b92c-320.webp",
+    "coverLarge": "public/covers/9f9cf3d7b92c-720.webp",
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack",
+    "type": "music",
+    "title": "Quentin Tarantino’s Django Unchained Original Motion Picture Soundtrack",
+    "creator": "Various Artists",
+    "cover": "public/covers/5132dc474825-320.webp",
+    "coverLarge": "public/covers/5132dc474825-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:the coldest and darkest season",
+    "type": "music",
+    "title": "the coldest and darkest season",
+    "creator": "Various Artists",
+    "cover": "public/covers/f17ae7eb0d06-320.webp",
+    "coverLarge": "public/covers/f17ae7eb0d06-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Y100",
+    "type": "music",
+    "title": "Y100",
+    "creator": "Various Artists",
+    "cover": "public/covers/d351fc616f46-320.webp",
+    "coverLarge": "public/covers/d351fc616f46-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:13 Reasons Why (A Netflix Original Series Soundtrack)",
+    "type": "music",
+    "title": "13 Reasons Why (A Netflix Original Series Soundtrack)",
+    "creator": "Various Artists",
+    "cover": "public/covers/85d62c0665ee-320.webp",
+    "coverLarge": "public/covers/85d62c0665ee-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:Another Day, Another Time_ Celebrating the Music of 'Inside Llewyn Davis'",
+    "type": "music",
+    "title": "Another Day, Another Time: Celebrating the Music of 'Inside Llewyn Davis'",
+    "creator": "Various Artists",
+    "cover": "public/covers/e8313a38779f-320.webp",
+    "coverLarge": "public/covers/e8313a38779f-720.webp",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
+    "type": "music",
+    "title": "The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
+    "creator": "Various Artists",
+    "cover": "public/covers/4410b8e40a57-320.webp",
+    "coverLarge": "public/covers/4410b8e40a57-720.webp",
+    "categories": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "id": "music:replica",
+    "type": "music",
+    "title": "replica",
+    "creator": "Vaundy",
+    "cover": "public/covers/71e12957f90f-320.webp",
+    "coverLarge": "public/covers/71e12957f90f-720.webp",
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Ram",
+    "type": "music",
+    "title": "Ram",
+    "creator": "Wheeler Walker Jr.",
+    "cover": "public/covers/57798442d116-320.webp",
+    "coverLarge": "public/covers/57798442d116-720.webp",
+    "categories": [
+      "Country"
+    ]
+  },
+  {
+    "id": "music:Way out",
+    "type": "music",
+    "title": "Way out",
+    "creator": "Whyte",
+    "cover": "public/covers/f3fde8a57017-320.webp",
+    "coverLarge": "public/covers/f3fde8a57017-720.webp",
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:平等路",
+    "type": "music",
+    "title": "平等路",
+    "creator": "Wild Children",
+    "cover": "public/covers/e8b4a1edda8b-320.webp",
+    "coverLarge": "public/covers/e8b4a1edda8b-720.webp",
+    "categories": [
+      "Singer/Songwriter"
+    ]
+  },
+  {
+    "id": "music:Start Up",
+    "type": "music",
+    "title": "Start Up",
+    "creator": "Wilfred Lau",
+    "cover": "public/covers/5c35bf090e33-320.webp",
+    "coverLarge": "public/covers/5c35bf090e33-720.webp",
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:跟著感覺走",
+    "type": "music",
+    "title": "跟著感覺走",
+    "creator": "Zhang Zhen Yue",
+    "cover": "public/covers/d2b1e8f9bed1-320.webp",
+    "coverLarge": "public/covers/d2b1e8f9bed1-720.webp",
+    "categories": [
+      "C-pop"
     ]
   }
 ]

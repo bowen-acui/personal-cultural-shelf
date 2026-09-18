@@ -196,3 +196,14 @@ test("Eason records lead the music shelf before other artists", () => {
   sortMediaRecords(records);
   assert.deepEqual(records.map((item) => item.id), ["music:eason", "music:other"]);
 });
+
+test("music records stay grouped by artist before titles", () => {
+  const records = [
+    { id: "music:b-title", type: "music", title: "A title", creator: "Beyoncé" },
+    { id: "music:a-later", type: "music", title: "Z title", creator: "Adele" },
+    { id: "music:a-first", type: "music", title: "A title", creator: "Adele" },
+  ];
+
+  sortMediaRecords(records);
+  assert.deepEqual(records.map((item) => item.id), ["music:a-first", "music:a-later", "music:b-title"]);
+});
