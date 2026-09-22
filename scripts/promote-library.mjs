@@ -6,8 +6,10 @@ import { pathToFileURL } from "node:url";
 const BOUNDARIES = [
   "old-data-backed-up",
   "old-covers-backed-up",
+  "old-font-backed-up",
   "candidate-data-promoted",
   "candidate-covers-promoted",
+  "candidate-font-promoted",
 ];
 
 function sha256(contents) {
@@ -42,22 +44,24 @@ export async function createManifest(root) {
     assertDirectory(path.join(resolvedRoot, "data"), "manifest data"),
     assertDirectory(path.join(resolvedRoot, "public"), "manifest public"),
     assertDirectory(coversRoot, "manifest covers"),
+    assertDirectory(path.join(resolvedRoot, "public/fonts"), "manifest fonts"),
   ]);
   const coverNames = (await readdir(coversRoot)).sort();
   const covers = [];
   for (const name of coverNames) covers.push(await fileEntry(resolvedRoot, `public/covers/${name}`));
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     data: await fileEntry(resolvedRoot, "data/media.json"),
     covers,
+    font: await fileEntry(resolvedRoot, "public/fonts/lxgw-wenkai-subset.woff2"),
   };
 }
 
 function validateManifest(value, label) {
-  if (!exactKeys(value, ["schemaVersion", "data", "covers"]) || value.schemaVersion !== 1 || !Array.isArray(value.covers)) {
+  if (!exactKeys(value, ["schemaVersion", "data", "covers", "font"]) || value.schemaVersion !== 2 || !Array.isArray(value.covers)) {
     throw new Error(`${label} has an invalid root`);
   }
-  const entries = [value.data, ...value.covers];
+  const entries = [value.data, ...value.covers, value.font];
   for (const entry of entries) {
     if (!exactKeys(entry, ["path", "size", "sha256"])
       || typeof entry.path !== "string"
@@ -68,6 +72,7 @@ function validateManifest(value, label) {
     }
   }
   if (value.data.path !== "data/media.json") throw new Error(`${label} has an invalid data path`);
+  if (value.font.path !== "public/fonts/lxgw-wenkai-subset.woff2") throw new Error(`${label} has an invalid font path`);
   const coverPaths = value.covers.map((entry) => entry.path);
   if (coverPaths.some((entry) => !/^public\/covers\/[a-f0-9]{12}-(?:320|720)\.webp$/.test(entry))) {
     throw new Error(`${label} has an invalid cover path`);
@@ -111,8 +116,10 @@ async function pathExists(target) {
 }
 
 async function rollbackPromotion(paths, state) {
+  if (state.candidateFontPromoted) await rename(paths.projectFont, paths.candidateFont);
   if (state.candidateCoversPromoted) await rename(paths.projectCovers, paths.candidateCovers);
   if (state.candidateDataPromoted) await rename(paths.projectData, paths.candidateData);
+  if (state.oldFontBackedUp) await rename(paths.backupFont, paths.projectFont);
   if (state.oldCoversBackedUp) await rename(paths.backupCovers, paths.projectCovers);
   if (state.oldDataBackedUp) await rename(paths.backupData, paths.projectData);
   await rm(paths.backupRoot, { recursive: true, force: true });
@@ -130,10 +137,13 @@ export async function promoteLibrary({ candidate, projectRoot, lock, receipt, fa
     backupRoot: path.join(resolvedProject, ".task2-library-backup"),
     backupData: path.join(resolvedProject, ".task2-library-backup/media.json"),
     backupCovers: path.join(resolvedProject, ".task2-library-backup/covers"),
+    backupFont: path.join(resolvedProject, ".task2-library-backup/lxgw-wenkai-subset.woff2"),
     projectData: path.join(resolvedProject, "data/media.json"),
     projectCovers: path.join(resolvedProject, "public/covers"),
+    projectFont: path.join(resolvedProject, "public/fonts/lxgw-wenkai-subset.woff2"),
     candidateData: path.join(candidateRoot, "data/media.json"),
     candidateCovers: path.join(candidateRoot, "public/covers"),
+    candidateFont: path.join(candidateRoot, "public/fonts/lxgw-wenkai-subset.woff2"),
   };
   const startedAt = new Date().toISOString();
   let lockHandle;
@@ -141,8 +151,10 @@ export async function promoteLibrary({ candidate, projectRoot, lock, receipt, fa
     backupCreated: false,
     oldDataBackedUp: false,
     oldCoversBackedUp: false,
+    oldFontBackedUp: false,
     candidateDataPromoted: false,
     candidateCoversPromoted: false,
+    candidateFontPromoted: false,
   };
   let committed = false;
   let receiptManaged = false;
@@ -163,12 +175,18 @@ export async function promoteLibrary({ candidate, projectRoot, lock, receipt, fa
     await rename(paths.projectCovers, paths.backupCovers);
     state.oldCoversBackedUp = true;
     if (failAfter === BOUNDARIES[1]) throw new Error(`injected failure after ${BOUNDARIES[1]}`);
+    await rename(paths.projectFont, paths.backupFont);
+    state.oldFontBackedUp = true;
+    if (failAfter === BOUNDARIES[2]) throw new Error(`injected failure after ${BOUNDARIES[2]}`);
     await rename(paths.candidateData, paths.projectData);
     state.candidateDataPromoted = true;
-    if (failAfter === BOUNDARIES[2]) throw new Error(`injected failure after ${BOUNDARIES[2]}`);
+    if (failAfter === BOUNDARIES[3]) throw new Error(`injected failure after ${BOUNDARIES[3]}`);
     await rename(paths.candidateCovers, paths.projectCovers);
     state.candidateCoversPromoted = true;
-    if (failAfter === BOUNDARIES[3]) throw new Error(`injected failure after ${BOUNDARIES[3]}`);
+    if (failAfter === BOUNDARIES[4]) throw new Error(`injected failure after ${BOUNDARIES[4]}`);
+    await rename(paths.candidateFont, paths.projectFont);
+    state.candidateFontPromoted = true;
+    if (failAfter === BOUNDARIES[5]) throw new Error(`injected failure after ${BOUNDARIES[5]}`);
 
     const promotedManifest = await createManifest(resolvedProject);
     if (JSON.stringify(promotedManifest) !== JSON.stringify(candidateManifest)) throw new Error("promoted manifest differs from candidate");
@@ -182,6 +200,7 @@ export async function promoteLibrary({ candidate, projectRoot, lock, receipt, fa
       candidateManifestSha256: sha256(JSON.stringify(candidateManifest)),
       promotedManifestSha256: sha256(JSON.stringify(promotedManifest)),
       dataSha256: promotedManifest.data.sha256,
+      fontSha256: promotedManifest.font.sha256,
       coverFiles: promotedManifest.covers.length,
       backupsRemoved: true,
     };
@@ -232,11 +251,6 @@ async function main(argv) {
   if (argv[0] === "--compare-manifests" && argv.length === 3) {
     await compareManifestFiles(argv[1], argv[2]);
     process.stdout.write("Manifest comparison PASS\n");
-    return;
-  }
-  if (argv[0] === "--self-test" && argv.length === 3) {
-    const { runPromoteLibrarySelfTest } = await import("../.omo/evidence/personal-cultural-shelf-smoothness-audit/self-test-promote-library.mjs");
-    await runPromoteLibrarySelfTest({ tmpRoot: option(argv, "--tmp-root"), promoteLibrary, promoterPath: process.argv[1] });
     return;
   }
   if (argv.length !== 8) throw new Error("unknown or malformed arguments");

@@ -51,6 +51,12 @@ test("verify-only rejects a missing font instead of silently skipping", () => {
   assert.match(result.stderr, /not found|ENOENT/i);
 });
 
+test("default mode verifies the committed WOFF2 when the source TTF is unavailable", () => {
+  const result = runSubsetFont();
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /Verified existing WOFF2/);
+});
+
 test("self-test-missing proves an omitted codepoint fails in an isolated root", async () => {
   const tmpRoot = await mkdtemp(path.join(os.tmpdir(), "shelf-subset-test-"));
   try {

@@ -43,6 +43,13 @@ test("film scatter uses a wider dramatic spread than a book pile", () => {
   assert.ok(layout.every((item) => item.width >= 130));
 });
 
+test("layouts use a record aspect ratio instead of cropping every cover to a type fallback", () => {
+  const layout = createScatterLayout([{ id: "film:wide", title: "Wide", aspectRatio: 16 / 9 }], { width: 1280 }, 0, "film");
+  assert.equal(layout[0].ratio, 16 / 9);
+  assert.equal(createTidyLayout([{ id: "music:tall", title: "Tall", aspectRatio: 1 / 2 }], { width: 768 }, "music")[0].ratio, 1 / 2);
+  assert.equal(createVortexLayout([{ id: "book:square", title: "Square", aspectRatio: 1 }], { width: 768, height: 700 }, "book")[0].ratio, 1);
+});
+
 const manyOf = (type, count) =>
   Array.from({ length: count }, (_, index) => ({ id: `${type}:${index}`, title: `${type} ${index}` }));
 

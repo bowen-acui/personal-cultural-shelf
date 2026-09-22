@@ -145,11 +145,11 @@ async function main() {
     try {
       await access(defaultSourceFont);
     } catch {
-      process.stderr.write("public/fonts/lxgw-wenkai-regular.ttf not found — skipping font subset.\n");
-      process.stderr.write("Restore it with: git show 3fd8d17:public/fonts/lxgw-wenkai-regular.ttf > public/fonts/lxgw-wenkai-regular.ttf\n");
+      const result = await verifyFont({ fontPath: defaultOutputFont, mediaPath: defaultMediaFile });
+      process.stdout.write(`Verified existing WOFF2 for ${result.records} records because source TTF is unavailable.\n`);
       return;
     }
-    await buildSubset({ sourcePath: defaultSourceFont, mediaPath: defaultMediaFile, outputPath: defaultOutputFont });
+    await buildSubset({ sourcePath: defaultSourceFont, mediaPath: defaultMediaFile, outputPath: defaultOutputFont, verify: true });
   }
 }
 

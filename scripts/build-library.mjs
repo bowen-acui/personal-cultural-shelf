@@ -6,11 +6,11 @@ import sharp from "sharp";
 
 import {
   coverDestinationName,
-  isDisplayableBook,
-  isDisplayableMedia,
   orphanCoverNames,
   parseFrontmatter,
+  artistRank,
   pinnedRank,
+  publicationDecision,
   resolveVaultRoot,
   sortMediaRecords,
   toPublicMedia,
@@ -45,6 +45,8 @@ async function copyCover(sourceCover) {
   const contents = await readFile(resolvedCover);
   const outputName = coverDestination(resolvedCover, contents);
   if (!outputName) return null;
+  const dimensions = await sharp(contents).metadata();
+  if (!dimensions.width || !dimensions.height) throw new Error("invalid-cover");
   const smallPath = path.join(coversDirectory, `${outputName}-320.webp`);
   const largePath = path.join(coversDirectory, `${outputName}-720.webp`);
   // outputName 是内容哈希，同名即同内容：两档产物都在就没有重编码的必要。
@@ -62,6 +64,7 @@ async function copyCover(sourceCover) {
   return {
     small: `public/covers/${outputName}-320.webp`,
     large: `public/covers/${outputName}-720.webp`,
+    aspectRatio: Number((dimensions.width / dimensions.height).toFixed(6)),
   };
 }
 
@@ -69,19 +72,37 @@ async function buildSource(source) {
   const vaultRoot = resolveVaultRoot();
   const directory = path.join(vaultRoot, source.directory);
   const records = [];
+  const report = [];
   for (const filename of (await readdir(directory)).filter((name) => name.endsWith(".md"))) {
     const markdown = await readFile(path.join(directory, filename), "utf8");
     const metadata = parseFrontmatter(markdown);
-    const displayable = source.type === "book" ? isDisplayableBook(metadata) : isDisplayableMedia(metadata);
-    if (!displayable) continue;
+    const decision = publicationDecision(source.type, metadata);
+    if (decision.status === "skip") {
+      report.push({ type: source.type, file: filename, ...decision });
+      continue;
+    }
+    if (decision.status === "error") {
+      report.push({ type: source.type, file: filename, ...decision });
+      continue;
+    }
     try {
       const covers = await copyCover(path.resolve(vaultRoot, metadata.封面));
-      if (covers) records.push({ ...toPublicMedia(filename, metadata, covers.small, source.type, covers.large), pinned: pinnedRank(metadata) });
+      if (!covers) {
+        report.push({ type: source.type, file: filename, status: "error", reason: "missing-cover-file" });
+        continue;
+      }
+      records.push({
+        ...toPublicMedia(filename, metadata, covers.small, source.type, covers.large, covers.aspectRatio),
+        pinned: pinnedRank(metadata),
+        ...(source.type === "music" ? { artistRank: artistRank(metadata) } : {}),
+      });
+      report.push({ type: source.type, file: filename, status: "include", reason: "ready" });
     } catch (error) {
-      if (error.code !== "ENOENT") throw error;
+      if (error.code === "ENOENT") report.push({ type: source.type, file: filename, status: "error", reason: "missing-cover-file" });
+      else report.push({ type: source.type, file: filename, status: "error", reason: "invalid-cover" });
     }
   }
-  return records;
+  return { records, report };
 }
 
 async function buildLibrary() {
@@ -91,10 +112,24 @@ async function buildLibrary() {
   await mkdir(coversDirectory, { recursive: true });
   await mkdir(path.dirname(mediaFile), { recursive: true });
   const collections = [];
-  for (const source of sources) collections.push(...await buildSource(source));
+  const reports = [];
+  for (const source of sources) {
+    const built = await buildSource(source);
+    collections.push(...built.records);
+    reports.push(...built.report);
+  }
+  const included = reports.filter((item) => item.status === "include").length;
+  const skipped = reports.filter((item) => item.status === "skip").length;
+  const errors = reports.filter((item) => item.status === "error");
+  process.stdout.write(`Source audit: included=${included} skipped=${skipped} errors=${errors.length}\n`);
+  errors.forEach((item) => process.stdout.write(`ERROR ${item.type}/${item.file} ${item.reason}\n`));
+  if (errors.length > 0) throw new Error(`Source audit failed with ${errors.length} blocking error(s)`);
   validateUniqueRecords(collections);
   sortMediaRecords(collections);
-  for (const record of collections) delete record.pinned;
+  for (const record of collections) {
+    delete record.pinned;
+    delete record.artistRank;
+  }
   const temporaryFile = `${mediaFile}.tmp`;
   await writeFile(temporaryFile, `${JSON.stringify(collections, null, 2)}\n`, "utf8");
   await rename(temporaryFile, mediaFile);

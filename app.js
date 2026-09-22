@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=17";
-import { loadMediaData } from "./lib/media-data.js?v=17";
-import { createPosterCanvas } from "./lib/poster.js?v=17";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=17";
-import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=17";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=18";
+import { loadMediaData } from "./lib/media-data.js?v=18";
+import { createPosterCanvas } from "./lib/poster.js?v=18";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=18";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=18";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -19,6 +19,7 @@ const controls = document.querySelector("#shelf-controls");
 const filterPanel = document.querySelector("#filter-panel");
 const workDialog = document.querySelector("#work-dialog");
 const workFlip = document.querySelector("#work-flip");
+const posterDialog = document.querySelector("#poster-dialog");
 const filterAction = document.querySelector('[data-action="filter"]');
 const layoutAction = document.querySelector('[data-action="layout"]');
 const shareAction = document.querySelector('[data-action="share"]');
@@ -26,13 +27,17 @@ let transientTrigger = { owner: null, trigger: null };
 let posterUrl = null;
 const COVER_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 let coverObserver = null;
-let cancelIdleHydration = null;
 let hydrationGeneration = 0;
 let layoutGeneration = 0;
 let layoutReleaseTimer = 0;
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
 function monthLabel(item) { return item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : ""; }
+function fallbackRatio(type) { return type === "music" ? 1 : 2 / 3; }
+function itemRatio(item) {
+  const ratio = Number(item?.aspectRatio);
+  return Number.isFinite(ratio) && ratio > 0 ? ratio : fallbackRatio(item?.type);
+}
 
 function stageViewport() {
   return { top: scrollY - stage.offsetTop, height: innerHeight };
@@ -66,38 +71,7 @@ function cancelHydrationWork() {
   hydrationGeneration += 1;
   coverObserver?.disconnect();
   coverObserver = null;
-  cancelIdleHydration?.();
-  cancelIdleHydration = null;
   return hydrationGeneration;
-}
-
-function queueVortexHydration(objects, generation) {
-  let offset = 0;
-  const runBatch = () => {
-    if (generation !== hydrationGeneration) return;
-    const batch = objects.slice(offset, offset + 12);
-    offset += batch.length;
-    batch.forEach((object) => {
-      if (object.isConnected && stage.contains(object)) hydrateObject(object);
-    });
-    if (offset < objects.length) scheduleBatch();
-  };
-  const scheduleBatch = () => {
-    let cancelScheduled;
-    const callback = () => {
-      if (cancelIdleHydration === cancelScheduled) cancelIdleHydration = null;
-      runBatch();
-    };
-    if (typeof requestIdleCallback === "function") {
-      const handle = requestIdleCallback(callback, { timeout: 250 });
-      cancelScheduled = () => cancelIdleCallback(handle);
-    } else {
-      const handle = setTimeout(callback, 32);
-      cancelScheduled = () => clearTimeout(handle);
-    }
-    cancelIdleHydration = cancelScheduled;
-  };
-  if (objects.length) scheduleBatch();
 }
 
 function refreshHydration(objects, placements) {
@@ -111,7 +85,6 @@ function refreshHydration(objects, placements) {
   }
   if (state.mode === "vortex") {
     topVortexLayerIndexes(placements).forEach((index) => hydrateObject(objects[index]));
-    queueVortexHydration(objects.filter((object) => object.querySelector("img")?.dataset.src), generation);
     return;
   }
   placements.forEach((placement, index) => {
@@ -261,7 +234,7 @@ function createObject(item, index, placement) {
   image.sizes = state.type === "music" ? "(max-width: 639px) 20vw, 8vw" : "(max-width: 639px) 25vw, 10vw";
   image.alt = label(item);
   image.width = 320;
-  image.height = state.type === "music" ? 320 : 480;
+  image.height = Math.round(320 / itemRatio(item));
   image.decoding = "async";
   image.fetchPriority = "auto";
   const information = document.createElement("span");
@@ -291,7 +264,7 @@ function openWork(item, trigger) {
   rememberTrigger("work", trigger);
   document.querySelector("#poster-dialog")?.close();
   workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
-  workFlip.style.setProperty("--detail-ratio", item.type === "music" ? "1" : "2 / 3");
+  workFlip.style.setProperty("--detail-ratio", itemRatio(item));
   const cover = document.querySelector("#work-cover");
   if (item.coverLarge) cover.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
   else cover.removeAttribute("srcset");
@@ -382,8 +355,16 @@ function filter(category) {
     pill.classList.toggle("is-active", active);
     pill.setAttribute("aria-pressed", String(active));
   });
-  document.querySelector('[data-action="filter"]').textContent = category === "全部" ? "筛选" : `${category} ${matches}`;
+  updateFilterActionLabel(category, matches);
   applyLayout();
+}
+
+function updateFilterActionLabel(category = state.category, matches = category === "全部" ? state.items.length : state.items.filter((item) => item.categories.includes(category)).length) {
+  const action = document.querySelector('[data-action="filter"]');
+  if (!action) return;
+  const mobile = matchMedia("(max-width: 639px)").matches;
+  action.textContent = category === "全部" ? "筛选" : mobile ? `筛选 ${matches}` : `${category} ${matches}`;
+  action.setAttribute("aria-label", category === "全部" ? "筛选分类" : `当前筛选：${category}，${matches}件作品`);
 }
 
 function renderFilters() {
@@ -402,7 +383,7 @@ function closeTransientStates() {
   closeFilter({ restoreFocus: false });
   if (state.picking) startPicking(false, { restoreFocus: false });
   closeWork({ restoreFocus: false });
-  document.querySelector("#poster-dialog")?.close();
+  closePoster({ restoreFocus: false });
   clearAllTransientOwnership();
 }
 
@@ -452,6 +433,7 @@ function updatePickStatus() {
 }
 
 async function createPoster() {
+  const posterTrigger = transientTrigger.owner === "share" ? transientTrigger.trigger : shareAction;
   const items = state.picked.map((index) => {
     const object = stage.querySelector(`[data-index="${index}"]`);
     return { image: hydrateObject(object) };
@@ -486,6 +468,7 @@ async function createPoster() {
   if (posterUrl) URL.revokeObjectURL(posterUrl);
   posterUrl = URL.createObjectURL(blob);
   startPicking(false, { restoreFocus: false });
+  rememberTrigger("poster", posterTrigger);
   document.querySelector("#poster-preview").src = posterUrl;
   document.querySelector("#poster-download").href = posterUrl;
   const share = document.querySelector("#poster-share");
@@ -493,7 +476,13 @@ async function createPoster() {
   const canShare = typeof navigator.canShare === "function" && navigator.canShare({ files: [file] });
   share.hidden = !canShare;
   share.onclick = () => navigator.share({ files: [file] }).catch(() => {});
-  document.querySelector("#poster-dialog").showModal();
+  posterDialog.showModal();
+}
+
+function closePoster({ restoreFocus = false } = {}) {
+  const trigger = clearTrigger("poster");
+  posterDialog?.close();
+  if (restoreFocus && trigger?.isConnected) trigger.focus();
 }
 
 function enableDrag(object, event) {
@@ -617,7 +606,9 @@ document.querySelector("#copy-link").addEventListener("click", async (event) => 
   setTimeout(() => { button.textContent = "复制本站链接"; }, 1600);
 });
 document.querySelectorAll(".dialog-close").forEach((button) => button.addEventListener("click", () => {
-  button.closest("dialog").close();
+  const dialog = button.closest("dialog");
+  if (dialog?.id === "poster-dialog") closePoster({ restoreFocus: true });
+  else dialog?.close();
 }));
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true, morph: true })));
 workFlip.addEventListener("click", () => setFlipped(!workFlip.classList.contains("is-flipped")));
@@ -629,11 +620,8 @@ document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
   if (filterPanel.hidden === false) closeFilter({ restoreFocus: true });
   else if (state.picking) startPicking(false);
-  else if (document.querySelector("#poster-dialog")?.open) {
-    document.querySelector("#poster-dialog").close();
-    restoreTrigger("share");
-  }
+  else if (posterDialog?.open) closePoster({ restoreFocus: true });
 });
 let resizeFrame = 0;
-addEventListener("resize", () => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(applyLayout); });
+addEventListener("resize", () => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(() => { updateFilterActionLabel(); applyLayout(); }); });
 load();

@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import * as buildUtils from "../lib/build-utils.mjs";
 
 import {
   isDisplayableBook,
@@ -61,6 +62,25 @@ test("isDisplayableBook requires a cover and completed reading evidence", () => 
     false,
   );
   assert.equal(isDisplayableBook({ 状态: "已读" }), false);
+});
+
+test("completed books without a cover are blocking source errors", () => {
+  assert.deepEqual(buildUtils.publicationDecision("book", { 书名: "王川宝典", 状态: "读完待整理" }), {
+    status: "error",
+    reason: "missing-cover",
+  });
+});
+
+test("unfinished books remain reported skips instead of errors", () => {
+  assert.deepEqual(buildUtils.publicationDecision("book", { 书名: "未读完", 状态: "在读" }), {
+    status: "skip",
+    reason: "not-completed",
+  });
+});
+
+test("film and music notes require a public title and cover", () => {
+  assert.equal(buildUtils.publicationDecision("film", { 名称: "一一" }).reason, "missing-cover");
+  assert.equal(buildUtils.publicationDecision("music", { 封面: "照片/a.jpg" }).reason, "missing-title");
 });
 
 test("completedMonth keeps only the year and month", () => {
@@ -144,6 +164,12 @@ test("media records use the folder type and never expose dates", () => {
   assert.equal(isDisplayableMedia({ 名称: "", 封面: "cover.jpg" }), false);
 });
 
+test("media records preserve the source cover aspect ratio when available", () => {
+  const record = toPublicMedia("一一.md", { 名称: "一一", 封面: "cover.jpg" }, "covers/one-one.jpg", "film", "covers/one-one-large.jpg", 16 / 9);
+  assert.equal(record.aspectRatio, 16 / 9);
+  assert.equal("aspectRatio" in toPublicMedia("一一.md", { 名称: "一一" }, "covers/one-one.jpg", "film"), false);
+});
+
 test("vault root is portable and duplicate ids are rejected", () => {
   assert.equal(resolveVaultRoot({}, "/Users/example"), "/Users/example/Documents/obsidian/阿崔");
   assert.equal(resolveVaultRoot({ OBSIDIAN_VAULT: "/vault" }, "/Users/example"), "/vault");
@@ -206,4 +232,43 @@ test("music records stay grouped by artist before titles", () => {
 
   sortMediaRecords(records);
   assert.deepEqual(records.map((item) => item.id), ["music:a-first", "music:a-later", "music:b-title"]);
+});
+
+test("music artist aliases share one stable sorting key", () => {
+  assert.equal(buildUtils.musicArtistKey("陈嫺静"), buildUtils.musicArtistKey("陳嫺靜"));
+  assert.equal(buildUtils.musicArtistKey("Jay Chou"), buildUtils.musicArtistKey("周杰倫"));
+  assert.equal(buildUtils.musicArtistKey("Hikaru Utada"), buildUtils.musicArtistKey("Utada"));
+  assert.equal(buildUtils.musicArtistKey("G.E.M."), buildUtils.musicArtistKey("G.E.M. 邓紫棋"));
+  assert.equal(buildUtils.musicArtistKey("Daoko"), buildUtils.musicArtistKey("DAOKO"));
+  assert.equal(buildUtils.musicArtistKey("Billie Eilish & Khalid"), buildUtils.musicArtistKey("Billie Eilish"));
+});
+
+test("artistRank separates artist group order from album pin order", () => {
+  assert.equal(buildUtils.artistRank({ 艺人顺序: "0" }), 0);
+  assert.equal(buildUtils.artistRank({ 艺人顺序: "3" }), 3);
+  assert.equal(buildUtils.artistRank({}), 99);
+  assert.equal(buildUtils.artistRank({ 艺人顺序: "第一" }), 99);
+});
+
+test("music shelf orders prioritized artist groups before unranked artists", () => {
+  const records = [
+    { id: "music:other", type: "music", title: "A", creator: "Adele" },
+    { id: "music:chen-variant", type: "music", title: "B", creator: "陳嫺靜", artistRank: 3 },
+    { id: "music:eason", type: "music", title: "C", creator: "Eason Chan", artistRank: 0 },
+    { id: "music:billie-collab", type: "music", title: "D", creator: "Billie Eilish & Khalid", artistRank: 2 },
+    { id: "music:gareth", type: "music", title: "E", creator: "Gareth.T", artistRank: 1 },
+    { id: "music:billie", type: "music", title: "F", creator: "Billie Eilish", artistRank: 2 },
+    { id: "music:eason-variant", type: "music", title: "G", creator: "陳奕迅", artistRank: 0 },
+  ];
+
+  sortMediaRecords(records);
+  assert.deepEqual(records.map((item) => item.id), [
+    "music:eason",
+    "music:eason-variant",
+    "music:gareth",
+    "music:billie-collab",
+    "music:billie",
+    "music:chen-variant",
+    "music:other",
+  ]);
 });

@@ -64,6 +64,18 @@ test("validateMediaData still throws when the payload is not an array", () => {
   assert.throws(() => validateMediaData({ id: "book:a" }), /不是数组/);
 });
 
+test("validateMediaData rejects invalid cover aspect ratios", () => {
+  assert.deepEqual(validateMediaData([good("book:ok", { aspectRatio: 2 / 3 })]).map((item) => item.id), ["book:ok"]);
+  const { result, warnings } = captureWarnings(() => validateMediaData([
+    good("book:zero", { aspectRatio: 0 }),
+    good("book:nan", { aspectRatio: "2/3" }),
+    good("book:ok", { aspectRatio: 1 }),
+  ]));
+  assert.deepEqual(result.map((item) => item.id), ["book:ok"]);
+  assert.match(warnings[0], /book:zero/);
+  assert.match(warnings[0], /book:nan/);
+});
+
 test("the build-time 置顶 field never reaches the public payload", async () => {
   const records = JSON.parse(await readFile(new URL("../data/media.json", import.meta.url), "utf8"));
   assert.ok(records.every((item) => !Object.hasOwn(item, "pinned") && !Object.hasOwn(item, "置顶")));

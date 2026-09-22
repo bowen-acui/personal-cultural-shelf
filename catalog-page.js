@@ -1,5 +1,5 @@
-import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=17";
-import { loadMediaData } from "./lib/media-data.js?v=17";
+import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=18";
+import { loadMediaData } from "./lib/media-data.js?v=18";
 
 const labels = { book: "书", film: "影", music: "音" };
 const grid = document.querySelector("#catalog-grid");
@@ -8,6 +8,12 @@ const type = document.querySelector("#catalog-type");
 const category = document.querySelector("#catalog-category");
 const status = document.querySelector("#catalog-status");
 let data = [];
+let renderTimer = 0;
+
+function ratioFor(item) {
+  const ratio = Number(item.aspectRatio);
+  return Number.isFinite(ratio) && ratio > 0 ? ratio : item.type === "music" ? 1 : 2 / 3;
+}
 
 function card(item) {
   const article = document.createElement("article");
@@ -19,7 +25,7 @@ function card(item) {
   image.sizes = "(max-width: 639px) 42vw, 180px";
   image.alt = [item.title, item.creator].filter(Boolean).join("，");
   image.width = 320;
-  image.height = item.type === "music" ? 320 : 480;
+  image.height = Math.round(320 / ratioFor(item));
   image.loading = "lazy";
   const title = document.createElement("strong");
   const meta = document.createElement("small");
@@ -89,7 +95,7 @@ async function load() {
   }
 }
 
-search.addEventListener("input", render);
+search.addEventListener("input", () => { clearTimeout(renderTimer); renderTimer = setTimeout(render, 120); });
 type.addEventListener("change", () => { renderCategories(); render(); });
 category.addEventListener("change", render);
 load();

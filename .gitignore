@@ -1,6 +1,7 @@
 .worktrees/
 qa/
 node_modules/
+test-results/
 research/reference/
 public/fonts/*.ttf
 .claude/

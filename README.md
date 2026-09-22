@@ -7,6 +7,7 @@
 ## 本地运行
 
 ```bash
+npm run data:check
 npm run build:data
 python3 -m http.server 4173
 ```
@@ -50,11 +51,11 @@ npm run build:data
 
 评分使用 frontmatter 字段 `评分: 1` 到 `评分: 5`；不填写时，详情卡显示五个空点。
 
-影、音的置顶顺序由 frontmatter 字段 `置顶:` 决定，数字越小越靠前，不填写的排在所有置顶之后（书按评分排序，不看这个字段）。想换偏好只改笔记，不用改代码。该字段只参与构建时排序，不会写进 `data/media.json`。
+书籍按评分从 5 星到 1 星排列。音乐先按 frontmatter 字段 `艺人顺序:` 分组（陈奕迅 `0`、Gareth.T `1`、Billie Eilish `2`、陈娴静 `3`），同一艺人组内再按 `置顶:` 与标题排列；未填写艺人顺序的组排在后面。影、音的组内置顶顺序由 frontmatter 字段 `置顶:` 决定，数字越小越靠前，不填写的排在所有置顶之后。想换偏好只改笔记，不用改代码；这些字段只参与构建时排序，不会写进 `data/media.json`。
 
 如果 Obsidian 不在默认位置，可以通过 `OBSIDIAN_VAULT=/path/to/阿崔 npm run build:data` 指定只读数据源。
 
-生成结果位于 `data/media.json` 与 `public/covers/`。构建会为每张封面生成 320px 与 720px 的 WebP 响应式资源，页面通过 `srcset` 按设备选择尺寸。字体文件（包含详情背面的霞鹜文楷）与 favicon 也随站点本地发布，因此运行时不依赖第三方字体 CDN。将代码推送到 GitHub 后，可以使用任意静态托管服务发布。
+生成结果位于 `data/media.json` 与 `public/covers/`。构建会为每张封面生成 320px 与 720px 的 WebP 响应式资源，并记录真实封面宽高比，页面通过 `srcset` 按设备选择尺寸。`npm run data:check` 只构建临时候选并在存在已完成但缺封面的 Obsidian 笔记时失败；`npm run build:data` 只有候选通过后才原子替换正式数据、封面与字体。字体文件（包含详情背面的霞鹜文楷）与 favicon 也随站点本地发布，因此运行时不依赖第三方字体 CDN。将代码推送到 GitHub 后，可以使用任意静态托管服务发布。
 
 ## 参考站扫描
 
