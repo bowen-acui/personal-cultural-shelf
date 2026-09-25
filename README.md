@@ -49,6 +49,14 @@ grep -rn '?v=' *.html *.css app.js catalog-page.js lib/
 npm run build:data
 ```
 
+遇到确认没有正式封面的书籍时，在书籍笔记中运行下列命令，会按 `书名` 生成只显示书名的默认封面，并把图片路径写回该笔记的 `封面` 字段：
+
+```bash
+node scripts/generate-default-book-cover.mjs "Project：存放项目的必要信息/閱讀書單 Book Tracker/書櫃/书名.md"
+```
+
+只对明确确认没有正式封面的笔记使用；已有封面或路径损坏时先核对来源，不要用默认图覆盖。
+
 评分使用 frontmatter 字段 `评分: 1` 到 `评分: 5`；不填写时，详情卡显示五个空点。
 
 书籍按评分从 5 星到 1 星排列。音乐先按 frontmatter 字段 `艺人顺序:` 分组（陈奕迅 `0`、Gareth.T `1`、Billie Eilish `2`、陈娴静 `3`），同一艺人组内再按 `置顶:` 与标题排列；未填写艺人顺序的组排在后面。影、音的组内置顶顺序由 frontmatter 字段 `置顶:` 决定，数字越小越靠前，不填写的排在所有置顶之后。想换偏好只改笔记，不用改代码；这些字段只参与构建时排序，不会写进 `data/media.json`。

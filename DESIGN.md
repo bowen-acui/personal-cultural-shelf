@@ -82,6 +82,8 @@ Base unit: 4px.
 - **Accessibility**: keyboard reachable, visible focus ring, image alt contains title and author, pressed state reflects mobile selection.
 - **Motion**: scatter touch feedback is 180ms without overshoot; layout modes retain their editorial spring; reduced-motion mode makes the transition immediate.
 
+For a book confirmed to have no formal cover, the Obsidian workflow uses a title-only 2:3 cover on the same warm paper field. Each title gets its own rendered WebP, and the note stores its image path.
+
 ### Information Slip
 
 - **Structure**: title, creator, books' completion month, optional categories.

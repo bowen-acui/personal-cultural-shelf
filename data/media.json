@@ -6,6 +6,7 @@
     "creator": "[美] 沃伦·巴菲特",
     "cover": "public/covers/7365885c810e-320.webp",
     "coverLarge": "public/covers/7365885c810e-720.webp",
+    "aspectRatio": 0.670732,
     "categories": [
       "投资"
     ],
@@ -19,6 +20,7 @@
     "creator": "陈忠实",
     "cover": "public/covers/0a2841013496-320.webp",
     "coverLarge": "public/covers/0a2841013496-720.webp",
+    "aspectRatio": 0.676755,
     "categories": [
       "小说"
     ],
@@ -32,6 +34,7 @@
     "creator": "王小波",
     "cover": "public/covers/d9a519ee2983-320.webp",
     "coverLarge": "public/covers/d9a519ee2983-720.webp",
+    "aspectRatio": 0.732394,
     "categories": [
       "随笔"
     ],
@@ -45,6 +48,7 @@
     "creator": "刘和平",
     "cover": "public/covers/d9cf2f1aea09-320.webp",
     "coverLarge": "public/covers/d9cf2f1aea09-720.webp",
+    "aspectRatio": 0.722892,
     "categories": [
       "小说"
     ],
@@ -58,6 +62,7 @@
     "creator": "纳西姆•尼古拉斯•塔勒布",
     "cover": "public/covers/9a5e9650494a-320.webp",
     "coverLarge": "public/covers/9a5e9650494a-720.webp",
+    "aspectRatio": 0.717131,
     "categories": [
       "投资"
     ],
@@ -71,6 +76,7 @@
     "creator": "纳西姆•尼古拉斯•塔勒布",
     "cover": "public/covers/38ccbb5627c5-320.webp",
     "coverLarge": "public/covers/38ccbb5627c5-720.webp",
+    "aspectRatio": 0.759494,
     "categories": [
       "投资"
     ],
@@ -84,6 +90,7 @@
     "creator": "余华",
     "cover": "public/covers/248fa594d30d-320.webp",
     "coverLarge": "public/covers/248fa594d30d-720.webp",
+    "aspectRatio": 0.694,
     "categories": [
       "小说"
     ],
@@ -97,6 +104,7 @@
     "creator": "[美] 孔飞力",
     "cover": "public/covers/0c4129d38142-320.webp",
     "coverLarge": "public/covers/0c4129d38142-720.webp",
+    "aspectRatio": 0.65043,
     "categories": [
       "历史"
     ],
@@ -110,6 +118,7 @@
     "creator": "芭芭拉•明托",
     "cover": "public/covers/91e28ac9c553-320.webp",
     "coverLarge": "public/covers/91e28ac9c553-720.webp",
+    "aspectRatio": 0.665845,
     "categories": [
       "个人成长"
     ],
@@ -123,6 +132,7 @@
     "creator": "[法] 阿尔贝·加缪",
     "cover": "public/covers/117f21c4f13b-320.webp",
     "coverLarge": "public/covers/117f21c4f13b-720.webp",
+    "aspectRatio": 0.694981,
     "categories": [
       "小说"
     ],
@@ -136,6 +146,7 @@
     "creator": "毛泽东",
     "cover": "public/covers/fd72774688a9-320.webp",
     "coverLarge": "public/covers/fd72774688a9-720.webp",
+    "aspectRatio": 0.698,
     "categories": [
       "历史"
     ],
@@ -149,6 +160,7 @@
     "creator": "埃里克·乔根森",
     "cover": "public/covers/e0d0ec24e09d-320.webp",
     "coverLarge": "public/covers/e0d0ec24e09d-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "个人成长",
       "投资"
@@ -163,6 +175,7 @@
     "creator": "斯蒂芬·茨威格",
     "cover": "public/covers/8e708efcfabe-320.webp",
     "coverLarge": "public/covers/8e708efcfabe-720.webp",
+    "aspectRatio": 0.698577,
     "categories": [
       "小说"
     ],
@@ -176,6 +189,7 @@
     "creator": "周岭",
     "cover": "public/covers/89c46a570f5c-320.webp",
     "coverLarge": "public/covers/89c46a570f5c-720.webp",
+    "aspectRatio": 0.739726,
     "categories": [
       "个人成长"
     ],
@@ -189,6 +203,7 @@
     "creator": "周岭",
     "cover": "public/covers/f42aa07b83a9-320.webp",
     "coverLarge": "public/covers/f42aa07b83a9-720.webp",
+    "aspectRatio": 0.751043,
     "categories": [
       "个人成长"
     ],
@@ -202,6 +217,7 @@
     "creator": "[美] 莫提默·艾德勒 / 查尔斯·范多伦",
     "cover": "public/covers/102a7f5d0db9-320.webp",
     "coverLarge": "public/covers/102a7f5d0db9-720.webp",
+    "aspectRatio": 0.735294,
     "categories": [
       "方法论"
     ],
@@ -215,6 +231,7 @@
     "creator": "刘慈欣",
     "cover": "public/covers/50583e1811a3-320.webp",
     "coverLarge": "public/covers/50583e1811a3-720.webp",
+    "aspectRatio": 0.7,
     "categories": [
       "科幻"
     ],
@@ -228,6 +245,7 @@
     "creator": "沃尔特·艾萨克森",
     "cover": "public/covers/699beb49e132-320.webp",
     "coverLarge": "public/covers/699beb49e132-720.webp",
+    "aspectRatio": 0.752542,
     "categories": [
       "个人传记"
     ],
@@ -241,10 +259,25 @@
     "creator": "[美] 黄仁宇",
     "cover": "public/covers/b59edefd6093-320.webp",
     "coverLarge": "public/covers/b59edefd6093-720.webp",
+    "aspectRatio": 0.672043,
     "categories": [
       "历史"
     ],
     "completedMonth": "2019-02",
+    "rating": 5
+  },
+  {
+    "id": "book:王川宝典",
+    "type": "book",
+    "title": "王川宝典",
+    "creator": "王川",
+    "cover": "public/covers/f91e8f810c7f-320.webp",
+    "coverLarge": "public/covers/f91e8f810c7f-720.webp",
+    "aspectRatio": 0.666667,
+    "categories": [
+      "投资"
+    ],
+    "completedMonth": "2024-02",
     "rating": 5
   },
   {
@@ -254,6 +287,7 @@
     "creator": "王小波",
     "cover": "public/covers/4521590f1f13-320.webp",
     "coverLarge": "public/covers/4521590f1f13-720.webp",
+    "aspectRatio": 0.647668,
     "categories": [
       "小说"
     ],
@@ -267,6 +301,7 @@
     "creator": "赫尔曼·黑塞",
     "cover": "public/covers/8f21b4565b42-320.webp",
     "coverLarge": "public/covers/8f21b4565b42-720.webp",
+    "aspectRatio": 0.733696,
     "categories": [
       "哲学"
     ],
@@ -280,6 +315,7 @@
     "creator": "吴思",
     "cover": "public/covers/f66bc7d7896d-320.webp",
     "coverLarge": "public/covers/f66bc7d7896d-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "历史"
     ],
@@ -293,6 +329,7 @@
     "creator": "豆豆",
     "cover": "public/covers/529812565c51-320.webp",
     "coverLarge": "public/covers/529812565c51-720.webp",
+    "aspectRatio": 0.668896,
     "categories": [
       "小说"
     ],
@@ -306,6 +343,7 @@
     "creator": "[美] 罗伯特·西奥迪尼",
     "cover": "public/covers/cc0666c2f430-320.webp",
     "coverLarge": "public/covers/cc0666c2f430-720.webp",
+    "aspectRatio": 0.81103,
     "categories": [
       "心理学"
     ],
@@ -319,6 +357,7 @@
     "creator": "瑞·达利欧",
     "cover": "public/covers/9593bea67fe6-320.webp",
     "coverLarge": "public/covers/9593bea67fe6-720.webp",
+    "aspectRatio": 0.694981,
     "categories": [
       "个人成长",
       "投资"
@@ -333,6 +372,7 @@
     "creator": "凯利·麦格尼格尔",
     "cover": "public/covers/0faa3d62ae94-320.webp",
     "coverLarge": "public/covers/0faa3d62ae94-720.webp",
+    "aspectRatio": 0.71,
     "categories": [
       "个人成长"
     ],
@@ -346,6 +386,7 @@
     "creator": "单伟建",
     "cover": "public/covers/d2d8db49b143-320.webp",
     "coverLarge": "public/covers/d2d8db49b143-720.webp",
+    "aspectRatio": 0.656934,
     "categories": [
       "个人成长"
     ],
@@ -359,6 +400,7 @@
     "creator": "刘未鹏",
     "cover": "public/covers/b92a5884b46a-320.webp",
     "coverLarge": "public/covers/b92a5884b46a-720.webp",
+    "aspectRatio": 0.722892,
     "categories": [
       "个人成长",
       "工具书"
@@ -373,6 +415,7 @@
     "creator": "[英] 简·奥斯丁",
     "cover": "public/covers/835612ae2717-320.webp",
     "coverLarge": "public/covers/835612ae2717-720.webp",
+    "aspectRatio": 0.707038,
     "categories": [
       "小说"
     ],
@@ -386,6 +429,7 @@
     "creator": "帕特·多尔西",
     "cover": "public/covers/611bee935ed7-320.webp",
     "coverLarge": "public/covers/611bee935ed7-720.webp",
+    "aspectRatio": 0.694444,
     "categories": [
       "投资"
     ],
@@ -399,6 +443,7 @@
     "creator": "MJ·德马科",
     "cover": "public/covers/80be02b48eca-320.webp",
     "coverLarge": "public/covers/80be02b48eca-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "投资"
     ],
@@ -412,6 +457,7 @@
     "creator": "岸见一郎",
     "cover": "public/covers/5533f8326677-320.webp",
     "coverLarge": "public/covers/5533f8326677-720.webp",
+    "aspectRatio": 0.681759,
     "categories": [
       "身心灵"
     ],
@@ -425,6 +471,7 @@
     "creator": "萧冬连",
     "cover": "public/covers/dd8c2cce9702-320.webp",
     "coverLarge": "public/covers/dd8c2cce9702-720.webp",
+    "aspectRatio": 0.678238,
     "categories": [
       "社科"
     ],
@@ -438,6 +485,7 @@
     "creator": "[日] 伊坂幸太郎",
     "cover": "public/covers/9f82e3554181-320.webp",
     "coverLarge": "public/covers/9f82e3554181-720.webp",
+    "aspectRatio": 0.662983,
     "categories": [
       "小说"
     ],
@@ -451,6 +499,7 @@
     "creator": "阎真",
     "cover": "public/covers/49b06b368fd9-320.webp",
     "coverLarge": "public/covers/49b06b368fd9-720.webp",
+    "aspectRatio": 0.668421,
     "categories": [
       "小说"
     ],
@@ -464,6 +513,7 @@
     "creator": "张宏杰",
     "cover": "public/covers/c52a8ebd03c4-320.webp",
     "coverLarge": "public/covers/c52a8ebd03c4-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "传记"
     ],
@@ -477,6 +527,7 @@
     "creator": "老舍",
     "cover": "public/covers/9bedd86aa7a7-320.webp",
     "coverLarge": "public/covers/9bedd86aa7a7-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "小说"
     ],
@@ -490,6 +541,7 @@
     "creator": "[美] 本杰明·格雷厄姆",
     "cover": "public/covers/12ba62020646-320.webp",
     "coverLarge": "public/covers/12ba62020646-720.webp",
+    "aspectRatio": 0.706,
     "categories": [
       "投资"
     ],
@@ -503,6 +555,7 @@
     "creator": "李睿秋",
     "cover": "public/covers/7fb1c30896ec-320.webp",
     "coverLarge": "public/covers/7fb1c30896ec-720.webp",
+    "aspectRatio": 0.704961,
     "categories": [
       "身心灵"
     ],
@@ -516,6 +569,7 @@
     "creator": "埃克哈特·托利",
     "cover": "public/covers/6637dcedfe32-320.webp",
     "coverLarge": "public/covers/6637dcedfe32-720.webp",
+    "aspectRatio": 0.700389,
     "categories": [
       "身心灵"
     ],
@@ -529,6 +583,7 @@
     "creator": "[美] 马歇尔·卢森堡",
     "cover": "public/covers/0bfe72df5207-320.webp",
     "coverLarge": "public/covers/0bfe72df5207-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "沟通"
     ],
@@ -542,6 +597,7 @@
     "creator": "胡猛",
     "cover": "public/covers/bdad94079d93-320.webp",
     "coverLarge": "public/covers/bdad94079d93-720.webp",
+    "aspectRatio": 0.72973,
     "categories": [
       "投资"
     ],
@@ -555,6 +611,7 @@
     "creator": "[清] 沈复",
     "cover": "public/covers/3078929ae303-320.webp",
     "coverLarge": "public/covers/3078929ae303-720.webp",
+    "aspectRatio": 0.684932,
     "categories": [
       "散文"
     ],
@@ -568,6 +625,7 @@
     "creator": "[美] B.J.福格",
     "cover": "public/covers/bb5e7ff25f44-320.webp",
     "coverLarge": "public/covers/bb5e7ff25f44-720.webp",
+    "aspectRatio": 0.736196,
     "categories": [
       "心理学"
     ],
@@ -581,6 +639,7 @@
     "creator": "史蒂芬·柯维",
     "cover": "public/covers/ee0200b4aa02-320.webp",
     "coverLarge": "public/covers/ee0200b4aa02-720.webp",
+    "aspectRatio": 0.698565,
     "categories": [
       "个人成长"
     ],
@@ -594,6 +653,7 @@
     "creator": "王川",
     "cover": "public/covers/834e0f3b8718-320.webp",
     "coverLarge": "public/covers/834e0f3b8718-720.webp",
+    "aspectRatio": 0.692308,
     "categories": [
       "投资"
     ],
@@ -607,6 +667,7 @@
     "creator": "威廉·格林",
     "cover": "public/covers/cd4d6083e447-320.webp",
     "coverLarge": "public/covers/cd4d6083e447-720.webp",
+    "aspectRatio": 0.684411,
     "categories": [
       "投资"
     ],
@@ -620,6 +681,7 @@
     "creator": "[美] 埃德温·勒菲弗",
     "cover": "public/covers/9e12e5248951-320.webp",
     "coverLarge": "public/covers/9e12e5248951-720.webp",
+    "aspectRatio": 0.707733,
     "categories": [
       "投资"
     ],
@@ -633,6 +695,7 @@
     "creator": "艾丽斯·施罗德",
     "cover": "public/covers/5438b65fa970-320.webp",
     "coverLarge": "public/covers/5438b65fa970-720.webp",
+    "aspectRatio": 0.666,
     "categories": [
       "投资"
     ],
@@ -646,6 +709,7 @@
     "creator": "王小波",
     "cover": "public/covers/7547973a22fd-320.webp",
     "coverLarge": "public/covers/7547973a22fd-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "小说"
     ],
@@ -659,6 +723,7 @@
     "creator": "沈栋",
     "cover": "public/covers/a43407f9d69f-320.webp",
     "coverLarge": "public/covers/a43407f9d69f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "政治"
     ],
@@ -672,6 +737,7 @@
     "creator": "李硕",
     "cover": "public/covers/566d9a403849-320.webp",
     "coverLarge": "public/covers/566d9a403849-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "历史"
     ],
@@ -685,6 +751,7 @@
     "creator": "伊坂幸太郎",
     "cover": "public/covers/c037a780eadf-320.webp",
     "coverLarge": "public/covers/c037a780eadf-720.webp",
+    "aspectRatio": 0.693642,
     "categories": [
       "小说"
     ],
@@ -698,6 +765,7 @@
     "creator": "[美] 弗拉基米尔·纳博科夫",
     "cover": "public/covers/159b430e785e-320.webp",
     "coverLarge": "public/covers/159b430e785e-720.webp",
+    "aspectRatio": 0.687758,
     "categories": [
       "小说"
     ],
@@ -711,6 +779,7 @@
     "creator": "[美] 塔拉·韦斯特弗",
     "cover": "public/covers/4bf3cdaa6631-320.webp",
     "coverLarge": "public/covers/4bf3cdaa6631-720.webp",
+    "aspectRatio": 0.691057,
     "categories": [
       "传记"
     ],
@@ -724,6 +793,7 @@
     "creator": "托尼·罗宾斯",
     "cover": "public/covers/38327834f26c-320.webp",
     "coverLarge": "public/covers/38327834f26c-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "投资"
     ],
@@ -737,6 +807,7 @@
     "creator": "吴思",
     "cover": "public/covers/9d97e0164223-320.webp",
     "coverLarge": "public/covers/9d97e0164223-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "历史"
     ],
@@ -750,6 +821,7 @@
     "creator": "太宰治",
     "cover": "public/covers/bd18e6314c9c-320.webp",
     "coverLarge": "public/covers/bd18e6314c9c-720.webp",
+    "aspectRatio": 0.656,
     "categories": [
       "小说"
     ],
@@ -763,6 +835,7 @@
     "creator": "斯科特·派克",
     "cover": "public/covers/518b7cc895d5-320.webp",
     "coverLarge": "public/covers/518b7cc895d5-720.webp",
+    "aspectRatio": 0.707733,
     "categories": [
       "身心灵"
     ],
@@ -776,6 +849,7 @@
     "creator": "纳西姆•尼古拉斯•塔勒布",
     "cover": "public/covers/8eecbeb3ffd5-320.webp",
     "coverLarge": "public/covers/8eecbeb3ffd5-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "投资"
     ],
@@ -789,6 +863,7 @@
     "creator": "邱国鹭",
     "cover": "public/covers/6070659172c6-320.webp",
     "coverLarge": "public/covers/6070659172c6-720.webp",
+    "aspectRatio": 0.731707,
     "categories": [
       "投资"
     ],
@@ -802,6 +877,7 @@
     "creator": "霍华德·马克斯",
     "cover": "public/covers/c52a1ae82a20-320.webp",
     "coverLarge": "public/covers/c52a1ae82a20-720.webp",
+    "aspectRatio": 0.738714,
     "categories": [
       "投资"
     ],
@@ -815,6 +891,7 @@
     "creator": "李录",
     "cover": "public/covers/101f007d93e1-320.webp",
     "coverLarge": "public/covers/101f007d93e1-720.webp",
+    "aspectRatio": 0.71618,
     "categories": [
       "投资"
     ],
@@ -828,6 +905,7 @@
     "creator": "史铁生",
     "cover": "public/covers/cb921f496a28-320.webp",
     "coverLarge": "public/covers/cb921f496a28-720.webp",
+    "aspectRatio": 0.667969,
     "categories": [
       "散文"
     ],
@@ -841,6 +919,7 @@
     "creator": "[法] 圣埃克苏佩里",
     "cover": "public/covers/4ae6257100ea-320.webp",
     "coverLarge": "public/covers/4ae6257100ea-720.webp",
+    "aspectRatio": 0.807407,
     "categories": [
       "小说"
     ],
@@ -854,6 +933,7 @@
     "creator": "刘震云",
     "cover": "public/covers/98fe9c2c6414-320.webp",
     "coverLarge": "public/covers/98fe9c2c6414-720.webp",
+    "aspectRatio": 0.733242,
     "categories": [
       "小说"
     ],
@@ -867,6 +947,7 @@
     "creator": "李翔",
     "cover": "public/covers/8f500329b2fa-320.webp",
     "coverLarge": "public/covers/8f500329b2fa-720.webp",
+    "aspectRatio": 0.69625,
     "categories": [
       "传记"
     ],
@@ -880,6 +961,7 @@
     "creator": "詹姆斯·克利尔",
     "cover": "public/covers/7cddfc0dd3d8-320.webp",
     "coverLarge": "public/covers/7cddfc0dd3d8-720.webp",
+    "aspectRatio": 0.711462,
     "categories": [
       "个人成长"
     ],
@@ -893,6 +975,7 @@
     "creator": "安东尼·加卢佐",
     "cover": "public/covers/bfa110827d63-320.webp",
     "coverLarge": "public/covers/bfa110827d63-720.webp",
+    "aspectRatio": 0.680958,
     "categories": [
       "社会科学"
     ],
@@ -906,6 +989,7 @@
     "creator": "兰小欢",
     "cover": "public/covers/ed0fbf12baad-320.webp",
     "coverLarge": "public/covers/ed0fbf12baad-720.webp",
+    "aspectRatio": 0.68268,
     "categories": [
       "政治"
     ],
@@ -919,6 +1003,7 @@
     "creator": "艾伯特-拉斯洛•巴拉巴西",
     "cover": "public/covers/9634b6557d7e-320.webp",
     "coverLarge": "public/covers/9634b6557d7e-720.webp",
+    "aspectRatio": 0.738714,
     "categories": [
       "投资"
     ],
@@ -932,6 +1017,7 @@
     "creator": "肉唐僧",
     "cover": "public/covers/6bbd899fce0d-320.webp",
     "coverLarge": "public/covers/6bbd899fce0d-720.webp",
+    "aspectRatio": 0.636,
     "categories": [
       "文化"
     ],
@@ -945,6 +1031,7 @@
     "creator": "彼得·斯科特-摩根",
     "cover": "public/covers/18850140156c-320.webp",
     "coverLarge": "public/covers/18850140156c-720.webp",
+    "aspectRatio": 0.696774,
     "categories": [
       "科幻"
     ],
@@ -958,6 +1045,7 @@
     "creator": "冯唐",
     "cover": "public/covers/f3fa453b9b67-320.webp",
     "coverLarge": "public/covers/f3fa453b9b67-720.webp",
+    "aspectRatio": 1.0625,
     "categories": [
       "小说"
     ],
@@ -971,6 +1059,7 @@
     "creator": "李笑来",
     "cover": "public/covers/601c38c5aebb-320.webp",
     "coverLarge": "public/covers/601c38c5aebb-720.webp",
+    "aspectRatio": 0.689379,
     "categories": [
       "投资"
     ],
@@ -984,6 +1073,7 @@
     "creator": "李笑来",
     "cover": "public/covers/cf432e6d6f6d-320.webp",
     "coverLarge": "public/covers/cf432e6d6f6d-720.webp",
+    "aspectRatio": 0.697674,
     "categories": [
       "个人成长"
     ],
@@ -997,6 +1087,7 @@
     "creator": "奥勒留",
     "cover": "public/covers/b3eb9589f5b6-320.webp",
     "coverLarge": "public/covers/b3eb9589f5b6-720.webp",
+    "aspectRatio": 0.646707,
     "categories": [
       "身心灵"
     ],
@@ -1010,6 +1101,7 @@
     "creator": "艾瑞克·伯格",
     "cover": "public/covers/ec73142feb4f-320.webp",
     "coverLarge": "public/covers/ec73142feb4f-720.webp",
+    "aspectRatio": 0.719638,
     "categories": [
       "企业"
     ],
@@ -1023,6 +1115,7 @@
     "creator": "史蒂夫·帕弗利纳",
     "cover": "public/covers/24bafa90ecfa-320.webp",
     "coverLarge": "public/covers/24bafa90ecfa-720.webp",
+    "aspectRatio": 0.705107,
     "categories": [
       "个人成长"
     ],
@@ -1036,6 +1129,7 @@
     "creator": "小池浩",
     "cover": "public/covers/87af4cffcfbb-320.webp",
     "coverLarge": "public/covers/87af4cffcfbb-720.webp",
+    "aspectRatio": 0.723906,
     "categories": [
       "身心灵"
     ],
@@ -1049,6 +1143,7 @@
     "creator": "意公子",
     "cover": "public/covers/f74972a404dd-320.webp",
     "coverLarge": "public/covers/f74972a404dd-720.webp",
+    "aspectRatio": 0.735695,
     "categories": [
       "文化"
     ],
@@ -1062,6 +1157,7 @@
     "creator": "安德烈•科斯托拉尼",
     "cover": "public/covers/18af5e3a7ba6-320.webp",
     "coverLarge": "public/covers/18af5e3a7ba6-720.webp",
+    "aspectRatio": 0.648,
     "categories": [
       "投资"
     ],
@@ -1075,6 +1171,7 @@
     "creator": "徐皓峰",
     "cover": "public/covers/a25bed9107b6-320.webp",
     "coverLarge": "public/covers/a25bed9107b6-720.webp",
+    "aspectRatio": 0.701299,
     "categories": [
       "小说"
     ],
@@ -1088,6 +1185,7 @@
     "creator": "伊恩·布鲁玛",
     "cover": "public/covers/42d71e2c18c0-320.webp",
     "coverLarge": "public/covers/42d71e2c18c0-720.webp",
+    "aspectRatio": 0.662983,
     "categories": [
       "文化"
     ],
@@ -1101,6 +1199,7 @@
     "creator": "吴军",
     "cover": "public/covers/3d83593c64b1-320.webp",
     "coverLarge": "public/covers/3d83593c64b1-720.webp",
+    "aspectRatio": 0.704501,
     "categories": [
       "成长"
     ],
@@ -1114,6 +1213,7 @@
     "creator": "齐格蒙特·鲍曼",
     "cover": "public/covers/b33debf58dee-320.webp",
     "coverLarge": "public/covers/b33debf58dee-720.webp",
+    "aspectRatio": 0.723861,
     "categories": [
       "社会科学"
     ],
@@ -1127,6 +1227,7 @@
     "creator": "[美] 罗伯特·D·爱德华兹 / 约翰·迈吉 / W.H.C.巴塞蒂",
     "cover": "public/covers/6edc691b0855-320.webp",
     "coverLarge": "public/covers/6edc691b0855-720.webp",
+    "aspectRatio": 0.791557,
     "categories": [
       "投资"
     ],
@@ -1140,6 +1241,7 @@
     "creator": "柯蒂斯•费思",
     "cover": "public/covers/ed7eae365a98-320.webp",
     "coverLarge": "public/covers/ed7eae365a98-720.webp",
+    "aspectRatio": 0.74,
     "categories": [
       "投资"
     ],
@@ -1153,6 +1255,7 @@
     "creator": "大卫·格雷伯",
     "cover": "public/covers/d2dcc93f2e25-320.webp",
     "coverLarge": "public/covers/d2dcc93f2e25-720.webp",
+    "aspectRatio": 0.681818,
     "categories": [
       "社会科学"
     ],
@@ -1166,6 +1269,7 @@
     "creator": "华杉",
     "cover": "public/covers/5f8c6954b97a-320.webp",
     "coverLarge": "public/covers/5f8c6954b97a-720.webp",
+    "aspectRatio": 0.669145,
     "categories": [
       "哲学"
     ],
@@ -1179,6 +1283,7 @@
     "creator": "[美] 马里奥·普佐",
     "cover": "public/covers/c7d5120d6466-320.webp",
     "coverLarge": "public/covers/c7d5120d6466-720.webp",
+    "aspectRatio": 0.691421,
     "categories": [
       "小说"
     ],
@@ -1192,6 +1297,7 @@
     "creator": "单伟建",
     "cover": "public/covers/f91d725cbc28-320.webp",
     "coverLarge": "public/covers/f91d725cbc28-720.webp",
+    "aspectRatio": 0.750521,
     "categories": [
       "投资"
     ],
@@ -1205,6 +1311,7 @@
     "creator": "金胜镐",
     "cover": "public/covers/54644fed91ab-320.webp",
     "coverLarge": "public/covers/54644fed91ab-720.webp",
+    "aspectRatio": 0.696774,
     "categories": [
       "投资"
     ],
@@ -1218,6 +1325,7 @@
     "creator": "摩根·豪泽尔",
     "cover": "public/covers/3992e480c408-320.webp",
     "coverLarge": "public/covers/3992e480c408-720.webp",
+    "aspectRatio": 0.680958,
     "categories": [
       "投资"
     ],
@@ -1231,6 +1339,7 @@
     "creator": "蒂姆·费里斯",
     "cover": "public/covers/8d3982fd14af-320.webp",
     "coverLarge": "public/covers/8d3982fd14af-720.webp",
+    "aspectRatio": 0.674157,
     "categories": [
       "身心灵"
     ],
@@ -1244,6 +1353,7 @@
     "creator": "尼科洛·马基雅维里",
     "cover": "public/covers/f3aec4c855c9-320.webp",
     "coverLarge": "public/covers/f3aec4c855c9-720.webp",
+    "aspectRatio": 0.680272,
     "categories": [
       "文化"
     ],
@@ -1257,6 +1367,7 @@
     "creator": "安德斯·艾利克森",
     "cover": "public/covers/73ddfaacde4b-320.webp",
     "coverLarge": "public/covers/73ddfaacde4b-720.webp",
+    "aspectRatio": 0.701299,
     "categories": [
       "个人成长"
     ],
@@ -1270,6 +1381,7 @@
     "creator": "托德·斯特拉瑟",
     "cover": "public/covers/87f2dabbbc79-320.webp",
     "coverLarge": "public/covers/87f2dabbbc79-720.webp",
+    "aspectRatio": 0.725293,
     "categories": [
       "小说"
     ],
@@ -1283,6 +1395,7 @@
     "creator": "张五常",
     "cover": "public/covers/d9f623a6bbf4-320.webp",
     "coverLarge": "public/covers/d9f623a6bbf4-720.webp",
+    "aspectRatio": 0.613806,
     "categories": [
       "投资"
     ],
@@ -1296,6 +1409,7 @@
     "creator": "蒂姆·费里斯",
     "cover": "public/covers/30f432e99fd5-320.webp",
     "coverLarge": "public/covers/30f432e99fd5-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "个人成长"
     ],
@@ -1309,6 +1423,7 @@
     "creator": "丹尼尔·戈尔曼",
     "cover": "public/covers/0b3d9a6ca700-320.webp",
     "coverLarge": "public/covers/0b3d9a6ca700-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "身心灵"
     ],
@@ -1322,6 +1437,7 @@
     "creator": "菲尔·尚帕涅",
     "cover": "public/covers/8ec5c69aa5f5-320.webp",
     "coverLarge": "public/covers/8ec5c69aa5f5-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "工具书"
     ],
@@ -1335,6 +1451,7 @@
     "creator": "张辉",
     "cover": "public/covers/f1a357699f8c-320.webp",
     "coverLarge": "public/covers/f1a357699f8c-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "个人成长"
     ],
@@ -1348,6 +1465,7 @@
     "creator": "安迪·普迪科姆",
     "cover": "public/covers/2f483b716dd6-320.webp",
     "coverLarge": "public/covers/2f483b716dd6-720.webp",
+    "aspectRatio": 0.694981,
     "categories": [
       "个人成长"
     ],
@@ -1361,6 +1479,7 @@
     "creator": "周洛华",
     "cover": "public/covers/dddb050d2f25-320.webp",
     "coverLarge": "public/covers/dddb050d2f25-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "社会科学"
     ],
@@ -1374,6 +1493,7 @@
     "creator": "阿尔贝·加缪",
     "cover": "public/covers/f8d698052103-320.webp",
     "coverLarge": "public/covers/f8d698052103-720.webp",
+    "aspectRatio": 0.694981,
     "categories": [
       "小说"
     ],
@@ -1387,6 +1507,7 @@
     "creator": "拿破仑·希尔",
     "cover": "public/covers/f60dc14cc75a-320.webp",
     "coverLarge": "public/covers/f60dc14cc75a-720.webp",
+    "aspectRatio": 0.708,
     "categories": [
       "投资"
     ],
@@ -1400,6 +1521,7 @@
     "creator": "马伯庸",
     "cover": "public/covers/af0d9ede5d98-320.webp",
     "coverLarge": "public/covers/af0d9ede5d98-720.webp",
+    "aspectRatio": 0.702653,
     "categories": [
       "小说"
     ],
@@ -1413,6 +1535,7 @@
     "creator": "豆豆",
     "cover": "public/covers/d776618db0ef-320.webp",
     "coverLarge": "public/covers/d776618db0ef-720.webp",
+    "aspectRatio": 0.654,
     "categories": [
       "小说"
     ],
@@ -1426,6 +1549,7 @@
     "creator": "[法] 马克·李维",
     "cover": "public/covers/b9880735f69a-320.webp",
     "coverLarge": "public/covers/b9880735f69a-720.webp",
+    "aspectRatio": 0.719041,
     "categories": [
       "小说"
     ],
@@ -1439,6 +1563,7 @@
     "creator": "钱钟书",
     "cover": "public/covers/b0d7a85b6d96-320.webp",
     "coverLarge": "public/covers/b0d7a85b6d96-720.webp",
+    "aspectRatio": 0.676,
     "categories": [
       "小说"
     ],
@@ -1452,6 +1577,7 @@
     "creator": "桦泽紫苑",
     "cover": "public/covers/2a33262c2367-320.webp",
     "coverLarge": "public/covers/2a33262c2367-720.webp",
+    "aspectRatio": 0.715232,
     "categories": [
       "个人成长"
     ],
@@ -1465,6 +1591,7 @@
     "creator": "[法] 古斯塔夫·勒庞",
     "cover": "public/covers/796a8f963f9d-320.webp",
     "coverLarge": "public/covers/796a8f963f9d-720.webp",
+    "aspectRatio": 0.703125,
     "categories": [
       "社会学"
     ],
@@ -1478,6 +1605,7 @@
     "creator": "马伯庸",
     "cover": "public/covers/f061fa07ec54-320.webp",
     "coverLarge": "public/covers/f061fa07ec54-720.webp",
+    "aspectRatio": 0.703125,
     "categories": [
       "历史",
       "小说"
@@ -1492,6 +1620,7 @@
     "creator": "李翔",
     "cover": "public/covers/33704cb9741d-320.webp",
     "coverLarge": "public/covers/33704cb9741d-720.webp",
+    "aspectRatio": 0.640569,
     "categories": [
       "个人传记",
       "企业"
@@ -1506,6 +1635,7 @@
     "creator": "李翔",
     "cover": "public/covers/40c84f471ff1-320.webp",
     "coverLarge": "public/covers/40c84f471ff1-720.webp",
+    "aspectRatio": 0.642857,
     "categories": [
       "个人传记",
       "企业"
@@ -1520,6 +1650,7 @@
     "creator": "杰伊·谢蒂",
     "cover": "public/covers/72f70ef13f44-320.webp",
     "coverLarge": "public/covers/72f70ef13f44-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "个人成长"
     ],
@@ -1533,6 +1664,7 @@
     "creator": "石勇",
     "cover": "public/covers/43478218df34-320.webp",
     "coverLarge": "public/covers/43478218df34-720.webp",
+    "aspectRatio": 0.704961,
     "categories": [
       "身心灵"
     ],
@@ -1546,6 +1678,7 @@
     "creator": "罗伯特·艾格",
     "cover": "public/covers/4e62d2159810-320.webp",
     "coverLarge": "public/covers/4e62d2159810-720.webp",
+    "aspectRatio": 0.694805,
     "categories": [
       "个人传记"
     ],
@@ -1559,6 +1692,7 @@
     "creator": "哈维‧艾克",
     "cover": "public/covers/88a6e8613b56-320.webp",
     "coverLarge": "public/covers/88a6e8613b56-720.webp",
+    "aspectRatio": 0.687898,
     "categories": [
       "投资"
     ],
@@ -1572,6 +1706,7 @@
     "creator": "[美] 约翰·瑞迪 / 埃里克·哈格曼",
     "cover": "public/covers/d05735feb039-320.webp",
     "coverLarge": "public/covers/d05735feb039-720.webp",
+    "aspectRatio": 0.799,
     "categories": [
       "科普"
     ],
@@ -1585,6 +1720,7 @@
     "creator": "马伯庸",
     "cover": "public/covers/fb02d01ca562-320.webp",
     "coverLarge": "public/covers/fb02d01ca562-720.webp",
+    "aspectRatio": 0.702653,
     "categories": [
       "小说"
     ],
@@ -1598,6 +1734,7 @@
     "creator": "度阴山",
     "cover": "public/covers/ef44a83a1ca7-320.webp",
     "coverLarge": "public/covers/ef44a83a1ca7-720.webp",
+    "aspectRatio": 0.705882,
     "categories": [
       "传记"
     ],
@@ -1611,6 +1748,7 @@
     "creator": "摩根·豪瑟",
     "cover": "public/covers/23371fb0a146-320.webp",
     "coverLarge": "public/covers/23371fb0a146-720.webp",
+    "aspectRatio": 0.761636,
     "categories": [
       "投资"
     ],
@@ -1624,6 +1762,7 @@
     "creator": "张宏杰",
     "cover": "public/covers/49bb14808aad-320.webp",
     "coverLarge": "public/covers/49bb14808aad-720.webp",
+    "aspectRatio": 0.7,
     "categories": [
       "历史"
     ],
@@ -1637,6 +1776,7 @@
     "creator": "詹姆斯·阿图彻",
     "cover": "public/covers/4375aef54e93-320.webp",
     "coverLarge": "public/covers/4375aef54e93-720.webp",
+    "aspectRatio": 0.730717,
     "categories": [
       "个人成长"
     ],
@@ -1650,6 +1790,7 @@
     "creator": "柏杨",
     "cover": "public/covers/91fc984e9447-320.webp",
     "coverLarge": "public/covers/91fc984e9447-720.webp",
+    "aspectRatio": 0.649007,
     "categories": [
       "文化"
     ],
@@ -1663,6 +1804,7 @@
     "creator": "约翰·索福里克",
     "cover": "public/covers/d80ca54df312-320.webp",
     "coverLarge": "public/covers/d80ca54df312-720.webp",
+    "aspectRatio": 0.687898,
     "categories": [
       "个人成长"
     ],
@@ -1676,6 +1818,7 @@
     "creator": "关明生",
     "cover": "public/covers/45f5237520c3-320.webp",
     "coverLarge": "public/covers/45f5237520c3-720.webp",
+    "aspectRatio": 0.69625,
     "categories": [
       "企业"
     ],
@@ -1689,6 +1832,7 @@
     "creator": "罗伯特·摩尔, 道格拉斯·吉列",
     "cover": "public/covers/384f68fb9d18-320.webp",
     "coverLarge": "public/covers/384f68fb9d18-720.webp",
+    "aspectRatio": 0.68997,
     "categories": [
       "个人成长"
     ],
@@ -1702,6 +1846,7 @@
     "creator": "托马斯·斯坦利",
     "cover": "public/covers/7fe26e13c712-320.webp",
     "coverLarge": "public/covers/7fe26e13c712-720.webp",
+    "aspectRatio": 0.706806,
     "categories": [
       "投资"
     ],
@@ -1715,6 +1860,7 @@
     "creator": "保罗·柯艾略",
     "cover": "public/covers/686d899a6329-320.webp",
     "coverLarge": "public/covers/686d899a6329-720.webp",
+    "aspectRatio": 0.69281,
     "categories": [
       "个人成长"
     ],
@@ -1728,6 +1874,7 @@
     "creator": "尼克·利特尔黑尔斯",
     "cover": "public/covers/562d4b5a452b-320.webp",
     "coverLarge": "public/covers/562d4b5a452b-720.webp",
+    "aspectRatio": 0.696774,
     "categories": [
       "身心灵"
     ],
@@ -1741,6 +1888,7 @@
     "creator": "简·博克",
     "cover": "public/covers/09510fc257f8-320.webp",
     "coverLarge": "public/covers/09510fc257f8-720.webp",
+    "aspectRatio": 0.680101,
     "categories": [
       "身心灵"
     ],
@@ -1754,6 +1902,7 @@
     "creator": "芭芭拉·艾伦瑞克",
     "cover": "public/covers/956109fc1c19-320.webp",
     "coverLarge": "public/covers/956109fc1c19-720.webp",
+    "aspectRatio": 0.690496,
     "categories": [
       "社会科学"
     ],
@@ -1767,6 +1916,7 @@
     "creator": "欧成效",
     "cover": "public/covers/b19fac9a69bc-320.webp",
     "coverLarge": "public/covers/b19fac9a69bc-720.webp",
+    "aspectRatio": 0.750733,
     "categories": [
       "投资"
     ],
@@ -1780,6 +1930,7 @@
     "creator": "卡罗尔·德韦克",
     "cover": "public/covers/92e9be74f8f4-320.webp",
     "coverLarge": "public/covers/92e9be74f8f4-720.webp",
+    "aspectRatio": 0.720961,
     "categories": [
       "个人成长"
     ],
@@ -1793,6 +1944,7 @@
     "creator": "比尔·帕金斯",
     "cover": "public/covers/b595a8239c08-320.webp",
     "coverLarge": "public/covers/b595a8239c08-720.webp",
+    "aspectRatio": 0.68268,
     "categories": [
       "身心灵"
     ],
@@ -1806,6 +1958,7 @@
     "creator": "卫蓝",
     "cover": "public/covers/4d67c1583300-320.webp",
     "coverLarge": "public/covers/4d67c1583300-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "个人成长"
     ],
@@ -1819,6 +1972,7 @@
     "creator": "冯唐",
     "cover": "public/covers/7d453c4f27bc-320.webp",
     "coverLarge": "public/covers/7d453c4f27bc-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "个人成长"
     ],
@@ -1832,6 +1986,7 @@
     "creator": "昆汀·塔伦蒂诺",
     "cover": "public/covers/c2ca6644ba4d-320.webp",
     "coverLarge": "public/covers/c2ca6644ba4d-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "西部"
@@ -1844,6 +1999,7 @@
     "creator": "昆汀·塔伦蒂诺",
     "cover": "public/covers/b48094c8d37b-320.webp",
     "coverLarge": "public/covers/b48094c8d37b-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -1856,6 +2012,7 @@
     "creator": "昆汀·塔伦蒂诺",
     "cover": "public/covers/7c9ef5932dfe-320.webp",
     "coverLarge": "public/covers/7c9ef5932dfe-720.webp",
+    "aspectRatio": 0.674479,
     "categories": [
       "剧情",
       "喜剧"
@@ -1868,6 +2025,7 @@
     "creator": "昆汀·塔伦蒂诺",
     "cover": "public/covers/c3b0c4aaeb7d-320.webp",
     "coverLarge": "public/covers/c3b0c4aaeb7d-720.webp",
+    "aspectRatio": 0.672087,
     "categories": [
       "剧情",
       "犯罪"
@@ -1880,6 +2038,7 @@
     "creator": "昆汀·塔伦蒂诺",
     "cover": "public/covers/61aa79b42d1f-320.webp",
     "coverLarge": "public/covers/61aa79b42d1f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "剧情"
@@ -1892,6 +2051,7 @@
     "creator": "昆汀·塔伦蒂诺",
     "cover": "public/covers/af23ff7dc8c5-320.webp",
     "coverLarge": "public/covers/af23ff7dc8c5-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "战争"
@@ -1904,6 +2064,7 @@
     "creator": "大卫·芬奇",
     "cover": "public/covers/0175566f5b55-320.webp",
     "coverLarge": "public/covers/0175566f5b55-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -1915,6 +2076,7 @@
     "creator": "木下麦",
     "cover": "public/covers/9b447c22e892-320.webp",
     "coverLarge": "public/covers/9b447c22e892-720.webp",
+    "aspectRatio": 0.712074,
     "categories": [
       "剧情",
       "悬疑"
@@ -1927,6 +2089,7 @@
     "creator": "陈凯歌",
     "cover": "public/covers/7a1db935079d-320.webp",
     "coverLarge": "public/covers/7a1db935079d-720.webp",
+    "aspectRatio": 0.666097,
     "categories": [
       "剧情",
       "爱情"
@@ -1939,6 +2102,7 @@
     "creator": "詹姆斯·卡梅隆",
     "cover": "public/covers/2bb029826a83-320.webp",
     "coverLarge": "public/covers/2bb029826a83-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "冒险"
@@ -1951,6 +2115,7 @@
     "creator": "王家卫",
     "cover": "public/covers/134a1b6179c0-320.webp",
     "coverLarge": "public/covers/134a1b6179c0-720.webp",
+    "aspectRatio": 0.666097,
     "categories": [
       "剧情"
     ]
@@ -1962,6 +2127,7 @@
     "creator": "罗伯特·泽米吉斯",
     "cover": "public/covers/05b3be7e7f9f-320.webp",
     "coverLarge": "public/covers/05b3be7e7f9f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -1974,6 +2140,7 @@
     "creator": "马丁·斯科塞斯",
     "cover": "public/covers/2519b149ecff-320.webp",
     "coverLarge": "public/covers/2519b149ecff-720.webp",
+    "aspectRatio": 0.683246,
     "categories": [
       "犯罪",
       "剧情",
@@ -1987,6 +2154,7 @@
     "creator": "迈克尔·迪马蒂诺、布莱恩·科尼兹科",
     "cover": "public/covers/935d911a777f-320.webp",
     "coverLarge": "public/covers/935d911a777f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻",
@@ -2003,6 +2171,7 @@
     "creator": "乔·怀特",
     "cover": "public/covers/01403bf6d552-320.webp",
     "coverLarge": "public/covers/01403bf6d552-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -2015,6 +2184,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/48e4a7c2e2dd-320.webp",
     "coverLarge": "public/covers/48e4a7c2e2dd-720.webp",
+    "aspectRatio": 0.674479,
     "categories": [
       "剧情",
       "传记",
@@ -2028,6 +2198,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/d559ae76255e-320.webp",
     "coverLarge": "public/covers/d559ae76255e-720.webp",
+    "aspectRatio": 0.675105,
     "categories": [
       "动作",
       "奇幻",
@@ -2041,6 +2212,7 @@
     "creator": "刁亦男",
     "cover": "public/covers/ec0c1b695965-320.webp",
     "coverLarge": "public/covers/ec0c1b695965-720.webp",
+    "aspectRatio": 0.713904,
     "categories": [
       "剧情",
       "犯罪",
@@ -2054,6 +2226,7 @@
     "creator": "王伟",
     "cover": "public/covers/5f091655125f-320.webp",
     "coverLarge": "public/covers/5f091655125f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "悬疑",
       "犯罪",
@@ -2067,6 +2240,7 @@
     "creator": "福泽克雄",
     "cover": "public/covers/00c47f1d18e7-320.webp",
     "coverLarge": "public/covers/00c47f1d18e7-720.webp",
+    "aspectRatio": 0.710383,
     "categories": [
       "剧情",
       "日剧"
@@ -2079,6 +2253,7 @@
     "creator": "达米恩·查泽雷",
     "cover": "public/covers/4348821d7b18-320.webp",
     "coverLarge": "public/covers/4348821d7b18-720.webp",
+    "aspectRatio": 0.67474,
     "categories": [
       "剧情",
       "音乐"
@@ -2091,6 +2266,7 @@
     "creator": "黄建新 / 杨亚洲",
     "cover": "public/covers/58d9da448bdc-320.webp",
     "coverLarge": "public/covers/58d9da448bdc-720.webp",
+    "aspectRatio": 0.698299,
     "categories": [
       "剧情"
     ]
@@ -2102,6 +2278,7 @@
     "creator": "大卫·芬奇",
     "cover": "public/covers/3a3dd9a056fc-320.webp",
     "coverLarge": "public/covers/3a3dd9a056fc-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "奇幻",
@@ -2115,6 +2292,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/bcd158573532-320.webp",
     "coverLarge": "public/covers/bcd158573532-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "犯罪",
@@ -2128,6 +2306,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/5de7b5e8c0e3-320.webp",
     "coverLarge": "public/covers/5de7b5e8c0e3-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "犯罪",
@@ -2141,6 +2320,7 @@
     "creator": "吴宇森",
     "cover": "public/covers/20f48b08f9a0-320.webp",
     "coverLarge": "public/covers/20f48b08f9a0-720.webp",
+    "aspectRatio": 0.668693,
     "categories": [
       "动作",
       "科幻",
@@ -2154,6 +2334,7 @@
     "creator": "克里斯·巴克 / 珍妮弗·李",
     "cover": "public/covers/251ceba8b4fb-320.webp",
     "coverLarge": "public/covers/251ceba8b4fb-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "歌舞",
@@ -2167,6 +2348,7 @@
     "creator": "布莱恩·辛格",
     "cover": "public/covers/15821464ef0c-320.webp",
     "coverLarge": "public/covers/15821464ef0c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "音乐",
@@ -2180,6 +2362,7 @@
     "creator": "郑保瑞",
     "cover": "public/covers/bd1aa692a3b2-320.webp",
     "coverLarge": "public/covers/bd1aa692a3b2-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "犯罪"
@@ -2192,6 +2375,7 @@
     "creator": "韦斯·安德森",
     "cover": "public/covers/5244a5b00b86-320.webp",
     "coverLarge": "public/covers/5244a5b00b86-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "剧情"
@@ -2204,6 +2388,7 @@
     "creator": "丹尼·博伊尔",
     "cover": "public/covers/2c0fb8a20c84-320.webp",
     "coverLarge": "public/covers/2c0fb8a20c84-720.webp",
+    "aspectRatio": 1.333333,
     "categories": [
       "剧情",
       "犯罪",
@@ -2217,6 +2402,7 @@
     "creator": "凯瑟琳·毕格罗",
     "cover": "public/covers/2b57c9d4195c-320.webp",
     "coverLarge": "public/covers/2b57c9d4195c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "惊悚",
@@ -2230,6 +2416,7 @@
     "creator": "莉莉·沃卓斯基 / 拉娜·沃卓斯基 / J·迈克尔·斯特拉辛斯基",
     "cover": "public/covers/94043c3e5837-320.webp",
     "coverLarge": "public/covers/94043c3e5837-720.webp",
+    "aspectRatio": 0.67624,
     "categories": [
       "科幻",
       "剧情",
@@ -2243,6 +2430,7 @@
     "creator": "唐·霍尔 / 克里斯·威廉姆斯",
     "cover": "public/covers/cefcd5444ee2-320.webp",
     "coverLarge": "public/covers/cefcd5444ee2-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -2255,6 +2443,7 @@
     "creator": "托尼·凯耶",
     "cover": "public/covers/deeb73ac15ad-320.webp",
     "coverLarge": "public/covers/deeb73ac15ad-720.webp",
+    "aspectRatio": 0.67474,
     "categories": [
       "剧情"
     ]
@@ -2266,6 +2455,7 @@
     "creator": "乔纳森·戴米",
     "cover": "public/covers/bacfcf019d17-320.webp",
     "coverLarge": "public/covers/bacfcf019d17-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "惊悚",
       "犯罪"
@@ -2278,6 +2468,7 @@
     "creator": "马丁·斯科塞斯",
     "cover": "public/covers/780ce4f14866-320.webp",
     "coverLarge": "public/covers/780ce4f14866-720.webp",
+    "aspectRatio": 0.662371,
     "categories": [
       "剧情",
       "犯罪"
@@ -2290,6 +2481,7 @@
     "creator": "彼得·威尔",
     "cover": "public/covers/d66377ccfd80-320.webp",
     "coverLarge": "public/covers/d66377ccfd80-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "科幻"
@@ -2302,6 +2494,7 @@
     "creator": "范小天 / 叶崇铭 / 梦继",
     "cover": "public/covers/662788fadbcf-320.webp",
     "coverLarge": "public/covers/662788fadbcf-720.webp",
+    "aspectRatio": 0.591133,
     "categories": [
       "喜剧",
       "爱情",
@@ -2315,6 +2508,7 @@
     "creator": "王家卫",
     "cover": "public/covers/1f2f35bda84b-320.webp",
     "coverLarge": "public/covers/1f2f35bda84b-720.webp",
+    "aspectRatio": 0.695807,
     "categories": [
       "剧情",
       "爱情"
@@ -2327,6 +2521,7 @@
     "creator": "让-马克·瓦雷",
     "cover": "public/covers/f29f1f8ed9fb-320.webp",
     "coverLarge": "public/covers/f29f1f8ed9fb-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "传记"
@@ -2339,6 +2534,7 @@
     "creator": "黄信尧",
     "cover": "public/covers/867b62bdc6e8-320.webp",
     "coverLarge": "public/covers/867b62bdc6e8-720.webp",
+    "aspectRatio": 0.70018,
     "categories": [
       "剧情",
       "喜剧"
@@ -2351,6 +2547,7 @@
     "creator": "张艺谋",
     "cover": "public/covers/608ebcab2fcb-320.webp",
     "coverLarge": "public/covers/608ebcab2fcb-720.webp",
+    "aspectRatio": 0.766551,
     "categories": [
       "剧情"
     ]
@@ -2362,6 +2559,7 @@
     "creator": "刘镇伟",
     "cover": "public/covers/c1dc46413e24-320.webp",
     "coverLarge": "public/covers/c1dc46413e24-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "奇幻",
@@ -2375,6 +2573,7 @@
     "creator": "刘镇伟",
     "cover": "public/covers/0602b877ea36-320.webp",
     "coverLarge": "public/covers/0602b877ea36-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "奇幻",
@@ -2388,6 +2587,7 @@
     "creator": "亚当·麦凯",
     "cover": "public/covers/1ce7c182d9fa-320.webp",
     "coverLarge": "public/covers/1ce7c182d9fa-720.webp",
+    "aspectRatio": 0.675325,
     "categories": [
       "剧情",
       "喜剧",
@@ -2401,6 +2601,7 @@
     "creator": "张黎",
     "cover": "public/covers/7f35df77162e-320.webp",
     "coverLarge": "public/covers/7f35df77162e-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "历史",
@@ -2414,6 +2615,7 @@
     "creator": "谷德昭",
     "cover": "public/covers/aa935e61be5a-320.webp",
     "coverLarge": "public/covers/aa935e61be5a-720.webp",
+    "aspectRatio": 0.683246,
     "categories": [
       "喜剧",
       "古装"
@@ -2426,6 +2628,7 @@
     "creator": "冯小刚",
     "cover": "public/covers/054192da1c2e-320.webp",
     "coverLarge": "public/covers/054192da1c2e-720.webp",
+    "aspectRatio": 0.736986,
     "categories": [
       "喜剧",
       "剧情"
@@ -2438,6 +2641,7 @@
     "creator": "杜琪峰",
     "cover": "public/covers/a768d68bf029-320.webp",
     "coverLarge": "public/covers/a768d68bf029-720.webp",
+    "aspectRatio": 0.672727,
     "categories": [
       "剧情",
       "动作",
@@ -2451,6 +2655,7 @@
     "creator": "迈克尔·曼",
     "cover": "public/covers/e9dbf7057299-320.webp",
     "coverLarge": "public/covers/e9dbf7057299-720.webp",
+    "aspectRatio": 0.662651,
     "categories": [
       "犯罪",
       "惊悚",
@@ -2464,6 +2669,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/019232b827d8-320.webp",
     "coverLarge": "public/covers/019232b827d8-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "悬疑",
@@ -2477,6 +2683,7 @@
     "creator": "贝内特·米勒",
     "cover": "public/covers/f3513248a7c1-320.webp",
     "coverLarge": "public/covers/f3513248a7c1-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -2488,6 +2695,7 @@
     "creator": "詹姆斯·温",
     "cover": "public/covers/8f4fd6f58ca4-320.webp",
     "coverLarge": "public/covers/8f4fd6f58ca4-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "恐怖",
       "悬疑"
@@ -2500,6 +2708,7 @@
     "creator": "今石洋之",
     "cover": "public/covers/87fc53e261ab-320.webp",
     "coverLarge": "public/covers/87fc53e261ab-720.webp",
+    "aspectRatio": 0.684524,
     "categories": [
       "喜剧",
       "动作"
@@ -2512,6 +2721,7 @@
     "creator": "西德尼·吕美特",
     "cover": "public/covers/da94f05a8335-320.webp",
     "coverLarge": "public/covers/da94f05a8335-720.webp",
+    "aspectRatio": 1.356589,
     "categories": [
       "悬疑",
       "犯罪",
@@ -2525,6 +2735,7 @@
     "creator": "森田修平",
     "cover": "public/covers/3682a59ea023-320.webp",
     "coverLarge": "public/covers/3682a59ea023-720.webp",
+    "aspectRatio": 0.707692,
     "categories": [
       "动画",
       "恐怖",
@@ -2538,6 +2749,7 @@
     "creator": "今敏",
     "cover": "public/covers/5cd06890b977-320.webp",
     "coverLarge": "public/covers/5cd06890b977-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "剧情"
@@ -2550,6 +2762,7 @@
     "creator": "王家卫",
     "cover": "public/covers/796f6c73768c-320.webp",
     "coverLarge": "public/covers/796f6c73768c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "武侠",
       "爱情"
@@ -2562,6 +2775,7 @@
     "creator": "神经刀",
     "cover": "public/covers/35fcd5c5c90e-320.webp",
     "coverLarge": "public/covers/35fcd5c5c90e-720.webp",
+    "aspectRatio": 0.692105,
     "categories": [
       "剧情",
       "犯罪"
@@ -2574,6 +2788,7 @@
     "creator": "李安",
     "cover": "public/covers/96eb8acafc0e-320.webp",
     "coverLarge": "public/covers/96eb8acafc0e-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -2586,6 +2801,7 @@
     "creator": "杜琪峰",
     "cover": "public/covers/fceaf1e4b081-320.webp",
     "coverLarge": "public/covers/fceaf1e4b081-720.webp",
+    "aspectRatio": 0.71123,
     "categories": [
       "剧情",
       "犯罪"
@@ -2598,6 +2814,7 @@
     "creator": "马克·斯蒂文·约翰逊",
     "cover": "public/covers/e8562bffff65-320.webp",
     "coverLarge": "public/covers/e8562bffff65-720.webp",
+    "aspectRatio": 0.67624,
     "categories": [
       "超级英雄",
       "奇幻",
@@ -2611,6 +2828,7 @@
     "creator": "水岛努",
     "cover": "public/covers/0093ae9148ff-320.webp",
     "coverLarge": "public/covers/0093ae9148ff-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -2623,6 +2841,7 @@
     "creator": "金知云",
     "cover": "public/covers/582aa0ea2c92-320.webp",
     "coverLarge": "public/covers/582aa0ea2c92-720.webp",
+    "aspectRatio": 0.698413,
     "categories": [
       "剧情",
       "犯罪",
@@ -2636,6 +2855,7 @@
     "creator": "王家卫",
     "cover": "public/covers/10f4ec3be524-320.webp",
     "coverLarge": "public/covers/10f4ec3be524-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "国产剧"
@@ -2648,6 +2868,7 @@
     "creator": "谷口悟朗",
     "cover": "public/covers/ea02e818c9b5-320.webp",
     "coverLarge": "public/covers/ea02e818c9b5-720.webp",
+    "aspectRatio": 0.75,
     "categories": [
       "动画",
       "科幻"
@@ -2660,6 +2881,7 @@
     "creator": "克里斯托夫·巴拉蒂",
     "cover": "public/covers/c860bd16974a-320.webp",
     "coverLarge": "public/covers/c860bd16974a-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "音乐"
@@ -2672,6 +2894,7 @@
     "creator": "韩寒",
     "cover": "public/covers/0265fb4ea3c3-320.webp",
     "coverLarge": "public/covers/0265fb4ea3c3-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧",
@@ -2685,6 +2908,7 @@
     "creator": "韩寒",
     "cover": "public/covers/d1eb2a915e35-320.webp",
     "coverLarge": "public/covers/d1eb2a915e35-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧",
@@ -2698,6 +2922,7 @@
     "creator": "韩寒",
     "cover": "public/covers/14ec45bb81f2-320.webp",
     "coverLarge": "public/covers/14ec45bb81f2-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧",
@@ -2711,6 +2936,7 @@
     "creator": "彼特·道格特 / 鲍勃·彼德森",
     "cover": "public/covers/d9565a51c0b7-320.webp",
     "coverLarge": "public/covers/d9565a51c0b7-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -2723,6 +2949,7 @@
     "creator": "米洛斯·福尔曼",
     "cover": "public/covers/d9c7f2f31a71-320.webp",
     "coverLarge": "public/covers/d9c7f2f31a71-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -2734,6 +2961,7 @@
     "creator": "韩天",
     "cover": "public/covers/5acaa594c9bc-320.webp",
     "coverLarge": "public/covers/5acaa594c9bc-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "青春",
@@ -2747,6 +2975,7 @@
     "creator": "文斯·吉利根 / 彼得·古尔德",
     "cover": "public/covers/9437f6d4202c-320.webp",
     "coverLarge": "public/covers/9437f6d4202c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪",
@@ -2760,6 +2989,7 @@
     "creator": "乔治·米勒",
     "cover": "public/covers/a61673620dd2-320.webp",
     "coverLarge": "public/covers/a61673620dd2-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "科幻"
@@ -2772,6 +3002,7 @@
     "creator": "宁浩",
     "cover": "public/covers/c769e1e62a5f-320.webp",
     "coverLarge": "public/covers/c769e1e62a5f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "犯罪"
@@ -2784,6 +3015,7 @@
     "creator": "拜伦·霍华德 / 瑞奇·摩尔",
     "cover": "public/covers/df72c2ce8e0a-320.webp",
     "coverLarge": "public/covers/df72c2ce8e0a-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -2796,6 +3028,7 @@
     "creator": "科克·德·米科 / 克里斯·桑德斯",
     "cover": "public/covers/788a72323071-320.webp",
     "coverLarge": "public/covers/788a72323071-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -2808,6 +3041,7 @@
     "creator": "乔纳森·诺兰",
     "cover": "public/covers/36c29caff1eb-320.webp",
     "coverLarge": "public/covers/36c29caff1eb-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "剧情",
@@ -2821,6 +3055,7 @@
     "creator": "延尚昊",
     "cover": "public/covers/92b8aea3525f-320.webp",
     "coverLarge": "public/covers/92b8aea3525f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "恐怖",
       "动作"
@@ -2833,6 +3068,7 @@
     "creator": "乔斯·韦登",
     "cover": "public/covers/d99d6b7b7a0f-320.webp",
     "coverLarge": "public/covers/d99d6b7b7a0f-720.webp",
+    "aspectRatio": 0.677083,
     "categories": [
       "动作",
       "科幻",
@@ -2846,6 +3082,7 @@
     "creator": "乔斯·韦登",
     "cover": "public/covers/ea5c12d881eb-320.webp",
     "coverLarge": "public/covers/ea5c12d881eb-720.webp",
+    "aspectRatio": 0.677083,
     "categories": [
       "动作",
       "科幻",
@@ -2859,6 +3096,7 @@
     "creator": "安东尼·罗素, 乔·罗素",
     "cover": "public/covers/1779127e1e7c-320.webp",
     "coverLarge": "public/covers/1779127e1e7c-720.webp",
+    "aspectRatio": 0.674847,
     "categories": [
       "动作",
       "科幻",
@@ -2872,6 +3110,7 @@
     "creator": "安东尼·罗素, 乔·罗素",
     "cover": "public/covers/7d89eba743af-320.webp",
     "coverLarge": "public/covers/7d89eba743af-720.webp",
+    "aspectRatio": 0.674847,
     "categories": [
       "剧情",
       "动作",
@@ -2885,6 +3124,7 @@
     "creator": "罗曼·波兰斯基",
     "cover": "public/covers/ee1abf548417-320.webp",
     "coverLarge": "public/covers/ee1abf548417-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "传记",
@@ -2898,6 +3138,7 @@
     "creator": "迈克尔·哈内克",
     "cover": "public/covers/8dae1f5db087-320.webp",
     "coverLarge": "public/covers/8dae1f5db087-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "情色"
@@ -2910,6 +3151,7 @@
     "creator": "入江泰浩",
     "cover": "public/covers/620da9f97364-320.webp",
     "coverLarge": "public/covers/620da9f97364-720.webp",
+    "aspectRatio": 0.680272,
     "categories": [
       "动画",
       "奇幻"
@@ -2922,6 +3164,7 @@
     "creator": "大地丙太郎",
     "cover": "public/covers/a5c2313e4910-320.webp",
     "coverLarge": "public/covers/a5c2313e4910-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -2934,6 +3177,7 @@
     "creator": "郑范植",
     "cover": "public/covers/3cdd73b09bde-320.webp",
     "coverLarge": "public/covers/3cdd73b09bde-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -2946,6 +3190,7 @@
     "creator": "周星驰",
     "cover": "public/covers/6e02e7d8a3bc-320.webp",
     "coverLarge": "public/covers/6e02e7d8a3bc-720.webp",
+    "aspectRatio": 0.701262,
     "categories": [
       "喜剧",
       "动作",
@@ -2959,6 +3204,7 @@
     "creator": "马克·奥斯本 / 约翰·斯蒂芬森",
     "cover": "public/covers/ce6acc1c7838-320.webp",
     "coverLarge": "public/covers/ce6acc1c7838-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -2971,6 +3217,7 @@
     "creator": "沟口宪司",
     "cover": "public/covers/64b99beb0bc2-320.webp",
     "coverLarge": "public/covers/64b99beb0bc2-720.webp",
+    "aspectRatio": 0.709091,
     "categories": [
       "剧情",
       "日剧"
@@ -2983,6 +3230,7 @@
     "creator": "杨德昌",
     "cover": "public/covers/04ccf23465e0-320.webp",
     "coverLarge": "public/covers/04ccf23465e0-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -2995,6 +3243,7 @@
     "creator": "彼特·道格特 / 大卫·斯沃曼",
     "cover": "public/covers/2d0132d92bbb-320.webp",
     "coverLarge": "public/covers/2d0132d92bbb-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -3007,6 +3256,7 @@
     "creator": "李应福",
     "cover": "public/covers/69a0d03674b6-320.webp",
     "coverLarge": "public/covers/69a0d03674b6-720.webp",
+    "aspectRatio": 0.691892,
     "categories": [
       "奇幻",
       "爱情",
@@ -3020,6 +3270,7 @@
     "creator": "亨利·塞利克",
     "cover": "public/covers/17b5749b5a44-320.webp",
     "coverLarge": "public/covers/17b5749b5a44-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -3032,6 +3283,7 @@
     "creator": "汤姆·霍伯",
     "cover": "public/covers/2d5f91143bbe-320.webp",
     "coverLarge": "public/covers/2d5f91143bbe-720.webp",
+    "aspectRatio": 1.333333,
     "categories": [
       "剧情",
       "传记",
@@ -3045,6 +3297,7 @@
     "creator": "宫崎骏",
     "cover": "public/covers/63d1b4d8e62c-320.webp",
     "coverLarge": "public/covers/63d1b4d8e62c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻",
@@ -3058,6 +3311,7 @@
     "creator": "克里斯·哥伦布",
     "cover": "public/covers/4c63ef133d96-320.webp",
     "coverLarge": "public/covers/4c63ef133d96-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "奇幻",
       "冒险"
@@ -3070,6 +3324,7 @@
     "creator": "是枝裕和",
     "cover": "public/covers/37d8d1ed3cbf-320.webp",
     "coverLarge": "public/covers/37d8d1ed3cbf-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -3081,6 +3336,7 @@
     "creator": "朱塞佩·托纳多雷",
     "cover": "public/covers/d86883bd66d7-320.webp",
     "coverLarge": "public/covers/d86883bd66d7-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "音乐"
@@ -3093,6 +3349,7 @@
     "creator": "宫元宏彰",
     "cover": "public/covers/e09cb228bfad-320.webp",
     "coverLarge": "public/covers/e09cb228bfad-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -3105,6 +3362,7 @@
     "creator": "邵艺辉",
     "cover": "public/covers/51b2dee7e585-320.webp",
     "coverLarge": "public/covers/51b2dee7e585-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -3117,6 +3375,7 @@
     "creator": "张晓波",
     "cover": "public/covers/d8a916f1cfae-320.webp",
     "coverLarge": "public/covers/d8a916f1cfae-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情",
@@ -3130,6 +3389,7 @@
     "creator": "丹尼尔·钟",
     "cover": "public/covers/84ca46a48e43-320.webp",
     "coverLarge": "public/covers/84ca46a48e43-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "动画"
@@ -3142,6 +3402,7 @@
     "creator": "瑞恩·库格勒",
     "cover": "public/covers/6407a42bc651-320.webp",
     "coverLarge": "public/covers/6407a42bc651-720.webp",
+    "aspectRatio": 0.709736,
     "categories": [
       "动作",
       "冒险",
@@ -3155,6 +3416,7 @@
     "creator": "乔纳森·特罗普 / 大卫·斯奇克勒",
     "cover": "public/covers/1be6a91822c7-320.webp",
     "coverLarge": "public/covers/1be6a91822c7-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "犯罪",
       "动作",
@@ -3168,6 +3430,7 @@
     "creator": "望月智充",
     "cover": "public/covers/10f78b4d17c9-320.webp",
     "coverLarge": "public/covers/10f78b4d17c9-720.webp",
+    "aspectRatio": 0.691729,
     "categories": [
       "动作",
       "犯罪"
@@ -3180,6 +3443,7 @@
     "creator": "安迪·沃卓斯基 / 拉娜·沃卓斯基",
     "cover": "public/covers/20ff55590a48-320.webp",
     "coverLarge": "public/covers/20ff55590a48-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "动作"
@@ -3192,6 +3456,7 @@
     "creator": "拉娜·沃卓斯基 / 莉莉·沃卓斯基",
     "cover": "public/covers/2de613fde1cd-320.webp",
     "coverLarge": "public/covers/2de613fde1cd-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "动作"
@@ -3204,6 +3469,7 @@
     "creator": "拉娜·沃卓斯基 / 莉莉·沃卓斯基",
     "cover": "public/covers/953befc28471-320.webp",
     "coverLarge": "public/covers/953befc28471-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "动作"
@@ -3216,6 +3482,7 @@
     "creator": "杜琪峰",
     "cover": "public/covers/a724ba4305c4-320.webp",
     "coverLarge": "public/covers/a724ba4305c4-720.webp",
+    "aspectRatio": 0.725067,
     "categories": [
       "剧情",
       "犯罪"
@@ -3228,6 +3495,7 @@
     "creator": "达伦·阿罗诺夫斯基",
     "cover": "public/covers/7ccab8bd4097-320.webp",
     "coverLarge": "public/covers/7ccab8bd4097-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "惊悚"
@@ -3240,6 +3508,7 @@
     "creator": "卞赫",
     "cover": "public/covers/c618c355f6e3-320.webp",
     "coverLarge": "public/covers/c618c355f6e3-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪",
@@ -3253,6 +3522,7 @@
     "creator": "埃里克·布雷斯 / J·麦基·格鲁伯",
     "cover": "public/covers/950f903635e8-320.webp",
     "coverLarge": "public/covers/950f903635e8-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "悬疑",
@@ -3266,6 +3536,7 @@
     "creator": "王家卫",
     "cover": "public/covers/42a5fae5f157-320.webp",
     "coverLarge": "public/covers/42a5fae5f157-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -3278,6 +3549,7 @@
     "creator": "马丁·斯科塞斯",
     "cover": "public/covers/429172052182-320.webp",
     "coverLarge": "public/covers/429172052182-720.webp",
+    "aspectRatio": 0.6743,
     "categories": [
       "剧情",
       "喜剧",
@@ -3291,6 +3563,7 @@
     "creator": "皮埃尔·佩里费尔",
     "cover": "public/covers/28d13f979e26-320.webp",
     "coverLarge": "public/covers/28d13f979e26-720.webp",
+    "aspectRatio": 0.666549,
     "categories": [
       "动画",
       "喜剧"
@@ -3303,6 +3576,7 @@
     "creator": "皮埃尔·佩里费尔 / J·P·桑斯",
     "cover": "public/covers/7e6895f5f1c2-320.webp",
     "coverLarge": "public/covers/7e6895f5f1c2-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -3315,6 +3589,7 @@
     "creator": "加斯·詹宁斯 / 克里斯托夫·卢戴尔",
     "cover": "public/covers/b3fed943f356-320.webp",
     "coverLarge": "public/covers/b3fed943f356-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧",
@@ -3328,6 +3603,7 @@
     "creator": "塞尔乔·莱昂内",
     "cover": "public/covers/5627f9a10ddd-320.webp",
     "coverLarge": "public/covers/5627f9a10ddd-720.webp",
+    "aspectRatio": 0.695767,
     "categories": [
       "剧情",
       "西部"
@@ -3340,6 +3616,7 @@
     "creator": "塞尔乔·莱昂内",
     "cover": "public/covers/67555afe72e6-320.webp",
     "coverLarge": "public/covers/67555afe72e6-720.webp",
+    "aspectRatio": 0.715054,
     "categories": [
       "剧情",
       "西部"
@@ -3352,6 +3629,7 @@
     "creator": "罗伯特·泽米吉斯",
     "cover": "public/covers/3910f0e077bd-320.webp",
     "coverLarge": "public/covers/3910f0e077bd-720.webp",
+    "aspectRatio": 0.632242,
     "categories": [
       "科幻",
       "冒险",
@@ -3365,6 +3643,7 @@
     "creator": "渡边信一郎",
     "cover": "public/covers/bdc0d9fba3ce-320.webp",
     "coverLarge": "public/covers/bdc0d9fba3ce-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -3377,6 +3656,7 @@
     "creator": "张艺谋",
     "cover": "public/covers/5c190b6392b0-320.webp",
     "coverLarge": "public/covers/5c190b6392b0-720.webp",
+    "aspectRatio": 0.657673,
     "categories": [
       "剧情"
     ]
@@ -3388,6 +3668,7 @@
     "creator": "伊达勇登",
     "cover": "public/covers/543744bf7fe7-320.webp",
     "coverLarge": "public/covers/543744bf7fe7-720.webp",
+    "aspectRatio": 0.708783,
     "categories": [
       "动画",
       "动作",
@@ -3401,6 +3682,7 @@
     "creator": "中村健治",
     "cover": "public/covers/ce45a13d3170-320.webp",
     "coverLarge": "public/covers/ce45a13d3170-720.webp",
+    "aspectRatio": 0.724432,
     "categories": [
       "剧情",
       "动作",
@@ -3414,6 +3696,7 @@
     "creator": "巴勃罗·贝格尔",
     "cover": "public/covers/3b77c41c1470-320.webp",
     "coverLarge": "public/covers/3b77c41c1470-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "剧情"
@@ -3426,6 +3709,7 @@
     "creator": "安德鲁·斯坦顿",
     "cover": "public/covers/31359c08c881-320.webp",
     "coverLarge": "public/covers/31359c08c881-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "科幻"
@@ -3438,6 +3722,7 @@
     "creator": "余丁",
     "cover": "public/covers/b474bbe452a2-320.webp",
     "coverLarge": "public/covers/b474bbe452a2-720.webp",
+    "aspectRatio": 0.634561,
     "categories": [
       "剧情",
       "年代",
@@ -3451,6 +3736,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/c6edaaf952dc-320.webp",
     "coverLarge": "public/covers/c6edaaf952dc-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "悬疑",
       "犯罪"
@@ -3463,6 +3749,7 @@
     "creator": "奉俊昊",
     "cover": "public/covers/8a5f175aab70-320.webp",
     "coverLarge": "public/covers/8a5f175aab70-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -3475,6 +3762,7 @@
     "creator": "戈尔·维宾斯基",
     "cover": "public/covers/f670a8b7544d-320.webp",
     "coverLarge": "public/covers/f670a8b7544d-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "奇幻",
@@ -3488,6 +3776,7 @@
     "creator": "西尾大介",
     "cover": "public/covers/1d6a1546846d-320.webp",
     "coverLarge": "public/covers/1d6a1546846d-720.webp",
+    "aspectRatio": 0.677467,
     "categories": [
       "动作",
       "喜剧",
@@ -3501,6 +3790,7 @@
     "creator": "闵奎东",
     "cover": "public/covers/77ef7036d31a-320.webp",
     "coverLarge": "public/covers/77ef7036d31a-720.webp",
+    "aspectRatio": 0.666097,
     "categories": [
       "剧情",
       "情色",
@@ -3514,6 +3804,7 @@
     "creator": "蒂姆·波顿",
     "cover": "public/covers/2c405ee46e0b-320.webp",
     "coverLarge": "public/covers/2c405ee46e0b-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "奇幻",
@@ -3527,6 +3818,7 @@
     "creator": "波多正美",
     "cover": "public/covers/01f350f3ee3a-320.webp",
     "coverLarge": "public/covers/01f350f3ee3a-720.webp",
+    "aspectRatio": 0.706605,
     "categories": [
       "剧情",
       "动作",
@@ -3540,6 +3832,7 @@
     "creator": "苏照彬",
     "cover": "public/covers/3b8005bed7de-320.webp",
     "coverLarge": "public/covers/3b8005bed7de-720.webp",
+    "aspectRatio": 0.678851,
     "categories": [
       "动作",
       "武侠",
@@ -3553,6 +3846,7 @@
     "creator": "蒂姆·波顿 / 迈克·约翰逊",
     "cover": "public/covers/95fda7c13053-320.webp",
     "coverLarge": "public/covers/95fda7c13053-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -3565,6 +3859,7 @@
     "creator": "雷德利·斯科特",
     "cover": "public/covers/8771a79b5cc9-320.webp",
     "coverLarge": "public/covers/8771a79b5cc9-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "剧情",
@@ -3578,6 +3873,7 @@
     "creator": "弗朗西斯·福特·科波拉",
     "cover": "public/covers/072c5457a7c9-320.webp",
     "coverLarge": "public/covers/072c5457a7c9-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -3590,6 +3886,7 @@
     "creator": "弗朗西斯·福特·科波拉",
     "cover": "public/covers/baacea577025-320.webp",
     "coverLarge": "public/covers/baacea577025-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -3602,6 +3899,7 @@
     "creator": "弗朗西斯·福特·科波拉",
     "cover": "public/covers/974fc12e62db-320.webp",
     "coverLarge": "public/covers/974fc12e62db-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -3614,6 +3912,7 @@
     "creator": "荒木哲郎",
     "cover": "public/covers/48fa4bc63a59-320.webp",
     "coverLarge": "public/covers/48fa4bc63a59-720.webp",
+    "aspectRatio": 0.7235,
     "categories": [
       "动画",
       "剧情",
@@ -3627,6 +3926,7 @@
     "creator": "马丁·斯科塞斯",
     "cover": "public/covers/4b159aa1222e-320.webp",
     "coverLarge": "public/covers/4b159aa1222e-720.webp",
+    "aspectRatio": 0.666097,
     "categories": [
       "悬疑",
       "惊悚"
@@ -3639,6 +3939,7 @@
     "creator": "王晶",
     "cover": "public/covers/2da2720d327c-320.webp",
     "coverLarge": "public/covers/2da2720d327c-720.webp",
+    "aspectRatio": 0.67474,
     "categories": [
       "喜剧",
       "古装"
@@ -3651,6 +3952,7 @@
     "creator": "文斯·吉利根",
     "cover": "public/covers/e1a8a7266d91-320.webp",
     "coverLarge": "public/covers/e1a8a7266d91-720.webp",
+    "aspectRatio": 0.67475,
     "categories": [
       "剧情",
       "犯罪",
@@ -3664,6 +3966,7 @@
     "creator": "张永新",
     "cover": "public/covers/bbfff280c641-320.webp",
     "coverLarge": "public/covers/bbfff280c641-720.webp",
+    "aspectRatio": 0.752896,
     "categories": [
       "剧情",
       "历史",
@@ -3677,6 +3980,7 @@
     "creator": "金英卓",
     "cover": "public/covers/b3414e8e53de-320.webp",
     "coverLarge": "public/covers/b3414e8e53de-720.webp",
+    "aspectRatio": 0.701754,
     "categories": [
       "剧情",
       "喜剧",
@@ -3690,6 +3994,7 @@
     "creator": "奥里奥尔·保罗",
     "cover": "public/covers/65c008d038d6-320.webp",
     "coverLarge": "public/covers/65c008d038d6-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "悬疑",
       "犯罪"
@@ -3702,6 +4007,7 @@
     "creator": "弗朗西斯·劳伦斯",
     "cover": "public/covers/5a41ebf14b9e-320.webp",
     "coverLarge": "public/covers/5a41ebf14b9e-720.webp",
+    "aspectRatio": 0.674479,
     "categories": [
       "奇幻",
       "惊悚",
@@ -3715,6 +4021,7 @@
     "creator": "萨姆·莱文森",
     "cover": "public/covers/9494d3a4ef24-320.webp",
     "coverLarge": "public/covers/9494d3a4ef24-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "美剧"
@@ -3727,6 +4034,7 @@
     "creator": "克里斯托弗·史密斯",
     "cover": "public/covers/872cb0dc0e27-320.webp",
     "coverLarge": "public/covers/872cb0dc0e27-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "恐怖",
       "悬疑"
@@ -3739,6 +4047,7 @@
     "creator": "罗曼·波兰斯基",
     "cover": "public/covers/29c387fb19e1-320.webp",
     "coverLarge": "public/covers/29c387fb19e1-720.webp",
+    "aspectRatio": 0.637975,
     "categories": [
       "剧情",
       "惊悚",
@@ -3752,6 +4061,7 @@
     "creator": "郑智泳",
     "cover": "public/covers/d16f9ca45d79-320.webp",
     "coverLarge": "public/covers/d16f9ca45d79-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "情色"
@@ -3764,6 +4074,7 @@
     "creator": "小岛正幸",
     "cover": "public/covers/9f925e15c6e0-320.webp",
     "coverLarge": "public/covers/9f925e15c6e0-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -3776,6 +4087,7 @@
     "creator": "戈尔·维宾斯基",
     "cover": "public/covers/71405af14d07-320.webp",
     "coverLarge": "public/covers/71405af14d07-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧",
@@ -3789,6 +4101,7 @@
     "creator": "孔笙 / 李雪",
     "cover": "public/covers/32b8b74a7d0e-320.webp",
     "coverLarge": "public/covers/32b8b74a7d0e-720.webp",
+    "aspectRatio": 0.704787,
     "categories": [
       "古装",
       "剧情",
@@ -3802,6 +4115,7 @@
     "creator": "古橋一浩",
     "cover": "public/covers/d73577416954-320.webp",
     "coverLarge": "public/covers/d73577416954-720.webp",
+    "aspectRatio": 0.679468,
     "categories": [
       "剧情",
       "动作",
@@ -3816,6 +4130,7 @@
     "creator": "於水",
     "cover": "public/covers/ed53a4ce72a1-320.webp",
     "coverLarge": "public/covers/ed53a4ce72a1-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -3828,6 +4143,7 @@
     "creator": "朴赞郁",
     "cover": "public/covers/392f2aa48cda-320.webp",
     "coverLarge": "public/covers/392f2aa48cda-720.webp",
+    "aspectRatio": 0.700809,
     "categories": [
       "剧情",
       "悬疑",
@@ -3841,6 +4157,7 @@
     "creator": "大卫·F·桑德伯格",
     "cover": "public/covers/33bf7d0d766c-320.webp",
     "coverLarge": "public/covers/33bf7d0d766c-720.webp",
+    "aspectRatio": 0.673575,
     "categories": [
       "动作",
       "喜剧",
@@ -3854,6 +4171,7 @@
     "creator": "盖·里奇",
     "cover": "public/covers/8c17aff61217-320.webp",
     "coverLarge": "public/covers/8c17aff61217-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "犯罪"
@@ -3866,6 +4184,7 @@
     "creator": "布拉德·伯德",
     "cover": "public/covers/629a0a6db9a0-320.webp",
     "coverLarge": "public/covers/629a0a6db9a0-720.webp",
+    "aspectRatio": 0.672783,
     "categories": [
       "动画",
       "喜剧",
@@ -3879,6 +4198,7 @@
     "creator": "曹保平",
     "cover": "public/covers/5068ca9b0503-320.webp",
     "coverLarge": "public/covers/5068ca9b0503-720.webp",
+    "aspectRatio": 0.700265,
     "categories": [
       "剧情",
       "犯罪",
@@ -3892,6 +4212,7 @@
     "creator": "威尔·史密斯",
     "cover": "public/covers/d9ef950d671f-320.webp",
     "coverLarge": "public/covers/d9ef950d671f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "谍战",
       "悬疑",
@@ -3905,6 +4226,7 @@
     "creator": "宫崎骏",
     "cover": "public/covers/a95ad7d504ca-320.webp",
     "coverLarge": "public/covers/a95ad7d504ca-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -3917,6 +4239,7 @@
     "creator": "王勇",
     "cover": "public/covers/9e622c3190f7-320.webp",
     "coverLarge": "public/covers/9e622c3190f7-720.webp",
+    "aspectRatio": 0.717742,
     "categories": [
       "喜剧",
       "古装"
@@ -3929,6 +4252,7 @@
     "creator": "大卫·芬奇",
     "cover": "public/covers/edc6c048ecde-320.webp",
     "coverLarge": "public/covers/edc6c048ecde-720.webp",
+    "aspectRatio": 0.656716,
     "categories": [
       "悬疑",
       "犯罪"
@@ -3941,6 +4265,7 @@
     "creator": "长井龙雪",
     "cover": "public/covers/9ddc64fb72c7-320.webp",
     "coverLarge": "public/covers/9ddc64fb72c7-720.webp",
+    "aspectRatio": 0.713178,
     "categories": [
       "剧情",
       "爱情",
@@ -3954,6 +4279,7 @@
     "creator": "特瑞·乔治",
     "cover": "public/covers/df6906c7a250-320.webp",
     "coverLarge": "public/covers/df6906c7a250-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "历史",
@@ -3967,6 +4293,7 @@
     "creator": "大隅正秋",
     "cover": "public/covers/d4a1c997c4d1-320.webp",
     "coverLarge": "public/covers/d4a1c997c4d1-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -3979,6 +4306,7 @@
     "creator": "彼得·法雷里",
     "cover": "public/covers/4e3e5597535f-320.webp",
     "coverLarge": "public/covers/4e3e5597535f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -3991,6 +4319,7 @@
     "creator": "维克多·弗莱明 / 乔治·库克",
     "cover": "public/covers/03b9b39b7f54-320.webp",
     "coverLarge": "public/covers/03b9b39b7f54-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情",
@@ -4004,6 +4333,7 @@
     "creator": "威廉·惠勒",
     "cover": "public/covers/06ba4c3aff55-320.webp",
     "coverLarge": "public/covers/06ba4c3aff55-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情",
@@ -4017,6 +4347,7 @@
     "creator": "木头（MTJJ）",
     "cover": "public/covers/332845693f7c-320.webp",
     "coverLarge": "public/covers/332845693f7c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -4029,6 +4360,7 @@
     "creator": "木头（MTJJ） / 顾杰",
     "cover": "public/covers/bfd21ed6591b-320.webp",
     "coverLarge": "public/covers/bfd21ed6591b-720.webp",
+    "aspectRatio": 0.667237,
     "categories": [
       "动画",
       "奇幻"
@@ -4041,6 +4373,7 @@
     "creator": "迈克尔·沃尔德伦",
     "cover": "public/covers/d68c95cc819f-320.webp",
     "coverLarge": "public/covers/d68c95cc819f-720.webp",
+    "aspectRatio": 0.675,
     "categories": [
       "剧情",
       "科幻",
@@ -4055,6 +4388,7 @@
     "creator": "乔恩·费儒",
     "cover": "public/covers/cac372bdc390-320.webp",
     "coverLarge": "public/covers/cac372bdc390-720.webp",
+    "aspectRatio": 0.694087,
     "categories": [
       "剧情",
       "喜剧"
@@ -4067,6 +4401,7 @@
     "creator": "杨德昌",
     "cover": "public/covers/1f08498447f1-320.webp",
     "coverLarge": "public/covers/1f08498447f1-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -4079,6 +4414,7 @@
     "creator": "乔恩·费儒",
     "cover": "public/covers/c3f987611a35-320.webp",
     "coverLarge": "public/covers/c3f987611a35-720.webp",
+    "aspectRatio": 0.674479,
     "categories": [
       "科幻",
       "动作",
@@ -4092,6 +4428,7 @@
     "creator": "史蒂文·斯皮尔伯格",
     "cover": "public/covers/f6c80b41b740-320.webp",
     "coverLarge": "public/covers/f6c80b41b740-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪",
@@ -4105,6 +4442,7 @@
     "creator": "保罗·韦兹",
     "cover": "public/covers/a453e8dc70fb-320.webp",
     "coverLarge": "public/covers/a453e8dc70fb-720.webp",
+    "aspectRatio": 0.670732,
     "categories": [
       "喜剧",
       "爱情"
@@ -4117,6 +4455,7 @@
     "creator": "朗·霍华德",
     "cover": "public/covers/2edc6c97ff50-320.webp",
     "coverLarge": "public/covers/2edc6c97ff50-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "传记"
@@ -4129,6 +4468,7 @@
     "creator": "尔冬升",
     "cover": "public/covers/4df0834ecf76-320.webp",
     "coverLarge": "public/covers/4df0834ecf76-720.webp",
+    "aspectRatio": 0.685039,
     "categories": [
       "剧情",
       "犯罪"
@@ -4141,6 +4481,7 @@
     "creator": "钮承泽",
     "cover": "public/covers/a0bf8692a0e6-320.webp",
     "coverLarge": "public/covers/a0bf8692a0e6-720.webp",
+    "aspectRatio": 0.700265,
     "categories": [
       "剧情",
       "犯罪"
@@ -4153,6 +4494,7 @@
     "creator": "宫岛善博",
     "cover": "public/covers/c2cb7a6ad228-320.webp",
     "coverLarge": "public/covers/c2cb7a6ad228-720.webp",
+    "aspectRatio": 0.734824,
     "categories": [
       "冒险",
       "奇幻",
@@ -4166,6 +4508,7 @@
     "creator": "史蒂芬·山伯格",
     "cover": "public/covers/ffc6e3c4514d-320.webp",
     "coverLarge": "public/covers/ffc6e3c4514d-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情",
@@ -4179,6 +4522,7 @@
     "creator": "青木英",
     "cover": "public/covers/a1a6ae548de9-320.webp",
     "coverLarge": "public/covers/a1a6ae548de9-720.webp",
+    "aspectRatio": 0.680035,
     "categories": [
       "动画",
       "奇幻"
@@ -4191,6 +4535,7 @@
     "creator": "贝纳尔多·贝托鲁奇",
     "cover": "public/covers/b7c83752e19a-320.webp",
     "coverLarge": "public/covers/b7c83752e19a-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "历史",
@@ -4204,6 +4549,7 @@
     "creator": "乔纳森·弗雷克斯 / 弗雷德里克·E·O·托伊",
     "cover": "public/covers/2ba4477c3646-320.webp",
     "coverLarge": "public/covers/2ba4477c3646-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "历史",
@@ -4217,6 +4563,7 @@
     "creator": "饺子",
     "cover": "public/covers/ac369ee8dccb-320.webp",
     "coverLarge": "public/covers/ac369ee8dccb-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -4229,6 +4576,7 @@
     "creator": "赤根和树",
     "cover": "public/covers/2e580b3d27ba-320.webp",
     "coverLarge": "public/covers/2e580b3d27ba-720.webp",
+    "aspectRatio": 0.693333,
     "categories": [
       "动画",
       "喜剧"
@@ -4241,6 +4589,7 @@
     "creator": "大地丙太郎",
     "cover": "public/covers/5910e7856435-320.webp",
     "coverLarge": "public/covers/5910e7856435-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "家庭"
@@ -4253,6 +4602,7 @@
     "creator": "罗伯·莱纳",
     "cover": "public/covers/516c4c2d2a7b-320.webp",
     "coverLarge": "public/covers/516c4c2d2a7b-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -4265,6 +4615,7 @@
     "creator": "约翰·威尔斯",
     "cover": "public/covers/c0770a42c4d9-320.webp",
     "coverLarge": "public/covers/c0770a42c4d9-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "医务",
@@ -4278,6 +4629,7 @@
     "creator": "丹尼·鲍尔",
     "cover": "public/covers/9310f0e0b8b8-320.webp",
     "coverLarge": "public/covers/9310f0e0b8b8-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -4290,6 +4642,7 @@
     "creator": "陈茂贤",
     "cover": "public/covers/04612aebc5c8-320.webp",
     "coverLarge": "public/covers/04612aebc5c8-720.webp",
+    "aspectRatio": 0.70018,
     "categories": [
       "剧情"
     ]
@@ -4301,6 +4654,7 @@
     "creator": "大卫·芬奇",
     "cover": "public/covers/55c721433313-320.webp",
     "coverLarge": "public/covers/55c721433313-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "悬疑",
       "惊悚",
@@ -4314,6 +4668,7 @@
     "creator": "宫崎骏",
     "cover": "public/covers/580de16d0137-320.webp",
     "coverLarge": "public/covers/580de16d0137-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -4326,6 +4681,7 @@
     "creator": "程小东",
     "cover": "public/covers/337f5f217e28-320.webp",
     "coverLarge": "public/covers/337f5f217e28-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "奇幻",
       "爱情",
@@ -4339,6 +4695,7 @@
     "creator": "杜琪峰",
     "cover": "public/covers/112a83ea81e0-320.webp",
     "coverLarge": "public/covers/112a83ea81e0-720.webp",
+    "aspectRatio": 0.741144,
     "categories": [
       "剧情",
       "犯罪",
@@ -4352,6 +4709,7 @@
     "creator": "野村和也",
     "cover": "public/covers/83b7f0f87cc2-320.webp",
     "coverLarge": "public/covers/83b7f0f87cc2-720.webp",
+    "aspectRatio": 0.707733,
     "categories": [
       "剧情",
       "动画",
@@ -4365,6 +4723,7 @@
     "creator": "弗洛里安·亨克尔·冯·多纳斯马尔克",
     "cover": "public/covers/4124a8b139ec-320.webp",
     "coverLarge": "public/covers/4124a8b139ec-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -4376,6 +4735,7 @@
     "creator": "朴赞郁",
     "cover": "public/covers/7af85c73c601-320.webp",
     "coverLarge": "public/covers/7af85c73c601-720.webp",
+    "aspectRatio": 0.700265,
     "categories": [
       "剧情",
       "犯罪"
@@ -4388,6 +4748,7 @@
     "creator": "石之予",
     "cover": "public/covers/0e42d704e07e-320.webp",
     "coverLarge": "public/covers/0e42d704e07e-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -4400,6 +4761,7 @@
     "creator": "徐克",
     "cover": "public/covers/d9ede5bdac78-320.webp",
     "coverLarge": "public/covers/d9ede5bdac78-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "奇幻",
       "爱情"
@@ -4412,6 +4774,7 @@
     "creator": "申元浩",
     "cover": "public/covers/ec000d924f2b-320.webp",
     "coverLarge": "public/covers/ec000d924f2b-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "家庭",
@@ -4425,6 +4788,7 @@
     "creator": "张艺谋",
     "cover": "public/covers/4f18bcec9f83-320.webp",
     "coverLarge": "public/covers/4f18bcec9f83-720.webp",
+    "aspectRatio": 0.713137,
     "categories": [
       "剧情"
     ]
@@ -4436,6 +4800,7 @@
     "creator": "大塚隆史",
     "cover": "public/covers/ac538b99fb37-320.webp",
     "coverLarge": "public/covers/ac538b99fb37-720.webp",
+    "aspectRatio": 0.767947,
     "categories": [
       "动作",
       "奇幻",
@@ -4449,6 +4814,7 @@
     "creator": "乔纳森·恩特威斯尔",
     "cover": "public/covers/003fad429d3c-320.webp",
     "coverLarge": "public/covers/003fad429d3c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧",
@@ -4462,6 +4828,7 @@
     "creator": "蒂莫西·范·帕滕 / 布莱恩·柯克 / 丹尼尔·米纳汉 / 艾伦·泰勒",
     "cover": "public/covers/336464ee979a-320.webp",
     "coverLarge": "public/covers/336464ee979a-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "奇幻",
       "剧情",
@@ -4475,6 +4842,7 @@
     "creator": "李沧东",
     "cover": "public/covers/d37becdb5765-320.webp",
     "coverLarge": "public/covers/d37becdb5765-720.webp",
+    "aspectRatio": 0.700809,
     "categories": [
       "剧情",
       "悬疑"
@@ -4487,6 +4855,7 @@
     "creator": "姜文",
     "cover": "public/covers/6497b64c091a-320.webp",
     "coverLarge": "public/covers/6497b64c091a-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧",
@@ -4500,6 +4869,7 @@
     "creator": "石原立也",
     "cover": "public/covers/13242b3a4892-320.webp",
     "coverLarge": "public/covers/13242b3a4892-720.webp",
+    "aspectRatio": 0.707162,
     "categories": [
       "动画",
       "喜剧"
@@ -4512,6 +4882,7 @@
     "creator": "黄东赫",
     "cover": "public/covers/7b507d29c74d-320.webp",
     "coverLarge": "public/covers/7b507d29c74d-720.webp",
+    "aspectRatio": 0.670679,
     "categories": [
       "剧情"
     ]
@@ -4523,6 +4894,7 @@
     "creator": "贾斯汀·罗兰、丹·哈蒙",
     "cover": "public/covers/c7f591e6add6-320.webp",
     "coverLarge": "public/covers/c7f591e6add6-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "成人动画",
       "科幻",
@@ -4536,6 +4908,7 @@
     "creator": "金基德",
     "cover": "public/covers/3a08b6d7d8f6-320.webp",
     "coverLarge": "public/covers/3a08b6d7d8f6-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "情色"
@@ -4548,6 +4921,7 @@
     "creator": "拉库马·希拉尼",
     "cover": "public/covers/e172e6139dd3-320.webp",
     "coverLarge": "public/covers/e172e6139dd3-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -4560,6 +4934,7 @@
     "creator": "五百",
     "cover": "public/covers/b7acd6d766db-320.webp",
     "coverLarge": "public/covers/b7acd6d766db-720.webp",
+    "aspectRatio": 0.747945,
     "categories": [
       "剧情",
       "犯罪"
@@ -4572,6 +4947,7 @@
     "creator": "李安",
     "cover": "public/covers/68fddcac079a-320.webp",
     "coverLarge": "public/covers/68fddcac079a-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -4584,6 +4960,7 @@
     "creator": "尹济均",
     "cover": "public/covers/25aefd5a2c32-320.webp",
     "coverLarge": "public/covers/25aefd5a2c32-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "爱情"
@@ -4596,6 +4973,7 @@
     "creator": "尔冬升",
     "cover": "public/covers/6f3802f46990-320.webp",
     "coverLarge": "public/covers/6f3802f46990-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -4608,6 +4986,7 @@
     "creator": "奉俊昊",
     "cover": "public/covers/a0116c1b54bc-320.webp",
     "coverLarge": "public/covers/a0116c1b54bc-720.webp",
+    "aspectRatio": 1.777778,
     "categories": [
       "悬疑",
       "犯罪"
@@ -4620,6 +4999,7 @@
     "creator": "丹尼斯·维伦纽瓦",
     "cover": "public/covers/21c53edbfb5d-320.webp",
     "coverLarge": "public/covers/21c53edbfb5d-720.webp",
+    "aspectRatio": 0.674479,
     "categories": [
       "科幻",
       "冒险"
@@ -4632,6 +5012,7 @@
     "creator": "贾樟柯",
     "cover": "public/covers/d1dd2d3dcbbb-320.webp",
     "coverLarge": "public/covers/d1dd2d3dcbbb-720.webp",
+    "aspectRatio": 0.700637,
     "categories": [
       "剧情"
     ]
@@ -4643,6 +5024,7 @@
     "creator": "费尔南多·梅里尔斯 / 卡迪亚·兰德",
     "cover": "public/covers/0ca24e05f6bd-320.webp",
     "coverLarge": "public/covers/0ca24e05f6bd-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -4655,6 +5037,7 @@
     "creator": "周星驰",
     "cover": "public/covers/e88a80358616-320.webp",
     "coverLarge": "public/covers/e88a80358616-720.webp",
+    "aspectRatio": 0.725067,
     "categories": [
       "喜剧",
       "动作"
@@ -4667,6 +5050,7 @@
     "creator": "李安",
     "cover": "public/covers/49116f3d0bf3-320.webp",
     "coverLarge": "public/covers/49116f3d0bf3-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "奇幻",
@@ -4680,6 +5064,7 @@
     "creator": "刘镇伟",
     "cover": "public/covers/c9e503164a0d-320.webp",
     "coverLarge": "public/covers/c9e503164a0d-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "武侠"
@@ -4692,6 +5077,7 @@
     "creator": "杜琪峰 / 韦家辉",
     "cover": "public/covers/ea2a52c3415e-320.webp",
     "coverLarge": "public/covers/ea2a52c3415e-720.webp",
+    "aspectRatio": 0.714286,
     "categories": [
       "剧情",
       "犯罪",
@@ -4705,6 +5091,7 @@
     "creator": "保罗·麦奎根",
     "cover": "public/covers/3f5180c34a43-320.webp",
     "coverLarge": "public/covers/3f5180c34a43-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "悬疑",
       "犯罪",
@@ -4718,6 +5105,7 @@
     "creator": "皮艾尔·柯芬 / 克里斯·雷纳德",
     "cover": "public/covers/fd7345737c87-320.webp",
     "coverLarge": "public/covers/fd7345737c87-720.webp",
+    "aspectRatio": 0.701262,
     "categories": [
       "动画",
       "喜剧"
@@ -4730,6 +5118,7 @@
     "creator": "马克·塞金",
     "cover": "public/covers/5795666a207c-320.webp",
     "coverLarge": "public/covers/5795666a207c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "美剧"
@@ -4742,6 +5131,7 @@
     "creator": "石川淳一",
     "cover": "public/covers/01238d14c454-320.webp",
     "coverLarge": "public/covers/01238d14c454-720.webp",
+    "aspectRatio": 0.672414,
     "categories": [
       "剧情",
       "日剧"
@@ -4754,6 +5144,7 @@
     "creator": "罗杰·阿勒斯 / 罗伯·明可夫",
     "cover": "public/covers/9acd6b0a2939-320.webp",
     "coverLarge": "public/covers/9acd6b0a2939-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -4766,6 +5157,7 @@
     "creator": "张艺谋",
     "cover": "public/covers/453e9a2386c8-320.webp",
     "coverLarge": "public/covers/453e9a2386c8-720.webp",
+    "aspectRatio": 0.6875,
     "categories": [
       "剧情",
       "爱情",
@@ -4779,6 +5171,7 @@
     "creator": "欧文杰 / 黄伟杰 / 许学文",
     "cover": "public/covers/98ea7a6144cd-320.webp",
     "coverLarge": "public/covers/98ea7a6144cd-720.webp",
+    "aspectRatio": 0.711111,
     "categories": [
       "剧情",
       "犯罪"
@@ -4791,6 +5184,7 @@
     "creator": "涅提·蒂瓦里",
     "cover": "public/covers/c6abfc50ff96-320.webp",
     "coverLarge": "public/covers/c6abfc50ff96-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "传记",
@@ -4804,6 +5198,7 @@
     "creator": "丹尼尔·关 / 丹尼尔·施纳特",
     "cover": "public/covers/3d195284b537-320.webp",
     "coverLarge": "public/covers/3d195284b537-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "冒险",
@@ -4817,6 +5212,7 @@
     "creator": "格拉迪·哈尔",
     "cover": "public/covers/18705c62dbb2-320.webp",
     "coverLarge": "public/covers/18705c62dbb2-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "剧情",
@@ -4830,6 +5226,7 @@
     "creator": "安藤真裕",
     "cover": "public/covers/4248a68bb3b0-320.webp",
     "coverLarge": "public/covers/4248a68bb3b0-720.webp",
+    "aspectRatio": 0.70625,
     "categories": [
       "动画",
       "奇幻"
@@ -4842,6 +5239,7 @@
     "creator": "荒卷伸志",
     "cover": "public/covers/dd547fff7822-320.webp",
     "coverLarge": "public/covers/dd547fff7822-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "悬疑"
@@ -4854,6 +5252,7 @@
     "creator": "李濬益",
     "cover": "public/covers/cec496de7997-320.webp",
     "coverLarge": "public/covers/cec496de7997-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -4865,6 +5264,7 @@
     "creator": "钟少雄 / 王飞",
     "cover": "public/covers/5e3f7cabfbf5-320.webp",
     "coverLarge": "public/covers/5e3f7cabfbf5-720.webp",
+    "aspectRatio": 0.752747,
     "categories": [
       "剧情",
       "历史",
@@ -4878,6 +5278,7 @@
     "creator": "罗启锐",
     "cover": "public/covers/fb74f032557d-320.webp",
     "coverLarge": "public/covers/fb74f032557d-720.webp",
+    "aspectRatio": 0.712401,
     "categories": [
       "剧情"
     ]
@@ -4889,6 +5290,7 @@
     "creator": "姜文",
     "cover": "public/covers/0dca0672c0a2-320.webp",
     "coverLarge": "public/covers/0dca0672c0a2-720.webp",
+    "aspectRatio": 1.496599,
     "categories": [
       "剧情",
       "奇幻"
@@ -4901,6 +5303,7 @@
     "creator": "詹姆斯·卡梅隆",
     "cover": "public/covers/03efe8e0f6ac-320.webp",
     "coverLarge": "public/covers/03efe8e0f6ac-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情",
@@ -4914,6 +5317,7 @@
     "creator": "李力持",
     "cover": "public/covers/420a492fcf48-320.webp",
     "coverLarge": "public/covers/420a492fcf48-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "爱情"
@@ -4926,6 +5330,7 @@
     "creator": "陈思诚",
     "cover": "public/covers/2e4e3e14527e-320.webp",
     "coverLarge": "public/covers/2e4e3e14527e-720.webp",
+    "aspectRatio": 0.715818,
     "categories": [
       "喜剧",
       "悬疑",
@@ -4939,6 +5344,7 @@
     "creator": "金子文纪",
     "cover": "public/covers/26a4dc3741b1-320.webp",
     "coverLarge": "public/covers/26a4dc3741b1-720.webp",
+    "aspectRatio": 0.715596,
     "categories": [
       "爱情",
       "喜剧",
@@ -4952,6 +5358,7 @@
     "creator": "元奎 / 刘镇伟",
     "cover": "public/covers/4857576b1d9d-320.webp",
     "coverLarge": "public/covers/4857576b1d9d-720.webp",
+    "aspectRatio": 0.730994,
     "categories": [
       "喜剧",
       "动作"
@@ -4964,6 +5371,7 @@
     "creator": "许鞍华",
     "cover": "public/covers/9e14d7adeb6d-320.webp",
     "coverLarge": "public/covers/9e14d7adeb6d-720.webp",
+    "aspectRatio": 0.691293,
     "categories": [
       "剧情",
       "家庭"
@@ -4976,6 +5384,7 @@
     "creator": "张前",
     "cover": "public/covers/88490148952d-320.webp",
     "coverLarge": "public/covers/88490148952d-720.webp",
+    "aspectRatio": 0.65641,
     "categories": [
       "都市",
       "商战",
@@ -4989,6 +5398,7 @@
     "creator": "宫崎骏",
     "cover": "public/covers/74a8a66dce90-320.webp",
     "coverLarge": "public/covers/74a8a66dce90-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -5001,6 +5411,7 @@
     "creator": "奥利弗·斯通",
     "cover": "public/covers/480f0bf16d36-320.webp",
     "coverLarge": "public/covers/480f0bf16d36-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "犯罪",
       "惊悚",
@@ -5014,6 +5425,7 @@
     "creator": "让-皮埃尔·热内",
     "cover": "public/covers/9856015305b1-320.webp",
     "coverLarge": "public/covers/9856015305b1-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情",
@@ -5027,6 +5439,7 @@
     "creator": "邓衍成 / 韦丽园",
     "cover": "public/covers/f040dc87a484-320.webp",
     "coverLarge": "public/covers/f040dc87a484-720.webp",
+    "aspectRatio": 0.715818,
     "categories": [
       "武侠",
       "古装",
@@ -5040,6 +5453,7 @@
     "creator": "贾樟柯",
     "cover": "public/covers/f14aa48faebd-320.webp",
     "coverLarge": "public/covers/f14aa48faebd-720.webp",
+    "aspectRatio": 0.706667,
     "categories": [
       "剧情",
       "犯罪"
@@ -5052,6 +5466,7 @@
     "creator": "肖恩·利维",
     "cover": "public/covers/b232b2562c9f-320.webp",
     "coverLarge": "public/covers/b232b2562c9f-720.webp",
+    "aspectRatio": 0.675,
     "categories": [
       "剧情",
       "动作",
@@ -5066,6 +5481,7 @@
     "creator": "史蒂文·斯皮尔伯格",
     "cover": "public/covers/82f33ee86909-320.webp",
     "coverLarge": "public/covers/82f33ee86909-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "冒险"
@@ -5078,6 +5494,7 @@
     "creator": "菲尔·罗德 / 克里斯托弗·米勒",
     "cover": "public/covers/cffa8bf0f520-320.webp",
     "coverLarge": "public/covers/cffa8bf0f520-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "剧情"
@@ -5090,6 +5507,7 @@
     "creator": "克雷格·西尔弗斯坦",
     "cover": "public/covers/44d745865b45-320.webp",
     "coverLarge": "public/covers/44d745865b45-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "科幻",
@@ -5105,6 +5523,7 @@
     "creator": "易小星",
     "cover": "public/covers/27fbe52ea7a2-320.webp",
     "coverLarge": "public/covers/27fbe52ea7a2-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "短片"
@@ -5117,6 +5536,7 @@
     "creator": "金成勋",
     "cover": "public/covers/fcff2b79e433-320.webp",
     "coverLarge": "public/covers/fcff2b79e433-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "悬疑",
       "惊悚",
@@ -5130,6 +5550,7 @@
     "creator": "路易·莱特里尔",
     "cover": "public/covers/b36245efe759-320.webp",
     "coverLarge": "public/covers/b36245efe759-720.webp",
+    "aspectRatio": 0.670732,
     "categories": [
       "喜剧",
       "动作",
@@ -5143,6 +5564,7 @@
     "creator": "韩在林",
     "cover": "public/covers/fb226aa2c716-320.webp",
     "coverLarge": "public/covers/fb226aa2c716-720.webp",
+    "aspectRatio": 0.697368,
     "categories": [
       "剧情",
       "犯罪",
@@ -5156,6 +5578,7 @@
     "creator": "王家卫",
     "cover": "public/covers/2af15adea96a-320.webp",
     "coverLarge": "public/covers/2af15adea96a-720.webp",
+    "aspectRatio": 0.715818,
     "categories": [
       "剧情",
       "犯罪",
@@ -5169,6 +5592,7 @@
     "creator": "马风清",
     "cover": "public/covers/6097b36a365c-320.webp",
     "coverLarge": "public/covers/6097b36a365c-720.webp",
+    "aspectRatio": 1.968889,
     "categories": [
       "武侠",
       "冒险",
@@ -5182,6 +5606,7 @@
     "creator": "马丁·布莱斯",
     "cover": "public/covers/9c32257ed095-320.webp",
     "coverLarge": "public/covers/9c32257ed095-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -5193,6 +5618,7 @@
     "creator": "文牧野",
     "cover": "public/covers/4f6b3a928271-320.webp",
     "coverLarge": "public/covers/4f6b3a928271-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧"
@@ -5205,6 +5631,7 @@
     "creator": "及川启",
     "cover": "public/covers/3381b3fb97d9-320.webp",
     "coverLarge": "public/covers/3381b3fb97d9-720.webp",
+    "aspectRatio": 0.699088,
     "categories": [
       "剧情",
       "爱情",
@@ -5218,6 +5645,7 @@
     "creator": "长井龙雪",
     "cover": "public/covers/19a565704e0e-320.webp",
     "coverLarge": "public/covers/19a565704e0e-720.webp",
+    "aspectRatio": 0.709877,
     "categories": [
       "剧情",
       "家庭"
@@ -5230,6 +5658,7 @@
     "creator": "惠楷栋",
     "cover": "public/covers/d683b16cd2ff-320.webp",
     "coverLarge": "public/covers/d683b16cd2ff-720.webp",
+    "aspectRatio": 0.562945,
     "categories": [
       "剧情",
       "犯罪",
@@ -5243,6 +5672,7 @@
     "creator": "李安",
     "cover": "public/covers/7ad1d2adb9ad-320.webp",
     "coverLarge": "public/covers/7ad1d2adb9ad-720.webp",
+    "aspectRatio": 0.675325,
     "categories": [
       "剧情",
       "武侠",
@@ -5256,6 +5686,7 @@
     "creator": "约翰·维尔斯",
     "cover": "public/covers/902452d76b15-320.webp",
     "coverLarge": "public/covers/902452d76b15-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "喜剧",
@@ -5269,6 +5700,7 @@
     "creator": "瑞奇·莫尔",
     "cover": "public/covers/4f8ed20f25a3-320.webp",
     "coverLarge": "public/covers/4f8ed20f25a3-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "冒险"
@@ -5281,6 +5713,7 @@
     "creator": "刘伟强 / 麦兆辉",
     "cover": "public/covers/e8de4d9e5b25-320.webp",
     "coverLarge": "public/covers/e8de4d9e5b25-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -5293,6 +5726,7 @@
     "creator": "刘伟强 / 麦兆辉",
     "cover": "public/covers/87c0fd35e95f-320.webp",
     "coverLarge": "public/covers/87c0fd35e95f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -5305,6 +5739,7 @@
     "creator": "宁浩",
     "cover": "public/covers/b6b2d0eb9d7c-320.webp",
     "coverLarge": "public/covers/b6b2d0eb9d7c-720.webp",
+    "aspectRatio": 0.679012,
     "categories": [
       "剧情",
       "犯罪"
@@ -5317,6 +5752,7 @@
     "creator": "庄文强",
     "cover": "public/covers/4e434b9e4648-320.webp",
     "coverLarge": "public/covers/4e434b9e4648-720.webp",
+    "aspectRatio": 0.711111,
     "categories": [
       "剧情",
       "犯罪"
@@ -5329,6 +5765,7 @@
     "creator": "冈本学",
     "cover": "public/covers/e4ece92112e0-320.webp",
     "coverLarge": "public/covers/e4ece92112e0-720.webp",
+    "aspectRatio": 0.710974,
     "categories": [
       "奇幻",
       "冒险"
@@ -5341,6 +5778,7 @@
     "creator": "詹姆斯·弗雷",
     "cover": "public/covers/04660e1fbd5d-320.webp",
     "coverLarge": "public/covers/04660e1fbd5d-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情",
@@ -5354,6 +5792,7 @@
     "creator": "尚敬",
     "cover": "public/covers/6d14b5cb192d-320.webp",
     "coverLarge": "public/covers/6d14b5cb192d-720.webp",
+    "aspectRatio": 0.690265,
     "categories": [
       "喜剧",
       "古装",
@@ -5367,6 +5806,7 @@
     "creator": "朱塞佩·托纳多雷",
     "cover": "public/covers/973289198c8d-320.webp",
     "coverLarge": "public/covers/973289198c8d-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "爱情"
@@ -5379,6 +5819,7 @@
     "creator": "周星驰 / 李力持",
     "cover": "public/covers/4da5a3c08a75-320.webp",
     "coverLarge": "public/covers/4da5a3c08a75-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "喜剧",
       "爱情"
@@ -5391,6 +5832,7 @@
     "creator": "李国立 / 吴锦源 / 梁胜权 / 麦贯之",
     "cover": "public/covers/54441720b9c3-320.webp",
     "coverLarge": "public/covers/54441720b9c3-720.webp",
+    "aspectRatio": 0.68625,
     "categories": [
       "古装",
       "奇幻",
@@ -5404,6 +5846,7 @@
     "creator": "托德·菲利普斯",
     "cover": "public/covers/2958bec3c9ee-320.webp",
     "coverLarge": "public/covers/2958bec3c9ee-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -5416,6 +5859,7 @@
     "creator": "皮埃尔·柯芬",
     "cover": "public/covers/f44fe98add2a-320.webp",
     "coverLarge": "public/covers/f44fe98add2a-720.webp",
+    "aspectRatio": 0.675,
     "categories": [
       "喜剧",
       "动画",
@@ -5429,6 +5873,7 @@
     "creator": "朴赞郁",
     "cover": "public/covers/934919236c89-320.webp",
     "coverLarge": "public/covers/934919236c89-720.webp",
+    "aspectRatio": 0.667,
     "categories": [
       "剧情",
       "犯罪",
@@ -5442,6 +5887,7 @@
     "creator": "是枝裕和",
     "cover": "public/covers/7ca56daab327-320.webp",
     "coverLarge": "public/covers/7ca56daab327-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -5453,6 +5899,7 @@
     "creator": "弗兰克·德拉邦特",
     "cover": "public/covers/709a22366a4f-320.webp",
     "coverLarge": "public/covers/709a22366a4f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -5465,6 +5912,7 @@
     "creator": "程小东",
     "cover": "public/covers/e82bb4f41297-320.webp",
     "coverLarge": "public/covers/e82bb4f41297-720.webp",
+    "aspectRatio": 0.672727,
     "categories": [
       "武侠",
       "奇幻"
@@ -5477,6 +5925,7 @@
     "creator": "彼特·道格特 / 凯普·鲍尔斯",
     "cover": "public/covers/a1f609488b4f-320.webp",
     "coverLarge": "public/covers/a1f609488b4f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -5489,6 +5938,7 @@
     "creator": "史蒂文·斯皮尔伯格",
     "cover": "public/covers/a1fcd5f13280-320.webp",
     "coverLarge": "public/covers/a1fcd5f13280-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "历史",
@@ -5502,6 +5952,7 @@
     "creator": "李惠民",
     "cover": "public/covers/62deb408a42f-320.webp",
     "coverLarge": "public/covers/62deb408a42f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "武侠",
       "动作"
@@ -5514,6 +5965,7 @@
     "creator": "朴勋政",
     "cover": "public/covers/835fa4d2a2ed-320.webp",
     "coverLarge": "public/covers/835fa4d2a2ed-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -5526,6 +5978,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/233854ba9b93-320.webp",
     "coverLarge": "public/covers/233854ba9b93-720.webp",
+    "aspectRatio": 0.675325,
     "categories": [
       "科幻",
       "动作",
@@ -5539,6 +5992,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/f46c57528b85-320.webp",
     "coverLarge": "public/covers/f46c57528b85-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "科幻",
       "剧情"
@@ -5551,6 +6005,7 @@
     "creator": "渡边信一郎",
     "cover": "public/covers/2410cde654d7-320.webp",
     "coverLarge": "public/covers/2410cde654d7-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "科幻"
@@ -5563,6 +6018,7 @@
     "creator": "蒂姆·波顿",
     "cover": "public/covers/9eb097382c4e-320.webp",
     "coverLarge": "public/covers/9eb097382c4e-720.webp",
+    "aspectRatio": 0.675068,
     "categories": [
       "剧情",
       "悬疑",
@@ -5577,6 +6033,7 @@
     "creator": "杨雅喆",
     "cover": "public/covers/6afb185900ca-320.webp",
     "coverLarge": "public/covers/6afb185900ca-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "犯罪"
@@ -5589,6 +6046,7 @@
     "creator": "李·昂克里奇 / 阿德里安·莫利纳",
     "cover": "public/covers/ed4253c2e3a8-320.webp",
     "coverLarge": "public/covers/ed4253c2e3a8-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -5601,6 +6059,7 @@
     "creator": "姜文",
     "cover": "public/covers/c36de1c82866-320.webp",
     "coverLarge": "public/covers/c36de1c82866-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -5612,6 +6071,7 @@
     "creator": "乔纳森·代顿 / 瓦莱丽·法里斯",
     "cover": "public/covers/116d40e886e9-320.webp",
     "coverLarge": "public/covers/116d40e886e9-720.webp",
+    "aspectRatio": 0.723562,
     "categories": [
       "喜剧",
       "剧情"
@@ -5624,6 +6084,7 @@
     "creator": "德鲁·高达",
     "cover": "public/covers/5f7064e36975-320.webp",
     "coverLarge": "public/covers/5f7064e36975-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "动作",
@@ -5638,6 +6099,7 @@
     "creator": "王家卫",
     "cover": "public/covers/7b1ed3e05f2d-320.webp",
     "coverLarge": "public/covers/7b1ed3e05f2d-720.webp",
+    "aspectRatio": 0.700265,
     "categories": [
       "剧情",
       "传记",
@@ -5651,6 +6113,7 @@
     "creator": "阿德里安·莱恩",
     "cover": "public/covers/d5c29fe38f9b-320.webp",
     "coverLarge": "public/covers/d5c29fe38f9b-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "情色"
@@ -5663,6 +6126,7 @@
     "creator": "安藤真裕",
     "cover": "public/covers/d5ae29e02edf-320.webp",
     "coverLarge": "public/covers/d5ae29e02edf-720.webp",
+    "aspectRatio": 0.707011,
     "categories": [
       "动画",
       "动作",
@@ -5677,6 +6141,7 @@
     "creator": "罗伯特·怀斯",
     "cover": "public/covers/063759220881-320.webp",
     "coverLarge": "public/covers/063759220881-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "音乐",
@@ -5690,6 +6155,7 @@
     "creator": "高松信司",
     "cover": "public/covers/63d87beaa1dd-320.webp",
     "coverLarge": "public/covers/63d87beaa1dd-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "喜剧"
@@ -5702,6 +6168,7 @@
     "creator": "吴宇森",
     "cover": "public/covers/714c2433af07-320.webp",
     "coverLarge": "public/covers/714c2433af07-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "动作",
@@ -5715,6 +6182,7 @@
     "creator": "克里斯蒂安·林克",
     "cover": "public/covers/71d28e4a3b51-320.webp",
     "coverLarge": "public/covers/71d28e4a3b51-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "动画",
@@ -5731,6 +6199,7 @@
     "creator": "金容华",
     "cover": "public/covers/d0475d4c308f-320.webp",
     "coverLarge": "public/covers/d0475d4c308f-720.webp",
+    "aspectRatio": 0.702128,
     "categories": [
       "剧情",
       "奇幻"
@@ -5743,6 +6212,7 @@
     "creator": "谢君伟 / 邹靖",
     "cover": "public/covers/80728e977eb0-320.webp",
     "coverLarge": "public/covers/80728e977eb0-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "剧情"
@@ -5755,6 +6225,7 @@
     "creator": "曹盾",
     "cover": "public/covers/376fcf84bd73-320.webp",
     "coverLarge": "public/covers/376fcf84bd73-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "悬疑",
       "古装",
@@ -5768,6 +6239,7 @@
     "creator": "吕克·贝松",
     "cover": "public/covers/11ffb09bc731-320.webp",
     "coverLarge": "public/covers/11ffb09bc731-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "动作",
@@ -5781,6 +6253,7 @@
     "creator": "史蒂文·斯皮尔伯格",
     "cover": "public/covers/67406a049c4e-320.webp",
     "coverLarge": "public/covers/67406a049c4e-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "战争"
@@ -5793,6 +6266,7 @@
     "creator": "刘家成",
     "cover": "public/covers/5d0e41c71308-320.webp",
     "coverLarge": "public/covers/5d0e41c71308-720.webp",
+    "aspectRatio": 0.741144,
     "categories": [
       "剧情",
       "年代",
@@ -5806,6 +6280,7 @@
     "creator": "鲍勃·佩尔西凯蒂 / 彼得·拉姆齐",
     "cover": "public/covers/ac4e7d623b9d-320.webp",
     "coverLarge": "public/covers/ac4e7d623b9d-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "科幻",
@@ -5819,6 +6294,7 @@
     "creator": "大卫·芬奇",
     "cover": "public/covers/9a4e5c40dc9d-320.webp",
     "coverLarge": "public/covers/9a4e5c40dc9d-720.webp",
+    "aspectRatio": 0.667237,
     "categories": [
       "剧情",
       "美剧"
@@ -5831,6 +6307,7 @@
     "creator": "彼得·杰克逊",
     "cover": "public/covers/c724bcaed0ff-320.webp",
     "coverLarge": "public/covers/c724bcaed0ff-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "奇幻",
       "冒险"
@@ -5843,6 +6320,7 @@
     "creator": "克里斯托弗·诺兰",
     "cover": "public/covers/c7a66628c40f-320.webp",
     "coverLarge": "public/covers/c7a66628c40f-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "悬疑"
@@ -5855,6 +6333,7 @@
     "creator": "石原立也",
     "cover": "public/covers/5ebc278de0c5-320.webp",
     "coverLarge": "public/covers/5ebc278de0c5-720.webp",
+    "aspectRatio": 0.72327,
     "categories": [
       "喜剧",
       "爱情"
@@ -5867,6 +6346,7 @@
     "creator": "莱塞·霍尔斯道姆",
     "cover": "public/covers/3c8b0c9b8112-320.webp",
     "coverLarge": "public/covers/3c8b0c9b8112-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情"
     ]
@@ -5878,6 +6358,7 @@
     "creator": "黄精甫",
     "cover": "public/covers/f3a0bd0e4410-320.webp",
     "coverLarge": "public/covers/f3a0bd0e4410-720.webp",
+    "aspectRatio": 0.689474,
     "categories": [
       "剧情",
       "犯罪",
@@ -5891,6 +6372,7 @@
     "creator": "朴性厚",
     "cover": "public/covers/791449429aee-320.webp",
     "coverLarge": "public/covers/791449429aee-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动画",
       "奇幻"
@@ -5903,6 +6385,7 @@
     "creator": "罗泓轸",
     "cover": "public/covers/82537994b0f4-320.webp",
     "coverLarge": "public/covers/82537994b0f4-720.webp",
+    "aspectRatio": 0.700265,
     "categories": [
       "剧情",
       "犯罪",
@@ -5916,6 +6399,7 @@
     "creator": "王晶 / 关智耀",
     "cover": "public/covers/f7680bd09cc8-320.webp",
     "coverLarge": "public/covers/f7680bd09cc8-720.webp",
+    "aspectRatio": 0.691358,
     "categories": [
       "剧情",
       "犯罪",
@@ -5929,6 +6413,7 @@
     "creator": "吴宇森",
     "cover": "public/covers/1add9f82fc5e-320.webp",
     "coverLarge": "public/covers/1add9f82fc5e-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "动作",
       "爱情"
@@ -5941,6 +6426,7 @@
     "creator": "伊桑·科恩 / 乔尔·科恩",
     "cover": "public/covers/ade9dadfd38e-320.webp",
     "coverLarge": "public/covers/ade9dadfd38e-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "音乐"
@@ -5953,6 +6439,7 @@
     "creator": "约瑟夫·科辛斯基",
     "cover": "public/covers/aecdf8d81e1c-320.webp",
     "coverLarge": "public/covers/aecdf8d81e1c-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "运动"
@@ -5965,6 +6452,7 @@
     "creator": "朱斯特·雅坎",
     "cover": "public/covers/7f358b4c8881-320.webp",
     "coverLarge": "public/covers/7f358b4c8881-720.webp",
+    "aspectRatio": 0.666667,
     "categories": [
       "剧情",
       "情色"
@@ -5977,6 +6465,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/b38060735c34-320.webp",
     "coverLarge": "public/covers/b38060735c34-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -5988,6 +6477,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/35c238c6804f-320.webp",
     "coverLarge": "public/covers/35c238c6804f-720.webp",
+    "aspectRatio": 1.132075,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -5999,6 +6489,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/9fbf61c62039-320.webp",
     "coverLarge": "public/covers/9fbf61c62039-720.webp",
+    "aspectRatio": 0.963869,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6010,6 +6501,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/3d0b7ea69ed0-320.webp",
     "coverLarge": "public/covers/3d0b7ea69ed0-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6021,6 +6513,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/f60cbeb908b2-320.webp",
     "coverLarge": "public/covers/f60cbeb908b2-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6032,6 +6525,7 @@
     "creator": "陈奕迅",
     "cover": "public/covers/5e473c2df643-320.webp",
     "coverLarge": "public/covers/5e473c2df643-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "华语流行"
     ]
@@ -6043,6 +6537,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/1932972c3ba1-320.webp",
     "coverLarge": "public/covers/1932972c3ba1-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop",
       "C-pop"
@@ -6055,6 +6550,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/39f36f8dddce-320.webp",
     "coverLarge": "public/covers/39f36f8dddce-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6066,6 +6562,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/c9e865e986b2-320.webp",
     "coverLarge": "public/covers/c9e865e986b2-720.webp",
+    "aspectRatio": 1.333333,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6077,6 +6574,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/4829b66ba853-320.webp",
     "coverLarge": "public/covers/4829b66ba853-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop",
       "Cantopop/HK-Pop"
@@ -6089,6 +6587,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/c170aa4098cd-320.webp",
     "coverLarge": "public/covers/c170aa4098cd-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6100,6 +6599,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/fe1e09c9472a-320.webp",
     "coverLarge": "public/covers/fe1e09c9472a-720.webp",
+    "aspectRatio": 1.010952,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6111,6 +6611,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/9b5eb59b21fa-320.webp",
     "coverLarge": "public/covers/9b5eb59b21fa-720.webp",
+    "aspectRatio": 0.705,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6122,6 +6623,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/94c2a7bb3b19-320.webp",
     "coverLarge": "public/covers/94c2a7bb3b19-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6133,6 +6635,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/659c0cda23bf-320.webp",
     "coverLarge": "public/covers/659c0cda23bf-720.webp",
+    "aspectRatio": 0.918197,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6144,6 +6647,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/025c741ae061-320.webp",
     "coverLarge": "public/covers/025c741ae061-720.webp",
+    "aspectRatio": 0.996678,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6155,6 +6659,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/edd5597e96bd-320.webp",
     "coverLarge": "public/covers/edd5597e96bd-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6166,6 +6671,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/9a9bfd60f996-320.webp",
     "coverLarge": "public/covers/9a9bfd60f996-720.webp",
+    "aspectRatio": 0.880562,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6177,6 +6683,7 @@
     "creator": "Eason Chan",
     "cover": "public/covers/60e595e44347-320.webp",
     "coverLarge": "public/covers/60e595e44347-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6188,41 +6695,177 @@
     "creator": "Eason Chan",
     "cover": "public/covers/c680be68efdd-320.webp",
     "coverLarge": "public/covers/c680be68efdd-720.webp",
+    "aspectRatio": 1.075269,
     "categories": [
       "Cantopop/HK-Pop"
     ]
   },
   {
-    "id": "music:Somnium Chamber",
+    "id": "music:玻璃 demo",
     "type": "music",
-    "title": "Somnium Chamber",
-    "creator": "9m88",
-    "cover": "public/covers/e205c46c71dd-320.webp",
-    "coverLarge": "public/covers/e205c46c71dd-720.webp",
+    "title": "玻璃 demo",
+    "creator": "Gareth.T",
+    "cover": "public/covers/5b68df1320f0-320.webp",
+    "coverLarge": "public/covers/5b68df1320f0-720.webp",
+    "aspectRatio": 1,
     "categories": [
-      "R&B/Soul"
+      "独立流行"
     ]
   },
   {
-    "id": "music:极乐大厦揭幕",
+    "id": "music:緊急聯絡人",
     "type": "music",
-    "title": "极乐大厦揭幕",
-    "creator": "八仙8Immortals",
-    "cover": "public/covers/b87b51744e87-320.webp",
-    "coverLarge": "public/covers/b87b51744e87-720.webp",
+    "title": "緊急聯絡人",
+    "creator": "Gareth.T",
+    "cover": "public/covers/f9e494c77ad7-320.webp",
+    "coverLarge": "public/covers/f9e494c77ad7-720.webp",
+    "aspectRatio": 1,
     "categories": [
-      "C-pop"
+      "Cantopop/HK-Pop"
     ]
   },
   {
-    "id": "music:If we can be happy happy every day, who wants to be sad",
+    "id": "music:泥菩薩",
     "type": "music",
-    "title": "If we can be happy happy every day, who wants to be sad",
-    "creator": "陈嫺静",
-    "cover": "public/covers/aafd13071dee-320.webp",
-    "coverLarge": "public/covers/aafd13071dee-720.webp",
+    "title": "泥菩薩",
+    "creator": "Gareth.T",
+    "cover": "public/covers/4acc5dc22cb5-320.webp",
+    "coverLarge": "public/covers/4acc5dc22cb5-720.webp",
+    "aspectRatio": 1,
     "categories": [
-      "华语流行"
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:顏色",
+    "type": "music",
+    "title": "顏色",
+    "creator": "Gareth.T",
+    "cover": "public/covers/ff379a8dab07-320.webp",
+    "coverLarge": "public/covers/ff379a8dab07-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "独立流行"
+    ]
+  },
+  {
+    "id": "music:用背脊唱情歌",
+    "type": "music",
+    "title": "用背脊唱情歌",
+    "creator": "Gareth.T",
+    "cover": "public/covers/9ada2137de36-320.webp",
+    "coverLarge": "public/covers/9ada2137de36-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:dont smile at me",
+    "type": "music",
+    "title": "dont smile at me",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/5d69909e1891-320.webp",
+    "coverLarge": "public/covers/5d69909e1891-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:everything i wanted",
+    "type": "music",
+    "title": "everything i wanted",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/8e2e3850a1fa-320.webp",
+    "coverLarge": "public/covers/8e2e3850a1fa-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Guitar Songs",
+    "type": "music",
+    "title": "Guitar Songs",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/9cf90645994a-320.webp",
+    "coverLarge": "public/covers/9cf90645994a-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:Happier Than Ever",
+    "type": "music",
+    "title": "Happier Than Ever",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/da74a8890bff-320.webp",
+    "coverLarge": "public/covers/da74a8890bff-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:HIT ME HARD AND SOFT",
+    "type": "music",
+    "title": "HIT ME HARD AND SOFT",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/d8b520370df3-320.webp",
+    "coverLarge": "public/covers/d8b520370df3-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:hotline (edit)",
+    "type": "music",
+    "title": "hotline (edit)",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/669e1a100a4a-320.webp",
+    "coverLarge": "public/covers/669e1a100a4a-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:lovely",
+    "type": "music",
+    "title": "lovely",
+    "creator": "Billie Eilish & Khalid",
+    "cover": "public/covers/362ad7cb6d52-320.webp",
+    "coverLarge": "public/covers/362ad7cb6d52-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:What Was I Made For_ (From The Motion Picture _Barbie_)",
+    "type": "music",
+    "title": "What Was I Made For? (From The Motion Picture \"Barbie\")",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/1c3790c67a17-320.webp",
+    "coverLarge": "public/covers/1c3790c67a17-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
+    ]
+  },
+  {
+    "id": "music:WHEN WE ALL FALL ASLEEP, WHERE DO WE GO_",
+    "type": "music",
+    "title": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+    "creator": "Billie Eilish",
+    "cover": "public/covers/49cbde0ef98a-320.webp",
+    "coverLarge": "public/covers/49cbde0ef98a-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Alternative"
     ]
   },
   {
@@ -6232,6 +6875,7 @@
     "creator": "陳嫺靜",
     "cover": "public/covers/600e81bbda61-320.webp",
     "coverLarge": "public/covers/600e81bbda61-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6243,6 +6887,43 @@
     "creator": "陳嫺靜",
     "cover": "public/covers/1da7041844f6-320.webp",
     "coverLarge": "public/covers/1da7041844f6-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:If we can be happy happy every day, who wants to be sad",
+    "type": "music",
+    "title": "If we can be happy happy every day, who wants to be sad",
+    "creator": "陈嫺静",
+    "cover": "public/covers/aafd13071dee-320.webp",
+    "coverLarge": "public/covers/aafd13071dee-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "华语流行"
+    ]
+  },
+  {
+    "id": "music:Somnium Chamber",
+    "type": "music",
+    "title": "Somnium Chamber",
+    "creator": "9m88",
+    "cover": "public/covers/e205c46c71dd-320.webp",
+    "coverLarge": "public/covers/e205c46c71dd-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "R&B/Soul"
+    ]
+  },
+  {
+    "id": "music:极乐大厦揭幕",
+    "type": "music",
+    "title": "极乐大厦揭幕",
+    "creator": "八仙8Immortals",
+    "cover": "public/covers/b87b51744e87-320.webp",
+    "coverLarge": "public/covers/b87b51744e87-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6254,8 +6935,57 @@
     "creator": "崔迪Trady",
     "cover": "public/covers/bce2ee6510c6-320.webp",
     "coverLarge": "public/covers/bce2ee6510c6-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
+    ]
+  },
+  {
+    "id": "music:摩天動物園",
+    "type": "music",
+    "title": "摩天動物園",
+    "creator": "G.E.M.",
+    "cover": "public/covers/8bad051abbff-320.webp",
+    "coverLarge": "public/covers/8bad051abbff-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:T.I.M.E",
+    "type": "music",
+    "title": "T.I.M.E.",
+    "creator": "G.E.M.",
+    "cover": "public/covers/096302623fc6-320.webp",
+    "coverLarge": "public/covers/096302623fc6-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:City Zoo",
+    "type": "music",
+    "title": "City Zoo",
+    "creator": "G.E.M.",
+    "cover": "public/covers/8eb47802c778-320.webp",
+    "coverLarge": "public/covers/8eb47802c778-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:Valentine",
+    "type": "music",
+    "title": "Valentine",
+    "creator": "G.E.M. 邓紫棋",
+    "cover": "public/covers/ff73eb489364-320.webp",
+    "coverLarge": "public/covers/ff73eb489364-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "华语流行"
     ]
   },
   {
@@ -6265,6 +6995,7 @@
     "creator": "河南說唱之神",
     "cover": "public/covers/f93ecfa07b51-320.webp",
     "coverLarge": "public/covers/f93ecfa07b51-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6276,6 +7007,7 @@
     "creator": "回春丹",
     "cover": "public/covers/0a0de35787df-320.webp",
     "coverLarge": "public/covers/0a0de35787df-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6287,6 +7019,7 @@
     "creator": "金車厘子",
     "cover": "public/covers/a2a5ad7c44ac-320.webp",
     "coverLarge": "public/covers/a2a5ad7c44ac-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "R&B/Soul"
     ]
@@ -6298,6 +7031,7 @@
     "creator": "刘森",
     "cover": "public/covers/53f9958e3946-320.webp",
     "coverLarge": "public/covers/53f9958e3946-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Indie Rock"
     ]
@@ -6309,6 +7043,7 @@
     "creator": "刘森",
     "cover": "public/covers/605afd23c20f-320.webp",
     "coverLarge": "public/covers/605afd23c20f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Indie Rock"
     ]
@@ -6320,6 +7055,7 @@
     "creator": "刘森",
     "cover": "public/covers/9784ae98f895-320.webp",
     "coverLarge": "public/covers/9784ae98f895-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6331,6 +7067,7 @@
     "creator": "刘森",
     "cover": "public/covers/376769d8466e-320.webp",
     "coverLarge": "public/covers/376769d8466e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Indie Rock"
     ]
@@ -6342,6 +7079,7 @@
     "creator": "群星",
     "cover": "public/covers/d6fb67183d1d-320.webp",
     "coverLarge": "public/covers/d6fb67183d1d-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "摇滚"
     ]
@@ -6353,6 +7091,7 @@
     "creator": "无边界音乐",
     "cover": "public/covers/748d246b8eaf-320.webp",
     "coverLarge": "public/covers/748d246b8eaf-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6364,8 +7103,118 @@
     "creator": "亞細亞曠世奇才",
     "cover": "public/covers/295882bcc5d2-320.webp",
     "coverLarge": "public/covers/295882bcc5d2-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Hip-Hop/Rap"
+    ]
+  },
+  {
+    "id": "music:First Love",
+    "type": "music",
+    "title": "First Love",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/73a3d24976bc-320.webp",
+    "coverLarge": "public/covers/73a3d24976bc-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Pop",
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:This Is The One (Remastered)",
+    "type": "music",
+    "title": "This Is The One (Remastered)",
+    "creator": "Utada",
+    "cover": "public/covers/fb7346fe3b7b-320.webp",
+    "coverLarge": "public/covers/fb7346fe3b7b-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
+    "type": "music",
+    "title": "Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/31f65c3c3e4e-320.webp",
+    "coverLarge": "public/covers/31f65c3c3e4e-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:Come Back to Me",
+    "type": "music",
+    "title": "Come Back to Me",
+    "creator": "Utada",
+    "cover": "public/covers/107ea8a27a6e-320.webp",
+    "coverLarge": "public/covers/107ea8a27a6e-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Pop"
+    ]
+  },
+  {
+    "id": "music:One Last Kiss",
+    "type": "music",
+    "title": "One Last Kiss",
+    "creator": "Hikaru Utada",
+    "cover": "public/covers/064f17868278-320.webp",
+    "coverLarge": "public/covers/064f17868278-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "J-Pop"
+    ]
+  },
+  {
+    "id": "music:11月的蕭邦",
+    "type": "music",
+    "title": "11月的蕭邦",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ee04a744d2b5-320.webp",
+    "coverLarge": "public/covers/ee04a744d2b5-720.webp",
+    "aspectRatio": 0.917188,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:八度空間",
+    "type": "music",
+    "title": "八度空間",
+    "creator": "Jay Chou",
+    "cover": "public/covers/ad2e9448e253-320.webp",
+    "coverLarge": "public/covers/ad2e9448e253-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:七里香",
+    "type": "music",
+    "title": "七里香",
+    "creator": "Jay Chou",
+    "cover": "public/covers/1ab6c535db43-320.webp",
+    "coverLarge": "public/covers/1ab6c535db43-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:葉惠美",
+    "type": "music",
+    "title": "葉惠美",
+    "creator": "Jay Chou",
+    "cover": "public/covers/baf891b674d2-320.webp",
+    "coverLarge": "public/covers/baf891b674d2-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
     ]
   },
   {
@@ -6375,8 +7224,21 @@
     "creator": "周杰倫",
     "cover": "public/covers/64ac46e3b311-320.webp",
     "coverLarge": "public/covers/64ac46e3b311-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack",
+      "Mandopop"
+    ]
+  },
+  {
+    "id": "music:November's Chopin",
+    "type": "music",
+    "title": "November's Chopin",
+    "creator": "Jay Chou",
+    "cover": "public/covers/b2c1d74e6568-320.webp",
+    "coverLarge": "public/covers/b2c1d74e6568-720.webp",
+    "aspectRatio": 1,
+    "categories": [
       "Mandopop"
     ]
   },
@@ -6387,6 +7249,7 @@
     "creator": "Accusefive",
     "cover": "public/covers/1df4218b486c-320.webp",
     "coverLarge": "public/covers/1df4218b486c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6398,6 +7261,7 @@
     "creator": "Adele",
     "cover": "public/covers/1eeb4fc30b4e-320.webp",
     "coverLarge": "public/covers/1eeb4fc30b4e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6409,6 +7273,7 @@
     "creator": "Adele",
     "cover": "public/covers/9c9acebe795b-320.webp",
     "coverLarge": "public/covers/9c9acebe795b-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6420,6 +7285,7 @@
     "creator": "AGA",
     "cover": "public/covers/2ee9e0f7ca92-320.webp",
     "coverLarge": "public/covers/2ee9e0f7ca92-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6431,6 +7297,7 @@
     "creator": "Aimyon",
     "cover": "public/covers/9ff009488c65-320.webp",
     "coverLarge": "public/covers/9ff009488c65-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-pop"
     ]
@@ -6442,6 +7309,7 @@
     "creator": "Aimyon",
     "cover": "public/covers/d71ce62732bb-320.webp",
     "coverLarge": "public/covers/d71ce62732bb-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-pop"
     ]
@@ -6453,6 +7321,7 @@
     "creator": "Aimyon",
     "cover": "public/covers/f303750e7730-320.webp",
     "coverLarge": "public/covers/f303750e7730-720.webp",
+    "aspectRatio": 1.149013,
     "categories": [
       "J-pop"
     ]
@@ -6464,6 +7333,7 @@
     "creator": "Aimyon",
     "cover": "public/covers/69efc5c7fa93-320.webp",
     "coverLarge": "public/covers/69efc5c7fa93-720.webp",
+    "aspectRatio": 1.148325,
     "categories": [
       "J-Pop"
     ]
@@ -6475,6 +7345,7 @@
     "creator": "Aimyon",
     "cover": "public/covers/abb19a7bfd64-320.webp",
     "coverLarge": "public/covers/abb19a7bfd64-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -6486,6 +7357,7 @@
     "creator": "Alec Benjamin",
     "cover": "public/covers/8886b2c18d92-320.webp",
     "coverLarge": "public/covers/8886b2c18d92-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6497,6 +7369,7 @@
     "creator": "Alexander Jean",
     "cover": "public/covers/e83e5f2ea8b1-320.webp",
     "coverLarge": "public/covers/e83e5f2ea8b1-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Singer/Songwriter"
     ]
@@ -6508,6 +7381,7 @@
     "creator": "Alice Longyu Gao",
     "cover": "public/covers/ac9a9ab2231c-320.webp",
     "coverLarge": "public/covers/ac9a9ab2231c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6519,6 +7393,7 @@
     "creator": "Ana Done",
     "cover": "public/covers/76a598554168-320.webp",
     "coverLarge": "public/covers/76a598554168-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Instrumental"
     ]
@@ -6530,6 +7405,7 @@
     "creator": "Arcade Fire",
     "cover": "public/covers/18a08fb4383b-320.webp",
     "coverLarge": "public/covers/18a08fb4383b-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -6541,6 +7417,7 @@
     "creator": "Badfinger",
     "cover": "public/covers/3159ce607801-320.webp",
     "coverLarge": "public/covers/3159ce607801-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Rock",
       "Pop"
@@ -6553,105 +7430,7 @@
     "creator": "Benson Boone",
     "cover": "public/covers/fb4a9ca7514f-320.webp",
     "coverLarge": "public/covers/fb4a9ca7514f-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:dont smile at me",
-    "type": "music",
-    "title": "dont smile at me",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/5d69909e1891-320.webp",
-    "coverLarge": "public/covers/5d69909e1891-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:everything i wanted",
-    "type": "music",
-    "title": "everything i wanted",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/8e2e3850a1fa-320.webp",
-    "coverLarge": "public/covers/8e2e3850a1fa-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:Guitar Songs",
-    "type": "music",
-    "title": "Guitar Songs",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/9cf90645994a-320.webp",
-    "coverLarge": "public/covers/9cf90645994a-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:Happier Than Ever",
-    "type": "music",
-    "title": "Happier Than Ever",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/da74a8890bff-320.webp",
-    "coverLarge": "public/covers/da74a8890bff-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:HIT ME HARD AND SOFT",
-    "type": "music",
-    "title": "HIT ME HARD AND SOFT",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/d8b520370df3-320.webp",
-    "coverLarge": "public/covers/d8b520370df3-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:hotline (edit)",
-    "type": "music",
-    "title": "hotline (edit)",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/669e1a100a4a-320.webp",
-    "coverLarge": "public/covers/669e1a100a4a-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:What Was I Made For_ (From The Motion Picture _Barbie_)",
-    "type": "music",
-    "title": "What Was I Made For? (From The Motion Picture \"Barbie\")",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/1c3790c67a17-320.webp",
-    "coverLarge": "public/covers/1c3790c67a17-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:WHEN WE ALL FALL ASLEEP, WHERE DO WE GO_",
-    "type": "music",
-    "title": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
-    "creator": "Billie Eilish",
-    "cover": "public/covers/49cbde0ef98a-320.webp",
-    "coverLarge": "public/covers/49cbde0ef98a-720.webp",
-    "categories": [
-      "Alternative"
-    ]
-  },
-  {
-    "id": "music:lovely",
-    "type": "music",
-    "title": "lovely",
-    "creator": "Billie Eilish & Khalid",
-    "cover": "public/covers/362ad7cb6d52-320.webp",
-    "coverLarge": "public/covers/362ad7cb6d52-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6663,6 +7442,7 @@
     "creator": "Black Dyke Band & Nicholas J. Childs",
     "cover": "public/covers/45bdc2897dbf-320.webp",
     "coverLarge": "public/covers/45bdc2897dbf-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Classical"
     ]
@@ -6674,6 +7454,7 @@
     "creator": "bôa",
     "cover": "public/covers/fc41b091e569-320.webp",
     "coverLarge": "public/covers/fc41b091e569-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Indie Pop"
     ]
@@ -6685,6 +7466,7 @@
     "creator": "Brandi Carlile",
     "cover": "public/covers/caa7ae00d840-320.webp",
     "coverLarge": "public/covers/caa7ae00d840-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Singer/Songwriter"
     ]
@@ -6696,6 +7478,7 @@
     "creator": "Bruce Liang",
     "cover": "public/covers/b945af115cbe-320.webp",
     "coverLarge": "public/covers/b945af115cbe-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6707,6 +7490,7 @@
     "creator": "Charli xcx & Lorde",
     "cover": "public/covers/c4cc5a72a466-320.webp",
     "coverLarge": "public/covers/c4cc5a72a466-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Dance"
     ]
@@ -6718,6 +7502,7 @@
     "creator": "Chen Hong Yu",
     "cover": "public/covers/367bb7a6347d-320.webp",
     "coverLarge": "public/covers/367bb7a6347d-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6729,6 +7514,7 @@
     "creator": "Chen Hong Yu",
     "cover": "public/covers/6f06daae1ae0-320.webp",
     "coverLarge": "public/covers/6f06daae1ae0-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6740,6 +7526,7 @@
     "creator": "Chen Li",
     "cover": "public/covers/811da8406323-320.webp",
     "coverLarge": "public/covers/811da8406323-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6751,6 +7538,7 @@
     "creator": "Chuck Berry",
     "cover": "public/covers/0187a810909a-320.webp",
     "coverLarge": "public/covers/0187a810909a-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Rock"
     ]
@@ -6762,6 +7550,7 @@
     "creator": "CoCo Lee",
     "cover": "public/covers/77cc9956f007-320.webp",
     "coverLarge": "public/covers/77cc9956f007-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6773,6 +7562,7 @@
     "creator": "Cody Francis",
     "cover": "public/covers/8938587eb1e3-320.webp",
     "coverLarge": "public/covers/8938587eb1e3-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6784,6 +7574,7 @@
     "creator": "Concrete Blonde",
     "cover": "public/covers/6e9ad004209d-320.webp",
     "coverLarge": "public/covers/6e9ad004209d-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Rock"
     ]
@@ -6795,6 +7586,7 @@
     "creator": "Daniel Caesar",
     "cover": "public/covers/12c1c3d64ba5-320.webp",
     "coverLarge": "public/covers/12c1c3d64ba5-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "R&B"
     ]
@@ -6806,6 +7598,7 @@
     "creator": "Daniel Caesar",
     "cover": "public/covers/ffc6d89be463-320.webp",
     "coverLarge": "public/covers/ffc6d89be463-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "R&B/Soul"
     ]
@@ -6817,6 +7610,7 @@
     "creator": "Daoko",
     "cover": "public/covers/233058c52166-320.webp",
     "coverLarge": "public/covers/233058c52166-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -6828,6 +7622,7 @@
     "creator": "DAOKO",
     "cover": "public/covers/7b047df2258a-320.webp",
     "coverLarge": "public/covers/7b047df2258a-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -6839,6 +7634,7 @@
     "creator": "Dave Wang",
     "cover": "public/covers/79a295c784e5-320.webp",
     "coverLarge": "public/covers/79a295c784e5-720.webp",
+    "aspectRatio": 1.154472,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6850,6 +7646,7 @@
     "creator": "Dave Wang",
     "cover": "public/covers/6c81b108e0cd-320.webp",
     "coverLarge": "public/covers/6c81b108e0cd-720.webp",
+    "aspectRatio": 0.993333,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6861,6 +7658,7 @@
     "creator": "David Tao",
     "cover": "public/covers/9dfe472b0e3f-320.webp",
     "coverLarge": "public/covers/9dfe472b0e3f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6872,6 +7670,7 @@
     "creator": "David Tao",
     "cover": "public/covers/356f512b2493-320.webp",
     "coverLarge": "public/covers/356f512b2493-720.webp",
+    "aspectRatio": 0.871667,
     "categories": [
       "Mandopop"
     ]
@@ -6883,6 +7682,7 @@
     "creator": "David Tao",
     "cover": "public/covers/f96f10897f3b-320.webp",
     "coverLarge": "public/covers/f96f10897f3b-720.webp",
+    "aspectRatio": 1.018676,
     "categories": [
       "Mandopop"
     ]
@@ -6894,6 +7694,7 @@
     "creator": "DOUDOU",
     "cover": "public/covers/65e24afc458b-320.webp",
     "coverLarge": "public/covers/65e24afc458b-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6905,6 +7706,7 @@
     "creator": "DOUDOU",
     "cover": "public/covers/01c6cf7ffb58-320.webp",
     "coverLarge": "public/covers/01c6cf7ffb58-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6916,6 +7718,7 @@
     "creator": "Edmond Leung",
     "cover": "public/covers/e7bb0cd5c7ba-320.webp",
     "coverLarge": "public/covers/e7bb0cd5c7ba-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -6927,6 +7730,7 @@
     "creator": "Eminem",
     "cover": "public/covers/85e8d0887b86-320.webp",
     "coverLarge": "public/covers/85e8d0887b86-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop",
       "Hip-Hop/Rap"
@@ -6939,6 +7743,7 @@
     "creator": "Eminem",
     "cover": "public/covers/82e8c2f808ab-320.webp",
     "coverLarge": "public/covers/82e8c2f808ab-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Hip-Hop/Rap"
     ]
@@ -6950,6 +7755,7 @@
     "creator": "Eminem",
     "cover": "public/covers/3a92fd4b1114-320.webp",
     "coverLarge": "public/covers/3a92fd4b1114-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Hip-Hop/Rap"
     ]
@@ -6961,6 +7767,7 @@
     "creator": "Enno Cheng",
     "cover": "public/covers/8bd2a5b3b1d1-320.webp",
     "coverLarge": "public/covers/8bd2a5b3b1d1-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -6972,6 +7779,7 @@
     "creator": "Florence + The Machine",
     "cover": "public/covers/ed72647480cb-320.webp",
     "coverLarge": "public/covers/ed72647480cb-720.webp",
+    "aspectRatio": 0.984375,
     "categories": [
       "Pop",
       "Alternative"
@@ -6984,6 +7792,7 @@
     "creator": "FloruitShow",
     "cover": "public/covers/a80be8bcf610-320.webp",
     "coverLarge": "public/covers/a80be8bcf610-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -6995,6 +7804,7 @@
     "creator": "Frank Ocean",
     "cover": "public/covers/95d11a49480a-320.webp",
     "coverLarge": "public/covers/95d11a49480a-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "R&B"
     ]
@@ -7006,6 +7816,7 @@
     "creator": "Fujii Kaze",
     "cover": "public/covers/82b439fcb10e-320.webp",
     "coverLarge": "public/covers/82b439fcb10e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -7017,107 +7828,9 @@
     "creator": "Fujii Kaze",
     "cover": "public/covers/b39b354f3b1b-320.webp",
     "coverLarge": "public/covers/b39b354f3b1b-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
-    ]
-  },
-  {
-    "id": "music:摩天動物園",
-    "type": "music",
-    "title": "摩天動物園",
-    "creator": "G.E.M.",
-    "cover": "public/covers/8bad051abbff-320.webp",
-    "coverLarge": "public/covers/8bad051abbff-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:T.I.M.E",
-    "type": "music",
-    "title": "T.I.M.E.",
-    "creator": "G.E.M.",
-    "cover": "public/covers/096302623fc6-320.webp",
-    "coverLarge": "public/covers/096302623fc6-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:City Zoo",
-    "type": "music",
-    "title": "City Zoo",
-    "creator": "G.E.M.",
-    "cover": "public/covers/8eb47802c778-320.webp",
-    "coverLarge": "public/covers/8eb47802c778-720.webp",
-    "categories": [
-      "Mandopop"
-    ]
-  },
-  {
-    "id": "music:Valentine",
-    "type": "music",
-    "title": "Valentine",
-    "creator": "G.E.M. 邓紫棋",
-    "cover": "public/covers/ff73eb489364-320.webp",
-    "coverLarge": "public/covers/ff73eb489364-720.webp",
-    "categories": [
-      "华语流行"
-    ]
-  },
-  {
-    "id": "music:玻璃 demo",
-    "type": "music",
-    "title": "玻璃 demo",
-    "creator": "Gareth.T",
-    "cover": "public/covers/5b68df1320f0-320.webp",
-    "coverLarge": "public/covers/5b68df1320f0-720.webp",
-    "categories": [
-      "独立流行"
-    ]
-  },
-  {
-    "id": "music:緊急聯絡人",
-    "type": "music",
-    "title": "緊急聯絡人",
-    "creator": "Gareth.T",
-    "cover": "public/covers/f9e494c77ad7-320.webp",
-    "coverLarge": "public/covers/f9e494c77ad7-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:泥菩薩",
-    "type": "music",
-    "title": "泥菩薩",
-    "creator": "Gareth.T",
-    "cover": "public/covers/4acc5dc22cb5-320.webp",
-    "coverLarge": "public/covers/4acc5dc22cb5-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:顏色",
-    "type": "music",
-    "title": "顏色",
-    "creator": "Gareth.T",
-    "cover": "public/covers/ff379a8dab07-320.webp",
-    "coverLarge": "public/covers/ff379a8dab07-720.webp",
-    "categories": [
-      "独立流行"
-    ]
-  },
-  {
-    "id": "music:用背脊唱情歌",
-    "type": "music",
-    "title": "用背脊唱情歌",
-    "creator": "Gareth.T",
-    "cover": "public/covers/9ada2137de36-320.webp",
-    "coverLarge": "public/covers/9ada2137de36-720.webp",
-    "categories": [
-      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -7127,6 +7840,7 @@
     "creator": "Glass Animals",
     "cover": "public/covers/cba0c5bd6037-320.webp",
     "coverLarge": "public/covers/cba0c5bd6037-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7138,6 +7852,7 @@
     "creator": "Gotye",
     "cover": "public/covers/dc3ffe007656-320.webp",
     "coverLarge": "public/covers/dc3ffe007656-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7149,6 +7864,7 @@
     "creator": "Gustavo Santaolalla",
     "cover": "public/covers/7d03081f41a5-320.webp",
     "coverLarge": "public/covers/7d03081f41a5-720.webp",
+    "aspectRatio": 1.006289,
     "categories": [
       "Soundtrack"
     ]
@@ -7160,42 +7876,9 @@
     "creator": "Harry Styles",
     "cover": "public/covers/ded403d7a65c-320.webp",
     "coverLarge": "public/covers/ded403d7a65c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
-    ]
-  },
-  {
-    "id": "music:First Love",
-    "type": "music",
-    "title": "First Love",
-    "creator": "Hikaru Utada",
-    "cover": "public/covers/73a3d24976bc-320.webp",
-    "coverLarge": "public/covers/73a3d24976bc-720.webp",
-    "categories": [
-      "Pop",
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
-    "type": "music",
-    "title": "Beautiful World (PLANiTb Acoustica Mix) [2021 Remastered]",
-    "creator": "Hikaru Utada",
-    "cover": "public/covers/31f65c3c3e4e-320.webp",
-    "coverLarge": "public/covers/31f65c3c3e4e-720.webp",
-    "categories": [
-      "J-Pop"
-    ]
-  },
-  {
-    "id": "music:One Last Kiss",
-    "type": "music",
-    "title": "One Last Kiss",
-    "creator": "Hikaru Utada",
-    "cover": "public/covers/064f17868278-320.webp",
-    "coverLarge": "public/covers/064f17868278-720.webp",
-    "categories": [
-      "J-Pop"
     ]
   },
   {
@@ -7205,6 +7888,7 @@
     "creator": "Hins Cheung",
     "cover": "public/covers/ede957c68bb9-320.webp",
     "coverLarge": "public/covers/ede957c68bb9-720.webp",
+    "aspectRatio": 0.885833,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7216,6 +7900,7 @@
     "creator": "HYUKOH",
     "cover": "public/covers/df1608b04bc8-320.webp",
     "coverLarge": "public/covers/df1608b04bc8-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Rock"
     ]
@@ -7227,6 +7912,7 @@
     "creator": "Imagine Dragons",
     "cover": "public/covers/3befd365a2d7-320.webp",
     "coverLarge": "public/covers/3befd365a2d7-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7238,6 +7924,7 @@
     "creator": "Imagine Dragons",
     "cover": "public/covers/ea05e83fb167-320.webp",
     "coverLarge": "public/covers/ea05e83fb167-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7249,6 +7936,7 @@
     "creator": "Imagine Dragons",
     "cover": "public/covers/f8351c75878d-320.webp",
     "coverLarge": "public/covers/f8351c75878d-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7260,6 +7948,7 @@
     "creator": "Imagine Dragons",
     "cover": "public/covers/fc616d0c5754-320.webp",
     "coverLarge": "public/covers/fc616d0c5754-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7271,6 +7960,7 @@
     "creator": "Jack Johnson",
     "cover": "public/covers/5e36eeb10ac0-320.webp",
     "coverLarge": "public/covers/5e36eeb10ac0-720.webp",
+    "aspectRatio": 1.111111,
     "categories": [
       "Pop",
       "Rock"
@@ -7283,6 +7973,7 @@
     "creator": "Jacky Cheung",
     "cover": "public/covers/4b2a925be815-320.webp",
     "coverLarge": "public/covers/4b2a925be815-720.webp",
+    "aspectRatio": 1.008403,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7294,63 +7985,9 @@
     "creator": "Jason Chan",
     "cover": "public/covers/88afb4de49ce-320.webp",
     "coverLarge": "public/covers/88afb4de49ce-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
-    ]
-  },
-  {
-    "id": "music:11月的蕭邦",
-    "type": "music",
-    "title": "11月的蕭邦",
-    "creator": "Jay Chou",
-    "cover": "public/covers/ee04a744d2b5-320.webp",
-    "coverLarge": "public/covers/ee04a744d2b5-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:八度空間",
-    "type": "music",
-    "title": "八度空間",
-    "creator": "Jay Chou",
-    "cover": "public/covers/ad2e9448e253-320.webp",
-    "coverLarge": "public/covers/ad2e9448e253-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:七里香",
-    "type": "music",
-    "title": "七里香",
-    "creator": "Jay Chou",
-    "cover": "public/covers/1ab6c535db43-320.webp",
-    "coverLarge": "public/covers/1ab6c535db43-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:葉惠美",
-    "type": "music",
-    "title": "葉惠美",
-    "creator": "Jay Chou",
-    "cover": "public/covers/baf891b674d2-320.webp",
-    "coverLarge": "public/covers/baf891b674d2-720.webp",
-    "categories": [
-      "C-pop"
-    ]
-  },
-  {
-    "id": "music:November's Chopin",
-    "type": "music",
-    "title": "November's Chopin",
-    "creator": "Jay Chou",
-    "cover": "public/covers/b2c1d74e6568-320.webp",
-    "coverLarge": "public/covers/b2c1d74e6568-720.webp",
-    "categories": [
-      "Mandopop"
     ]
   },
   {
@@ -7360,6 +7997,7 @@
     "creator": "Jaydan Wolf",
     "cover": "public/covers/f7867c008df0-320.webp",
     "coverLarge": "public/covers/f7867c008df0-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7371,6 +8009,7 @@
     "creator": "Jim Croce",
     "cover": "public/covers/636274f255be-320.webp",
     "coverLarge": "public/covers/636274f255be-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Singer/Songwriter"
     ]
@@ -7382,6 +8021,7 @@
     "creator": "Jonathan Lee",
     "cover": "public/covers/9b845072eadb-320.webp",
     "coverLarge": "public/covers/9b845072eadb-720.webp",
+    "aspectRatio": 1.151631,
     "categories": [
       "Mandopop"
     ]
@@ -7393,6 +8033,7 @@
     "creator": "Jonathan Lee",
     "cover": "public/covers/a84587ef8162-320.webp",
     "coverLarge": "public/covers/a84587ef8162-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7404,6 +8045,7 @@
     "creator": "Junip",
     "cover": "public/covers/d049b9d46fae-320.webp",
     "coverLarge": "public/covers/d049b9d46fae-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7415,6 +8057,7 @@
     "creator": "Juno Mak",
     "cover": "public/covers/c725011393db-320.webp",
     "coverLarge": "public/covers/c725011393db-720.webp",
+    "aspectRatio": 0.909167,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7426,6 +8069,7 @@
     "creator": "Juno Mak & Kay Tse",
     "cover": "public/covers/7e1e71b1f349-320.webp",
     "coverLarge": "public/covers/7e1e71b1f349-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7437,6 +8081,7 @@
     "creator": "Justin Bieber",
     "cover": "public/covers/447461acb77e-320.webp",
     "coverLarge": "public/covers/447461acb77e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7448,6 +8093,7 @@
     "creator": "Kate Bush",
     "cover": "public/covers/2714183d22e5-320.webp",
     "coverLarge": "public/covers/2714183d22e5-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7459,6 +8105,7 @@
     "creator": "Kay Tse",
     "cover": "public/covers/e5b2d8880165-320.webp",
     "coverLarge": "public/covers/e5b2d8880165-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7470,6 +8117,7 @@
     "creator": "Kay Tse",
     "cover": "public/covers/86cf4936c532-320.webp",
     "coverLarge": "public/covers/86cf4936c532-720.webp",
+    "aspectRatio": 1.115242,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7481,6 +8129,7 @@
     "creator": "Kazumasa Oda",
     "cover": "public/covers/ba02438bdc52-320.webp",
     "coverLarge": "public/covers/ba02438bdc52-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -7492,6 +8141,7 @@
     "creator": "Kenny Bee",
     "cover": "public/covers/e9ce100715d6-320.webp",
     "coverLarge": "public/covers/e9ce100715d6-720.webp",
+    "aspectRatio": 0.9875,
     "categories": [
       "C-pop"
     ]
@@ -7503,6 +8153,7 @@
     "creator": "Kenshi Yonezu",
     "cover": "public/covers/48c9d7b32d3a-320.webp",
     "coverLarge": "public/covers/48c9d7b32d3a-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -7514,6 +8165,7 @@
     "creator": "Kenshi Yonezu",
     "cover": "public/covers/bb3c78bdaf5f-320.webp",
     "coverLarge": "public/covers/bb3c78bdaf5f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -7525,6 +8177,7 @@
     "creator": "Khalil Fong",
     "cover": "public/covers/74dd806cba32-320.webp",
     "coverLarge": "public/covers/74dd806cba32-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7536,6 +8189,7 @@
     "creator": "Khalil Fong",
     "cover": "public/covers/1d483f0a211d-320.webp",
     "coverLarge": "public/covers/1d483f0a211d-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7547,6 +8201,7 @@
     "creator": "Khalil Fong",
     "cover": "public/covers/8c1d0a085d05-320.webp",
     "coverLarge": "public/covers/8c1d0a085d05-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7558,6 +8213,7 @@
     "creator": "Lady Gaga",
     "cover": "public/covers/15286447a8fb-320.webp",
     "coverLarge": "public/covers/15286447a8fb-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7569,6 +8225,7 @@
     "creator": "Lady Gaga",
     "cover": "public/covers/358dc7b03f5f-320.webp",
     "coverLarge": "public/covers/358dc7b03f5f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7580,6 +8237,7 @@
     "creator": "Lady Gaga",
     "cover": "public/covers/04de5678a30f-320.webp",
     "coverLarge": "public/covers/04de5678a30f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7591,6 +8249,7 @@
     "creator": "Lady Gaga",
     "cover": "public/covers/d66949d9bcd3-320.webp",
     "coverLarge": "public/covers/d66949d9bcd3-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7602,6 +8261,7 @@
     "creator": "Lady Gaga & Bradley Cooper",
     "cover": "public/covers/5c9e98cb280e-320.webp",
     "coverLarge": "public/covers/5c9e98cb280e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -7613,6 +8273,7 @@
     "creator": "Lady Gaga & Bruno Mars",
     "cover": "public/covers/b641af46bbdf-320.webp",
     "coverLarge": "public/covers/b641af46bbdf-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7624,6 +8285,7 @@
     "creator": "Lana Del Rey",
     "cover": "public/covers/c15da333e964-320.webp",
     "coverLarge": "public/covers/c15da333e964-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7635,6 +8297,7 @@
     "creator": "Lana Del Rey",
     "cover": "public/covers/d62391d903a5-320.webp",
     "coverLarge": "public/covers/d62391d903a5-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -7646,6 +8309,7 @@
     "creator": "Leah Dou",
     "cover": "public/covers/088b9e4dcce6-320.webp",
     "coverLarge": "public/covers/088b9e4dcce6-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7657,6 +8321,7 @@
     "creator": "Lei Zhao",
     "cover": "public/covers/43116c6a03b6-320.webp",
     "coverLarge": "public/covers/43116c6a03b6-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Folk"
     ]
@@ -7668,6 +8333,7 @@
     "creator": "Lei Zhao",
     "cover": "public/covers/b2d42ca97381-320.webp",
     "coverLarge": "public/covers/b2d42ca97381-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Folk"
     ]
@@ -7679,6 +8345,7 @@
     "creator": "Leon",
     "cover": "public/covers/8c9d4b72f9d3-320.webp",
     "coverLarge": "public/covers/8c9d4b72f9d3-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7690,6 +8357,7 @@
     "creator": "Leslie Cheung",
     "cover": "public/covers/148433f59c09-320.webp",
     "coverLarge": "public/covers/148433f59c09-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7701,6 +8369,7 @@
     "creator": "Leslie Cheung",
     "cover": "public/covers/c4a9532bd42a-320.webp",
     "coverLarge": "public/covers/c4a9532bd42a-720.webp",
+    "aspectRatio": 0.915833,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7712,6 +8381,7 @@
     "creator": "Li Zhi",
     "cover": "public/covers/19f2ca1fae01-320.webp",
     "coverLarge": "public/covers/19f2ca1fae01-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7723,6 +8393,7 @@
     "creator": "Li Zhi",
     "cover": "public/covers/a4c5be884f05-320.webp",
     "coverLarge": "public/covers/a4c5be884f05-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7734,6 +8405,7 @@
     "creator": "Li Zhi",
     "cover": "public/covers/ee6b9c24c526-320.webp",
     "coverLarge": "public/covers/ee6b9c24c526-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7745,6 +8417,7 @@
     "creator": "Mao Bu Yi",
     "cover": "public/covers/4a7b9fd3e738-320.webp",
     "coverLarge": "public/covers/4a7b9fd3e738-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -7756,6 +8429,7 @@
     "creator": "Mariah Carey",
     "cover": "public/covers/82b98404b0ea-320.webp",
     "coverLarge": "public/covers/82b98404b0ea-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7767,6 +8441,7 @@
     "creator": "Marshmello",
     "cover": "public/covers/451877e11d41-320.webp",
     "coverLarge": "public/covers/451877e11d41-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7778,6 +8453,7 @@
     "creator": "MC Cheung Tinfu & Panther Chan",
     "cover": "public/covers/a88eff4e434a-320.webp",
     "coverLarge": "public/covers/a88eff4e434a-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7789,6 +8465,7 @@
     "creator": "Mika Nakashima",
     "cover": "public/covers/8f5a2384cddd-320.webp",
     "coverLarge": "public/covers/8f5a2384cddd-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -7800,6 +8477,7 @@
     "creator": "Miley Cyrus",
     "cover": "public/covers/c0a0fc01c0de-320.webp",
     "coverLarge": "public/covers/c0a0fc01c0de-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7811,6 +8489,7 @@
     "creator": "Miriam Yeung",
     "cover": "public/covers/e1c26bff1fb4-320.webp",
     "coverLarge": "public/covers/e1c26bff1fb4-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7822,6 +8501,7 @@
     "creator": "Mixer",
     "cover": "public/covers/3745c4817e02-320.webp",
     "coverLarge": "public/covers/3745c4817e02-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -7833,6 +8513,7 @@
     "creator": "natori",
     "cover": "public/covers/a8becc4280d0-320.webp",
     "coverLarge": "public/covers/a8becc4280d0-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -7844,6 +8525,7 @@
     "creator": "Noriyuki Makihara",
     "cover": "public/covers/58ab35fae3a3-320.webp",
     "coverLarge": "public/covers/58ab35fae3a3-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -7855,6 +8537,7 @@
     "creator": "oceanfromtheblue",
     "cover": "public/covers/149445c3f29e-320.webp",
     "coverLarge": "public/covers/149445c3f29e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "R&B/Soul"
     ]
@@ -7866,6 +8549,7 @@
     "creator": "Olivia Dean",
     "cover": "public/covers/a6b97c4958fb-320.webp",
     "coverLarge": "public/covers/a6b97c4958fb-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -7877,6 +8561,7 @@
     "creator": "Olivia Rodrigo, Rachel Zegler & Flatland Cavalry",
     "cover": "public/covers/96eebbd6ff1c-320.webp",
     "coverLarge": "public/covers/96eebbd6ff1c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -7888,6 +8573,7 @@
     "creator": "Omnipotent Youth Society",
     "cover": "public/covers/34c73548b0b2-320.webp",
     "coverLarge": "public/covers/34c73548b0b2-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Prog-Rock/Art Rock"
     ]
@@ -7899,6 +8585,7 @@
     "creator": "Omnipotent Youth Society",
     "cover": "public/covers/e59f46bf26cc-320.webp",
     "coverLarge": "public/covers/e59f46bf26cc-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Adult Alternative"
     ]
@@ -7910,6 +8597,7 @@
     "creator": "Paige Su",
     "cover": "public/covers/c5ecd728f01f-320.webp",
     "coverLarge": "public/covers/c5ecd728f01f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Indie Pop"
     ]
@@ -7921,6 +8609,7 @@
     "creator": "Panther Chan",
     "cover": "public/covers/746ec8e7c0da-320.webp",
     "coverLarge": "public/covers/746ec8e7c0da-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7932,6 +8621,7 @@
     "creator": "Panther Chan",
     "cover": "public/covers/ef24c366a81c-320.webp",
     "coverLarge": "public/covers/ef24c366a81c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7943,6 +8633,7 @@
     "creator": "Panther Chan",
     "cover": "public/covers/b366694b41e6-320.webp",
     "coverLarge": "public/covers/b366694b41e6-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7954,6 +8645,7 @@
     "creator": "Panther Chan",
     "cover": "public/covers/af81e98392c5-320.webp",
     "coverLarge": "public/covers/af81e98392c5-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7965,6 +8657,7 @@
     "creator": "Panther Chan",
     "cover": "public/covers/7fd302d1a50e-320.webp",
     "coverLarge": "public/covers/7fd302d1a50e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -7976,6 +8669,7 @@
     "creator": "Post Malone",
     "cover": "public/covers/2796ba56b248-320.webp",
     "coverLarge": "public/covers/2796ba56b248-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Hip-Hop/Rap"
     ]
@@ -7987,6 +8681,7 @@
     "creator": "puppiebelly",
     "cover": "public/covers/e658c8d8dad9-320.webp",
     "coverLarge": "public/covers/e658c8d8dad9-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -7998,6 +8693,7 @@
     "creator": "Queen",
     "cover": "public/covers/79acf4261fa4-320.webp",
     "coverLarge": "public/covers/79acf4261fa4-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Rock",
       "Pop"
@@ -8010,6 +8706,7 @@
     "creator": "Queen",
     "cover": "public/covers/e9083dc316f7-320.webp",
     "coverLarge": "public/covers/e9083dc316f7-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Rock",
       "Pop"
@@ -8022,6 +8719,7 @@
     "creator": "Ronald Cheng",
     "cover": "public/covers/a96c871c79f0-320.webp",
     "coverLarge": "public/covers/a96c871c79f0-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8033,6 +8731,7 @@
     "creator": "sakanaction",
     "cover": "public/covers/a16f5bbdf28f-320.webp",
     "coverLarge": "public/covers/a16f5bbdf28f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8044,6 +8743,7 @@
     "creator": "Sammi Cheng",
     "cover": "public/covers/1fd2d05df39c-320.webp",
     "coverLarge": "public/covers/1fd2d05df39c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8055,6 +8755,7 @@
     "creator": "Shakira",
     "cover": "public/covers/b619bbab26c5-320.webp",
     "coverLarge": "public/covers/b619bbab26c5-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8066,6 +8767,7 @@
     "creator": "Shawn Mendes",
     "cover": "public/covers/05ba68c63bef-320.webp",
     "coverLarge": "public/covers/05ba68c63bef-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8077,6 +8779,7 @@
     "creator": "Shawn Mendes & Camila Cabello",
     "cover": "public/covers/c152f72f445f-320.webp",
     "coverLarge": "public/covers/c152f72f445f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8088,6 +8791,7 @@
     "creator": "Sheena Ringo",
     "cover": "public/covers/daec3b3328c4-320.webp",
     "coverLarge": "public/covers/daec3b3328c4-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8099,6 +8803,7 @@
     "creator": "Sheena Ringo",
     "cover": "public/covers/7617e4175015-320.webp",
     "coverLarge": "public/covers/7617e4175015-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-pop"
     ]
@@ -8110,6 +8815,7 @@
     "creator": "Shiro SAGISU",
     "cover": "public/covers/1e91f0f1086f-320.webp",
     "coverLarge": "public/covers/1e91f0f1086f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -8121,6 +8827,7 @@
     "creator": "Sia",
     "cover": "public/covers/8d27444ef6eb-320.webp",
     "coverLarge": "public/covers/8d27444ef6eb-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop",
       "Holiday"
@@ -8133,6 +8840,7 @@
     "creator": "Song Dongye",
     "cover": "public/covers/8b2800b93032-320.webp",
     "coverLarge": "public/covers/8b2800b93032-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -8144,6 +8852,7 @@
     "creator": "SoulFa",
     "cover": "public/covers/965cf0699559-320.webp",
     "coverLarge": "public/covers/965cf0699559-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8155,6 +8864,7 @@
     "creator": "starfall",
     "cover": "public/covers/e6f76ef8e445-320.webp",
     "coverLarge": "public/covers/e6f76ef8e445-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8166,6 +8876,7 @@
     "creator": "Suxi Ren",
     "cover": "public/covers/ca8fa3105d3a-320.webp",
     "coverLarge": "public/covers/ca8fa3105d3a-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -8177,6 +8888,7 @@
     "creator": "Suxi Ren",
     "cover": "public/covers/9b357d2ac638-320.webp",
     "coverLarge": "public/covers/9b357d2ac638-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8188,6 +8900,7 @@
     "creator": "Taichi Mukai",
     "cover": "public/covers/0fc3baffb67f-320.webp",
     "coverLarge": "public/covers/0fc3baffb67f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8199,6 +8912,7 @@
     "creator": "Taichi Mukai",
     "cover": "public/covers/ecaf6ada14cd-320.webp",
     "coverLarge": "public/covers/ecaf6ada14cd-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "R&B/Soul"
     ]
@@ -8210,6 +8924,7 @@
     "creator": "Tananai",
     "cover": "public/covers/d691b62d4db4-320.webp",
     "coverLarge": "public/covers/d691b62d4db4-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8221,6 +8936,7 @@
     "creator": "Tang Siu Hau & Hins Cheung",
     "cover": "public/covers/e2c1d5f72272-320.webp",
     "coverLarge": "public/covers/e2c1d5f72272-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -8232,6 +8948,7 @@
     "creator": "Taylor Swift",
     "cover": "public/covers/43b73ba64782-320.webp",
     "coverLarge": "public/covers/43b73ba64782-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8243,6 +8960,7 @@
     "creator": "Taylor Swift",
     "cover": "public/covers/c0674feaab5c-320.webp",
     "coverLarge": "public/covers/c0674feaab5c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8254,6 +8972,7 @@
     "creator": "Teddybears",
     "cover": "public/covers/d54ada82412c-320.webp",
     "coverLarge": "public/covers/d54ada82412c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -8265,6 +8984,7 @@
     "creator": "Terence Lam",
     "cover": "public/covers/3db7a784e729-320.webp",
     "coverLarge": "public/covers/3db7a784e729-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -8276,6 +8996,7 @@
     "creator": "Terry Lin",
     "cover": "public/covers/1e0ef46488b6-320.webp",
     "coverLarge": "public/covers/1e0ef46488b6-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -8287,6 +9008,7 @@
     "creator": "The Marías",
     "cover": "public/covers/170ee5c935f7-320.webp",
     "coverLarge": "public/covers/170ee5c935f7-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Alternative"
     ]
@@ -8298,6 +9020,7 @@
     "creator": "The Turtles",
     "cover": "public/covers/db546a1beb2f-320.webp",
     "coverLarge": "public/covers/db546a1beb2f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8309,6 +9032,7 @@
     "creator": "The Weeknd",
     "cover": "public/covers/c4d70c85194d-320.webp",
     "coverLarge": "public/covers/c4d70c85194d-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "R&B"
     ]
@@ -8320,6 +9044,7 @@
     "creator": "The Weeknd & Madonna",
     "cover": "public/covers/2da4d9602519-320.webp",
     "coverLarge": "public/covers/2da4d9602519-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -8331,6 +9056,7 @@
     "creator": "Tim McGraw",
     "cover": "public/covers/2b2ca075074a-320.webp",
     "coverLarge": "public/covers/2b2ca075074a-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8342,6 +9068,7 @@
     "creator": "Timbaland",
     "cover": "public/covers/c293bf4ca13a-320.webp",
     "coverLarge": "public/covers/c293bf4ca13a-720.webp",
+    "aspectRatio": 1.009251,
     "categories": [
       "Hip-Hop/Rap"
     ]
@@ -8353,6 +9080,7 @@
     "creator": "Twins",
     "cover": "public/covers/7f959ca16b03-320.webp",
     "coverLarge": "public/covers/7f959ca16b03-720.webp",
+    "aspectRatio": 0.726542,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -8364,28 +9092,7 @@
     "creator": "Us The Duo",
     "cover": "public/covers/8d7c782b99a2-320.webp",
     "coverLarge": "public/covers/8d7c782b99a2-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:This Is The One (Remastered)",
-    "type": "music",
-    "title": "This Is The One (Remastered)",
-    "creator": "Utada",
-    "cover": "public/covers/fb7346fe3b7b-320.webp",
-    "coverLarge": "public/covers/fb7346fe3b7b-720.webp",
-    "categories": [
-      "Pop"
-    ]
-  },
-  {
-    "id": "music:Come Back to Me",
-    "type": "music",
-    "title": "Come Back to Me",
-    "creator": "Utada",
-    "cover": "public/covers/107ea8a27a6e-320.webp",
-    "coverLarge": "public/covers/107ea8a27a6e-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8397,6 +9104,7 @@
     "creator": "Vae Xu",
     "cover": "public/covers/a18035793814-320.webp",
     "coverLarge": "public/covers/a18035793814-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Mandopop"
     ]
@@ -8408,6 +9116,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/8866165d9588-320.webp",
     "coverLarge": "public/covers/8866165d9588-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8419,6 +9128,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/3a2e450abef8-320.webp",
     "coverLarge": "public/covers/3a2e450abef8-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8430,6 +9140,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/0ec042f31af9-320.webp",
     "coverLarge": "public/covers/0ec042f31af9-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8441,6 +9152,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/d7318d58fbc2-320.webp",
     "coverLarge": "public/covers/d7318d58fbc2-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8452,6 +9164,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/7ec215208abc-320.webp",
     "coverLarge": "public/covers/7ec215208abc-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8463,6 +9176,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/0509a61eaf06-320.webp",
     "coverLarge": "public/covers/0509a61eaf06-720.webp",
+    "aspectRatio": 0.903125,
     "categories": [
       "C-pop"
     ]
@@ -8474,6 +9188,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/9f9cf3d7b92c-320.webp",
     "coverLarge": "public/covers/9f9cf3d7b92c-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
@@ -8485,6 +9200,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/5132dc474825-320.webp",
     "coverLarge": "public/covers/5132dc474825-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -8496,6 +9212,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/f17ae7eb0d06-320.webp",
     "coverLarge": "public/covers/f17ae7eb0d06-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8507,6 +9224,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/d351fc616f46-320.webp",
     "coverLarge": "public/covers/d351fc616f46-720.webp",
+    "aspectRatio": 0.74375,
     "categories": [
       "Pop"
     ]
@@ -8518,6 +9236,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/85d62c0665ee-320.webp",
     "coverLarge": "public/covers/85d62c0665ee-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -8529,6 +9248,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/e8313a38779f-320.webp",
     "coverLarge": "public/covers/e8313a38779f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Singer/Songwriter"
     ]
@@ -8540,6 +9260,7 @@
     "creator": "Various Artists",
     "cover": "public/covers/4410b8e40a57-320.webp",
     "coverLarge": "public/covers/4410b8e40a57-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Soundtrack"
     ]
@@ -8551,6 +9272,7 @@
     "creator": "Vaundy",
     "cover": "public/covers/71e12957f90f-320.webp",
     "coverLarge": "public/covers/71e12957f90f-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "J-Pop"
     ]
@@ -8562,6 +9284,7 @@
     "creator": "Wheeler Walker Jr.",
     "cover": "public/covers/57798442d116-320.webp",
     "coverLarge": "public/covers/57798442d116-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Country"
     ]
@@ -8573,6 +9296,7 @@
     "creator": "Whyte",
     "cover": "public/covers/f3fde8a57017-320.webp",
     "coverLarge": "public/covers/f3fde8a57017-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Pop"
     ]
@@ -8584,6 +9308,7 @@
     "creator": "Wild Children",
     "cover": "public/covers/e8b4a1edda8b-320.webp",
     "coverLarge": "public/covers/e8b4a1edda8b-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "Singer/Songwriter"
     ]
@@ -8595,6 +9320,7 @@
     "creator": "Wilfred Lau",
     "cover": "public/covers/5c35bf090e33-320.webp",
     "coverLarge": "public/covers/5c35bf090e33-720.webp",
+    "aspectRatio": 0.8925,
     "categories": [
       "Cantopop/HK-Pop"
     ]
@@ -8606,6 +9332,7 @@
     "creator": "Zhang Zhen Yue",
     "cover": "public/covers/d2b1e8f9bed1-320.webp",
     "coverLarge": "public/covers/d2b1e8f9bed1-720.webp",
+    "aspectRatio": 1,
     "categories": [
       "C-pop"
     ]
