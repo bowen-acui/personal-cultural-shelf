@@ -77,6 +77,7 @@ test("320px 目录头部和底栏都在视口内，长分类不产生横向滚�
     expect(rect.left).toBeGreaterThanOrEqual(0);
     expect(rect.right).toBeLessThanOrEqual(bounds.viewport);
   }
+  await page.locator("#catalog-type").selectOption("music");
   const longCategory = page.locator("#catalog-category option").filter({ hasText: "Cantopop" }).first();
   await page.locator("#catalog-category").selectOption(await longCategory.getAttribute("value"));
   await expect(page.locator("#catalog-category")).toBeVisible();
