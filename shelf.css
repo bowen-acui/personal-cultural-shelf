@@ -39,7 +39,7 @@
 .work-flip { view-transition-name:work-card; }
 ::view-transition-group(work-card) { animation-duration:420ms; animation-timing-function:cubic-bezier(.2,.72,.2,1); }
 .work-face { position:absolute; inset:0; display:block; overflow:hidden; border-radius:4px; box-shadow:0 22px 70px var(--control-shadow),var(--shadow-up); backface-visibility:hidden; }
-.work-front img { display:block; width:100%; height:100%; object-fit:cover; }
+.work-front img { display:block; width:100%; height:100%; object-fit:contain; background:var(--paper-light); }
 .work-back { display:flex; flex-direction:column; align-items:flex-start; padding:30px 28px 24px; color:var(--control-text); background:var(--control); text-align:left; transform:rotateY(180deg); }
 .work-back small { color:var(--control-muted); font:10px/1.2 var(--font-mono); letter-spacing:.08em; }
 .work-back strong { margin-top:14px; color:var(--active); font:400 clamp(30px,7vw,44px)/.96 "LXGW WenKai","霞鹜文楷",var(--font-display); letter-spacing:-.03em; text-wrap:balance; }

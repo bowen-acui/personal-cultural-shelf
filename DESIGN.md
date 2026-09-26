@@ -62,6 +62,7 @@ Base unit: 4px.
 - Stage: full-width, vertically scrollable paper canvas; no maximum content width.
 - Covers: absolute-positioned inside the stage, seeded from each book identity so refreshes remain stable.
 - Desktop cover width: 104-168px. Mobile cover width: 88-120px.
+- Display frames use one ratio per category: books and films 2:3, music 1:1. Shelf and browse thumbnails fill the frame; the floating detail keeps the complete source image inside that same frame.
 - Breakpoints: mobile `< 640px`, tablet `640-1023px`, desktop `>= 1024px`.
 - Page texture: subtle vertical paper ruling, not a flat fill.
 - Cover assets: the data builder emits deterministic `-320.webp` and `-720.webp` derivatives; the interface uses `srcset` and keeps the larger asset for the floating detail object.

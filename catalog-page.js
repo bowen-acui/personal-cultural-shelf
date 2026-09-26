@@ -1,5 +1,6 @@
-import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=18";
-import { loadMediaData } from "./lib/media-data.js?v=18";
+import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=20";
+import { loadMediaData } from "./lib/media-data.js?v=20";
+import { coverRatio } from "./lib/poster.js?v=20";
 
 const labels = { book: "书", film: "影", music: "音" };
 const grid = document.querySelector("#catalog-grid");
@@ -10,14 +11,10 @@ const status = document.querySelector("#catalog-status");
 let data = [];
 let renderTimer = 0;
 
-function ratioFor(item) {
-  const ratio = Number(item.aspectRatio);
-  return Number.isFinite(ratio) && ratio > 0 ? ratio : item.type === "music" ? 1 : 2 / 3;
-}
-
 function card(item) {
   const article = document.createElement("article");
   article.className = "catalog-card";
+  article.style.setProperty("--ratio", coverRatio(item.type));
   article.setAttribute("role", "listitem");
   const image = document.createElement("img");
   image.src = item.cover;
@@ -25,7 +22,7 @@ function card(item) {
   image.sizes = "(max-width: 639px) 42vw, 180px";
   image.alt = [item.title, item.creator].filter(Boolean).join("，");
   image.width = 320;
-  image.height = Math.round(320 / ratioFor(item));
+  image.height = Math.round(320 / coverRatio(item.type));
   image.loading = "lazy";
   const title = document.createElement("strong");
   const meta = document.createElement("small");

@@ -83,20 +83,29 @@ test("320px 目录头部和底栏都在视口内，长分类不产生横向滚�
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
 });
 
-test("720px 目录标题为单栏，横版封面按自然比例呈现", async ({ page }) => {
-  await page.setViewportSize({ width: 720, height: 900 });
-  await page.goto("/browse.html");
-  await expect(page.locator("#catalog-status")).toContainText("找到");
-  const columns = await page.locator(".page-heading").evaluate((node) => getComputedStyle(node).gridTemplateColumns);
-  expect(columns.split(" ")).toHaveLength(1);
-  await page.locator("#catalog-search").fill("猜火车");
-  await expect(page.locator("#catalog-status")).toContainText("找到 1");
-  const card = page.locator(".catalog-card").filter({ hasText: "猜火车" }).first();
-  await expect(card).toBeVisible();
-  const image = card.locator("img");
-  await expect.poll(() => image.evaluate((node) => node.naturalWidth), { timeout: 10_000 }).toBeGreaterThan(1);
-  const ratio = await image.evaluate((node) => node.naturalWidth / node.naturalHeight);
-  const bounds = await image.boundingBox();
-  expect(bounds).not.toBeNull();
-  expect(bounds.width / bounds.height).toBeCloseTo(ratio, 2);
-});
+for (const { route, title, ratio } of [
+  { route: "/", title: "不二", ratio: 2 / 3 },
+  { route: "/film.html", title: "猜火车", ratio: 2 / 3 },
+  { route: "/music.html", title: "Live for Today", ratio: 1 },
+]) {
+  test(`${title} 在书架、详情和目录均使用类别展示比例`, async ({ page }) => {
+    await page.setViewportSize({ width: 720, height: 900 });
+    await page.goto(route);
+    await waitForShelf(page);
+    const object = page.locator(".media-object").filter({ hasText: title }).first();
+    await expect(object).toHaveCount(1);
+    const image = object.locator("img");
+    await expect.poll(() => image.evaluate((node) => node.offsetWidth / node.offsetHeight)).toBeCloseTo(ratio, 2);
+    await object.dispatchEvent("click");
+    await expect(page.locator("#work-dialog")).toBeVisible();
+    const detailRatio = await page.locator(".work-flip-inner").evaluate((node) => node.offsetWidth / node.offsetHeight);
+    expect(detailRatio).toBeCloseTo(ratio, 2);
+    await page.goto("/browse.html");
+    await expect(page.locator("#catalog-status")).toContainText("找到");
+    await page.locator("#catalog-search").fill(title);
+    const card = page.locator(".catalog-card").filter({ hasText: title }).first();
+    await expect(card).toBeVisible();
+    const cardRatio = await card.locator("img").evaluate((node) => node.offsetWidth / node.offsetHeight);
+    expect(cardRatio).toBeCloseTo(ratio, 2);
+  });
+}

@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=18";
-import { loadMediaData } from "./lib/media-data.js?v=18";
-import { createPosterCanvas } from "./lib/poster.js?v=18";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=18";
-import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=18";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=20";
+import { loadMediaData } from "./lib/media-data.js?v=20";
+import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=20";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=20";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=20";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -33,11 +33,6 @@ let layoutReleaseTimer = 0;
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
 function monthLabel(item) { return item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : ""; }
-function fallbackRatio(type) { return type === "music" ? 1 : 2 / 3; }
-function itemRatio(item) {
-  const ratio = Number(item?.aspectRatio);
-  return Number.isFinite(ratio) && ratio > 0 ? ratio : fallbackRatio(item?.type);
-}
 
 function stageViewport() {
   return { top: scrollY - stage.offsetTop, height: innerHeight };
@@ -234,7 +229,7 @@ function createObject(item, index, placement) {
   image.sizes = state.type === "music" ? "(max-width: 639px) 20vw, 8vw" : "(max-width: 639px) 25vw, 10vw";
   image.alt = label(item);
   image.width = 320;
-  image.height = Math.round(320 / itemRatio(item));
+  image.height = Math.round(320 / coverRatio(item.type));
   image.decoding = "async";
   image.fetchPriority = "auto";
   const information = document.createElement("span");
@@ -264,7 +259,7 @@ function openWork(item, trigger) {
   rememberTrigger("work", trigger);
   document.querySelector("#poster-dialog")?.close();
   workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
-  workFlip.style.setProperty("--detail-ratio", itemRatio(item));
+  workFlip.style.setProperty("--detail-ratio", coverRatio(item.type));
   const cover = document.querySelector("#work-cover");
   if (item.coverLarge) cover.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
   else cover.removeAttribute("srcset");
