@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=21";
-import { loadMediaData } from "./lib/media-data.js?v=21";
-import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=21";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=21";
-import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=21";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=22";
+import { loadMediaData } from "./lib/media-data.js?v=22";
+import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=22";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=22";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=22";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -33,7 +33,7 @@ let layoutReleaseTimer = 0;
 let coverPointer = null;
 let coverFrame = 0;
 let coverPosition = null;
-let skipFlipClick = false;
+let skipFlipPointerId = null;
 
 function resetCoverTilt() {
   cancelAnimationFrame(coverFrame);
@@ -669,6 +669,7 @@ document.querySelectorAll(".dialog-close").forEach((button) => button.addEventLi
 }));
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true, morph: true })));
 workFlip.addEventListener("pointerdown", (event) => {
+  skipFlipPointerId = null;
   if (!canTiltCover()) return;
   coverPointer = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
   workFlip.setPointerCapture(event.pointerId);
@@ -681,14 +682,17 @@ workFlip.addEventListener("pointermove", (event) => {
 }, { passive: true });
 workFlip.addEventListener("pointerup", (event) => {
   if (coverPointer?.id !== event.pointerId) return;
-  skipFlipClick = coverPointer.moved;
+  skipFlipPointerId = coverPointer.moved ? event.pointerId : null;
   resetCoverTilt();
-  setTimeout(() => { skipFlipClick = false; }, 0);
 });
 workFlip.addEventListener("pointercancel", resetCoverTilt);
 workFlip.addEventListener("pointerleave", (event) => { if (event.pointerType === "mouse") resetCoverTilt(); });
-workFlip.addEventListener("click", () => {
-  if (skipFlipClick) return;
+workFlip.addEventListener("click", (event) => {
+  if (skipFlipPointerId === event.pointerId) {
+    skipFlipPointerId = null;
+    return;
+  }
+  skipFlipPointerId = null;
   setFlipped(!workFlip.classList.contains("is-flipped"));
 });
 workDialog.addEventListener("click", (event) => { if (event.target === workDialog) closeWork({ restoreFocus: true, morph: true }); });
