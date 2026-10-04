@@ -176,7 +176,7 @@ test("触屏音乐先显示封面，拖动不误翻，点按才翻面", async ({
     await expect(cover).toHaveClass(/is-tilting/);
     await input.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
     await expect(cover).not.toHaveClass(/is-flipped/);
-    await page.touchscreen.tap(x, y);
+    await cover.tap();
     await expect(cover).toHaveClass(/is-flipped/);
   } finally {
     await context.close();
