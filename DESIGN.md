@@ -123,12 +123,12 @@ For a book confirmed to have no formal cover, the Obsidian workflow uses a title
 
 ### Floating Work Object
 
-- **Structure**: a modal floating object on the current shelf page. Its front is the original cover; tapping it flips to a dark information back. Pointer devices open on the cover face because hover already revealed the slip; `hover: none` devices open on the information face, since a touch visitor has never seen the title and would otherwise be shown the cover they just tapped.
+- **Structure**: a modal floating object on the current shelf page. Its front is the original cover; tapping it flips to a dark information back. Pointer devices open on the cover face because hover already revealed the slip; `hover: none` devices open books and films on the information face, while music opens on the cover face so the artwork can be touched before flipping.
 - **Information**: media type, title, creator, categories, and book completion month. Films and music never show dates.
 - **Rating**: books alone show five dots representing the `rating` field from 1–5. Missing book ratings render as five empty dots; films and music show no rating row.
 - **Material**: the reverse uses the same warm-dark surface as the control capsule, with a terracotta title accent and no glass card.
 - **Dismissal**: close button, Escape, or tapping the transparent backdrop returns to the unchanged shelf. The shelf stays sharp and fully visible behind the floating object.
-- **Motion**: 520ms GPU-composited `rotateY`; reduced-motion removes the transition.
+- **Motion**: 520ms GPU-composited `rotateY`; only the expanded music cover adds pointer-tracked tilt (at most 6deg) and a soft reflected highlight while touched or hovered, returning to center on release. Reduced-motion keeps the music cover static and removes the flip transition. Reference mechanism: pointer-driven 3D card tilt and glare; the external beui.dev and react-bits source catalogs were unavailable during implementation, so no catalog component was copied.
 
 ## 6. Motion & Interaction
 
@@ -140,8 +140,9 @@ For a book confirmed to have no formal cover, the Obsidian workflow uses a title
 | Vortex | 900ms | `cubic-bezier(0.2, 1.6, 0.4, 1)` | Spiral arrangement with 8ms stagger |
 | Filter | 400ms | ease | Dim unrelated covers to 0.12 |
 | Press | 80ms | ease-out | Physical compression to 0.985 |
+| Music cover settle | 260ms | `cubic-bezier(0.2, 0.8, 0.2, 1)` | Expanded music cover returns from pointer tilt |
 
-- No continuous animation, parallax, or decorative motion.
+- No idle continuous animation, page parallax, or decorative motion; the music detail cover moves only in response to direct pointer contact or hover.
 - Layout cycles Scatter, Tidy, and Vortex in that order; re-entering Scatter reseeds the composition, which replaces the former separate Shake action.
 - Pointer dragging updates only the selected cover position; touch uses native scroll and tap-to-open instead.
 - Hover and focus share the same visual state.

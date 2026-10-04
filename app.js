@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=20";
-import { loadMediaData } from "./lib/media-data.js?v=20";
-import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=20";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=20";
-import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=20";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=21";
+import { loadMediaData } from "./lib/media-data.js?v=21";
+import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=21";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=21";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=21";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -13,7 +13,7 @@ const pageMeta = {
 // 三种排布是互斥的，移动端塞不下三个并列按钮：合成一个循环键，按钮文字就是当前排布。
 const layoutModes = ["scatter", "tidy", "vortex"];
 const layoutLabels = { scatter: "散落", tidy: "整理", vortex: "漩涡" };
-const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", picking: false, picked: [], dragging: false, savedScroll: 0 };
+const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", categoryBeforePicking: null, picking: false, picked: [], dragging: false, savedScroll: 0 };
 const stage = document.querySelector("#shelf-stage");
 const controls = document.querySelector("#shelf-controls");
 const filterPanel = document.querySelector("#filter-panel");
@@ -30,6 +30,40 @@ let coverObserver = null;
 let hydrationGeneration = 0;
 let layoutGeneration = 0;
 let layoutReleaseTimer = 0;
+let coverPointer = null;
+let coverFrame = 0;
+let coverPosition = null;
+let skipFlipClick = false;
+
+function resetCoverTilt() {
+  cancelAnimationFrame(coverFrame);
+  coverFrame = 0;
+  coverPosition = null;
+  coverPointer = null;
+  workFlip.classList.remove("is-tilting");
+  workFlip.style.removeProperty("--tilt-x");
+  workFlip.style.removeProperty("--tilt-y");
+  workFlip.style.removeProperty("--glint-x");
+}
+
+function trackCoverTilt(clientX, clientY) {
+  coverPosition = { x: clientX, y: clientY };
+  if (coverFrame) return;
+  coverFrame = requestAnimationFrame(() => {
+    coverFrame = 0;
+    const bounds = workFlip.getBoundingClientRect();
+    const x = Math.max(-1, Math.min(1, (coverPosition.x - bounds.left - bounds.width / 2) / (bounds.width / 2)));
+    const y = Math.max(-1, Math.min(1, (coverPosition.y - bounds.top - bounds.height / 2) / (bounds.height / 2)));
+    workFlip.style.setProperty("--tilt-x", `${-y * 6}deg`);
+    workFlip.style.setProperty("--tilt-y", `${x * 6}deg`);
+    workFlip.style.setProperty("--glint-x", `${x * 35}%`);
+    workFlip.classList.add("is-tilting");
+  });
+}
+
+function canTiltCover() {
+  return state.type === "music" && workDialog.open && !workFlip.classList.contains("is-flipped") && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
 function monthLabel(item) { return item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : ""; }
@@ -199,6 +233,7 @@ function morphOpen(source) {
 // morph 只给"用户主动收起详情卡"的三条路（关闭按钮、点背景、Esc）；
 // 顺手关掉的场景（开筛选、进选片、切页）不播动画，那会儿用户的注意力已经在别处了。
 function closeWork({ restoreFocus = false, morph = false } = {}) {
+  resetCoverTilt();
   const trigger = clearTrigger("work");
   const back = morphSource;
   morphSource = null;
@@ -249,12 +284,14 @@ function createObject(item, index, placement) {
 }
 
 function setFlipped(flipped) {
+  resetCoverTilt();
   workFlip.classList.toggle("is-flipped", flipped);
   workFlip.setAttribute("aria-pressed", String(flipped));
   workFlip.setAttribute("aria-label", flipped ? `${workFlip.dataset.detailLabel}。翻回作品封面` : "翻转查看作品信息");
 }
 
 function openWork(item, trigger) {
+  resetCoverTilt();
   closeTransientStates();
   rememberTrigger("work", trigger);
   document.querySelector("#poster-dialog")?.close();
@@ -289,9 +326,7 @@ function openWork(item, trigger) {
     ? (score ? `个人评分 ${score} / 5` : "尚未录入个人评分")
     : "";
   workFlip.dataset.detailLabel = [item.title, item.creator, document.querySelector("#work-meta").textContent, ratingLabel].filter(Boolean).join("，");
-  // 触屏没有 hover，封面上的信息条永远不显示：点开只看到刚点的那张封面等于零信息，
-  // 所以无 hover 设备直接开在信息面，想看大图再翻回去。
-  setFlipped(matchMedia("(hover: none)").matches);
+  setFlipped(item.type !== "music" && matchMedia("(hover: none)").matches);
   morphOpen(trigger);
 }
 
@@ -313,6 +348,24 @@ function setError(message) {
   stateMessage.append(title, detail, retry);
   stage.append(stateMessage);
   stage.setAttribute("aria-busy", "false");
+  document.querySelector("#item-count").textContent = "—";
+  setShelfActionsEnabled(false);
+}
+
+function setShelfActionsEnabled(enabled) {
+  [layoutAction, filterAction, shareAction].forEach((button) => { button.disabled = !enabled; });
+}
+
+function showShelfLoading() {
+  const message = document.createElement("p");
+  message.className = "shelf-loading";
+  message.setAttribute("role", "status");
+  message.textContent = "正在展开收藏…";
+  stage.classList.remove("shelf-state");
+  stage.replaceChildren(message);
+  stage.setAttribute("aria-busy", "true");
+  document.querySelector("#item-count").textContent = "…";
+  setShelfActionsEnabled(false);
 }
 
 function render() {
@@ -334,6 +387,7 @@ function render() {
   stage.setAttribute("aria-label", `${typeLabels[state.type]}的收藏`);
   filter(state.category);
   stage.setAttribute("aria-busy", "false");
+  setShelfActionsEnabled(true);
 }
 
 function filter(category) {
@@ -402,9 +456,14 @@ function startPicking(force, { restoreFocus = true } = {}) {
   closeFilter({ restoreFocus: false });
   closeWork({ restoreFocus: false });
   if (state.picking) {
+    state.categoryBeforePicking = state.category;
+    if (state.category !== "全部") filter("全部");
     clearAllTransientOwnership();
     rememberTrigger("share", shareAction);
   } else {
+    const previousCategory = state.categoryBeforePicking;
+    state.categoryBeforePicking = null;
+    if (previousCategory && previousCategory !== "全部") filter(previousCategory);
     shareTrigger = clearTrigger("share");
   }
   state.picked = [];
@@ -525,13 +584,16 @@ function renderType(type, push = false) {
   state.mode = "scatter";
   state.seed += 1;
   state.items = state.all.filter((item) => item.type === type);
-  if (push) history.pushState({ type }, "", pathForType(type));
+  if (push) {
+    history.pushState({ type }, "", pathForType(type));
+    scrollTo({ top: 0, behavior: "instant" });
+  }
   renderFilters();
   render();
 }
 
 async function load() {
-  stage.setAttribute("aria-busy", "true");
+  showShelfLoading();
   try {
     state.all = await loadMediaData();
     renderType(state.type);
@@ -606,7 +668,29 @@ document.querySelectorAll(".dialog-close").forEach((button) => button.addEventLi
   else dialog?.close();
 }));
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true, morph: true })));
-workFlip.addEventListener("click", () => setFlipped(!workFlip.classList.contains("is-flipped")));
+workFlip.addEventListener("pointerdown", (event) => {
+  if (!canTiltCover()) return;
+  coverPointer = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
+  workFlip.setPointerCapture(event.pointerId);
+});
+workFlip.addEventListener("pointermove", (event) => {
+  if (!canTiltCover()) return;
+  if (event.pointerType !== "mouse" && coverPointer?.id !== event.pointerId) return;
+  if (coverPointer?.id === event.pointerId && Math.hypot(event.clientX - coverPointer.x, event.clientY - coverPointer.y) > 8) coverPointer.moved = true;
+  trackCoverTilt(event.clientX, event.clientY);
+}, { passive: true });
+workFlip.addEventListener("pointerup", (event) => {
+  if (coverPointer?.id !== event.pointerId) return;
+  skipFlipClick = coverPointer.moved;
+  resetCoverTilt();
+  setTimeout(() => { skipFlipClick = false; }, 0);
+});
+workFlip.addEventListener("pointercancel", resetCoverTilt);
+workFlip.addEventListener("pointerleave", (event) => { if (event.pointerType === "mouse") resetCoverTilt(); });
+workFlip.addEventListener("click", () => {
+  if (skipFlipClick) return;
+  setFlipped(!workFlip.classList.contains("is-flipped"));
+});
 workDialog.addEventListener("click", (event) => { if (event.target === workDialog) closeWork({ restoreFocus: true, morph: true }); });
 // Esc 走的是原生关闭，拦下来换成同一条收回动画。close 事件留作兜底：绕过 closeWork 的原生关闭仍能还焦点。
 workDialog.addEventListener("cancel", (event) => { event.preventDefault(); closeWork({ restoreFocus: true, morph: true }); });

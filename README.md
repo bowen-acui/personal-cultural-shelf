@@ -9,10 +9,10 @@
 ```bash
 npm run data:check
 npm run build:data
-python3 -m http.server 4173
+npm start
 ```
 
-然后访问 `http://127.0.0.1:4173/`。
+然后访问 `http://127.0.0.1:4173/`。`npm start` 会通过与 Railway 相同的受限静态服务器提供页面。
 
 Railway 使用 `npm start` 启动同一个静态站点，并自动读取平台提供的 `PORT` 环境变量。
 

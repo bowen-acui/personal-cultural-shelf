@@ -1,6 +1,6 @@
-import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=20";
-import { loadMediaData } from "./lib/media-data.js?v=20";
-import { coverRatio } from "./lib/poster.js?v=20";
+import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=21";
+import { loadMediaData } from "./lib/media-data.js?v=21";
+import { coverRatio } from "./lib/poster.js?v=21";
 
 const labels = { book: "书", film: "影", music: "音" };
 const grid = document.querySelector("#catalog-grid");

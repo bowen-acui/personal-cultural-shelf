@@ -111,7 +111,7 @@ test("shelf pages expose synchronized metadata and keyboard entry points", async
   assert.ok(pages.every((page) => page.includes('class="skip-link"')));
   assert.ok(pages.every((page) => page.includes('meta name="description"')));
   // 循环键的按钮文字就是当前排布，屏幕阅读器靠 aria-label 知道「点一下会换」。
-  assert.match(pages[0], /<button data-action="layout" type="button" aria-label="当前排布：散落，点击换下一种">散落<\/button>/);
+  assert.match(pages[0], /<button data-action="layout" type="button" aria-label="当前排布：散落，点击换下一种" disabled>散落<\/button>/);
   assert.match(pages[0], /aria-labelledby="poster-title"/);
   assert.match(pages[0], /id="work-dialog"/);
 });

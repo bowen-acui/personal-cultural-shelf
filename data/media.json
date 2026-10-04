@@ -707,9 +707,9 @@
     "type": "book",
     "title": "红拂夜奔",
     "creator": "王小波",
-    "cover": "public/covers/7547973a22fd-320.webp",
-    "coverLarge": "public/covers/7547973a22fd-720.webp",
-    "aspectRatio": 0.75,
+    "cover": "public/covers/b46cc1f04f50-320.webp",
+    "coverLarge": "public/covers/b46cc1f04f50-720.webp",
+    "aspectRatio": 0.697674,
     "categories": [
       "小说"
     ],

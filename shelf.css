@@ -21,7 +21,8 @@
 .shelf-controls { position:fixed; z-index:var(--layer-controls); left:50%; bottom:22px; display:flex; align-items:center; height:64px; gap:16px; padding:8px 12px; border:1px solid var(--control-edge); border-radius:999px; color:var(--control-muted); background:var(--control-surface); box-shadow:0 1px 0 var(--control-active) inset,0 10px 32px var(--control-shadow); font:500 12px/1 var(--font-mono); letter-spacing:.04em; transform:translateX(-50%); backdrop-filter:blur(20px) saturate(1.1); }
 .control-group { display:flex; align-items:center; gap:6px; }
 .shelf-controls button,.shelf-controls a { position:relative; display:inline-flex; align-items:center; justify-content:center; min-width:var(--target-min); min-height:46px; padding:0 16px; border:0; border-radius:999px; color:var(--control-text); background:var(--control-hover); line-height:1; text-decoration:none; white-space:nowrap; transition:background-color .2s ease,color .2s ease,transform 80ms ease-out; }
-.shelf-controls button:hover { background:var(--control-active); }
+.shelf-controls button:not(:disabled):hover { background:var(--control-active); }
+.shelf-controls button:disabled { opacity:.55; cursor:default; }
 .shelf-controls button:active,.shelf-controls a:active { transform:scale(.97); }
 .control-stat { display:flex; align-items:center; gap:8px; min-height:46px; padding:0 8px; color:var(--control-text); white-space:nowrap; }
 .control-stat strong { font-family:var(--font-mono); font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; }
@@ -32,6 +33,8 @@
 .work-dialog { width:min(360px,calc(100% - 48px)); max-width:none; padding:0; overflow:visible; border:0; color:var(--control-text); background:transparent; }
 .work-dialog::backdrop { background:var(--work-backdrop); animation:backdrop-in 240ms ease-out both; }
 .work-flip { display:block; width:100%; padding:0; border:0; color:inherit; background:transparent; cursor:pointer; perspective:1200px; transform:rotate(-1.5deg); }
+body[data-media-type="music"] .work-flip { transform:perspective(1200px) rotate(-1.5deg) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)); transition:transform 260ms cubic-bezier(.2,.8,.2,1); touch-action:none; }
+body[data-media-type="music"] .work-flip.is-tilting { transition:none; }
 .work-flip-inner { position:relative; display:block; width:100%; aspect-ratio:var(--detail-ratio,2 / 3); transform-style:preserve-3d; transition:transform 520ms cubic-bezier(.2,.72,.2,1); }
 .work-flip.is-flipped .work-flip-inner { transform:rotateY(180deg); }
 /* 共享元素开合：详情卡常驻这个名字，架上被点的那张封面在开合的瞬间临时借用（见 app.js morphOpen/morphClose），
@@ -40,6 +43,8 @@
 ::view-transition-group(work-card) { animation-duration:420ms; animation-timing-function:cubic-bezier(.2,.72,.2,1); }
 .work-face { position:absolute; inset:0; display:block; overflow:hidden; border-radius:4px; box-shadow:0 22px 70px var(--control-shadow),var(--shadow-up); backface-visibility:hidden; }
 .work-front img { display:block; width:100%; height:100%; object-fit:contain; background:var(--paper-light); }
+body[data-media-type="music"] .work-front::after { content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 20%,var(--glass-highlight) 50%,transparent 80%); opacity:0; pointer-events:none; transform:translateX(var(--glint-x,0%)); transition:opacity 200ms ease,transform 260ms cubic-bezier(.2,.8,.2,1); }
+body[data-media-type="music"] .work-flip.is-tilting:not(.is-flipped) .work-front::after { opacity:.2; transition:opacity 200ms ease; }
 .work-back { display:flex; flex-direction:column; align-items:flex-start; padding:30px 28px 24px; color:var(--control-text); background:var(--control); text-align:left; transform:rotateY(180deg); }
 .work-back small { color:var(--control-muted); font:10px/1.2 var(--font-mono); letter-spacing:.08em; }
 .work-back strong { margin-top:14px; color:var(--active); font:400 clamp(30px,7vw,44px)/.96 "LXGW WenKai","霞鹜文楷",var(--font-display); letter-spacing:-.03em; text-wrap:balance; }
@@ -71,8 +76,10 @@
 .dialog-close { position:absolute; z-index:2; top:12px; right:12px; display:grid; width:var(--target-min); min-width:var(--target-min); padding:0!important; border:1px solid var(--glass-edge)!important; border-radius:50%; background:var(--close-surface)!important; box-shadow:0 1px 0 var(--glass-highlight) inset; font-size:20px; place-items:center; backdrop-filter:blur(12px); }
 @keyframes backdrop-in { from { background:transparent; backdrop-filter:blur(0) saturate(1); } }
 .shelf-state { display:grid; min-height:70svh; place-items:center; padding:120px 24px; }
+.shelf-loading { position:absolute; top:120px; left:32px; margin:0; color:var(--ink-muted); font:12px/1.4 var(--font-mono); }
 .shelf-error { display:grid; max-width:360px; gap:12px; text-align:center; }
 .shelf-error strong { font:32px/1.05 "Instrument Serif",Georgia,serif; }
 .shelf-error span { color:var(--ink-muted); }
 .shelf-error button { min-height:var(--target-min); border:1px solid var(--ink); color:var(--ink); background:transparent; }
-@media(max-width:639px){ .shelf-controls { bottom:14px; max-width:calc(100% - 24px); height:58px; gap:10px; padding:6px 8px; } .shelf-controls .control-group { gap:5px; } .shelf-controls button,.shelf-controls a { min-height:var(--target-min); padding:0 10px; } .control-stat { min-height:var(--target-min); padding:0 4px; } .object-info { max-width:min(180px,72vw); } .work-dialog { width:min(330px,calc(100% - 48px)); } .work-back { padding:26px 24px 22px; } .filter-panel,.pick-status { bottom:82px; } .dialog-close { top:8px; right:8px; } }
+@media(max-width:639px){ .shelf-controls { bottom:14px; max-width:calc(100% - 24px); height:58px; gap:10px; padding:6px 8px; } .shelf-controls .control-group { gap:5px; } .shelf-controls button,.shelf-controls a { min-height:var(--target-min); padding:0 10px; } .control-stat { min-height:var(--target-min); padding:0 4px; } .object-info { max-width:min(180px,72vw); } .work-dialog { width:min(330px,calc(100% - 48px)); } .work-back { padding:26px 24px 22px; } .filter-panel,.pick-status { bottom:82px; } .dialog-close { top:8px; right:8px; } .shelf-loading { left:16px; } }
+@media(prefers-reduced-motion:reduce){ body[data-media-type="music"] .work-flip { transform:rotate(-1.5deg); } body[data-media-type="music"] .work-front::after { display:none; } }
