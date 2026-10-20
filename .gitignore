@@ -4,4 +4,5 @@ node_modules/
 test-results/
 research/reference/
 public/fonts/*.ttf
+/.library-promotion.lock
 .claude/

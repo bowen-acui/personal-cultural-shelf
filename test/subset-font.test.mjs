@@ -1,16 +1,18 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-import { charsetFromMedia } from "../scripts/subset-font.mjs";
+import { buildSubset, charsetFromMedia, verifyFont } from "../scripts/subset-font.mjs";
 
 const scriptPath = fileURLToPath(new URL("../scripts/subset-font.mjs", import.meta.url));
 const mediaPath = fileURLToPath(new URL("../data/media.json", import.meta.url));
 const committedFontPath = fileURLToPath(new URL("../public/fonts/lxgw-wenkai-subset.woff2", import.meta.url));
+const sourceFontPath = fileURLToPath(new URL("../assets/fonts/lxgw-wenkai-regular.ttf", import.meta.url));
 
 function runSubsetFont(...args) {
   return spawnSync(process.execPath, [scriptPath, ...args], { encoding: "utf8" });
@@ -51,10 +53,34 @@ test("verify-only rejects a missing font instead of silently skipping", () => {
   assert.match(result.stderr, /not found|ENOENT/i);
 });
 
-test("default mode verifies the committed WOFF2 when the source TTF is unavailable", () => {
+test("default mode verifies the committed WOFF2 without changing it", async () => {
+  const before = createHash("sha256").update(await readFile(committedFontPath)).digest("hex");
   const result = runSubsetFont();
   assert.equal(result.status, 0, result.stderr);
   assert.match(result.stdout, /Verified existing WOFF2/);
+  const after = createHash("sha256").update(await readFile(committedFontPath)).digest("hex");
+  assert.equal(after, before);
+});
+
+test("the pinned source font builds an isolated subset for the new library glyphs", async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "shelf-new-glyphs-"));
+  const media = path.join(root, "media.json");
+  const output = path.join(root, "subset.woff2");
+  const record = {
+    id: "music:font-regression",
+    type: "music",
+    title: "É蛙室质网季擱淺變候乙鴿螢粉紅遊戲陽执郭",
+    creator: "陈奕迅",
+    categories: ["音乐"],
+    cover: "public/covers/a-320.webp",
+  };
+  try {
+    await writeFile(media, JSON.stringify([record]), "utf8");
+    await buildSubset({ sourcePath: sourceFontPath, mediaPath: media, outputPath: output, verify: true });
+    assert.equal((await verifyFont({ fontPath: output, mediaPath: media })).records, 1);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
 });
 
 test("self-test-missing proves an omitted codepoint fails in an isolated root", async () => {

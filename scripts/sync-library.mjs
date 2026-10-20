@@ -9,7 +9,7 @@ import { buildSubset, verifyFont } from "./subset-font.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const buildScript = path.join(projectRoot, "scripts/build-library.mjs");
-const sourceFont = path.join(projectRoot, "public/fonts/lxgw-wenkai-regular.ttf");
+const sourceFont = path.join(projectRoot, "assets/fonts/lxgw-wenkai-regular.ttf");
 const committedFont = path.join(projectRoot, "public/fonts/lxgw-wenkai-subset.woff2");
 
 async function exists(target) {
@@ -58,7 +58,7 @@ async function syncLibrary(mode) {
     const receipt = await promoteLibrary({
       candidate: candidateRoot,
       projectRoot,
-      lock: path.join(controlRoot, "promotion.lock"),
+      lock: path.join(projectRoot, ".library-promotion.lock"),
       receipt: path.join(controlRoot, "promotion-receipt.json"),
     });
     process.stdout.write(`Library promotion PASS: data=${receipt.dataSha256} font=${receipt.fontSha256}.\n`);

@@ -18,7 +18,7 @@ Railway 使用 `npm start` 启动同一个静态站点，并自动读取平台�
 
 ## 修改前端代码
 
-浏览器会分别缓存 JS/CSS（1 小时）和字体（1 年），入口、模块、样式与字体文件彼此独立。若只给入口加版本号，用户可能加载到新旧资源混合的页面。
+JS/CSS 与动态霞鹜文楷子集使用 `no-cache` 和 ETag，允许浏览器保存副本，但复用前会向服务器确认是否变化；固定字体与内容哈希封面仍缓存 1 年。入口、模块、样式与字体文件彼此独立。若只给入口加版本号，用户可能加载到新旧资源混合的页面。
 
 因此规则只有一条：**改任何前端静态资源后，全局搜索 `?v=` 并统一 +1。**
 
@@ -63,7 +63,9 @@ node scripts/generate-default-book-cover.mjs "Project：存放项目的必要信
 
 如果 Obsidian 不在默认位置，可以通过 `OBSIDIAN_VAULT=/path/to/阿崔 npm run build:data` 指定只读数据源。
 
-生成结果位于 `data/media.json` 与 `public/covers/`。构建会为每张封面生成 320px 与 720px 的 WebP 响应式资源，并记录真实封面宽高比，页面通过 `srcset` 按设备选择尺寸。`npm run data:check` 只构建临时候选并在存在已完成但缺封面的 Obsidian 笔记时失败；`npm run build:data` 只有候选通过后才原子替换正式数据、封面与字体。字体文件（包含详情背面的霞鹜文楷）与 favicon 也随站点本地发布，因此运行时不依赖第三方字体 CDN。将代码推送到 GitHub 后，可以使用任意静态托管服务发布。
+生成结果位于 `data/media.json` 与 `public/covers/`。构建会为每张封面生成 320px 与 720px 的 WebP 响应式资源，并记录真实封面宽高比，页面通过 `srcset` 按设备选择尺寸。`npm run data:check` 只构建临时候选并在存在已完成但缺封面的 Obsidian 笔记时失败；`npm run build:data` 只有候选通过后才原子替换正式数据、封面与字体。完整霞鹜文楷及许可证保存在 `assets/fonts/`，仅用于构建；公开站点只提供子集 WOFF2，不依赖第三方字体 CDN。将代码推送到 GitHub 后，可以使用任意静态托管服务发布。
+
+正式提升使用项目级 `.library-promotion.lock` 防止并发。若异常退出留下锁，先核对锁内 PID 和同步进程；确认无人运行后再处理锁。若同时存在 `.task2-library-backup`，先核对恢复状态，不要直接删除备份。
 
 ## 参考站扫描
 

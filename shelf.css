@@ -30,11 +30,13 @@
 .shelf-controls .control-catalog { min-width:auto; padding:0 8px; color:var(--active); background:transparent; transform:translateY(-1px); }
 .shelf-controls .control-catalog:hover { color:var(--control-text); background:transparent; }
 .shelf-controls .control-catalog:active { transform:translateY(0) scale(.97); }
-.work-dialog { width:min(360px,calc(100% - 48px)); max-width:none; padding:0; overflow:visible; border:0; color:var(--control-text); background:transparent; }
+.work-dialog { --detail-max-width:360px; width:min(var(--detail-max-width),calc(100vw - 48px),calc((100dvh - 128px) * var(--detail-ratio,.666667))); max-width:none; padding:0; overflow:visible; border:0; color:var(--control-text); background:transparent; }
 .work-dialog::backdrop { background:var(--work-backdrop); animation:backdrop-in 240ms ease-out both; }
 .work-flip { display:block; width:100%; padding:0; border:0; color:inherit; background:transparent; cursor:pointer; perspective:1200px; transform:rotate(-1.5deg); }
 body[data-media-type="music"] .work-flip { transform:perspective(1200px) rotate(-1.5deg) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)); transition:transform 260ms cubic-bezier(.2,.8,.2,1); touch-action:none; }
 body[data-media-type="music"] .work-flip.is-tilting { transition:none; }
+body[data-media-type="music"] .work-flip.is-flipped { touch-action:pan-y; }
+.work-flip.is-flipped { touch-action:pan-y; }
 .work-flip-inner { position:relative; display:block; width:100%; aspect-ratio:var(--detail-ratio,2 / 3); transform-style:preserve-3d; transition:transform 520ms cubic-bezier(.2,.72,.2,1); }
 .work-flip.is-flipped .work-flip-inner { transform:rotateY(180deg); }
 /* 共享元素开合：详情卡常驻这个名字，架上被点的那张封面在开合的瞬间临时借用（见 app.js morphOpen/morphClose），
@@ -45,13 +47,15 @@ body[data-media-type="music"] .work-flip.is-tilting { transition:none; }
 .work-front img { display:block; width:100%; height:100%; object-fit:contain; background:var(--paper-light); }
 body[data-media-type="music"] .work-front::after { content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 20%,var(--glass-highlight) 50%,transparent 80%); opacity:0; pointer-events:none; transform:translateX(var(--glint-x,0%)); transition:opacity 200ms ease,transform 260ms cubic-bezier(.2,.8,.2,1); }
 body[data-media-type="music"] .work-flip.is-tilting:not(.is-flipped) .work-front::after { opacity:.2; transition:opacity 200ms ease; }
-.work-back { display:flex; flex-direction:column; align-items:flex-start; padding:30px 28px 24px; color:var(--control-text); background:var(--control); text-align:left; transform:rotateY(180deg); }
-.work-back small { color:var(--control-muted); font:10px/1.2 var(--font-mono); letter-spacing:.08em; }
-.work-back strong { margin-top:14px; color:var(--active); font:400 clamp(30px,7vw,44px)/.96 "LXGW WenKai","霞鹜文楷",var(--font-display); letter-spacing:-.03em; text-wrap:balance; }
-.work-flip[data-title-length="long"] .work-back strong { font-size:clamp(24px,5vw,34px); line-height:1.03; letter-spacing:-.02em; }
-.work-back>span:not(.work-rating) { margin-top:10px; color:var(--control-muted); font:400 17px/1.45 "LXGW WenKai", "霞鹜文楷", var(--font-display); text-wrap:pretty; }
+.work-back { padding:0; color:var(--control-text); background:var(--control); text-align:left; transform:rotateY(180deg); }
+.work-back-content { position:absolute; inset:0; display:flex; flex-direction:column; align-items:flex-start; min-height:100%; overflow-y:auto; overflow-wrap:anywhere; overscroll-behavior:contain; padding:30px 28px 56px; text-align:left; touch-action:pan-y; }
+.work-back-content>* { max-width:100%; flex-shrink:0; }
+.work-back-content small { color:var(--control-muted); font:10px/1.2 var(--font-mono); letter-spacing:.08em; }
+.work-back-content strong { margin-top:14px; color:var(--active); font:400 clamp(30px,7vw,44px)/.96 "LXGW WenKai","霞鹜文楷",var(--font-display); letter-spacing:-.03em; text-wrap:balance; }
+.work-flip[data-title-length="long"] .work-back-content strong { font-size:clamp(24px,5vw,34px); line-height:1.03; letter-spacing:-.02em; }
+.work-back-content>span:not(.work-rating) { margin-top:10px; color:var(--control-muted); font:400 17px/1.45 "LXGW WenKai", "霞鹜文楷", var(--font-display); text-wrap:pretty; }
 .work-back em { position:absolute; right:24px; bottom:24px; color:var(--control-muted); font:9px/1.2 var(--font-mono); letter-spacing:.04em; }
-.work-rating { display:flex; gap:8px; margin-top:auto; }
+.work-rating { display:flex; gap:8px; margin-top:18px; }
 .work-rating i { display:block; width:12px; height:12px; border:1px solid var(--active); border-radius:50%; }
 .work-rating i.is-filled { background:var(--active); }
 .work-close { position:absolute; z-index:2; top:-52px; right:-4px; display:grid; width:var(--target-min); height:var(--target-min); padding:0; border:1px solid var(--control-edge); border-radius:50%; color:var(--control-text); background:var(--control-surface); font-size:20px; cursor:pointer; opacity:.76; place-items:center; transition:opacity .2s ease,transform .08s ease-out; }
@@ -81,5 +85,5 @@ body[data-media-type="music"] .work-flip.is-tilting:not(.is-flipped) .work-front
 .shelf-error strong { font:32px/1.05 "Instrument Serif",Georgia,serif; }
 .shelf-error span { color:var(--ink-muted); }
 .shelf-error button { min-height:var(--target-min); border:1px solid var(--ink); color:var(--ink); background:transparent; }
-@media(max-width:639px){ .shelf-controls { bottom:14px; max-width:calc(100% - 24px); height:58px; gap:10px; padding:6px 8px; } .shelf-controls .control-group { gap:5px; } .shelf-controls button,.shelf-controls a { min-height:var(--target-min); padding:0 10px; } .control-stat { min-height:var(--target-min); padding:0 4px; } .object-info { max-width:min(180px,72vw); } .work-dialog { width:min(330px,calc(100% - 48px)); } .work-back { padding:26px 24px 22px; } .filter-panel,.pick-status { bottom:82px; } .dialog-close { top:8px; right:8px; } .shelf-loading { left:16px; } }
+@media(max-width:639px){ .shelf-controls { bottom:14px; max-width:calc(100% - 24px); height:58px; gap:10px; padding:6px 8px; } .shelf-controls .control-group { gap:5px; } .shelf-controls button,.shelf-controls a { min-height:var(--target-min); padding:0 10px; } .control-stat { min-height:var(--target-min); padding:0 4px; } .object-info { max-width:min(180px,72vw); } .work-dialog { --detail-max-width:330px; } .work-back-content { padding:26px 24px 54px; } .filter-panel,.pick-status { bottom:82px; } .dialog-close { top:8px; right:8px; } .shelf-loading { left:16px; } }
 @media(prefers-reduced-motion:reduce){ body[data-media-type="music"] .work-flip { transform:rotate(-1.5deg); } body[data-media-type="music"] .work-front::after { display:none; } }

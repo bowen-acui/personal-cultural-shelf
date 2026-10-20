@@ -227,6 +227,7 @@ export async function promoteLibrary({ candidate, projectRoot, lock, receipt, fa
       }
     }
     if (rollbackErrors.length > 0) throw new AggregateError([error, ...rollbackErrors], "promotion failed and rollback was incomplete");
+    if (!lockHandle && error.code === "EEXIST") throw new Error("已有同步正在进行，请稍后重试");
     throw error;
   } finally {
     if (lockHandle) await lockHandle.close();

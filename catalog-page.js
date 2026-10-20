@@ -1,6 +1,6 @@
-import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=22";
-import { loadMediaData } from "./lib/media-data.js?v=22";
-import { coverRatio } from "./lib/poster.js?v=22";
+import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=23";
+import { loadMediaData } from "./lib/media-data.js?v=23";
+import { coverRatio } from "./lib/poster.js?v=23";
 
 const labels = { book: "书", film: "影", music: "音" };
 const grid = document.querySelector("#catalog-grid");
@@ -10,6 +10,12 @@ const category = document.querySelector("#catalog-category");
 const status = document.querySelector("#catalog-status");
 let data = [];
 let renderTimer = 0;
+let loadStatus = "loading";
+let loadInFlight = null;
+
+function setControlsEnabled(enabled) {
+  [search, type, category].forEach((control) => { control.disabled = !enabled; });
+}
 
 function card(item) {
   const article = document.createElement("article");
@@ -34,6 +40,7 @@ function card(item) {
 }
 
 function render() {
+  if (loadStatus !== "ready") return;
   const source = type.value === "全部" ? data : data.filter((item) => item.type === type.value);
   const results = filterCatalog(source, search.value, category.value);
   grid.replaceChildren(...results.map(card));
@@ -53,6 +60,7 @@ function render() {
 }
 
 function renderCategories() {
+  if (loadStatus !== "ready") return;
   const source = type.value === "全部" ? data : data.filter((item) => item.type === type.value);
   category.replaceChildren();
   for (const [name, count] of [["全部", source.length], ...categoryCounts(source)]) {
@@ -64,6 +72,8 @@ function renderCategories() {
 }
 
 function renderError(message) {
+  clearTimeout(renderTimer);
+  setControlsEnabled(false);
   status.textContent = message;
   grid.replaceChildren();
   const retry = document.createElement("button");
@@ -75,21 +85,32 @@ function renderError(message) {
 }
 
 async function load() {
+  if (loadInFlight) return loadInFlight;
+  loadStatus = "loading";
+  setControlsEnabled(false);
   status.textContent = "正在读取藏品…";
-  try {
-    data = await loadMediaData();
-    type.replaceChildren();
-    for (const [value, name] of [["全部", "全部"], ["book", "书"], ["film", "影"], ["music", "音"]]) {
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = name;
-      type.append(option);
+  loadInFlight = (async () => {
+    try {
+      data = await loadMediaData();
+      type.replaceChildren();
+      for (const [value, name] of [["全部", "全部"], ["book", "书"], ["film", "影"], ["music", "音"]]) {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = name;
+        type.append(option);
+      }
+      loadStatus = "ready";
+      setControlsEnabled(true);
+      renderCategories();
+      render();
+    } catch (error) {
+      loadStatus = "error";
+      renderError(error instanceof Error ? error.message : "媒体数据读取失败");
+    } finally {
+      loadInFlight = null;
     }
-    renderCategories();
-    render();
-  } catch (error) {
-    renderError(error instanceof Error ? error.message : "媒体数据读取失败");
-  }
+  })();
+  return loadInFlight;
 }
 
 search.addEventListener("input", () => { clearTimeout(renderTimer); renderTimer = setTimeout(render, 120); });
