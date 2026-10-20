@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=24";
-import { loadMediaData } from "./lib/media-data.js?v=24";
-import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=24";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=24";
-import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=24";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=25";
+import { loadMediaData } from "./lib/media-data.js?v=25";
+import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=25";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=25";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=25";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -744,25 +744,35 @@ document.querySelectorAll(".dialog-close").forEach((button) => button.addEventLi
 }));
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true, morph: true })));
 workFlip.addEventListener("pointerdown", (event) => {
-  skipFlipClick = false;
-  if (!canTiltCover()) return;
+  if (event.pointerType !== "touch") skipFlipClick = false;
+  if (!canTiltCover() && !(event.pointerType === "touch" && state.type === "music" && workDialog.open)) return;
   coverPointer = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
   workFlip.setPointerCapture(event.pointerId);
 });
 workFlip.addEventListener("pointermove", (event) => {
-  if (!canTiltCover()) return;
   if (event.pointerType !== "mouse" && coverPointer?.id !== event.pointerId) return;
   if (coverPointer?.id === event.pointerId && Math.hypot(event.clientX - coverPointer.x, event.clientY - coverPointer.y) > 8) coverPointer.moved = true;
+  if (!canTiltCover()) return;
   trackCoverTilt(event.clientX, event.clientY);
 }, { passive: true });
 workFlip.addEventListener("pointerup", (event) => {
   if (coverPointer?.id !== event.pointerId) return;
-  skipFlipClick = coverPointer.moved;
+  const moved = coverPointer.moved;
+  if (event.pointerType === "touch") {
+    if (!moved) setFlipped(!workFlip.classList.contains("is-flipped"));
+    skipFlipClick = true;
+  } else {
+    skipFlipClick = moved;
+  }
   resetCoverTilt();
 });
 workFlip.addEventListener("pointercancel", resetCoverTilt);
 workFlip.addEventListener("pointerleave", (event) => { if (event.pointerType === "mouse") resetCoverTilt(); });
 workFlip.addEventListener("click", (event) => {
+  if (event.pointerType === "touch") {
+    skipFlipClick = false;
+    return;
+  }
   if (skipFlipClick) {
     skipFlipClick = false;
     return;

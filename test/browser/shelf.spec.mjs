@@ -280,6 +280,8 @@ test("触屏音乐先显示封面，拖动不误翻，点按才翻面", async ({
     await expect(cover).not.toHaveClass(/is-flipped/);
     await cover.tap();
     await expect(cover).toHaveClass(/is-flipped/);
+    await cover.tap();
+    await expect(cover).not.toHaveClass(/is-flipped/);
   } finally {
     await context.close();
   }
