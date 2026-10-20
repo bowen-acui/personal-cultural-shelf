@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 
-import { validateMediaData } from "../lib/media-data.js";
+import { loadMediaData, validateMediaData } from "../lib/media-data.js";
 
 const good = (id, extra = {}) => ({ id, type: "book", title: id, cover: "public/covers/a-320.webp", ...extra });
 
@@ -74,6 +74,30 @@ test("validateMediaData rejects invalid cover aspect ratios", () => {
   assert.deepEqual(result.map((item) => item.id), ["book:ok"]);
   assert.match(warnings[0], /book:zero/);
   assert.match(warnings[0], /book:nan/);
+});
+
+test("loadMediaData aborts a pending request and permits a later retry", async () => {
+  const originalFetch = globalThis.fetch;
+  try {
+    globalThis.fetch = async (url, { signal }) => new Promise((resolve, reject) => {
+      signal.addEventListener("abort", () => reject(signal.reason), { once: true });
+    });
+    await assert.rejects(loadMediaData("/pending", { timeoutMs: 20 }), /读取超时/);
+    globalThis.fetch = async () => new Response(JSON.stringify([good("book:retry")]));
+    assert.equal((await loadMediaData("/ready"))[0].id, "book:retry");
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("loadMediaData reports HTTP errors without wrapping them", async () => {
+  const originalFetch = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => new Response("unavailable", { status: 503 });
+    await assert.rejects(loadMediaData("/unavailable"), /媒体数据加载失败 \(503\)/);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
 });
 
 test("the build-time 置顶 field never reaches the public payload", async () => {

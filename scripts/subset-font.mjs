@@ -6,7 +6,6 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const defaultMediaFile = path.join(projectRoot, "data/media.json");
-const defaultSourceFont = path.join(projectRoot, "public/fonts/lxgw-wenkai-regular.ttf");
 const defaultOutputFont = path.join(projectRoot, "public/fonts/lxgw-wenkai-subset.woff2");
 
 // 站内固定文案 + 海报标题。这些字不能指望藏品数据顺带覆盖——
@@ -142,14 +141,8 @@ async function main() {
     if (!options.source || !options.media || !options.output || !options.verify) throw new Error("build mode requires --source <ttf> --media <json> --output <woff2> --verify");
     await buildSubset({ sourcePath: options.source, mediaPath: options.media, outputPath: options.output, verify: true });
   } else {
-    try {
-      await access(defaultSourceFont);
-    } catch {
-      const result = await verifyFont({ fontPath: defaultOutputFont, mediaPath: defaultMediaFile });
-      process.stdout.write(`Verified existing WOFF2 for ${result.records} records because source TTF is unavailable.\n`);
-      return;
-    }
-    await buildSubset({ sourcePath: defaultSourceFont, mediaPath: defaultMediaFile, outputPath: defaultOutputFont, verify: true });
+    const result = await verifyFont({ fontPath: defaultOutputFont, mediaPath: defaultMediaFile });
+    process.stdout.write(`Verified existing WOFF2 for ${result.records} records.\n`);
   }
 }
 

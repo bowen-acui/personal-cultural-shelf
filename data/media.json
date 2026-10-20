@@ -6701,6 +6701,18 @@
     ]
   },
   {
+    "id": "music:Solidays",
+    "type": "music",
+    "title": "Solidays",
+    "creator": "Eason Chan",
+    "cover": "public/covers/85016dbfc1fd-320.webp",
+    "coverLarge": "public/covers/85016dbfc1fd-720.webp",
+    "aspectRatio": 0.920312,
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
     "id": "music:玻璃 demo",
     "type": "music",
     "title": "玻璃 demo",
@@ -6755,6 +6767,18 @@
     "creator": "Gareth.T",
     "cover": "public/covers/9ada2137de36-320.webp",
     "coverLarge": "public/covers/9ada2137de36-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:THE PROTÉGÉ",
+    "type": "music",
+    "title": "THE PROTÉGÉ",
+    "creator": "Gareth.T",
+    "cover": "public/covers/49c1c00ec16b-320.webp",
+    "coverLarge": "public/covers/49c1c00ec16b-720.webp",
     "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
@@ -6929,6 +6953,18 @@
     ]
   },
   {
+    "id": "music:单身旅记 (录音室版)",
+    "type": "music",
+    "title": "单身旅记 (录音室版)",
+    "creator": "保质期艺术家; 八仙8Immortals; 网易音乐人",
+    "cover": "public/covers/d45899e38939-320.webp",
+    "coverLarge": "public/covers/d45899e38939-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
     "id": "music:TRADY 1.0",
     "type": "music",
     "title": "TRADY 1.0",
@@ -6989,6 +7025,16 @@
     ]
   },
   {
+    "id": "music:飞行器的执行周期",
+    "type": "music",
+    "title": "飞行器的执行周期",
+    "creator": "郭顶",
+    "cover": "public/covers/1a67cfdc27ef-320.webp",
+    "coverLarge": "public/covers/1a67cfdc27ef-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
     "id": "music:錢專",
     "type": "music",
     "title": "錢專",
@@ -7023,6 +7069,16 @@
     "categories": [
       "R&B/Soul"
     ]
+  },
+  {
+    "id": "music:擱淺的人",
+    "type": "music",
+    "title": "擱淺的人",
+    "creator": "康士坦的變化球",
+    "cover": "public/covers/929e15b3296d-320.webp",
+    "coverLarge": "public/covers/929e15b3296d-720.webp",
+    "aspectRatio": 1,
+    "categories": []
   },
   {
     "id": "music:峨眉",
@@ -7083,6 +7139,16 @@
     "categories": [
       "摇滚"
     ]
+  },
+  {
+    "id": "music:wachi 2020-2021",
+    "type": "music",
+    "title": "wachi 2020-2021",
+    "creator": "蛙池",
+    "cover": "public/covers/a2b8937bf1c9-320.webp",
+    "coverLarge": "public/covers/a2b8937bf1c9-720.webp",
+    "aspectRatio": 1,
+    "categories": []
   },
   {
     "id": "music:雨RAIN RAIN RAIN",
@@ -7285,6 +7351,18 @@
     "creator": "AGA",
     "cover": "public/covers/2ee9e0f7ca92-320.webp",
     "coverLarge": "public/covers/2ee9e0f7ca92-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
+    "id": "music:Special One (feat. Eason Chan)",
+    "type": "music",
+    "title": "Special One (feat. Eason Chan)",
+    "creator": "AGA",
+    "cover": "public/covers/6c34420d65f4-320.webp",
+    "coverLarge": "public/covers/6c34420d65f4-720.webp",
     "aspectRatio": 1,
     "categories": [
       "Cantopop/HK-Pop"
@@ -7712,6 +7790,18 @@
     ]
   },
   {
+    "id": "music:L.O.V.E",
+    "type": "music",
+    "title": "L.O.V.E.",
+    "creator": "Eason Chan; eason and the duo band",
+    "cover": "public/covers/cd46ca28b5b6-320.webp",
+    "coverLarge": "public/covers/cd46ca28b5b6-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Cantopop/HK-Pop"
+    ]
+  },
+  {
     "id": "music:10號",
     "type": "music",
     "title": "10號",
@@ -7834,6 +7924,16 @@
     ]
   },
   {
+    "id": "music:beGin",
+    "type": "music",
+    "title": "beGin",
+    "creator": "Gin Lee",
+    "cover": "public/covers/ad88bed6db09-320.webp",
+    "coverLarge": "public/covers/ad88bed6db09-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
     "id": "music:How to Be a Human Being",
     "type": "music",
     "title": "How to Be a Human Being",
@@ -7879,6 +7979,18 @@
     "aspectRatio": 1,
     "categories": [
       "Pop"
+    ]
+  },
+  {
+    "id": "music:是時候",
+    "type": "music",
+    "title": "是時候...",
+    "creator": "Hins Cheung",
+    "cover": "public/covers/de7f27e1a2b4-320.webp",
+    "coverLarge": "public/covers/de7f27e1a2b4-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "Cantopop/HK-Pop"
     ]
   },
   {
@@ -7979,6 +8091,16 @@
     ]
   },
   {
+    "id": "music:My Love",
+    "type": "music",
+    "title": "My Love",
+    "creator": "Janice Vidal",
+    "cover": "public/covers/506ac7dc63fb-320.webp",
+    "coverLarge": "public/covers/506ac7dc63fb-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
     "id": "music:五年新曲加精選",
     "type": "music",
     "title": "五年新曲加精選",
@@ -8003,6 +8125,16 @@
     ]
   },
   {
+    "id": "music:甲乙丙丁Strangers",
+    "type": "music",
+    "title": "甲乙丙丁Strangers",
+    "creator": "Jess Lee",
+    "cover": "public/covers/682f40b4a23e-320.webp",
+    "coverLarge": "public/covers/682f40b4a23e-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
     "id": "music:You Don't Mess Around With Jim",
     "type": "music",
     "title": "You Don't Mess Around With Jim",
@@ -8013,6 +8145,16 @@
     "categories": [
       "Singer/Songwriter"
     ]
+  },
+  {
+    "id": "music:陽光普照",
+    "type": "music",
+    "title": "陽光普照",
+    "creator": "Joey Yung",
+    "cover": "public/covers/a2a2989b0fea-320.webp",
+    "coverLarge": "public/covers/a2a2989b0fea-720.webp",
+    "aspectRatio": 1,
+    "categories": []
   },
   {
     "id": "music:山丘",
@@ -8085,6 +8227,16 @@
     "categories": [
       "Pop"
     ]
+  },
+  {
+    "id": "music:黑玻璃",
+    "type": "music",
+    "title": "黑玻璃",
+    "creator": "Kaho Hung",
+    "cover": "public/covers/95945ac77be2-320.webp",
+    "coverLarge": "public/covers/95945ac77be2-720.webp",
+    "aspectRatio": 1,
+    "categories": []
   },
   {
     "id": "music:Hounds of Love",
@@ -8339,6 +8491,16 @@
     ]
   },
   {
+    "id": "music:遊戲 基",
+    "type": "music",
+    "title": "遊戲 基",
+    "creator": "Leo Ku",
+    "cover": "public/covers/114a9dfd0314-320.webp",
+    "coverLarge": "public/covers/114a9dfd0314-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
     "id": "music:漠河舞厅·2022",
     "type": "music",
     "title": "漠河舞厅·2022",
@@ -8507,6 +8669,16 @@
     ]
   },
   {
+    "id": "music:We R Mr",
+    "type": "music",
+    "title": "We R Mr.",
+    "creator": "Mr.",
+    "cover": "public/covers/612a4c3d1b11-320.webp",
+    "coverLarge": "public/covers/612a4c3d1b11-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
     "id": "music:Cult.",
     "type": "music",
     "title": "Cult.",
@@ -8663,6 +8835,26 @@
     ]
   },
   {
+    "id": "music:The Wall",
+    "type": "music",
+    "title": "The Wall",
+    "creator": "Pink Floyd",
+    "cover": "public/covers/9ffd87fb93d7-320.webp",
+    "coverLarge": "public/covers/9ffd87fb93d7-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
+    "id": "music:Wish You Were Here",
+    "type": "music",
+    "title": "Wish You Were Here",
+    "creator": "Pink Floyd",
+    "cover": "public/covers/b3276138054d-320.webp",
+    "coverLarge": "public/covers/b3276138054d-720.webp",
+    "aspectRatio": 1,
+    "categories": []
+  },
+  {
     "id": "music:Hollywood's Bleeding",
     "type": "music",
     "title": "Hollywood's Bleeding",
@@ -8725,6 +8917,18 @@
     ]
   },
   {
+    "id": "music:鄭中基演唱會熱身精選",
+    "type": "music",
+    "title": "鄭中基演唱會熱身精選",
+    "creator": "Ronald Cheng",
+    "cover": "public/covers/b45193ba8cca-320.webp",
+    "coverLarge": "public/covers/b45193ba8cca-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
     "id": "music:Kaiju",
     "type": "music",
     "title": "Kaiju",
@@ -8744,6 +8948,18 @@
     "cover": "public/covers/1fd2d05df39c-320.webp",
     "coverLarge": "public/covers/1fd2d05df39c-720.webp",
     "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
+    "id": "music:螢光粉紅",
+    "type": "music",
+    "title": "螢光粉紅",
+    "creator": "Sammi Cheng",
+    "cover": "public/covers/0770e85760c8-320.webp",
+    "coverLarge": "public/covers/0770e85760c8-720.webp",
+    "aspectRatio": 0.873437,
     "categories": [
       "C-pop"
     ]
@@ -9242,6 +9458,18 @@
     ]
   },
   {
+    "id": "music:声生不息港乐季 (第六期 Live)",
+    "type": "music",
+    "title": "声生不息港乐季 (第六期 Live)",
+    "creator": "Various Artists",
+    "cover": "public/covers/cfd626e664e4-320.webp",
+    "coverLarge": "public/covers/cfd626e664e4-720.webp",
+    "aspectRatio": 1,
+    "categories": [
+      "C-pop"
+    ]
+  },
+  {
     "id": "music:Another Day, Another Time_ Celebrating the Music of 'Inside Llewyn Davis'",
     "type": "music",
     "title": "Another Day, Another Time: Celebrating the Music of 'Inside Llewyn Davis'",
@@ -9324,6 +9552,16 @@
     "categories": [
       "Cantopop/HK-Pop"
     ]
+  },
+  {
+    "id": "music:白鴿",
+    "type": "music",
+    "title": "白鴿",
+    "creator": "Wu Bai",
+    "cover": "public/covers/43ae98ae154b-320.webp",
+    "coverLarge": "public/covers/43ae98ae154b-720.webp",
+    "aspectRatio": 1,
+    "categories": []
   },
   {
     "id": "music:跟著感覺走",

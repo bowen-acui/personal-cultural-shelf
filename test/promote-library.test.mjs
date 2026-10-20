@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdir, readFile, mkdtemp, readdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, open, readFile, mkdtemp, readdir, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { createManifest, promoteLibrary } from "../scripts/promote-library.mjs";
@@ -72,5 +72,55 @@ test("promotion rolls back all three artifact groups after any boundary failure"
     } finally {
       await rm(root, { recursive: true, force: true });
     }
+  }
+});
+
+test("an existing shared promotion lock blocks without touching either library", async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "shelf-lock-busy-"));
+  const projectRoot = path.join(root, "project");
+  const candidateRoot = path.join(root, "candidate");
+  const lockPath = path.join(projectRoot, ".library-promotion.lock");
+  const receiptPath = path.join(root, "receipt.json");
+  let lockHandle;
+  try {
+    await createLibrary(projectRoot, "old");
+    await createLibrary(candidateRoot, "new");
+    const before = await createManifest(projectRoot);
+    const candidateBefore = await createManifest(candidateRoot);
+    lockHandle = await open(lockPath, "wx", 0o600);
+    await lockHandle.writeFile("another sync owns this lock\n");
+    await assert.rejects(promoteLibrary({ candidate: candidateRoot, projectRoot, lock: lockPath, receipt: receiptPath }), /已有同步正在进行/);
+    assert.equal(await readFile(lockPath, "utf8"), "another sync owns this lock\n");
+    assert.deepEqual(await createManifest(projectRoot), before);
+    assert.deepEqual(await createManifest(candidateRoot), candidateBefore);
+    await lockHandle.close();
+    lockHandle = null;
+    await rm(lockPath);
+    await promoteLibrary({ candidate: candidateRoot, projectRoot, lock: lockPath, receipt: receiptPath });
+    assert.equal(JSON.parse(await readFile(path.join(projectRoot, "data/media.json"), "utf8"))[0].id, "book:new");
+  } finally {
+    await lockHandle?.close();
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("two promotions racing for the shared lock have exactly one winner", async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "shelf-lock-race-"));
+  const projectRoot = path.join(root, "project");
+  const candidateRoot = path.join(root, "candidate");
+  const lockPath = path.join(projectRoot, ".library-promotion.lock");
+  try {
+    await createLibrary(projectRoot, "old");
+    await createLibrary(candidateRoot, "new");
+    const results = await Promise.allSettled([
+      promoteLibrary({ candidate: candidateRoot, projectRoot, lock: lockPath, receipt: path.join(root, "one.json") }),
+      promoteLibrary({ candidate: candidateRoot, projectRoot, lock: lockPath, receipt: path.join(root, "two.json") }),
+    ]);
+    assert.equal(results.filter((result) => result.status === "fulfilled").length, 1);
+    assert.equal(results.filter((result) => result.status === "rejected" && /已有同步正在进行/.test(result.reason.message)).length, 1);
+    assert.equal(JSON.parse(await readFile(path.join(projectRoot, "data/media.json"), "utf8"))[0].id, "book:new");
+    assert.deepEqual(await readdir(path.join(projectRoot, "public/covers")), ["abcdefabcdef-320.webp", "abcdefabcdef-720.webp"]);
+  } finally {
+    await rm(root, { recursive: true, force: true });
   }
 });

@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -82,6 +83,43 @@ test("命中 If-None-Match 时返回 304 且不带响应体", async () => {
     assert.ok(etag && etag.startsWith('W/"'), "响应应带弱 ETag");
     const second = await fetch(`${base}/styles.css`, { headers: { "if-none-match": etag } });
     assert.equal(second.status, 304);
+    assert.equal(await second.text(), "");
+  });
+});
+
+test("build fonts stay private behind the static allowlist", async () => {
+  await withServer(async (base) => {
+    for (const asset of ["/assets/fonts/lxgw-wenkai-regular.ttf", "/assets/fonts/OFL.txt"]) {
+      assert.equal((await fetch(`${base}${asset}`)).status, 404);
+    }
+  });
+});
+
+test("可变字体和代码使用 no-cache，固定字体与内容哈希封面长期缓存", async () => {
+  const records = JSON.parse(await readFile(new URL("../data/media.json", import.meta.url), "utf8"));
+  await withServer(async (base) => {
+    for (const asset of ["/app.js?v=23", "/styles.css?v=23", "/public/fonts/lxgw-wenkai-subset.woff2?v=23"]) {
+      const response = await fetch(`${base}${asset}`);
+      assert.equal(response.status, 200, asset);
+      assert.equal(response.headers.get("cache-control"), "public, no-cache", asset);
+    }
+    for (const asset of ["/public/fonts/space-mono-regular.woff2", `/${records[0].cover}`]) {
+      const response = await fetch(`${base}${asset}`);
+      assert.equal(response.status, 200, asset);
+      assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable", asset);
+    }
+  });
+});
+
+test("JS no-cache still honors ETag validation", async () => {
+  await withServer(async (base) => {
+    const first = await fetch(`${base}/app.js?v=23`);
+    const etag = first.headers.get("etag");
+    assert.equal(first.headers.get("cache-control"), "public, no-cache");
+    assert.ok(etag);
+    const second = await fetch(`${base}/app.js?v=23`, { headers: { "if-none-match": etag } });
+    assert.equal(second.status, 304);
+    assert.equal(second.headers.get("cache-control"), "public, no-cache");
     assert.equal(await second.text(), "");
   });
 });

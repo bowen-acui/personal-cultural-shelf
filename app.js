@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=22";
-import { loadMediaData } from "./lib/media-data.js?v=22";
-import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=22";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=22";
-import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=22";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=25";
+import { loadMediaData } from "./lib/media-data.js?v=25";
+import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=25";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=25";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=25";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -30,10 +30,65 @@ let coverObserver = null;
 let hydrationGeneration = 0;
 let layoutGeneration = 0;
 let layoutReleaseTimer = 0;
+let loadStatus = "loading";
+let loadInFlight = null;
 let coverPointer = null;
 let coverFrame = 0;
 let coverPosition = null;
-let skipFlipPointerId = null;
+let skipFlipClick = false;
+let posterGeneration = 0;
+let posterController = null;
+
+function cancelPosterJob() {
+  posterGeneration += 1;
+  posterController?.abort(new DOMException("海报生成已取消", "AbortError"));
+  posterController = null;
+}
+
+async function awaitPosterStep(promise, signal) {
+  if (signal.aborted) throw signal.reason;
+  let onAbort;
+  const aborted = new Promise((resolve, reject) => {
+    onAbort = () => reject(signal.reason);
+    signal.addEventListener("abort", onAbort, { once: true });
+  });
+  try {
+    return await Promise.race([promise, aborted]);
+  } finally {
+    signal.removeEventListener("abort", onAbort);
+  }
+}
+
+function waitForPosterImage(image, signal) {
+  if (image.complete) {
+    return image.naturalWidth > 1 ? Promise.resolve() : Promise.reject(new Error(`封面加载失败：${image.alt}`));
+  }
+  return new Promise((resolve, reject) => {
+    const cleanup = () => {
+      image.removeEventListener("load", loaded);
+      image.removeEventListener("error", failed);
+      signal.removeEventListener("abort", aborted);
+    };
+    const loaded = () => {
+      cleanup();
+      if (image.naturalWidth > 1) resolve();
+      else reject(new Error(`封面加载失败：${image.alt}`));
+    };
+    const failed = () => { cleanup(); reject(new Error(`封面加载失败：${image.alt}`)); };
+    const aborted = () => { cleanup(); reject(signal.reason); };
+    image.addEventListener("load", loaded, { once: true });
+    image.addEventListener("error", failed, { once: true });
+    signal.addEventListener("abort", aborted, { once: true });
+    if (image.complete) loaded();
+  });
+}
+
+function assertCurrentPosterJob(generation, controller) {
+  if (controller.signal.aborted) throw controller.signal.reason;
+  if (posterGeneration !== generation || posterController !== controller) {
+    throw new DOMException("海报生成已取消", "AbortError");
+  }
+}
 
 function resetCoverTilt() {
   cancelAnimationFrame(coverFrame);
@@ -296,7 +351,7 @@ function openWork(item, trigger) {
   rememberTrigger("work", trigger);
   document.querySelector("#poster-dialog")?.close();
   workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
-  workFlip.style.setProperty("--detail-ratio", coverRatio(item.type));
+  workDialog.style.setProperty("--detail-ratio", coverRatio(item.type));
   const cover = document.querySelector("#work-cover");
   if (item.coverLarge) cover.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
   else cover.removeAttribute("srcset");
@@ -308,13 +363,7 @@ function openWork(item, trigger) {
   document.querySelector("#work-creator").textContent = item.creator ?? "";
   document.querySelector("#work-meta").textContent = [monthLabel(item), ...(item.categories ?? [])].filter(Boolean).join(" · ");
   const score = item.type === "book" ? Math.max(0, Math.min(5, Number(item.rating) || 0)) : 0;
-  let rating = document.querySelector("#work-rating");
-  if (!rating) {
-    rating = document.createElement("span");
-    rating.id = "work-rating";
-    rating.className = "work-rating";
-    document.querySelector(".work-back").insertBefore(rating, document.querySelector(".work-back em"));
-  }
+  const rating = document.querySelector("#work-rating");
   rating.hidden = item.type !== "book";
   rating.setAttribute("aria-label", score ? `个人评分 ${score} / 5` : "尚未录入个人评分");
   rating.replaceChildren(...Array.from({ length: 5 }, (_, index) => {
@@ -368,6 +417,16 @@ function showShelfLoading() {
   setShelfActionsEnabled(false);
 }
 
+function updatePageMeta() {
+  document.querySelector("#item-kind").textContent = typeLabels[state.type];
+  const meta = pageMeta[state.type];
+  document.title = meta.title;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
+  document.querySelector(".media-nav [aria-current]")?.removeAttribute("aria-current");
+  document.querySelector(`.media-nav [data-type="${state.type}"]`)?.setAttribute("aria-current", "page");
+  stage.setAttribute("aria-label", `${typeLabels[state.type]}的收藏`);
+}
+
 function render() {
   cancelHydrationWork();
   stage.classList.remove("shelf-state");
@@ -378,13 +437,7 @@ function render() {
   stage.style.height = `${stageHeightFor(initialLayout, state.mode)}px`;
   stage.replaceChildren(...objects);
   document.querySelector("#item-count").textContent = state.items.length;
-  document.querySelector("#item-kind").textContent = typeLabels[state.type];
-  const meta = pageMeta[state.type];
-  document.title = meta.title;
-  document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
-  document.querySelector(".media-nav [aria-current]")?.removeAttribute("aria-current");
-  document.querySelector(`.media-nav [data-type="${state.type}"]`)?.setAttribute("aria-current", "page");
-  stage.setAttribute("aria-label", `${typeLabels[state.type]}的收藏`);
+  updatePageMeta();
   filter(state.category);
   stage.setAttribute("aria-busy", "false");
   setShelfActionsEnabled(true);
@@ -451,7 +504,9 @@ function showFilters() {
 }
 
 function startPicking(force, { restoreFocus = true } = {}) {
-  state.picking = typeof force === "boolean" ? force : !state.picking;
+  const nextPicking = typeof force === "boolean" ? force : !state.picking;
+  if (state.picking && !nextPicking) cancelPosterJob();
+  state.picking = nextPicking;
   let shareTrigger = null;
   closeFilter({ restoreFocus: false });
   closeWork({ restoreFocus: false });
@@ -487,50 +542,54 @@ function updatePickStatus() {
 }
 
 async function createPoster() {
+  cancelPosterJob();
+  const generation = posterGeneration;
+  const controller = new AbortController();
+  const { signal } = controller;
   const posterTrigger = transientTrigger.owner === "share" ? transientTrigger.trigger : shareAction;
+  const mediaType = state.type;
   const items = state.picked.map((index) => {
     const object = stage.querySelector(`[data-index="${index}"]`);
     return { image: hydrateObject(object) };
   });
-  await Promise.all(items.map(async ({ image }) => {
-    if (!image.complete || image.naturalWidth <= 1) {
-      await new Promise((resolve, reject) => {
-        const cleanup = () => {
-          image.removeEventListener("load", loaded);
-          image.removeEventListener("error", failed);
-        };
-        const loaded = () => { cleanup(); resolve(); };
-        const failed = () => { cleanup(); reject(new Error(`封面加载失败：${image.alt}`)); };
-        image.addEventListener("load", loaded, { once: true });
-        image.addEventListener("error", failed, { once: true });
-        if (image.complete) {
-          if (image.naturalWidth > 1) loaded();
-          else failed();
-        }
-      });
-    }
-    await image.decode();
-    if (!image.complete || image.naturalWidth <= 1 || image.currentSrc.startsWith("data:")) {
-      throw new Error(`封面解码失败：${image.alt}`);
-    }
-  }));
-  // 字体是 font-display:swap 懒加载的，canvas 不会等它：不先 load 就会画成回退字形。
-  // 声明必须和 poster.js 里的 context.font 一致，否则匹配不上。
-  await document.fonts.load('72px "LXGW WenKai"');
-  const canvas = createPosterCanvas(state.type, items);
-  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
-  if (posterUrl) URL.revokeObjectURL(posterUrl);
-  posterUrl = URL.createObjectURL(blob);
-  startPicking(false, { restoreFocus: false });
-  rememberTrigger("poster", posterTrigger);
-  document.querySelector("#poster-preview").src = posterUrl;
-  document.querySelector("#poster-download").href = posterUrl;
-  const share = document.querySelector("#poster-share");
-  const file = new File([blob], "acui-spiritual-map.png", { type: "image/png" });
-  const canShare = typeof navigator.canShare === "function" && navigator.canShare({ files: [file] });
-  share.hidden = !canShare;
-  share.onclick = () => navigator.share({ files: [file] }).catch(() => {});
-  posterDialog.showModal();
+  posterController = controller;
+  const timer = setTimeout(() => controller.abort(new Error("海报生成超时，请重试")), 20_000);
+  try {
+    await Promise.all(items.map(async ({ image }) => {
+      if (!image.complete || image.naturalWidth <= 1) await waitForPosterImage(image, signal);
+      assertCurrentPosterJob(generation, controller);
+      await awaitPosterStep(image.decode(), signal);
+      assertCurrentPosterJob(generation, controller);
+      if (!image.complete || image.naturalWidth <= 1 || image.currentSrc.startsWith("data:")) {
+        throw new Error(`封面解码失败：${image.alt}`);
+      }
+    }));
+    assertCurrentPosterJob(generation, controller);
+    // 字体是 font-display:swap 懒加载的，canvas 不会等它：不先 load 就会画成回退字形。
+    // 声明必须和 poster.js 里的 context.font 一致，否则匹配不上。
+    await awaitPosterStep(document.fonts.load('72px "LXGW WenKai"'), signal);
+    assertCurrentPosterJob(generation, controller);
+    const canvas = createPosterCanvas(mediaType, items);
+    const blob = await awaitPosterStep(new Promise((resolve) => canvas.toBlob(resolve, "image/png")), signal);
+    assertCurrentPosterJob(generation, controller);
+    if (!blob) throw new Error("海报生成失败，请重试");
+    const nextUrl = URL.createObjectURL(blob);
+    if (posterUrl) URL.revokeObjectURL(posterUrl);
+    posterUrl = nextUrl;
+    startPicking(false, { restoreFocus: false });
+    rememberTrigger("poster", posterTrigger);
+    document.querySelector("#poster-preview").src = posterUrl;
+    document.querySelector("#poster-download").href = posterUrl;
+    const share = document.querySelector("#poster-share");
+    const file = new File([blob], "acui-spiritual-map.png", { type: "image/png" });
+    const canShare = typeof navigator.canShare === "function" && navigator.canShare({ files: [file] });
+    share.hidden = !canShare;
+    share.onclick = () => navigator.share({ files: [file] }).catch(() => {});
+    posterDialog.showModal();
+  } finally {
+    clearTimeout(timer);
+    if (posterController === controller) posterController = null;
+  }
 }
 
 function closePoster({ restoreFocus = false } = {}) {
@@ -580,26 +639,38 @@ function renderType(type, push = false) {
   closeTransientStates();
   state.type = type;
   document.body.dataset.mediaType = type;
-  state.category = "全部";
-  state.mode = "scatter";
-  state.seed += 1;
-  state.items = state.all.filter((item) => item.type === type);
+  updatePageMeta();
   if (push) {
     history.pushState({ type }, "", pathForType(type));
     scrollTo({ top: 0, behavior: "instant" });
   }
+  if (loadStatus !== "ready") return;
+  state.category = "全部";
+  state.mode = "scatter";
+  state.seed += 1;
+  state.items = state.all.filter((item) => item.type === type);
   renderFilters();
   render();
 }
 
 async function load() {
+  if (loadInFlight) return loadInFlight;
+  loadStatus = "loading";
+  closeTransientStates();
   showShelfLoading();
-  try {
-    state.all = await loadMediaData();
-    renderType(state.type);
-  } catch (error) {
-    setError(error instanceof Error ? error.message : "请检查数据文件后重试");
-  }
+  loadInFlight = (async () => {
+    try {
+      state.all = await loadMediaData();
+      loadStatus = "ready";
+      renderType(state.type);
+    } catch (error) {
+      loadStatus = "error";
+      setError(error instanceof Error ? error.message : "请检查数据文件后重试");
+    } finally {
+      loadInFlight = null;
+    }
+  })();
+  return loadInFlight;
 }
 
 controls.addEventListener("click", (event) => {
@@ -649,12 +720,16 @@ filterPanel.addEventListener("click", (event) => {
 // 文案写回 pick-status（本来就是 aria-live 区域），按钮由 updatePickStatus 复原，让人能重试。
 document.querySelector("#make-poster").addEventListener("click", async (event) => {
   event.currentTarget.disabled = true;
+  const task = createPoster();
+  const generation = posterGeneration;
   try {
-    await createPoster();
+    await task;
   } catch (error) {
-    document.querySelector("#pick-status .pick-label").firstChild.textContent = `${error.message}，请重试 `;
+    if (error.name !== "AbortError" && posterGeneration === generation) {
+      document.querySelector("#pick-status .pick-label").firstChild.textContent = `${error.message}，请重试 `;
+    }
   } finally {
-    updatePickStatus();
+    if (posterGeneration === generation) updatePickStatus();
   }
 });
 document.querySelector("#copy-link").addEventListener("click", async (event) => {
@@ -669,31 +744,57 @@ document.querySelectorAll(".dialog-close").forEach((button) => button.addEventLi
 }));
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true, morph: true })));
 workFlip.addEventListener("pointerdown", (event) => {
-  skipFlipPointerId = null;
-  if (!canTiltCover()) return;
+  if (event.pointerType !== "touch") skipFlipClick = false;
+  if (!canTiltCover() && !(event.pointerType === "touch" && state.type === "music" && workDialog.open)) return;
   coverPointer = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
   workFlip.setPointerCapture(event.pointerId);
 });
 workFlip.addEventListener("pointermove", (event) => {
-  if (!canTiltCover()) return;
   if (event.pointerType !== "mouse" && coverPointer?.id !== event.pointerId) return;
   if (coverPointer?.id === event.pointerId && Math.hypot(event.clientX - coverPointer.x, event.clientY - coverPointer.y) > 8) coverPointer.moved = true;
+  if (!canTiltCover()) return;
   trackCoverTilt(event.clientX, event.clientY);
 }, { passive: true });
 workFlip.addEventListener("pointerup", (event) => {
   if (coverPointer?.id !== event.pointerId) return;
-  skipFlipPointerId = coverPointer.moved ? event.pointerId : null;
+  const moved = coverPointer.moved;
+  if (event.pointerType === "touch") {
+    if (!moved) setFlipped(!workFlip.classList.contains("is-flipped"));
+    skipFlipClick = true;
+  } else {
+    skipFlipClick = moved;
+  }
   resetCoverTilt();
 });
 workFlip.addEventListener("pointercancel", resetCoverTilt);
 workFlip.addEventListener("pointerleave", (event) => { if (event.pointerType === "mouse") resetCoverTilt(); });
 workFlip.addEventListener("click", (event) => {
-  if (skipFlipPointerId === event.pointerId) {
-    skipFlipPointerId = null;
+  if (event.pointerType === "touch") {
+    skipFlipClick = false;
     return;
   }
-  skipFlipPointerId = null;
+  if (skipFlipClick) {
+    skipFlipClick = false;
+    return;
+  }
   setFlipped(!workFlip.classList.contains("is-flipped"));
+});
+workFlip.addEventListener("keydown", (event) => {
+  if (!workFlip.classList.contains("is-flipped")) return;
+  const content = document.querySelector(".work-back-content");
+  if (!content || content.scrollHeight <= content.clientHeight) return;
+  const distance = Math.max(content.clientHeight * 0.8, 40);
+  const targets = {
+    ArrowDown: content.scrollTop + 40,
+    ArrowUp: content.scrollTop - 40,
+    PageDown: content.scrollTop + distance,
+    PageUp: content.scrollTop - distance,
+    Home: 0,
+    End: content.scrollHeight,
+  };
+  if (!Object.hasOwn(targets, event.key)) return;
+  event.preventDefault();
+  content.scrollTo({ top: targets[event.key], behavior: "instant" });
 });
 workDialog.addEventListener("click", (event) => { if (event.target === workDialog) closeWork({ restoreFocus: true, morph: true }); });
 // Esc 走的是原生关闭，拦下来换成同一条收回动画。close 事件留作兜底：绕过 closeWork 的原生关闭仍能还焦点。

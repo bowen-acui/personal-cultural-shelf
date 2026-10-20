@@ -1,8 +1,33 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { access, readFile } from "node:fs/promises";
+import { access, mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+
+async function assertModuleGraphVersions(root, entries) {
+  const pending = entries.map((entry) => new URL(entry, root));
+  const visited = new Set();
+  const versions = [];
+  while (pending.length) {
+    const moduleUrl = pending.pop();
+    const modulePath = moduleUrl.pathname;
+    if (visited.has(modulePath)) continue;
+    visited.add(modulePath);
+    const source = await readFile(moduleUrl, "utf8");
+    for (const match of source.matchAll(/\b(?:import|export)\s+(?:[^'"]*?\s+from\s+)?["']([^'"]+)["']/g)) {
+      const specifier = match[1];
+      if (!specifier.startsWith(".")) continue;
+      const dependency = new URL(specifier, moduleUrl);
+      if (!dependency.pathname.endsWith(".js")) continue;
+      const version = dependency.searchParams.get("v");
+      assert.ok(version, `${path.relative(new URL(".", root).pathname, dependency.pathname)} has an unversioned module import`);
+      versions.push(version);
+      pending.push(dependency);
+    }
+  }
+  return versions;
+}
 
 // 这里只断言「发布出去的东西」：HTML 结构、隐私边界、CSS 令牌约定。
 // 不要断言 app.js 的源码文本（函数名、事件绑定写法、缓动曲线数值）——
@@ -70,10 +95,29 @@ test("release-sensitive HTML, JS, and CSS assets share one cache version", async
       versions.push(imported[1]);
     }
   }
+  versions.push(...await assertModuleGraphVersions(root, ["app.js", "catalog-page.js"]));
   const wenKai = styles.match(/url\("public\/fonts\/lxgw-wenkai-subset\.woff2(?:\?v=(\d+))?"\)/);
   assert.ok(wenKai?.[1], "styles.css has an unversioned WenKai font URL");
   versions.push(wenKai[1]);
   assert.equal(new Set(versions).size, 1, `cache versions differ: ${[...new Set(versions)].join(", ")}`);
+});
+
+test("recursive module version check catches an unversioned indirect dependency", async () => {
+  const directory = await mkdtemp(path.join(os.tmpdir(), "shelf-module-versions-"));
+  const root = pathToFileURL(`${directory}${path.sep}`);
+  try {
+    await mkdir(path.join(directory, "lib"));
+    await writeFile(path.join(directory, "app.js"), 'import "./lib/first.js?v=23";\n');
+    await writeFile(path.join(directory, "lib/first.js"), 'export { value } from "./second.js";\n');
+    await writeFile(path.join(directory, "lib/second.js"), "export const value = 1;\n");
+    await assert.rejects(assertModuleGraphVersions(root, ["app.js"]), /unversioned module import/);
+    await writeFile(path.join(directory, "lib/second.js"), 'export const value = 1;\nimport "./third.js?v=23";\n');
+    await writeFile(path.join(directory, "lib/first.js"), 'export { value } from "./second.js?v=23";\n');
+    await writeFile(path.join(directory, "lib/third.js"), "export const marker = true;\n");
+    assert.deepEqual(await assertModuleGraphVersions(root, ["app.js"]), ["23", "23", "23"]);
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
 });
 
 test("every page tints the mobile address bar the same paper color", async () => {
