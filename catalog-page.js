@@ -1,6 +1,6 @@
-import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=23";
-import { loadMediaData } from "./lib/media-data.js?v=23";
-import { coverRatio } from "./lib/poster.js?v=23";
+import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=24";
+import { loadMediaData } from "./lib/media-data.js?v=24";
+import { coverRatio } from "./lib/poster.js?v=24";
 
 const labels = { book: "书", film: "影", music: "音" };
 const grid = document.querySelector("#catalog-grid");
@@ -12,6 +12,7 @@ let data = [];
 let renderTimer = 0;
 let loadStatus = "loading";
 let loadInFlight = null;
+let renderGeneration = 0;
 
 function setControlsEnabled(enabled) {
   [search, type, category].forEach((control) => { control.disabled = !enabled; });
@@ -41,22 +42,36 @@ function card(item) {
 
 function render() {
   if (loadStatus !== "ready") return;
+  const generation = ++renderGeneration;
   const source = type.value === "全部" ? data : data.filter((item) => item.type === type.value);
   const results = filterCatalog(source, search.value, category.value);
-  grid.replaceChildren(...results.map(card));
-  if (!results.length) {
-    const empty = document.createElement("div");
-    const clear = document.createElement("button");
-    empty.className = "catalog-empty";
-    empty.setAttribute("role", "listitem");
-    clear.type = "button";
-    clear.className = "catalog-empty-action";
-    clear.textContent = "清除搜索";
-    clear.addEventListener("click", () => { search.value = ""; render(); search.focus(); });
-    empty.append(clear);
-    grid.append(empty);
-  }
+  grid.replaceChildren();
   status.textContent = results.length ? `找到 ${results.length} 件${type.value === "全部" ? "藏品" : labels[type.value]}` : "没有找到符合条件的藏品";
+  let index = 0;
+  const appendBatch = () => {
+    if (generation !== renderGeneration) return;
+    const cards = document.createDocumentFragment();
+    const end = Math.min(index + 48, results.length);
+    for (; index < end; index += 1) cards.append(card(results[index]));
+    grid.append(cards);
+    if (index < results.length) {
+      requestAnimationFrame(appendBatch);
+      return;
+    }
+    if (!results.length) {
+      const empty = document.createElement("div");
+      const clear = document.createElement("button");
+      empty.className = "catalog-empty";
+      empty.setAttribute("role", "listitem");
+      clear.type = "button";
+      clear.className = "catalog-empty-action";
+      clear.textContent = "清除搜索";
+      clear.addEventListener("click", () => { search.value = ""; render(); search.focus(); });
+      empty.append(clear);
+      grid.append(empty);
+    }
+  };
+  appendBatch();
 }
 
 function renderCategories() {

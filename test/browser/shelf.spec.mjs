@@ -188,6 +188,27 @@ test("目录加载失败时检索不能覆盖重试，恢复后开放控件", as
   await expect(page.locator("#catalog-search")).toBeEnabled();
 });
 
+test("目录分帧呈现，切换分类会丢弃过期批次", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.catalogFrames = [];
+    window.flushCatalogFrames = () => {
+      while (window.catalogFrames.length) window.catalogFrames.shift()(performance.now());
+    };
+    window.requestAnimationFrame = (callback) => {
+      window.catalogFrames.push(callback);
+      return window.catalogFrames.length;
+    };
+  });
+  await page.goto("/browse.html", { waitUntil: "domcontentloaded" });
+  await expect(page.locator("#catalog-status")).toContainText("找到 736");
+  const countCards = () => page.evaluate(() => document.querySelectorAll(".catalog-card").length);
+  expect(await countCards()).toBeLessThan(736);
+  await page.locator("#catalog-type").selectOption("music");
+  expect(await countCards()).toBeLessThan(261);
+  await page.evaluate(() => window.flushCatalogFrames());
+  await expect.poll(countCards).toBe(261);
+});
+
 test("主动切换陈列从顶部进入，返回仍在旧陈列位置", async ({ page }) => {
   await page.goto("/");
   await waitForShelf(page);
@@ -393,20 +414,22 @@ test("320px 目录头部和底栏都在视口内，长分类不产生横向滚�
   await page.setViewportSize({ width: 320, height: 700 });
   await page.goto("/browse.html", { waitUntil: "domcontentloaded" });
   await expect(page.locator("#catalog-status")).toContainText("找到");
+  await expect(page.locator("#catalog-type")).toBeEnabled();
+  await expect(page.locator("#catalog-category")).toBeEnabled();
+  await page.locator("#catalog-type").selectOption("music");
+  const longCategory = page.locator("#catalog-category option").filter({ hasText: "Cantopop" }).first();
+  await expect(longCategory).toHaveCount(1);
+  await page.locator("#catalog-category").selectOption(await longCategory.getAttribute("value"));
+  await expect(page.locator("#catalog-category")).toBeVisible();
   const bounds = await page.evaluate(() => {
     const rects = [".brand", ".media-nav", ".site-footer"].map((selector) => document.querySelector(selector).getBoundingClientRect());
     return { rects, viewport: innerWidth, scrollWidth: document.documentElement.scrollWidth };
   });
-  expect(bounds.scrollWidth).toBeLessThanOrEqual(bounds.viewport);
+  expect(bounds.scrollWidth).toBeLessThanOrEqual(320);
   for (const rect of bounds.rects) {
     expect(rect.left).toBeGreaterThanOrEqual(0);
     expect(rect.right).toBeLessThanOrEqual(bounds.viewport);
   }
-  await page.locator("#catalog-type").selectOption("music");
-  const longCategory = page.locator("#catalog-category option").filter({ hasText: "Cantopop" }).first();
-  await page.locator("#catalog-category").selectOption(await longCategory.getAttribute("value"));
-  await expect(page.locator("#catalog-category")).toBeVisible();
-  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
 });
 
 test("三类详情卡和关闭按钮在短视口、横屏及 200% 等效视口内", async ({ page }) => {
