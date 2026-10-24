@@ -189,6 +189,9 @@ test("目录加载失败时检索不能覆盖重试，恢复后开放控件", as
 });
 
 test("目录分帧呈现，切换分类会丢弃过期批次", async ({ page }) => {
+  const media = await (await page.request.get("/data/media.json")).json();
+  const total = media.length;
+  const musicCount = media.filter((item) => item.type === "music").length;
   await page.addInitScript(() => {
     window.catalogFrames = [];
     window.flushCatalogFrames = () => {
@@ -200,13 +203,13 @@ test("目录分帧呈现，切换分类会丢弃过期批次", async ({ page }) 
     };
   });
   await page.goto("/browse.html", { waitUntil: "domcontentloaded" });
-  await expect(page.locator("#catalog-status")).toContainText("找到 736");
+  await expect(page.locator("#catalog-status")).toContainText(`找到 ${total}`);
   const countCards = () => page.evaluate(() => document.querySelectorAll(".catalog-card").length);
-  expect(await countCards()).toBeLessThan(736);
+  expect(await countCards()).toBeLessThan(total);
   await page.locator("#catalog-type").selectOption("music");
-  expect(await countCards()).toBeLessThan(261);
+  expect(await countCards()).toBeLessThan(musicCount);
   await page.evaluate(() => window.flushCatalogFrames());
-  await expect.poll(countCards).toBe(261);
+  await expect.poll(countCards).toBe(musicCount);
 });
 
 test("主动切换陈列从顶部进入，返回仍在旧陈列位置", async ({ page }) => {
