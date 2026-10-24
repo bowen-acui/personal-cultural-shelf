@@ -290,6 +290,54 @@ test("触屏音乐先显示封面，拖动不误翻，点按才翻面", async ({
   }
 });
 
+for (const route of ["/", "/film.html"]) {
+  test(`${route} 触摸详情卡能从信息面翻回封面并再次翻回`, async ({ browser }) => {
+    const context = await browser.newContext({
+      viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true,
+    });
+    try {
+      const page = await context.newPage();
+      await page.goto(route);
+      await waitForShelf(page);
+      await page.locator(".media-object").first().tap({ force: true });
+      const flip = page.locator("#work-flip");
+      await expect(flip).toHaveClass(/is-flipped/);
+      await flip.tap();
+      await expect(flip).not.toHaveClass(/is-flipped/);
+      await flip.tap();
+      await expect(flip).toHaveClass(/is-flipped/);
+    } finally {
+      await context.close();
+    }
+  });
+}
+
+test("触摸焦点不遗留橙色圈，转为键盘操作后恢复焦点提示", async ({ browser }) => {
+  const context = await browser.newContext({
+    viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true,
+  });
+  try {
+    const page = await context.newPage();
+    await page.goto("/");
+    await waitForShelf(page);
+    await page.locator(".media-object").first().tap({ force: true });
+    await expect(page.locator("body")).toHaveAttribute("data-touch-input", "true");
+    await page.keyboard.press("Tab");
+    expect(await page.evaluate(() => document.activeElement?.matches(":focus-visible"))).toBe(true);
+    expect(await page.evaluate(() => getComputedStyle(document.activeElement).outlineStyle)).toBe("solid");
+    await page.evaluate(() => document.activeElement.dispatchEvent(new PointerEvent("pointerdown", { bubbles: true, pointerType: "touch" })));
+    await expect(page.locator("body")).toHaveAttribute("data-touch-input", "true");
+    expect(await page.evaluate(() => getComputedStyle(document.activeElement).outlineStyle)).toBe("none");
+    await page.locator(".work-close").tap();
+    await expect(page.locator("body")).toHaveAttribute("data-touch-input", "true");
+    await page.keyboard.press("Tab");
+    await expect(page.locator("body")).not.toHaveAttribute("data-touch-input");
+    expect(await page.evaluate(() => document.activeElement?.matches(":focus-visible"))).toBe(true);
+  } finally {
+    await context.close();
+  }
+});
+
 test("分享选择五件、打开海报、关闭后焦点回到分享按钮", async ({ page }) => {
   await page.goto("/");
   await waitForShelf(page);

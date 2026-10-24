@@ -745,7 +745,7 @@ document.querySelectorAll(".dialog-close").forEach((button) => button.addEventLi
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true, morph: true })));
 workFlip.addEventListener("pointerdown", (event) => {
   if (event.pointerType !== "touch") skipFlipClick = false;
-  if (!canTiltCover() && !(event.pointerType === "touch" && state.type === "music" && workDialog.open)) return;
+  if (event.pointerType !== "touch" && !canTiltCover()) return;
   coverPointer = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
   workFlip.setPointerCapture(event.pointerId);
 });
@@ -800,6 +800,13 @@ workDialog.addEventListener("click", (event) => { if (event.target === workDialo
 // Esc 走的是原生关闭，拦下来换成同一条收回动画。close 事件留作兜底：绕过 closeWork 的原生关闭仍能还焦点。
 workDialog.addEventListener("cancel", (event) => { event.preventDefault(); closeWork({ restoreFocus: true, morph: true }); });
 workDialog.addEventListener("close", () => restoreTrigger("work"));
+document.addEventListener("pointerdown", (event) => {
+  if (event.pointerType === "touch") document.body.dataset.touchInput = "true";
+  else delete document.body.dataset.touchInput;
+}, { capture: true });
+document.addEventListener("keydown", () => {
+  delete document.body.dataset.touchInput;
+}, { capture: true });
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
   if (filterPanel.hidden === false) closeFilter({ restoreFocus: true });
