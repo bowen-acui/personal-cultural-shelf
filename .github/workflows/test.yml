@@ -23,3 +23,31 @@ jobs:
           path: test-results/
           if-no-files-found: warn
           retention-days: 7
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/configure-pages@v5
+      - name: Package static site
+        run: |
+          mkdir -p _site/lib _site/data _site/public
+          cp index.html film.html music.html browse.html about.html 404.html app.js catalog-page.js styles.css shelf.css pages.css _site/
+          cp lib/*.js _site/lib/
+          cp data/media.json _site/data/
+          cp -R public/. _site/public/
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
