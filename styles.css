@@ -29,6 +29,7 @@ a { color:inherit; }
 .site-footer nav { display:flex; gap:22px; }
 .site-footer a { display:inline-flex; min-height:var(--target-min); align-items:center; text-decoration:none; }
 :focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+body[data-touch-input="true"] :is(.media-object,.work-close,.work-flip):focus-visible { outline:none; }
 [hidden] { display:none!important; }
 @media(max-width:639px){ .site-header { padding:14px 16px; } .brand span { font-size:23px; } .brand small { max-width:135px; font-size:10px; } .media-nav { gap:2px; } .media-nav a,.media-nav button { display:grid; min-width:var(--target-min); min-height:var(--target-min); place-items:center; padding:0 8px; } .media-nav [aria-current="page"]::after { right:10px; left:10px; } .site-footer { align-items:flex-start; gap:30px; padding:36px 16px 110px; } .site-footer nav { display:grid; gap:10px; } }
 @media(max-width:360px){ body[data-page="browse"] .site-header { padding-inline:12px; } body[data-page="browse"] .brand span { max-width:92px; font-size:18px; line-height:.92; } body[data-page="browse"] .brand small { display:none; } body[data-page="browse"] .media-nav { gap:0; } body[data-page="browse"] .media-nav a { padding-inline:0; } }
