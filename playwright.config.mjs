@@ -2,6 +2,7 @@ import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./test/browser",
+  fullyParallel: true,
   workers: 1,
   timeout: 30_000,
   use: {

@@ -1,28 +1,116 @@
 name: test
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || (github.ref == 'refs/heads/main' && github.sha) || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
+  pull-requests: read
+
 jobs:
-  test:
+  scope:
+    runs-on: ubuntu-latest
+    outputs:
+      run_tests: ${{ steps.scope.outputs.run_tests }}
+    steps:
+      - name: Decide whether this pull request needs tests
+        id: scope
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [[ "$GITHUB_EVENT_NAME" != "pull_request" ]]; then
+            echo "run_tests=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          changed_files="$(gh pr diff "$PR_NUMBER" --name-only)"
+          if printf '%s\n' "$changed_files" | awk 'NF && $0 !~ /(^|\/)README([^\/]*)?$/ && $0 !~ /(^|\/)docs(\/|$)/ { needs_tests = 1 } END { exit !needs_tests }'; then
+            echo "run_tests=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run_tests=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  unit:
+    needs: scope
+    if: needs.scope.outputs.run_tests == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 22
+          cache: npm
       - run: npm ci
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
       - run: python -m pip install "fonttools[woff]"
+      - run: npm test
+
+  browser:
+    needs: scope
+    if: needs.scope.outputs.run_tests == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:all
+      - run: npx playwright test --shard=${{ matrix.shard }}/2
       - name: Upload failed browser evidence
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: browser-failure-${{ github.run_id }}-${{ github.run_attempt }}
+          name: browser-failure-${{ matrix.shard }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: test-results/
           if-no-files-found: warn
           retention-days: 7
+
+  test:
+    if: always()
+    needs: [scope, unit, browser]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check required test results
+        env:
+          SCOPE_RESULT: ${{ needs.scope.result }}
+          RUN_TESTS: ${{ needs.scope.outputs.run_tests }}
+          UNIT_RESULT: ${{ needs.unit.result }}
+          BROWSER_RESULT: ${{ needs.browser.result }}
+        run: |
+          if [[ "$SCOPE_RESULT" != "success" ]]; then
+            echo "Unable to determine the required test scope."
+            exit 1
+          fi
+
+          if [[ "$RUN_TESTS" == "false" ]]; then
+            echo "README/docs-only pull request; required test check passes without running the suite."
+            exit 0
+          fi
+
+          if [[ "$UNIT_RESULT" != "success" || "$BROWSER_RESULT" != "success" ]]; then
+            echo "Unit or browser tests did not pass."
+            exit 1
+          fi
 
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
