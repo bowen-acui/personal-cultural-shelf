@@ -6,6 +6,7 @@ import sharp from "sharp";
 
 import {
   coverDestinationName,
+  filmReleaseYear,
   orphanCoverNames,
   parseFrontmatter,
   artistRank,
@@ -95,6 +96,7 @@ async function buildSource(source) {
         ...toPublicMedia(filename, metadata, covers.small, source.type, covers.large, covers.aspectRatio),
         pinned: pinnedRank(metadata),
         ...(source.type === "music" ? { artistRank: artistRank(metadata) } : {}),
+        ...(source.type === "film" ? { releaseYear: filmReleaseYear(metadata) } : {}),
       });
       report.push({ type: source.type, file: filename, status: "include", reason: "ready" });
     } catch (error) {
@@ -129,6 +131,7 @@ async function buildLibrary() {
   for (const record of collections) {
     delete record.pinned;
     delete record.artistRank;
+    delete record.releaseYear;
   }
   const temporaryFile = `${mediaFile}.tmp`;
   await writeFile(temporaryFile, `${JSON.stringify(collections, null, 2)}\n`, "utf8");
