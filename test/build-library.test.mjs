@@ -14,6 +14,7 @@ import {
   validateUniqueRecords,
   sortMediaRecords,
   pinnedRank,
+  filmReleaseYear,
 } from "../lib/build-utils.mjs";
 
 test("parseFrontmatter reads quoted scalars and dates", () => {
@@ -127,6 +128,7 @@ test("media records use the folder type and never expose dates", () => {
     创作者: "杨德昌",
     封面: "附件/电影封面/一一.jpg",
     分类: ["剧情", ""],
+    上映年份: "2000",
     完成日期: "2024-01-01",
     评分: "5",
   };
@@ -141,6 +143,7 @@ test("media records use the folder type and never expose dates", () => {
   });
   assert.equal("completedMonth" in toPublicMedia("一一.md", { ...metadata, 完读日期: "2024-01-01" }, "covers/one-one.jpg", "film"), false);
   assert.equal("rating" in toPublicMedia("一一.md", metadata, "covers/one-one.jpg", "film"), false);
+  assert.equal("上映年份" in toPublicMedia("一一.md", metadata, "covers/one-one.jpg", "film"), false);
   assert.equal(isDisplayableMedia({ 名称: "", 封面: "cover.jpg" }), false);
 });
 
@@ -176,7 +179,13 @@ test("pinnedRank reads the 置顶 frontmatter field and defaults to the back", (
   assert.equal(pinnedRank({ 置顶: "第一" }), 99);
 });
 
-test("film and music records honor 置顶 before their usual ordering", () => {
+test("filmReleaseYear reads only a four-digit 上映年份", () => {
+  assert.equal(filmReleaseYear({ 上映年份: "2025" }), 2025);
+  assert.equal(filmReleaseYear({ 上映年份: "" }), 0);
+  assert.equal(filmReleaseYear({ 上映年份: "2025-2026" }), 0);
+});
+
+test("film order follows requested priorities while music still honors 置顶", () => {
   const records = [
     { id: "film:late", type: "film", title: "乙", doubanRating: 9.5 },
     { id: "film:pinned", type: "film", title: "甲", doubanRating: 6, pinned: 0 },
@@ -184,5 +193,35 @@ test("film and music records honor 置顶 before their usual ordering", () => {
     { id: "music:pinned", type: "music", title: "乙", pinned: 1 },
   ];
   sortMediaRecords(records);
-  assert.deepEqual(records.map((item) => item.id), ["film:pinned", "film:late", "music:pinned", "music:late"]);
+  assert.deepEqual(records.map((item) => item.id), ["film:late", "film:pinned", "music:pinned", "music:late"]);
+});
+
+test("film order keeps requested works first, then sorts remaining titles by newest year", () => {
+  const records = [
+    { id: "film:old", type: "film", title: "旧片", releaseYear: 1990, pinned: 0 },
+    { id: "film:oddtaxi", type: "film", title: "奇巧计程车", releaseYear: 2021, pinned: 2 },
+    { id: "film:godfather3", type: "film", title: "教父3", releaseYear: 1990 },
+    { id: "film:quentin-old", type: "film", title: "落水狗", creator: "昆汀·塔伦蒂诺", releaseYear: 1992 },
+    { id: "film:recent", type: "film", title: "新片", releaseYear: 2025 },
+    { id: "film:godfather1", type: "film", title: "教父", releaseYear: 1972 },
+    { id: "film:farewell", type: "film", title: "霸王别姬", releaseYear: 1993, pinned: 3 },
+    { id: "film:godfather2", type: "film", title: "教父2", releaseYear: 1974 },
+    { id: "film:quentin-new", type: "film", title: "好莱坞往事", creator: "昆汀·塔伦蒂诺", releaseYear: 2019 },
+    { id: "film:no-year", type: "film", title: "年份未知" },
+  ];
+
+  sortMediaRecords(records);
+
+  assert.deepEqual(records.map((item) => item.id), [
+    "film:quentin-new",
+    "film:quentin-old",
+    "film:godfather1",
+    "film:godfather2",
+    "film:godfather3",
+    "film:farewell",
+    "film:oddtaxi",
+    "film:recent",
+    "film:old",
+    "film:no-year",
+  ]);
 });

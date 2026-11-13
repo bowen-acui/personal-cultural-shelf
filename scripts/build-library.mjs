@@ -6,6 +6,7 @@ import sharp from "sharp";
 
 import {
   coverDestinationName,
+  filmReleaseYear,
   isDisplayableBook,
   isDisplayableMedia,
   orphanCoverNames,
@@ -76,7 +77,11 @@ async function buildSource(source) {
     if (!displayable) continue;
     try {
       const covers = await copyCover(path.resolve(vaultRoot, metadata.封面));
-      if (covers) records.push({ ...toPublicMedia(filename, metadata, covers.small, source.type, covers.large), pinned: pinnedRank(metadata) });
+      if (covers) records.push({
+        ...toPublicMedia(filename, metadata, covers.small, source.type, covers.large),
+        pinned: pinnedRank(metadata),
+        ...(source.type === "film" ? { releaseYear: filmReleaseYear(metadata) } : {}),
+      });
     } catch (error) {
       if (error.code !== "ENOENT") throw error;
     }
@@ -94,7 +99,10 @@ async function buildLibrary() {
   for (const source of sources) collections.push(...await buildSource(source));
   validateUniqueRecords(collections);
   sortMediaRecords(collections);
-  for (const record of collections) delete record.pinned;
+  for (const record of collections) {
+    delete record.pinned;
+    delete record.releaseYear;
+  }
   const temporaryFile = `${mediaFile}.tmp`;
   await writeFile(temporaryFile, `${JSON.stringify(collections, null, 2)}\n`, "utf8");
   await rename(temporaryFile, mediaFile);
