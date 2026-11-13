@@ -28,9 +28,10 @@ export function safePath(urlPath) {
 
 function cacheControl(file) {
   const relative = path.relative(root, file);
+  if (relative === path.join("public", "fonts", "lxgw-wenkai-subset.woff2")) return "public, no-cache";
   if (relative.startsWith(path.join("public", "covers")) || relative.startsWith(path.join("public", "fonts"))) return "public, max-age=31536000, immutable";
   if (relative === path.join("data", "media.json")) return "public, max-age=60, must-revalidate";
-  if ([".css", ".js"].includes(path.extname(file).toLowerCase())) return "public, max-age=3600, must-revalidate";
+  if ([".css", ".js"].includes(path.extname(file).toLowerCase())) return "public, no-cache";
   return "public, max-age=300";
 }
 

@@ -1,8 +1,8 @@
-import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=17";
-import { loadMediaData } from "./lib/media-data.js?v=17";
-import { createPosterCanvas } from "./lib/poster.js?v=17";
-import { pathForType, typeFromPath } from "./lib/routes.js?v=17";
-import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=17";
+import { categoryCounts, toggleCategory } from "./lib/catalog.js?v=26";
+import { loadMediaData } from "./lib/media-data.js?v=26";
+import { coverRatio, createPosterCanvas } from "./lib/poster.js?v=26";
+import { pathForType, typeFromPath } from "./lib/routes.js?v=26";
+import { createScatterLayout, createTidyLayout, createVortexLayout, placementIntersectsViewportMargin, stageHeightFor, topVortexLayerIndexes, viewportPriorityIndexes } from "./lib/layouts.js?v=26";
 
 const typeLabels = { book: "书", film: "影", music: "音" };
 const pageMeta = {
@@ -13,12 +13,13 @@ const pageMeta = {
 // 三种排布是互斥的，移动端塞不下三个并列按钮：合成一个循环键，按钮文字就是当前排布。
 const layoutModes = ["scatter", "tidy", "vortex"];
 const layoutLabels = { scatter: "散落", tidy: "整理", vortex: "漩涡" };
-const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", picking: false, picked: [], dragging: false, savedScroll: 0 };
+const state = { type: document.body.dataset.mediaType || typeFromPath(location.pathname), all: [], items: [], mode: "scatter", seed: 0, category: "全部", categoryBeforePicking: null, picking: false, picked: [], dragging: false, savedScroll: 0 };
 const stage = document.querySelector("#shelf-stage");
 const controls = document.querySelector("#shelf-controls");
 const filterPanel = document.querySelector("#filter-panel");
 const workDialog = document.querySelector("#work-dialog");
 const workFlip = document.querySelector("#work-flip");
+const posterDialog = document.querySelector("#poster-dialog");
 const filterAction = document.querySelector('[data-action="filter"]');
 const layoutAction = document.querySelector('[data-action="layout"]');
 const shareAction = document.querySelector('[data-action="share"]');
@@ -26,10 +27,98 @@ let transientTrigger = { owner: null, trigger: null };
 let posterUrl = null;
 const COVER_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 let coverObserver = null;
-let cancelIdleHydration = null;
 let hydrationGeneration = 0;
 let layoutGeneration = 0;
 let layoutReleaseTimer = 0;
+let loadStatus = "loading";
+let loadInFlight = null;
+let coverPointer = null;
+let coverFrame = 0;
+let coverPosition = null;
+let skipFlipClick = false;
+let posterGeneration = 0;
+let posterController = null;
+
+function cancelPosterJob() {
+  posterGeneration += 1;
+  posterController?.abort(new DOMException("海报生成已取消", "AbortError"));
+  posterController = null;
+}
+
+async function awaitPosterStep(promise, signal) {
+  if (signal.aborted) throw signal.reason;
+  let onAbort;
+  const aborted = new Promise((resolve, reject) => {
+    onAbort = () => reject(signal.reason);
+    signal.addEventListener("abort", onAbort, { once: true });
+  });
+  try {
+    return await Promise.race([promise, aborted]);
+  } finally {
+    signal.removeEventListener("abort", onAbort);
+  }
+}
+
+function waitForPosterImage(image, signal) {
+  if (image.complete) {
+    return image.naturalWidth > 1 ? Promise.resolve() : Promise.reject(new Error(`封面加载失败：${image.alt}`));
+  }
+  return new Promise((resolve, reject) => {
+    const cleanup = () => {
+      image.removeEventListener("load", loaded);
+      image.removeEventListener("error", failed);
+      signal.removeEventListener("abort", aborted);
+    };
+    const loaded = () => {
+      cleanup();
+      if (image.naturalWidth > 1) resolve();
+      else reject(new Error(`封面加载失败：${image.alt}`));
+    };
+    const failed = () => { cleanup(); reject(new Error(`封面加载失败：${image.alt}`)); };
+    const aborted = () => { cleanup(); reject(signal.reason); };
+    image.addEventListener("load", loaded, { once: true });
+    image.addEventListener("error", failed, { once: true });
+    signal.addEventListener("abort", aborted, { once: true });
+    if (image.complete) loaded();
+  });
+}
+
+function assertCurrentPosterJob(generation, controller) {
+  if (controller.signal.aborted) throw controller.signal.reason;
+  if (posterGeneration !== generation || posterController !== controller) {
+    throw new DOMException("海报生成已取消", "AbortError");
+  }
+}
+
+function resetCoverTilt() {
+  cancelAnimationFrame(coverFrame);
+  coverFrame = 0;
+  coverPosition = null;
+  coverPointer = null;
+  workFlip.classList.remove("is-tilting");
+  workFlip.style.removeProperty("--tilt-x");
+  workFlip.style.removeProperty("--tilt-y");
+  workFlip.style.removeProperty("--glint-x");
+}
+
+function trackCoverTilt(clientX, clientY) {
+  coverPosition = { x: clientX, y: clientY };
+  if (coverFrame) return;
+  coverFrame = requestAnimationFrame(() => {
+    coverFrame = 0;
+    const bounds = workFlip.getBoundingClientRect();
+    const x = Math.max(-1, Math.min(1, (coverPosition.x - bounds.left - bounds.width / 2) / (bounds.width / 2)));
+    const y = Math.max(-1, Math.min(1, (coverPosition.y - bounds.top - bounds.height / 2) / (bounds.height / 2)));
+    workFlip.style.setProperty("--tilt-x", `${-y * 6}deg`);
+    workFlip.style.setProperty("--tilt-y", `${x * 6}deg`);
+    workFlip.style.setProperty("--glint-x", `${x * 35}%`);
+    workFlip.classList.add("is-tilting");
+  });
+}
+
+function canTiltCover() {
+  return state.type === "music" && workDialog.open && !workFlip.classList.contains("is-flipped") && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
 
 function label(item) { return [item.title, item.creator].filter(Boolean).join("，"); }
 function monthLabel(item) { return item.type === "book" && item.completedMonth ? `完读日期：${item.completedMonth.replace("-", "年")}月` : ""; }
@@ -66,38 +155,7 @@ function cancelHydrationWork() {
   hydrationGeneration += 1;
   coverObserver?.disconnect();
   coverObserver = null;
-  cancelIdleHydration?.();
-  cancelIdleHydration = null;
   return hydrationGeneration;
-}
-
-function queueVortexHydration(objects, generation) {
-  let offset = 0;
-  const runBatch = () => {
-    if (generation !== hydrationGeneration) return;
-    const batch = objects.slice(offset, offset + 12);
-    offset += batch.length;
-    batch.forEach((object) => {
-      if (object.isConnected && stage.contains(object)) hydrateObject(object);
-    });
-    if (offset < objects.length) scheduleBatch();
-  };
-  const scheduleBatch = () => {
-    let cancelScheduled;
-    const callback = () => {
-      if (cancelIdleHydration === cancelScheduled) cancelIdleHydration = null;
-      runBatch();
-    };
-    if (typeof requestIdleCallback === "function") {
-      const handle = requestIdleCallback(callback, { timeout: 250 });
-      cancelScheduled = () => cancelIdleCallback(handle);
-    } else {
-      const handle = setTimeout(callback, 32);
-      cancelScheduled = () => clearTimeout(handle);
-    }
-    cancelIdleHydration = cancelScheduled;
-  };
-  if (objects.length) scheduleBatch();
 }
 
 function refreshHydration(objects, placements) {
@@ -111,7 +169,6 @@ function refreshHydration(objects, placements) {
   }
   if (state.mode === "vortex") {
     topVortexLayerIndexes(placements).forEach((index) => hydrateObject(objects[index]));
-    queueVortexHydration(objects.filter((object) => object.querySelector("img")?.dataset.src), generation);
     return;
   }
   placements.forEach((placement, index) => {
@@ -231,6 +288,7 @@ function morphOpen(source) {
 // morph 只给"用户主动收起详情卡"的三条路（关闭按钮、点背景、Esc）；
 // 顺手关掉的场景（开筛选、进选片、切页）不播动画，那会儿用户的注意力已经在别处了。
 function closeWork({ restoreFocus = false, morph = false } = {}) {
+  resetCoverTilt();
   const trigger = clearTrigger("work");
   const back = morphSource;
   morphSource = null;
@@ -261,7 +319,7 @@ function createObject(item, index, placement) {
   image.sizes = state.type === "music" ? "(max-width: 639px) 20vw, 8vw" : "(max-width: 639px) 25vw, 10vw";
   image.alt = label(item);
   image.width = 320;
-  image.height = state.type === "music" ? 320 : 480;
+  image.height = Math.round(320 / coverRatio(item.type));
   image.decoding = "async";
   image.fetchPriority = "auto";
   const information = document.createElement("span");
@@ -281,17 +339,19 @@ function createObject(item, index, placement) {
 }
 
 function setFlipped(flipped) {
+  resetCoverTilt();
   workFlip.classList.toggle("is-flipped", flipped);
   workFlip.setAttribute("aria-pressed", String(flipped));
   workFlip.setAttribute("aria-label", flipped ? `${workFlip.dataset.detailLabel}。翻回作品封面` : "翻转查看作品信息");
 }
 
 function openWork(item, trigger) {
+  resetCoverTilt();
   closeTransientStates();
   rememberTrigger("work", trigger);
   document.querySelector("#poster-dialog")?.close();
   workFlip.dataset.titleLength = item.title.length > 42 ? "long" : "short";
-  workFlip.style.setProperty("--detail-ratio", item.type === "music" ? "1" : "2 / 3");
+  workDialog.style.setProperty("--detail-ratio", coverRatio(item.type));
   const cover = document.querySelector("#work-cover");
   if (item.coverLarge) cover.srcset = `${item.cover} 320w, ${item.coverLarge} 720w`;
   else cover.removeAttribute("srcset");
@@ -303,13 +363,7 @@ function openWork(item, trigger) {
   document.querySelector("#work-creator").textContent = item.creator ?? "";
   document.querySelector("#work-meta").textContent = [monthLabel(item), ...(item.categories ?? [])].filter(Boolean).join(" · ");
   const score = item.type === "book" ? Math.max(0, Math.min(5, Number(item.rating) || 0)) : 0;
-  let rating = document.querySelector("#work-rating");
-  if (!rating) {
-    rating = document.createElement("span");
-    rating.id = "work-rating";
-    rating.className = "work-rating";
-    document.querySelector(".work-back").insertBefore(rating, document.querySelector(".work-back em"));
-  }
+  const rating = document.querySelector("#work-rating");
   rating.hidden = item.type !== "book";
   rating.setAttribute("aria-label", score ? `个人评分 ${score} / 5` : "尚未录入个人评分");
   rating.replaceChildren(...Array.from({ length: 5 }, (_, index) => {
@@ -321,9 +375,7 @@ function openWork(item, trigger) {
     ? (score ? `个人评分 ${score} / 5` : "尚未录入个人评分")
     : "";
   workFlip.dataset.detailLabel = [item.title, item.creator, document.querySelector("#work-meta").textContent, ratingLabel].filter(Boolean).join("，");
-  // 触屏没有 hover，封面上的信息条永远不显示：点开只看到刚点的那张封面等于零信息，
-  // 所以无 hover 设备直接开在信息面，想看大图再翻回去。
-  setFlipped(matchMedia("(hover: none)").matches);
+  setFlipped(item.type !== "music" && matchMedia("(hover: none)").matches);
   morphOpen(trigger);
 }
 
@@ -345,6 +397,34 @@ function setError(message) {
   stateMessage.append(title, detail, retry);
   stage.append(stateMessage);
   stage.setAttribute("aria-busy", "false");
+  document.querySelector("#item-count").textContent = "—";
+  setShelfActionsEnabled(false);
+}
+
+function setShelfActionsEnabled(enabled) {
+  [layoutAction, filterAction, shareAction].forEach((button) => { button.disabled = !enabled; });
+}
+
+function showShelfLoading() {
+  const message = document.createElement("p");
+  message.className = "shelf-loading";
+  message.setAttribute("role", "status");
+  message.textContent = "正在展开收藏…";
+  stage.classList.remove("shelf-state");
+  stage.replaceChildren(message);
+  stage.setAttribute("aria-busy", "true");
+  document.querySelector("#item-count").textContent = "…";
+  setShelfActionsEnabled(false);
+}
+
+function updatePageMeta() {
+  document.querySelector("#item-kind").textContent = typeLabels[state.type];
+  const meta = pageMeta[state.type];
+  document.title = meta.title;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
+  document.querySelector(".media-nav [aria-current]")?.removeAttribute("aria-current");
+  document.querySelector(`.media-nav [data-type="${state.type}"]`)?.setAttribute("aria-current", "page");
+  stage.setAttribute("aria-label", `${typeLabels[state.type]}的收藏`);
 }
 
 function render() {
@@ -357,15 +437,10 @@ function render() {
   stage.style.height = `${stageHeightFor(initialLayout, state.mode)}px`;
   stage.replaceChildren(...objects);
   document.querySelector("#item-count").textContent = state.items.length;
-  document.querySelector("#item-kind").textContent = typeLabels[state.type];
-  const meta = pageMeta[state.type];
-  document.title = meta.title;
-  document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
-  document.querySelector(".media-nav [aria-current]")?.removeAttribute("aria-current");
-  document.querySelector(`.media-nav [data-type="${state.type}"]`)?.setAttribute("aria-current", "page");
-  stage.setAttribute("aria-label", `${typeLabels[state.type]}的收藏`);
+  updatePageMeta();
   filter(state.category);
   stage.setAttribute("aria-busy", "false");
+  setShelfActionsEnabled(true);
 }
 
 function filter(category) {
@@ -382,8 +457,16 @@ function filter(category) {
     pill.classList.toggle("is-active", active);
     pill.setAttribute("aria-pressed", String(active));
   });
-  document.querySelector('[data-action="filter"]').textContent = category === "全部" ? "筛选" : `${category} ${matches}`;
+  updateFilterActionLabel(category, matches);
   applyLayout();
+}
+
+function updateFilterActionLabel(category = state.category, matches = category === "全部" ? state.items.length : state.items.filter((item) => item.categories.includes(category)).length) {
+  const action = document.querySelector('[data-action="filter"]');
+  if (!action) return;
+  const mobile = matchMedia("(max-width: 639px)").matches;
+  action.textContent = category === "全部" ? "筛选" : mobile ? `筛选 ${matches}` : `${category} ${matches}`;
+  action.setAttribute("aria-label", category === "全部" ? "筛选分类" : `当前筛选：${category}，${matches}件作品`);
 }
 
 function renderFilters() {
@@ -402,7 +485,7 @@ function closeTransientStates() {
   closeFilter({ restoreFocus: false });
   if (state.picking) startPicking(false, { restoreFocus: false });
   closeWork({ restoreFocus: false });
-  document.querySelector("#poster-dialog")?.close();
+  closePoster({ restoreFocus: false });
   clearAllTransientOwnership();
 }
 
@@ -421,14 +504,21 @@ function showFilters() {
 }
 
 function startPicking(force, { restoreFocus = true } = {}) {
-  state.picking = typeof force === "boolean" ? force : !state.picking;
+  const nextPicking = typeof force === "boolean" ? force : !state.picking;
+  if (state.picking && !nextPicking) cancelPosterJob();
+  state.picking = nextPicking;
   let shareTrigger = null;
   closeFilter({ restoreFocus: false });
   closeWork({ restoreFocus: false });
   if (state.picking) {
+    state.categoryBeforePicking = state.category;
+    if (state.category !== "全部") filter("全部");
     clearAllTransientOwnership();
     rememberTrigger("share", shareAction);
   } else {
+    const previousCategory = state.categoryBeforePicking;
+    state.categoryBeforePicking = null;
+    if (previousCategory && previousCategory !== "全部") filter(previousCategory);
     shareTrigger = clearTrigger("share");
   }
   state.picked = [];
@@ -452,48 +542,60 @@ function updatePickStatus() {
 }
 
 async function createPoster() {
+  cancelPosterJob();
+  const generation = posterGeneration;
+  const controller = new AbortController();
+  const { signal } = controller;
+  const posterTrigger = transientTrigger.owner === "share" ? transientTrigger.trigger : shareAction;
+  const mediaType = state.type;
   const items = state.picked.map((index) => {
     const object = stage.querySelector(`[data-index="${index}"]`);
     return { image: hydrateObject(object) };
   });
-  await Promise.all(items.map(async ({ image }) => {
-    if (!image.complete || image.naturalWidth <= 1) {
-      await new Promise((resolve, reject) => {
-        const cleanup = () => {
-          image.removeEventListener("load", loaded);
-          image.removeEventListener("error", failed);
-        };
-        const loaded = () => { cleanup(); resolve(); };
-        const failed = () => { cleanup(); reject(new Error(`封面加载失败：${image.alt}`)); };
-        image.addEventListener("load", loaded, { once: true });
-        image.addEventListener("error", failed, { once: true });
-        if (image.complete) {
-          if (image.naturalWidth > 1) loaded();
-          else failed();
-        }
-      });
-    }
-    await image.decode();
-    if (!image.complete || image.naturalWidth <= 1 || image.currentSrc.startsWith("data:")) {
-      throw new Error(`封面解码失败：${image.alt}`);
-    }
-  }));
-  // 字体是 font-display:swap 懒加载的，canvas 不会等它：不先 load 就会画成回退字形。
-  // 声明必须和 poster.js 里的 context.font 一致，否则匹配不上。
-  await document.fonts.load('72px "LXGW WenKai"');
-  const canvas = createPosterCanvas(state.type, items);
-  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
-  if (posterUrl) URL.revokeObjectURL(posterUrl);
-  posterUrl = URL.createObjectURL(blob);
-  startPicking(false, { restoreFocus: false });
-  document.querySelector("#poster-preview").src = posterUrl;
-  document.querySelector("#poster-download").href = posterUrl;
-  const share = document.querySelector("#poster-share");
-  const file = new File([blob], "acui-spiritual-map.png", { type: "image/png" });
-  const canShare = typeof navigator.canShare === "function" && navigator.canShare({ files: [file] });
-  share.hidden = !canShare;
-  share.onclick = () => navigator.share({ files: [file] }).catch(() => {});
-  document.querySelector("#poster-dialog").showModal();
+  posterController = controller;
+  const timer = setTimeout(() => controller.abort(new Error("海报生成超时，请重试")), 20_000);
+  try {
+    await Promise.all(items.map(async ({ image }) => {
+      if (!image.complete || image.naturalWidth <= 1) await waitForPosterImage(image, signal);
+      assertCurrentPosterJob(generation, controller);
+      await awaitPosterStep(image.decode(), signal);
+      assertCurrentPosterJob(generation, controller);
+      if (!image.complete || image.naturalWidth <= 1 || image.currentSrc.startsWith("data:")) {
+        throw new Error(`封面解码失败：${image.alt}`);
+      }
+    }));
+    assertCurrentPosterJob(generation, controller);
+    // 字体是 font-display:swap 懒加载的，canvas 不会等它：不先 load 就会画成回退字形。
+    // 声明必须和 poster.js 里的 context.font 一致，否则匹配不上。
+    await awaitPosterStep(document.fonts.load('72px "LXGW WenKai"'), signal);
+    assertCurrentPosterJob(generation, controller);
+    const canvas = createPosterCanvas(mediaType, items);
+    const blob = await awaitPosterStep(new Promise((resolve) => canvas.toBlob(resolve, "image/png")), signal);
+    assertCurrentPosterJob(generation, controller);
+    if (!blob) throw new Error("海报生成失败，请重试");
+    const nextUrl = URL.createObjectURL(blob);
+    if (posterUrl) URL.revokeObjectURL(posterUrl);
+    posterUrl = nextUrl;
+    startPicking(false, { restoreFocus: false });
+    rememberTrigger("poster", posterTrigger);
+    document.querySelector("#poster-preview").src = posterUrl;
+    document.querySelector("#poster-download").href = posterUrl;
+    const share = document.querySelector("#poster-share");
+    const file = new File([blob], "acui-spiritual-map.png", { type: "image/png" });
+    const canShare = typeof navigator.canShare === "function" && navigator.canShare({ files: [file] });
+    share.hidden = !canShare;
+    share.onclick = () => navigator.share({ files: [file] }).catch(() => {});
+    posterDialog.showModal();
+  } finally {
+    clearTimeout(timer);
+    if (posterController === controller) posterController = null;
+  }
+}
+
+function closePoster({ restoreFocus = false } = {}) {
+  const trigger = clearTrigger("poster");
+  posterDialog?.close();
+  if (restoreFocus && trigger?.isConnected) trigger.focus();
 }
 
 function enableDrag(object, event) {
@@ -537,23 +639,38 @@ function renderType(type, push = false) {
   closeTransientStates();
   state.type = type;
   document.body.dataset.mediaType = type;
+  updatePageMeta();
+  if (push) {
+    history.pushState({ type }, "", pathForType(type));
+    scrollTo({ top: 0, behavior: "instant" });
+  }
+  if (loadStatus !== "ready") return;
   state.category = "全部";
   state.mode = "scatter";
   state.seed += 1;
   state.items = state.all.filter((item) => item.type === type);
-  if (push) history.pushState({ type }, "", pathForType(type));
   renderFilters();
   render();
 }
 
 async function load() {
-  stage.setAttribute("aria-busy", "true");
-  try {
-    state.all = await loadMediaData();
-    renderType(state.type);
-  } catch (error) {
-    setError(error instanceof Error ? error.message : "请检查数据文件后重试");
-  }
+  if (loadInFlight) return loadInFlight;
+  loadStatus = "loading";
+  closeTransientStates();
+  showShelfLoading();
+  loadInFlight = (async () => {
+    try {
+      state.all = await loadMediaData();
+      loadStatus = "ready";
+      renderType(state.type);
+    } catch (error) {
+      loadStatus = "error";
+      setError(error instanceof Error ? error.message : "请检查数据文件后重试");
+    } finally {
+      loadInFlight = null;
+    }
+  })();
+  return loadInFlight;
 }
 
 controls.addEventListener("click", (event) => {
@@ -603,12 +720,16 @@ filterPanel.addEventListener("click", (event) => {
 // 文案写回 pick-status（本来就是 aria-live 区域），按钮由 updatePickStatus 复原，让人能重试。
 document.querySelector("#make-poster").addEventListener("click", async (event) => {
   event.currentTarget.disabled = true;
+  const task = createPoster();
+  const generation = posterGeneration;
   try {
-    await createPoster();
+    await task;
   } catch (error) {
-    document.querySelector("#pick-status .pick-label").firstChild.textContent = `${error.message}，请重试 `;
+    if (error.name !== "AbortError" && posterGeneration === generation) {
+      document.querySelector("#pick-status .pick-label").firstChild.textContent = `${error.message}，请重试 `;
+    }
   } finally {
-    updatePickStatus();
+    if (posterGeneration === generation) updatePickStatus();
   }
 });
 document.querySelector("#copy-link").addEventListener("click", async (event) => {
@@ -617,23 +738,81 @@ document.querySelector("#copy-link").addEventListener("click", async (event) => 
   setTimeout(() => { button.textContent = "复制本站链接"; }, 1600);
 });
 document.querySelectorAll(".dialog-close").forEach((button) => button.addEventListener("click", () => {
-  button.closest("dialog").close();
+  const dialog = button.closest("dialog");
+  if (dialog?.id === "poster-dialog") closePoster({ restoreFocus: true });
+  else dialog?.close();
 }));
 document.querySelectorAll(".work-close").forEach((button) => button.addEventListener("click", () => closeWork({ restoreFocus: true, morph: true })));
-workFlip.addEventListener("click", () => setFlipped(!workFlip.classList.contains("is-flipped")));
+workFlip.addEventListener("pointerdown", (event) => {
+  if (event.pointerType !== "touch") skipFlipClick = false;
+  if (event.pointerType !== "touch" && !canTiltCover()) return;
+  coverPointer = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
+  workFlip.setPointerCapture(event.pointerId);
+});
+workFlip.addEventListener("pointermove", (event) => {
+  if (event.pointerType !== "mouse" && coverPointer?.id !== event.pointerId) return;
+  if (coverPointer?.id === event.pointerId && Math.hypot(event.clientX - coverPointer.x, event.clientY - coverPointer.y) > 8) coverPointer.moved = true;
+  if (!canTiltCover()) return;
+  trackCoverTilt(event.clientX, event.clientY);
+}, { passive: true });
+workFlip.addEventListener("pointerup", (event) => {
+  if (coverPointer?.id !== event.pointerId) return;
+  const moved = coverPointer.moved;
+  if (event.pointerType === "touch") {
+    if (!moved) setFlipped(!workFlip.classList.contains("is-flipped"));
+    skipFlipClick = true;
+  } else {
+    skipFlipClick = moved;
+  }
+  resetCoverTilt();
+});
+workFlip.addEventListener("pointercancel", resetCoverTilt);
+workFlip.addEventListener("pointerleave", (event) => { if (event.pointerType === "mouse") resetCoverTilt(); });
+workFlip.addEventListener("click", (event) => {
+  if (event.pointerType === "touch") {
+    skipFlipClick = false;
+    return;
+  }
+  if (skipFlipClick) {
+    skipFlipClick = false;
+    return;
+  }
+  setFlipped(!workFlip.classList.contains("is-flipped"));
+});
+workFlip.addEventListener("keydown", (event) => {
+  if (!workFlip.classList.contains("is-flipped")) return;
+  const content = document.querySelector(".work-back-content");
+  if (!content || content.scrollHeight <= content.clientHeight) return;
+  const distance = Math.max(content.clientHeight * 0.8, 40);
+  const targets = {
+    ArrowDown: content.scrollTop + 40,
+    ArrowUp: content.scrollTop - 40,
+    PageDown: content.scrollTop + distance,
+    PageUp: content.scrollTop - distance,
+    Home: 0,
+    End: content.scrollHeight,
+  };
+  if (!Object.hasOwn(targets, event.key)) return;
+  event.preventDefault();
+  content.scrollTo({ top: targets[event.key], behavior: "instant" });
+});
 workDialog.addEventListener("click", (event) => { if (event.target === workDialog) closeWork({ restoreFocus: true, morph: true }); });
 // Esc 走的是原生关闭，拦下来换成同一条收回动画。close 事件留作兜底：绕过 closeWork 的原生关闭仍能还焦点。
 workDialog.addEventListener("cancel", (event) => { event.preventDefault(); closeWork({ restoreFocus: true, morph: true }); });
 workDialog.addEventListener("close", () => restoreTrigger("work"));
+document.addEventListener("pointerdown", (event) => {
+  if (event.pointerType === "touch") document.body.dataset.touchInput = "true";
+  else delete document.body.dataset.touchInput;
+}, { capture: true });
+document.addEventListener("keydown", () => {
+  delete document.body.dataset.touchInput;
+}, { capture: true });
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
   if (filterPanel.hidden === false) closeFilter({ restoreFocus: true });
   else if (state.picking) startPicking(false);
-  else if (document.querySelector("#poster-dialog")?.open) {
-    document.querySelector("#poster-dialog").close();
-    restoreTrigger("share");
-  }
+  else if (posterDialog?.open) closePoster({ restoreFocus: true });
 });
 let resizeFrame = 0;
-addEventListener("resize", () => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(applyLayout); });
+addEventListener("resize", () => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(() => { updateFilterActionLabel(); applyLayout(); }); });
 load();

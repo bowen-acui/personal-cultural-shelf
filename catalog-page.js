@@ -1,5 +1,6 @@
-import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=17";
-import { loadMediaData } from "./lib/media-data.js?v=17";
+import { categoryCounts, filterCatalog } from "./lib/catalog.js?v=26";
+import { loadMediaData } from "./lib/media-data.js?v=26";
+import { coverRatio } from "./lib/poster.js?v=26";
 
 const labels = { book: "书", film: "影", music: "音" };
 const grid = document.querySelector("#catalog-grid");
@@ -8,10 +9,19 @@ const type = document.querySelector("#catalog-type");
 const category = document.querySelector("#catalog-category");
 const status = document.querySelector("#catalog-status");
 let data = [];
+let renderTimer = 0;
+let loadStatus = "loading";
+let loadInFlight = null;
+let renderGeneration = 0;
+
+function setControlsEnabled(enabled) {
+  [search, type, category].forEach((control) => { control.disabled = !enabled; });
+}
 
 function card(item) {
   const article = document.createElement("article");
   article.className = "catalog-card";
+  article.style.setProperty("--ratio", coverRatio(item.type));
   article.setAttribute("role", "listitem");
   const image = document.createElement("img");
   image.src = item.cover;
@@ -19,7 +29,7 @@ function card(item) {
   image.sizes = "(max-width: 639px) 42vw, 180px";
   image.alt = [item.title, item.creator].filter(Boolean).join("，");
   image.width = 320;
-  image.height = item.type === "music" ? 320 : 480;
+  image.height = Math.round(320 / coverRatio(item.type));
   image.loading = "lazy";
   const title = document.createElement("strong");
   const meta = document.createElement("small");
@@ -31,25 +41,41 @@ function card(item) {
 }
 
 function render() {
+  if (loadStatus !== "ready") return;
+  const generation = ++renderGeneration;
   const source = type.value === "全部" ? data : data.filter((item) => item.type === type.value);
   const results = filterCatalog(source, search.value, category.value);
-  grid.replaceChildren(...results.map(card));
-  if (!results.length) {
-    const empty = document.createElement("div");
-    const clear = document.createElement("button");
-    empty.className = "catalog-empty";
-    empty.setAttribute("role", "listitem");
-    clear.type = "button";
-    clear.className = "catalog-empty-action";
-    clear.textContent = "清除搜索";
-    clear.addEventListener("click", () => { search.value = ""; render(); search.focus(); });
-    empty.append(clear);
-    grid.append(empty);
-  }
+  grid.replaceChildren();
   status.textContent = results.length ? `找到 ${results.length} 件${type.value === "全部" ? "藏品" : labels[type.value]}` : "没有找到符合条件的藏品";
+  let index = 0;
+  const appendBatch = () => {
+    if (generation !== renderGeneration) return;
+    const cards = document.createDocumentFragment();
+    const end = Math.min(index + 48, results.length);
+    for (; index < end; index += 1) cards.append(card(results[index]));
+    grid.append(cards);
+    if (index < results.length) {
+      requestAnimationFrame(appendBatch);
+      return;
+    }
+    if (!results.length) {
+      const empty = document.createElement("div");
+      const clear = document.createElement("button");
+      empty.className = "catalog-empty";
+      empty.setAttribute("role", "listitem");
+      clear.type = "button";
+      clear.className = "catalog-empty-action";
+      clear.textContent = "清除搜索";
+      clear.addEventListener("click", () => { search.value = ""; render(); search.focus(); });
+      empty.append(clear);
+      grid.append(empty);
+    }
+  };
+  appendBatch();
 }
 
 function renderCategories() {
+  if (loadStatus !== "ready") return;
   const source = type.value === "全部" ? data : data.filter((item) => item.type === type.value);
   category.replaceChildren();
   for (const [name, count] of [["全部", source.length], ...categoryCounts(source)]) {
@@ -61,6 +87,8 @@ function renderCategories() {
 }
 
 function renderError(message) {
+  clearTimeout(renderTimer);
+  setControlsEnabled(false);
   status.textContent = message;
   grid.replaceChildren();
   const retry = document.createElement("button");
@@ -72,24 +100,35 @@ function renderError(message) {
 }
 
 async function load() {
+  if (loadInFlight) return loadInFlight;
+  loadStatus = "loading";
+  setControlsEnabled(false);
   status.textContent = "正在读取藏品…";
-  try {
-    data = await loadMediaData();
-    type.replaceChildren();
-    for (const [value, name] of [["全部", "全部"], ["book", "书"], ["film", "影"], ["music", "音"]]) {
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = name;
-      type.append(option);
+  loadInFlight = (async () => {
+    try {
+      data = await loadMediaData();
+      type.replaceChildren();
+      for (const [value, name] of [["全部", "全部"], ["book", "书"], ["film", "影"], ["music", "音"]]) {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = name;
+        type.append(option);
+      }
+      loadStatus = "ready";
+      setControlsEnabled(true);
+      renderCategories();
+      render();
+    } catch (error) {
+      loadStatus = "error";
+      renderError(error instanceof Error ? error.message : "媒体数据读取失败");
+    } finally {
+      loadInFlight = null;
     }
-    renderCategories();
-    render();
-  } catch (error) {
-    renderError(error instanceof Error ? error.message : "媒体数据读取失败");
-  }
+  })();
+  return loadInFlight;
 }
 
-search.addEventListener("input", render);
+search.addEventListener("input", () => { clearTimeout(renderTimer); renderTimer = setTimeout(render, 120); });
 type.addEventListener("change", () => { renderCategories(); render(); });
 category.addEventListener("change", render);
 load();
